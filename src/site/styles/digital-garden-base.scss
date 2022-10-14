@@ -7,7 +7,7 @@
     max-width: 900px;
     margin: auto;
     font-size: 22px;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 .external-link {
@@ -115,7 +115,7 @@ div[class*="callout-"] {
     outline-color: rgb(230, 230, 230);
     padding: 1rem;
     position: relative;
-    transition: height .5s ease-in, opacity .5s ease-in;
+    transition: height .2s ease-in, opacity .5s ease-in;
     word-break: break-word;
     white-space: normal !important;
 }
@@ -318,147 +318,147 @@ div.callout-cite {
 
 div.language-ad-note,
 div.callout-note {
-    background-color: rgba(68, 138, 255, .5)
+    background-color: rgba(68, 138, 255, .2)
 }
 
 div.language-ad-seealso,
 div.callout-seealso {
-    background-color: rgba(68, 138, 255, .5)
+    background-color: rgba(68, 138, 255, .2)
 }
 
 div.language-ad-abstract,
 div.callout-abstract {
-    background-color: rgba(0, 176, 255, .5)
+    background-color: rgba(0, 176, 255, .2)
 }
 
 div.language-ad-summary,
 div.callout-summary {
-    background-color: rgba(0, 176, 255, .5)
+    background-color: rgba(0, 176, 255, .2)
 }
 
 div.language-ad-tldr,
 div.callout-tldr {
-    background-color: rgba(0, 176, 255, .5)
+    background-color: rgba(0, 176, 255, .2)
 }
 
 div.language-ad-info,
 div.callout-info {
-    background-color: rgba(0, 184, 212, .5)
+    background-color: rgba(0, 184, 212, .2)
 }
 
 div.language-ad-todo,
 div.callout-todo {
-    background-color: rgba(0, 184, 212, .5)
+    background-color: rgba(0, 184, 212, .2)
 }
 
 div.language-ad-tip,
 div.callout-tip {
-    background-color: rgba(0, 191, 165, .5)
+    background-color: rgba(0, 191, 165, .2)
 }
 
 div.language-ad-hint,
 div.callout-hint {
-    background-color: rgba(0, 191, 165, .5)
+    background-color: rgba(0, 191, 165, .2)
 }
 
 div.language-ad-important,
 div.callout-important {
-    background-color: rgba(0, 191, 165, .5)
+    background-color: rgba(0, 191, 165, .2)
 }
 
 div.language-ad-success,
 div.callout-success {
-    background-color: rgba(0, 200, 83, .5)
+    background-color: rgba(0, 200, 83, .2)
 }
 
 div.language-ad-check,
 div.callout-check {
-    background-color: rgba(0, 200, 83, .5)
+    background-color: rgba(0, 200, 83, .2)
 }
 
 div.language-ad-done,
 div.callout-done {
-    background-color: rgba(0, 200, 83, .5)
+    background-color: rgba(0, 200, 83, .2)
 }
 
 div.language-ad-question,
 div.callout-question {
-    background-color: rgba(100, 221, 23, .5)
+    background-color: rgba(100, 221, 23, .2)
 }
 
 div.language-ad-help,
 div.callout-help {
-    background-color: rgba(100, 221, 23, .5)
+    background-color: rgba(100, 221, 23, .2)
 }
 
 div.language-ad-faq,
 div.callout-faq {
-    background-color: rgba(100, 221, 23, .5)
+    background-color: rgba(100, 221, 23, .2)
 }
 
 div.language-ad-warning,
 div.callout-warning {
-    background-color: rgba(255, 145, 0, .5)
+    background-color: rgba(255, 145, 0, .2)
 }
 
 div.language-ad-caution,
 div.callout-caution {
-    background-color: rgba(255, 145, 0, .5)
+    background-color: rgba(255, 145, 0, .2)
 }
 
 div.language-ad-attention,
 div.callout-attention {
-    background-color: rgba(255, 145, 0, .5)
+    background-color: rgba(255, 145, 0, .2)
 }
 
 div.language-ad-failure,
 div.callout-failure {
-    background-color: rgba(255, 82, 82, .5)
+    background-color: rgba(255, 82, 82, .2)
 }
 
 div.language-ad-fail,
 div.callout-fail {
-    background-color: rgba(255, 82, 82, .5)
+    background-color: rgba(255, 82, 82, .2)
 }
 
 div.language-ad-missing,
 div.callout-missing {
-    background-color: rgba(255, 82, 82, .5)
+    background-color: rgba(255, 82, 82, .2)
 }
 
 div.language-ad-danger,
 div.callout-danger {
-    background-color: rgba(255, 23, 68, .5)
+    background-color: rgba(255, 23, 68, .2)
 }
 
 div.language-ad-error,
 div.callout-error {
-    background-color: rgba(255, 23, 68, .5)
+    background-color: rgba(255, 23, 68, .2)
 }
 
 div.language-ad-bug,
 div.callout-bug {
-    background-color: rgba(245, 0, 87, .5)
+    background-color: rgba(245, 0, 87, .2)
 }
 
 div.language-ad-example,
 div.callout-example {
-    background-color: rgba(124, 77, 255, .5)
+    background-color: rgba(124, 77, 255, .2)
 }
 
 div.language-ad-quote,
 div.callout-quote {
-    background-color: rgba(158, 158, 158, .5)
+    background-color: rgba(158, 158, 158, .2)
 }
 
 div.language-ad-cite,
 div.callout-cite {
-    background-color: rgba(158, 158, 158, .5)
+    background-color: rgba(158, 158, 158, .2)
 }
 
 /* CUSTOM CALLOUTS */
 div.callout-rmk {
-    background-color: rgba(255, 23, 68, .5);
+    background-color: rgba(255, 23, 68, .2);
     .admonition-title::before { content: "⚠️" }
 }
 div.callout-meta { display: none; }
