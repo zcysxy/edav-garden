@@ -158,7 +158,7 @@ div.callout-caution {
 div.language-ad-info,
 div.callout-info {
     .admonition-title::before {
-        content: "ℹ";
+        content: "ℹ️";
     }
 }
 
@@ -454,4 +454,10 @@ div.callout-quote {
 div.language-ad-cite,
 div.callout-cite {
     background-color: rgba(158, 158, 158, .5)
+}
+
+/* CUSTOM CALLOUTS */
+div.callout-rmk {
+    background-color: rgba(158, 158, 158, .5);
+    .admonition-title::before { content: "⚠️" }
 }
