@@ -68,7 +68,7 @@ sup:: [[EDAV|EDAV]]
     - [[Heatmap|Heatmap]]
     - [[Alluvial Diagram|Alluvial Diagram]]
 
-## [[R|R]]
+## [[R|R]] References
 
 * [[R Basics|R Basics]]
 * [[R Type|R Type]]
