@@ -461,4 +461,8 @@ div.callout-rmk {
     background-color: rgba(255, 23, 68, .2);
     .admonition-title::before { content: "⚠️" }
 }
+div.callout-garden {
+    background-color: rgba(255, 200, 60, .2);
+    .admonition-title::before { content: "🪴" }
+}
 div.callout-meta { display: none; }
