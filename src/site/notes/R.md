@@ -14,6 +14,8 @@ R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
 You can run R commands within a [[LaTeX|LaTeX]] document.
 Also, R is supported by [[Jupyter|Jupyter]] by default.
 
+## References
+
 * [[R Basics|R Basics]]
 * [[R Type|R Type]]
 * [[R Data Structure|R Data Structure]]
