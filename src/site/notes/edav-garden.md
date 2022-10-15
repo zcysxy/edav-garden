@@ -1,0 +1,118 @@
+---
+{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+---
+
+> [!meta]-  
+state:: [[%wip|%wip]]  
+sup:: [[EDAV|EDAV]]  
+
+# EDAV Garden
+
+> Visualization is a fundamentally human activity.
+
+This site is a **[digital garden](https://github.com/MaggieAppleton/digital-gardeners)**[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
+
+[^1]: In plain English: A collection of *notes*.
+
+## Basic Elements
+
+- Interdisciplinary
+    - [[Statistics|Statistics]]
+    - [[Computer Science|Computer Science]]
+    - Graphic Design
+    - Journalism
+    - Subject Expertise
+    - Psychology
+- Fundamental problems
+    - Exploration vs. Visualization
+    - Exploratory vs. Explanatory
+    - Not mutually exclusive
+    - Visualizations offering insight are likely to be shared
+* Aims
+    * look for patterns
+    * identify outliers
+    * make comparisons
+    * discover clusters
+* Textbook
+    * Unwin, Antony. _Graphical data analysis with R_. Chapman and Hall/CRC, 2018.
+* Website
+    * <https://edav.info>
+* Tools
+    * [[R|R]]
+    * [[JavaScript|JavaScript]]
+    * D3 (library for JS)
+
+## Plots Gallery
+
+- [[EDAV - Continuous Variable|Continuous Variable]]
+    - [[Histogram|Histogram]]
+    - [[Boxplot|Boxplot]]
+    - [[Q-Q Plot|Q-Q Plot]]
+    - [[Density Curve|Density Curve]]
+    - [[Ridgeline|Ridgeline]]
+- [[EDAV - Categorical Data|Categorical Data]]
+    - [[Bar Chart|Bar Chart]]
+    - [[Cleveland Dot Plot|Cleveland Dot Plot]]
+- [[EDAV - Dependency Relationship|Dependency Relationship]]
+    - [[Scatterplot|Scatterplot]]
+    - [[Heatmap|Heatmap]]
+    - [[Density Contour Plot|Density Contour Plot]]
+- [[EDAV - Multivariate Continuous Data|Multivariate Continuous Data]]
+    - [[Scatterplot Matrix|Scatterplot Matrix]]
+    - [[Parallel Coordinate|Parallel Coordinate]]
+- [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]]
+    - [[Mosaic Plot|Mosaic Plot]]
+    - [[Heatmap|Heatmap]]
+    - [[Alluvial Diagram|Alluvial Diagram]]
+
+## [[R|R]]
+
+
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+
+<div class="markdown-embed-title">
+
+# n-h
+
+
+</div>
+
+
+> [!meta]-
+sup:: [[Language|Language]]  
+state:: [[%wip|%wip]]  
+
+# R
+
+R is a [[Scripting Language|Scripting Language]] for [[Statistics|statistical computing]] and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.
+
+R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
+You can run R commands within a [[LaTeX|LaTeX]] document.
+Also, R is supported by [[Jupyter|Jupyter]] by default.
+
+## References
+
+* [[R Basics|R Basics]]
+* [[R Type|R Type]]
+* [[R Data Structure|R Data Structure]]
+* [[R Function|R Function]]
+* [[R Function List|R Function List]]
+* [[R Operator|R Operator]]
+* [[R Package|R Package]]
+
+
+</div></div>
+
+
+- Useful [[R Package|R Package]]s
+    - tidyverse
+        - [[ggplot2|ggplot2]]
+        - [[dplyr|dplyr]]
+        - [[forcats|forcats]]
+        - [[tidyr|tidyr]]
+    - [[R Package - Plotly|Plotly]]
+    - [[rvest|rvest]]
+
+## Course Log
+
+> For a time log of notes, see this [[EDAV#Notes|course log]].
