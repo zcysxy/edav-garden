@@ -51,7 +51,7 @@ Likert data is a special categorical data that uses a **psychometric scale** com
 
 Relative frequency stacked [[Bar Chart|Bar Chart]]s are used to present this kind of data.
 
-[Redirect Notice](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffortune.com%2F2017%2F10%2F18%2Fgender-equality-in-america%2F&psig=AOvVaw2F8I5KhWntZbau7231FeEl&ust=1665802291429000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJiJ2qDb3voCFQAAAAAdAAAAABAO)![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png)
+![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png)
 
 Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.
 
