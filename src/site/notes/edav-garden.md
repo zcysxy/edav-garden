@@ -9,7 +9,7 @@ sup:: [[EDAV|EDAV]]
 # EDAV Garden
 
 <center>
-<img width="300" height="300" src="favicon.svg" style="background:transparent">
+<img width="300" height="300" src="favicon.svg" style="background:transparent; border: none; box-shadow: none;">
 <blockquote> "Visualization is a fundamentally human activity."
 </blockquote>
 </center>
