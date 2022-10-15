@@ -8,7 +8,7 @@ sup:: [[EDAV|EDAV]]
 
 # EDAV Garden
 
-> Visualization is a fundamentally human activity.
+> [!quote] Visualization is a fundamentally human activity.
 
 > [!garden] This site is a **[digital garden](https://github.com/MaggieAppleton/digital-gardeners)**[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
 
