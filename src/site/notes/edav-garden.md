@@ -9,7 +9,7 @@ sup:: [[EDAV|EDAV]]
 # EDAV Garden
 
 <center>
-<img src="assets/salt-edav.svg">
+<img src="favicon.svg">
 <blockquote> "Visualization is a fundamentally human activity."
 </blockquote>
 </center>
