@@ -67,31 +67,6 @@ This site is a **[digital garden](https://github.com/MaggieAppleton/digital-gard
 
 ## [[R|R]]
 
-
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
-
-<div class="markdown-embed-title">
-
-# n-h
-
-
-</div>
-
-
-> [!meta]-
-sup:: [[Language|Language]]  
-state:: [[%wip|%wip]]  
-
-# R
-
-R is a [[Scripting Language|Scripting Language]] for [[Statistics|statistical computing]] and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.
-
-R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
-You can run R commands within a [[LaTeX|LaTeX]] document.
-Also, R is supported by [[Jupyter|Jupyter]] by default.
-
-## References
-
 * [[R Basics|R Basics]]
 * [[R Type|R Type]]
 * [[R Data Structure|R Data Structure]]
@@ -99,12 +74,6 @@ Also, R is supported by [[Jupyter|Jupyter]] by default.
 * [[R Function List|R Function List]]
 * [[R Operator|R Operator]]
 * [[R Package|R Package]]
-
-
-</div></div>
-
-
-- Useful [[R Package|R Package]]s
     - tidyverse
         - [[ggplot2|ggplot2]]
         - [[dplyr|dplyr]]
