@@ -10,4 +10,12 @@ body {
     //  h1 {
     //   color: black;
     //  }
+    .markdown-embed > h2,
+    .markdown-embed > h3,
+    .markdown-embed > h4,
+    .markdown-embed > h5,
+    .markdown-embed > h6 {
+        display: none;
+    }
 }
+
