@@ -23,3 +23,10 @@ Also, R is supported by [[Jupyter|Jupyter]] by default.
 * [[R Function List|R Function List]]
 * [[R Operator|R Operator]]
 * [[R Package|R Package]]
+    - tidyverse
+        - [[ggplot2|ggplot2]]
+        - [[dplyr|dplyr]]
+        - [[forcats|forcats]]
+        - [[tidyr|tidyr]]
+    - [[R Package - Plotly|Plotly]]
+    - [[rvest|rvest]]
