@@ -18,7 +18,7 @@ sup:: [[EDAV|EDAV]]
 > - made by [me](https://github.com/zcysxy)
 > - on materials from GR5702 Exploratory Data Analysis and Visualization course with [Joyce Robbins](https://github.com/jtr13) at Columbia University
 > - with [Obsidian](https://obsidian.md) and [Obsidian Digital Garden](https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0)
-> - the source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
+> - source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
 
 [^1]: In plain English: A collection of *notes*.
 
@@ -75,6 +75,30 @@ sup:: [[EDAV|EDAV]]
 
 ## [[R|R]] References
 
+
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+
+<div class="markdown-embed-title">
+
+
+
+</div>
+
+
+> [!meta]-
+sup:: [[Language|Language]]  
+state:: [[%wip|%wip]]  
+
+# R
+
+R is a [[Scripting Language|Scripting Language]] for [[Statistics|statistical computing]] and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.
+
+R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
+You can run R commands within a [[LaTeX|LaTeX]] document.
+Also, R is supported by [[Jupyter|Jupyter]] by default.
+
+## References
+
 * [[R Basics|R Basics]]
 * [[R Type|R Type]]
 * [[R Data Structure|R Data Structure]]
@@ -89,6 +113,10 @@ sup:: [[EDAV|EDAV]]
         - [[tidyr|tidyr]]
     - [[R Package - Plotly|Plotly]]
     - [[rvest|rvest]]
+
+
+</div></div>
+
 
 ## Course Log
 
