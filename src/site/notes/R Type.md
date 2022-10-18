@@ -14,10 +14,10 @@ state:: done
 
 | Type            | Abbreviation |
 | --------------- | ------------ |
-| [[R Type#Integer|#Integer]]    | `int`        |
-| [[R Type#Numeric|#Numeric]]    | `dbl`        |
-| [[R Type#Characters|#Characters]] | `chr`        |
-| [[R Type#Logical|#Logical]]    | `lgl`        |
+| [[R Type#Integer|R Type#Integer]]    | `int`        |
+| [[R Type#Numeric|R Type#Numeric]]    | `dbl`        |
+| [[R Type#Characters|R Type#Characters]] | `chr`        |
+| [[R Type#Logical|R Type#Logical]]    | `lgl`        |
 | [[R Type#Factors|#Factors]]    | `fctr`       |
 | Date            | `date`       |
 | Date-times      | `dttm`       |
