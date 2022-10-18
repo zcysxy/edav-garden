@@ -17,10 +17,10 @@ state:: done
 | Type            | Abbreviation |
 | --------------- | ------------ |
 | [[R Type#Integer\|Integer]]    | `int`        |
-| [[R Type#Numeric|#Numeric]]    | `dbl`        |
-| [[R Type#Characters|#Characters]] | `chr`        |
-| [[R Type#Logical|#Logical]]    | `lgl`        |
-| [[R Type#Factors|#Factors]]    | `fctr`       |
+| [[R Type#Numeric\|Numeric]]    | `dbl`        |
+| [[R Type#Characters\|Characters]] | `chr`        |
+| [[R Type#Logical\|Logical]]    | `lgl`        |
+| [[R Type#Factors\|Factors]]    | `fctr`       |
 | Date            | `date`       |
 | Date-times      | `dttm`       |
 
