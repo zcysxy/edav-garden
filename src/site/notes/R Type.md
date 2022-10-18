@@ -8,16 +8,18 @@ state:: done
 
 # R Types
 
+[[R Type#Integer\|Integer]]
+
 - [!] Here we just introduce some basic "atomic" data types. There are many more, like dates and time series.
 
 - [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R|R]] object.
 
 | Type            | Abbreviation |
 | --------------- | ------------ |
-| [[R Type#Integer|R Type#Integer]]    | `int`        |
-| [[R Type#Numeric|R Type#Numeric]]    | `dbl`        |
-| [[R Type#Characters|R Type#Characters]] | `chr`        |
-| [[R Type#Logical|R Type#Logical]]    | `lgl`        |
+| [[R Type#Integer|#Integer]]    | `int`        |
+| [[R Type#Numeric|#Numeric]]    | `dbl`        |
+| [[R Type#Characters|#Characters]] | `chr`        |
+| [[R Type#Logical|#Logical]]    | `lgl`        |
 | [[R Type#Factors|#Factors]]    | `fctr`       |
 | Date            | `date`       |
 | Date-times      | `dttm`       |
