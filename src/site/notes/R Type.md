@@ -16,7 +16,7 @@ state:: done
 
 | Type            | Abbreviation |
 | --------------- | ------------ |
-| [[R Type#Integer|#Integer]]    | `int`        |
+| [[R Type#Integer\|Integer]]    | `int`        |
 | [[R Type#Numeric|#Numeric]]    | `dbl`        |
 | [[R Type#Characters|#Characters]] | `chr`        |
 | [[R Type#Logical|#Logical]]    | `lgl`        |
