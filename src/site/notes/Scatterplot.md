@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot/"}
+{"dg-publish":true,"permalink":"/scatterplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
