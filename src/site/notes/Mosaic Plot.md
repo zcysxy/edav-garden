@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mosaic-plot/"}
+{"dg-publish":true,"permalink":"/mosaic-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-
