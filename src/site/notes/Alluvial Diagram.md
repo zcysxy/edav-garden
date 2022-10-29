@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/alluvial-diagram/"}
+{"dg-publish":true,"permalink":"/alluvial-diagram/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
