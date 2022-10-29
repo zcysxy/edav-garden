@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/biplot/"}
+{"dg-publish":true,"permalink":"/biplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
