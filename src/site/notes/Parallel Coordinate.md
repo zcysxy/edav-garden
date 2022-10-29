@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/parallel-coordinate/"}
+{"dg-publish":true,"permalink":"/parallel-coordinate/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
