@@ -11,13 +11,14 @@ state:: done
 Alluvial diagrams take inspiration from alluvial fans.
 They use [[Parallel Coordinate|Parallel Coordinate]]s for [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]].
 They show how data move from one category to some other categories.
-Alluvial diagrams work well for data with *flow* in it. Observations with the same movement are drawn together to show the flow.
+Alluvial diagrams work well for data with *flows* in it. Observations with the same movement are drawn together to show the flow.
 Some examples of data types that are suitable for alluvial diagrams are
 
 - Hierarchical data
 - Temporal data
 
-![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013170436.png)
+![500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013170436.png) ![500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018161618.png)
+
 
 Other than axes, we can use colors for one variable to better visualize the patterns. The variable we choose to color should be our most interested one.
 
@@ -51,7 +52,21 @@ While we can use `geom_flow` to create similar diagrams, where flows may not be 
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013182109.png)
 
-## Loads Form
+## Lodes Form
 
-- Able to present *ghost* data, which doesn't have all categorical variables
+- Able to present *ghosted* data, which doesn't have all categorical variables
 - Need not specify the axes
+
+To transform a dataframe to a lodes form, use `to_lodes_form(df, axes = 1:2)`. It works like `pivot_longer` in [[tidyr|tidyr]], making one row per lode.
+
+```R
+df %>%
+    to_lodes_form(axes = 1:2) %>%
+    ggplot(, aes(alluvium = alluvium, x = x, stratum = stratum, y = Freq)) +
+        geom_alluvium(color = "blue") +
+        geom_stratum() +
+        geom_text(stat = "stratum", aes(label = paste(after_stat(stratum), "\n", after_stat(count))))
+```
+
+![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018162557.png)
+
