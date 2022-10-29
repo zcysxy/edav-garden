@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/boxplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/boxplot/"}
 ---
 
 > [!meta]-
