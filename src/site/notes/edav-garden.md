@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry"}
+{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
