@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav/"}
+{"dg-publish":true,"permalink":"/edav/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
