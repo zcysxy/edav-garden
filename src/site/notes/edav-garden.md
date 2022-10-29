@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry"}
 ---
 
 > [!meta]-  
@@ -82,24 +82,7 @@ sup:: [[EDAV|EDAV]]
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
-<div class="markdown-embed-title">
 
-
-
-</div>
-
-
-> [!meta]-
-sup:: [[Language|Language]]  
-state:: [[%wip|%wip]]  
-
-# R
-
-R is a [[Scripting Language|Scripting Language]] for [[Statistics|statistical computing]] and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.
-
-R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
-You can run R commands within a [[LaTeX|LaTeX]] document.
-Also, R is supported by [[Jupyter|Jupyter]] by default.
 
 ## References
 
