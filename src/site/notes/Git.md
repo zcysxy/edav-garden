@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git/"}
+{"dg-publish":true,"permalink":"/git/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-
