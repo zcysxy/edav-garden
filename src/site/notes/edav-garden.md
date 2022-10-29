@@ -42,11 +42,12 @@ sup:: [[EDAV|EDAV]]
     * make comparisons
     * discover clusters
 * Textbook
-    * Unwin, Antony. _Graphical data analysis with R_. Chapman and Hall/CRC, 2018.
+    * Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
 * Website
     * <https://edav.info>
 * Tools
     * [[R|R]]
+    * [[Git|Git]]
     * [[JavaScript|JavaScript]]
     * D3 (library for JS)
 
@@ -68,17 +69,37 @@ sup:: [[EDAV|EDAV]]
 - [[EDAV - Multivariate Continuous Data|Multivariate Continuous Data]]
     - [[Scatterplot Matrix|Scatterplot Matrix]]
     - [[Parallel Coordinate|Parallel Coordinate]]
+    - [[Biplot|Biplot]]
 - [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]]
     - [[Mosaic Plot|Mosaic Plot]]
     - [[Heatmap|Heatmap]]
     - [[Alluvial Diagram|Alluvial Diagram]]
+- Other
+    - [[Graph Color|Graph Color]]
 
 ## [[R|R]] References
 
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
+<div class="markdown-embed-title">
 
+
+
+</div>
+
+
+> [!meta]-
+sup:: [[Language|Language]]  
+state:: [[%wip|%wip]]  
+
+# R
+
+R is a [[Scripting Language|Scripting Language]] for [[Statistics|statistical computing]] and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.
+
+R has mature integrations with [[Markdown|Markdown]] and [[LaTeX|LaTeX]].
+You can run R commands within a [[LaTeX|LaTeX]] document.
+Also, R is supported by [[Jupyter|Jupyter]] by default.
 
 ## References
 
