@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/forcats/"}
+{"dg-publish":true,"permalink":"/forcats/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
