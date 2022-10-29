@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleveland-dot-plot/"}
+{"dg-publish":true,"permalink":"/cleveland-dot-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
