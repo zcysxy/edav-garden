@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-dependency-relationship/"}
+{"dg-publish":true,"permalink":"/edav-dependency-relationship/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
