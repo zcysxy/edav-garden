@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/git/"}
 ---
 
 > [!meta]-
@@ -53,11 +53,7 @@
     * 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
-<div class="markdown-embed-title">
 
-
-
-</div>
 
 
 > [!meta]-
@@ -111,11 +107,7 @@
     * 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
-<div class="markdown-embed-title">
 
-
-
-</div>
 
 
 > [!meta]-
@@ -169,11 +161,7 @@
     * 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
-<div class="markdown-embed-title">
 
-
-
-</div>
 
 
 > [!meta]-
@@ -227,11 +215,7 @@
     * 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
-<div class="markdown-embed-title">
 
-
-
-</div>
 
 
 > [!meta]-
