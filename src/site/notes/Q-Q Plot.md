@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/q-q-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/q-q-plot/"}
 ---
 
 > [!meta]-
