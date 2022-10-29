@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/bar-chart/"}
+{"dg-publish":true,"permalink":"/bar-chart/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
