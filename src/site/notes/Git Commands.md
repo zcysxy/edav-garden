@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git-commands/"}
+{"dg-publish":true,"permalink":"/git-commands/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-
