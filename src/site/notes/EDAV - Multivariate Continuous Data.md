@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/"}
+{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
