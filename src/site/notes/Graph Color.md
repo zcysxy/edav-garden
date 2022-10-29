@@ -12,6 +12,18 @@ state:: done
 
 Match data types to color palettes/schemes
 
+- Sequential <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FFFFFF"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#C0C0C0"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#808080"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#000000"/></svg>
+    - suitable for **ordinal** variables
+    - easy to tell the level of a color
+    - e.g. [[Heatmap|Heatmap]]
+- Diverging <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF0000"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF7F00"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FFFF00"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#7FFF00"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#00FF00"/></svg>
+    - suitable for [[EDAV - Categorical Data#Likert Data|Likert Data]]
+    - able to divide colors into groups
+- Qualitative <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF0000"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#007FFF"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#00FF00"/></svg>
+    - suitable for [[EDAV - Categorical Data|Categorical Data]]
+    - There should not be some colors that stand out more than other colors
+        - Unless you are stressing certain values
+
 ## Perceptually Uniform Color Spaces
 
 We want to perceive the difference between data by observing colors.
