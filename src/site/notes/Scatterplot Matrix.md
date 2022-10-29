@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot-matrix/"}
+{"dg-publish":true,"permalink":"/scatterplot-matrix/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
