@@ -34,7 +34,7 @@ We can observe that
 
 - Boundaries
     - No films have high votes and low ratings
-    - No films have high votes and very high ratings
+    - No films have high votes and an average rating close to the maximum possible
 - For films with more than a few cotes, the average rating increases w/ # of votes
 - Outliers: some films appear to have lower-than-expected ratings
 - Films with low votes may have any average rating (full range)
