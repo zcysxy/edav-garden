@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/density-contour-plot/"}
+{"dg-publish":true,"permalink":"/density-contour-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-  
