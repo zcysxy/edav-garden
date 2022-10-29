@@ -5,6 +5,7 @@
 > [!meta]-  
 state:: [[%wip|%wip]]  
 sup:: [[Columbia|Columbia]]  
+sub:: [[edav-garden|edav-garden]], [[edav-output-1|edav-output-1]]  
 
 # EDAV
 
@@ -95,47 +96,33 @@ G --> H[Communicate]
 
 ### 2022-09-20
 
-- [ ] [[EDAV - Categorical Data|EDAV - Categorical Data]]
-    - Use [[ggplot2#Facet|facets]] w/ different scales if needed to
-        - Usually, we should not use different scales in a plot
-        - [[ggplot2#^32e6e9|ggplot2#^32e6e9]]
-    - Watch the top/bottom-coded data
-        - "or more" category may contain too much data to be considered "or more"
-    - When you just present a proportion of the data, put a **smart cut**
-        - For example, when two bars are similar, it's not reasonable to cut them; you should look for a "jump" instead
-- [[Bar Chart|Bar Chart]]
-- [[Cleveland Dot Plot|Cleveland Dot Plot]]
+- [[EDAV - Categorical Data|EDAV - Categorical Data]]
+    - [[Bar Chart|Bar Chart]]
+    - [[Cleveland Dot Plot|Cleveland Dot Plot]]
 - [[forcats|forcats]]
 - [[dplyr#summarise()|dplyr#summarise()]]
 
 ### 2022-09-22
 
 - [[forcats#Lumping|forcats#Lumping]]
-- [ ] [[EDAV - Dependency Relationship|EDAV - Dependency Relationship]]
-- [[Scatterplot|Scatterplot]]
+- [[EDAV - Dependency Relationship|EDAV - Dependency Relationship]]
+    - [[Scatterplot|Scatterplot]]
+    - [[Heatmap|Heatmap]]
+    - [[Density Contour Plot|Density Contour Plot]]
 - [[R Package - Plotly|R Package - Plotly]]
-- [[Heatmap|Heatmap]]
-- [[Density Contour Plot|Density Contour Plot]]
 
 ### 2022-09-27
 
 - [[Scatterplot Matrix|Scatterplot Matrix]]
 - [[tidyr|tidyr]]
 - [[ggplot2#Facet|ggplot2#Facet]]
-- Combining [[EDAV - Continuous Variable|Continuous Variable]]s + [[EDAV - Categorical Data|Categorical Variable]]s
-    - mapping options:
-        - Continuous: x-axis, y-axis, color (not so great), size (not so great)
-        - Categorical: color, facets (rows, columns), shape (maybe)
-    - Add one variable at a time
-    - Create more graphs if suitable options run out
-    - Switch options to test
+- [[EDAV - Categorical Data#Combine Continuous Variables and Categorical Variables|EDAV - Categorical Data#Combine Continuous Variables and Categorical Variables]]
 
 ### 2022-09-29
 
-- [ ] [[EDAV - Multivariate Continuous Data|EDAV - Multivariate Continuous Data]]
-    - Remember to transform values into numerics (continuous)
-- [[Parallel Coordinate|Parallel Coordinate]]
-- [ ] [[EDAV - Multivariate Categorical Data|EDAV - Multivariate Categorical Data]]
+- [[EDAV - Multivariate Continuous Data|EDAV - Multivariate Continuous Data]]
+    - [[Parallel Coordinate|Parallel Coordinate]]
+- [[EDAV - Multivariate Categorical Data|EDAV - Multivariate Categorical Data]]
 
 ### 2022-10-06
 
@@ -167,12 +154,36 @@ G --> H[Communicate]
 
 ### 2022-10-13
 
-- PS2
-    - Use `fct_relevel` or `fct_reorder`
-    - The bar is horizontal
-    - for 2, only one column is needed
-    - provide links for the research
-    - patterns should involve all variables
-    - find the best options for each pair of vars
 - [[Heatmap|Heatmap]]
 - [[Alluvial Diagram|Alluvial Diagram]]
+
+### 2022-10-18
+
+- [[R Package - Bookdown|R Package - Bookdown]]
+    - [Home | Bookdown](https://bookdown.org)
+- [[Git|Git]]/GitHub Tutorials
+    - [3 Contribute to this Resource | edav dot info, 1st edition](https://jtr13.github.io/EDAV/contribute.html)
+    - [Chapter 6 GitHub/git Resources | edav.info, 2nd edition](https://edav.info/github.html)
+    - [Let’s Git started | Happy Git and GitHub for the useR](https://happygitwithr.com)
+- [RStudio Projects](https://r4ds.had.co.nz/workflow-projects.html)
+
+### 2022-10-20
+
+- A template in GitHub is a repo without history when you fork
+
+### 2022-10-25
+
+- [[Biplot|Biplot]]
+
+### 2022-10-27
+
+- Choose Data
+    - No Kaggle data
+        - go to the direct source
+    - No popular data
+        - e.g. Yelp, Airbnb
+    - *Healthy* data
+        - no wrong data
+    - *good-shape* data
+        - balance between the number of observations and variables
+- [[Graph Color|Graph Color]]
