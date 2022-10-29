@@ -25,8 +25,7 @@ tidydata <- messydata %>%
     pivot_longer(cols = !id, names_to = "roadtype", values_to = "mpg")
 ```
 
-> `pivot_longer()` "lengthens" data, increasing the number of rows
-     and decreasing the number of columns. The inverse transformation  is `pivot_wider()`
+> `pivot_longer()` "lengthens" data, increasing the number of rows and decreasing the number of columns. The inverse transformation  is `pivot_wider()`
 
 As we can see, the `id` column is essential. Sometimes data have row names, but don't have a column name for them. Then we can create one manually
 
