@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/histogram/"}
+{"dg-publish":true,"permalink":"/histogram/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
 ---
 
 > [!meta]-
