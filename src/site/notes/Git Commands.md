@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/git-commands/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/git-commands/"}
 ---
 
 > [!meta]-
-> sup:: [[Git|Git]]  
+> sup:: [[Git\|Git]]  
 > state:: done
 
 # Git Commands
@@ -170,7 +170,7 @@ git status
 
 ## Tagging
 
-- [ ] [[!todo|!todo]] [Git - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+- [ ] [[!todo\|!todo]] [Git - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 ## List Files
 
