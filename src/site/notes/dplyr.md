@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/dplyr/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/dplyr/"}
 ---
 
 > [!meta]-
-sup:: [[R Package|R Package]], [[EDAV|EDAV]]  
+sup:: [[R Package\|R Package]], [[EDAV\|EDAV]]  
 state:: done  
 source: [5 Data transformation | R for Data Science](https://r4ds.had.co.nz/transform.html)
 
@@ -53,7 +53,7 @@ arrange(flights, year, desc(month), day)
 - `starts_with("abc")` matches names that begin with `abc`
 - `ends_with("xyz")` matches names that end with `xyz`
 - `contains("ijk")` matches names that contain `ijk`
-- `matches("(.)\\1")` selects variables that match a [[Regular Expression|Regular Expression]]
+- `matches("(.)\\1")` selects variables that match a [[Regular Expression\|Regular Expression]]
 - `num_range("x", 1:3)` matches `x1`, `x2` and `x3`
 - `everything()` matches all columns, only useful when you want to **move some columns to the start**
 
