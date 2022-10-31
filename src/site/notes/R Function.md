@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/r-function/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/r-function/"}
 ---
 
 > [!meta]-
-sup:: [[R|R]]  
+sup:: [[R\|R]]  
 state:: done
 
 # R Function
