@@ -1,20 +1,20 @@
 ---
-{"dg-publish":true,"permalink":"/edav-dependency-relationship/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-dependency-relationship/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Dependency Relationship
 
-When we focus on two [[EDAV - Multivariate Continuous Data|continuous variables]], we want to find out how they **relate**, is one variable dependent on the other?
+When we focus on two [[EDAV - Multivariate Continuous Data\|continuous variables]], we want to find out how they **relate**, is one variable dependent on the other?
 
 ## Graphs
 
-- [[Scatterplot|Scatterplot]]
-- [[Heatmap|Heatmap]]
-- [[Density Contour Plot|Density Contour Plot]]
+- [[Scatterplot\|Scatterplot]]
+- [[Heatmap\|Heatmap]]
+- [[Density Contour Plot\|Density Contour Plot]]
 
 ## Features
 
