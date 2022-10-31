@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/q-q-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/q-q-plot/"}
 ---
 
 > [!meta]-
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Q-Q Plot
@@ -12,12 +12,12 @@ A **Q–Q plot (quantile-quantile plot)** is a probability plot, a **graphical m
 
 If the two distributions being compared are similar, the points in the Q–Q plot will approximately lie on the **identity line $y = x$**. If the distributions are linearly related, the points in the Q–Q plot will approximately lie on a line, but not necessarily on the line $y = x$. Q–Q plots can also be used as a graphical means of estimating parameters in a location-scale family of distributions.
 
-Q–Q plots are commonly used to compare a data set to a theoretical model. For example, collected data and a [[Normal Distribution|Normal Distribution]].
-Q–Q plots can also be used to compare collections of data, which can be viewed as a **non-parametric** approach to comparing their underlying distributions. A Q–Q plot is generally more diagnostic than comparing the samples' [[Histogram|Histogram]]s, but is less widely known.
+Q–Q plots are commonly used to compare a data set to a theoretical model. For example, collected data and a [[Normal Distribution\|Normal Distribution]].
+Q–Q plots can also be used to compare collections of data, which can be viewed as a **non-parametric** approach to comparing their underlying distributions. A Q–Q plot is generally more diagnostic than comparing the samples' [[Histogram\|Histogram]]s, but is less widely known.
 
 Since Q–Q plots compare distributions, there is no need for the values to be observed as pairs, as in a scatter plot, or even for the numbers of values in the two groups being compared to be equal.
 
-- [~] Another graphical method to compare distributions is to compare the [[Density Curve|Density Curve]]s.
+- [~] Another graphical method to compare distributions is to compare the [[Density Curve\|Density Curve]]s.
 
 ## Q-Q Line
 
