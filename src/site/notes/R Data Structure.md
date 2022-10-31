@@ -1,18 +1,18 @@
 ---
-{"dg-publish":true,"permalink":"/r-data-structure/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/r-data-structure/"}
 ---
 
 > [!meta]-
-sup:: [[R|R]]  
+sup:: [[R\|R]]  
 state:: done
 
 # R Data Structure
 
-[[R Type|R Type]]s are types for the smallest objects in [[R|R]]. Furthermore, these objects can form more complex **data structures**.
+[[R Type\|R Type]]s are types for the smallest objects in [[R\|R]]. Furthermore, these objects can form more complex **data structures**.
 
 ## Vector
 
-In [[R|R]], every single value, like `5L`, is considered a vector of length 1.
+In [[R\|R]], every single value, like `5L`, is considered a vector of length 1.
 There is one rule about vectors: **a vector can only contain objects of the same type**.
 Use function `c` (for "combine") to create a vector with more than 1 element.
 If you combine objects of different types into a vector, the objects will be transformed into the same type.
@@ -55,8 +55,8 @@ as.logical(c(1,0,1,1))  # TRUE FALSE  TRUE  TRUE
 
 ## Matrix
 
-Matrix is a special two-dimensional data structure in [[R|R]]. The class of it is `"matrix" "array"`.
-Like a vector, the elements in a matrix should/will be of the same [[R Type|R Type]].
+Matrix is a special two-dimensional data structure in [[R\|R]]. The class of it is `"matrix" "array"`.
+Like a vector, the elements in a matrix should/will be of the same [[R Type\|R Type]].
 To create a matrix, using the following function
 
 ```r
@@ -70,7 +70,7 @@ M <- matrix([data =] data, [nrow =] 3, [ncol =] 2)
 
 ### Indexing
 
-Since a matrix is two-dimensional, the index has two arguments, like `M[1,2]`. When the argument is missing, it is interpreted as a colon `:` in [[Matlab Array - Indexing|Matlab Array - Indexing]].
+Since a matrix is two-dimensional, the index has two arguments, like `M[1,2]`. When the argument is missing, it is interpreted as a colon `:` in [[Matlab Array - Indexing\|Matlab Array - Indexing]].
 
 ```r
 M <- matrix(1:4,2,2)
@@ -82,7 +82,7 @@ M[]
 
 ## Data Frame
 
-Data frames are used to store **tabular data** (2d) in [[R|R]]. They are represented as a special type of [list](#list) where every element of the list has to have the same length.
+Data frames are used to store **tabular data** (2d) in [[R\|R]]. They are represented as a special type of [list](#list) where every element of the list has to have the same length.
 
 Data frames are usually created by reading in a dataset using the `read.table()` or `read.csv()`. However, data frames can also be created explicitly with the `data.frame()`function or they can be coerced from other types of objects like lists.
 
@@ -120,7 +120,7 @@ students$houseFounderName <- NULL
 
 ## Array
 
-An array in R is a **multi-dimensional** homogenous (of the same [[R Type|R Type]]) data structure, like [[Matlab Array|Matlab Array]].
+An array in R is a **multi-dimensional** homogenous (of the same [[R Type\|R Type]]) data structure, like [[Matlab Array\|Matlab Array]].
 
 ```r
 array(c(c(c(2, 300, 4), c(8, 9, 0)), c(c(5, 60, 0), c(66, 7, 847))), dim = c(3, 2, 2))
@@ -134,7 +134,7 @@ A list is a multi-dimensional **heterogeneous** data structure.
 x <- list(1, "a", TRUE, 1 + 4i)
 ```
 
-Lists are like [[Python Types - Dictionary|dictionaries]]: you can give each value a name:
+Lists are like [[Python Types - Dictionary\|dictionaries]]: you can give each value a name:
 
 ```r
 x <- list(time = 1:40)
