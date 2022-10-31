@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Multivariate Continuous Data
@@ -11,15 +11,15 @@ state:: done
 ## Graphs
 
 - Two continuous variables
-    - [[Scatterplot|Scatterplot]]
-    - [[Heatmap|Heatmap]]
-    - [[Density Contour Plot|Density Contour Plot]]
+    - [[Scatterplot\|Scatterplot]]
+    - [[Heatmap\|Heatmap]]
+    - [[Density Contour Plot\|Density Contour Plot]]
 - Three continuous variables
-    - [[Scatterplot Matrix|Scatterplot Matrix]]
-    - 3D [[Scatterplot|Scatterplot]] (interactive)
+    - [[Scatterplot Matrix\|Scatterplot Matrix]]
+    - 3D [[Scatterplot\|Scatterplot]] (interactive)
 - More
-    - [[Scatterplot Matrix|Scatterplot Matrix]]
+    - [[Scatterplot Matrix\|Scatterplot Matrix]]
         - Not conveying the multivariate structure but only pair-wise relationships
-    - [[Parallel Coordinate|Parallel Coordinate]]
+    - [[Parallel Coordinate\|Parallel Coordinate]]
 
 - [~] When manipulating dataframes with multivariate categorical data, remember to transform values into numerics (continuous).
