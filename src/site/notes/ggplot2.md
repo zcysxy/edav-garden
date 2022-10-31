@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/ggplot2/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/ggplot2/"}
 ---
 
 > [!meta]-
-sup:: [[EDAV|EDAV]], [[R Package|R Package]]  
+sup:: [[EDAV\|EDAV]], [[R Package\|R Package]]  
 state:: done  
 source:: [3 Data visualisation | R for Data Science](https://r4ds.had.co.nz/data-visualisation.html), [Chapter 7 Learning ggplot2 | edav.info, 2nd edition](https://edav.info/learning-ggplot2.html), [Create a new layer — layer • ggplot2](https://ggplot2.tidyverse.org/reference/layer.html)
 
@@ -126,7 +126,7 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 
 ### Statistical Transformation
 
-Not all graphs plot the same information about the data. Scatter plots plot the raw value, while [[Histogram|Histogram]]s plots the frequencies. The algorithm used to calculate the statistics to plot is called a `stat`, short for statistical transformation.
+Not all graphs plot the same information about the data. Scatter plots plot the raw value, while [[Histogram\|Histogram]]s plots the frequencies. The algorithm used to calculate the statistics to plot is called a `stat`, short for statistical transformation.
 
 Like `bin`, it first put data in different bins, and then calculate the count in each bin.
 
@@ -188,7 +188,7 @@ The output graph will be three, one for each species.
 To create two-dimensional facets:
 
 - Use option `nrow=x` in `facet_wrap()`
-- Use `facet_grid()` with [[R Type - Formula|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns
+- Use `facet_grid()` with [[R Type - Formula\|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns
     - Use `facet_grid(. ~ x)` and `facet_grid(x ~ .)` when you only want facet on one variable
 
 To use different adaptive scales for each facet, use option `scales = "free"`, `scales = "free_y"`, or `scales = "free_x"`. ^32e6e9
