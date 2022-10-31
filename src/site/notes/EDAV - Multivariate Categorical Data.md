@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/edav-multivariate-categorical-data/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-multivariate-categorical-data/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # EDAV - Multivariate Categorical Data
@@ -17,13 +17,13 @@ When creating a graph for multivariate categorical data, we don't want multiple 
 To highlight different aspects of data in different categories, we can use
 
 - Frequency
-    - [[Bar Chart|Bar Chart]]
+    - [[Bar Chart\|Bar Chart]]
         - Stacked bars
         - Grouped bars
-    - [[Cleveland Dot Plot|Cleveland Dot Plot]]
+    - [[Cleveland Dot Plot\|Cleveland Dot Plot]]
         - multiple dots
         - facets
 - Proportion / Association
-    - [[Mosaic Plot|Mosaic Plot]]
+    - [[Mosaic Plot\|Mosaic Plot]]
 - Change of State
-    - [[Alluvial Diagram|Alluvial Diagram]]
+    - [[Alluvial Diagram\|Alluvial Diagram]]
