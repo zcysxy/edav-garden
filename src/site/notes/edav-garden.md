@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-garden/","tags":"gardenEntry"}
 ---
 
 > [!meta]-  
-state:: [[%wip|%wip]]  
-sup:: [[EDAV|EDAV]]  
+state:: [[%wip\|%wip]]  
+sup:: [[EDAV\|EDAV]]  
 
 # EDAV Garden
 
@@ -25,8 +25,8 @@ sup:: [[EDAV|EDAV]]
 ## Basic Elements
 
 - Interdisciplinary
-    - [[Statistics|Statistics]]
-    - [[Computer Science|Computer Science]]
+    - [[Statistics\|Statistics]]
+    - [[Computer Science\|Computer Science]]
     - Graphic Design
     - Journalism
     - Subject Expertise
@@ -46,38 +46,38 @@ sup:: [[EDAV|EDAV]]
 * Website
     * <https://edav.info>
 * Tools
-    * [[R|R]]
-    * [[Git|Git]]
-    * [[JavaScript|JavaScript]]
+    * [[R\|R]]
+    * [[Git\|Git]]
+    * [[JavaScript\|JavaScript]]
     * D3 (library for JS)
 
 ## Plots Gallery
 
-- [[EDAV - Continuous Variable|Continuous Variable]]
-    - [[Histogram|Histogram]]
-    - [[Boxplot|Boxplot]]
-    - [[Q-Q Plot|Q-Q Plot]]
-    - [[Density Curve|Density Curve]]
-    - [[Ridgeline|Ridgeline]]
-- [[EDAV - Categorical Data|Categorical Data]]
-    - [[Bar Chart|Bar Chart]]
-    - [[Cleveland Dot Plot|Cleveland Dot Plot]]
-- [[EDAV - Dependency Relationship|Dependency Relationship]]
-    - [[Scatterplot|Scatterplot]]
-    - [[Heatmap|Heatmap]]
-    - [[Density Contour Plot|Density Contour Plot]]
-- [[EDAV - Multivariate Continuous Data|Multivariate Continuous Data]]
-    - [[Scatterplot Matrix|Scatterplot Matrix]]
-    - [[Parallel Coordinate|Parallel Coordinate]]
-    - [[Biplot|Biplot]]
-- [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]]
-    - [[Mosaic Plot|Mosaic Plot]]
-    - [[Heatmap|Heatmap]]
-    - [[Alluvial Diagram|Alluvial Diagram]]
+- [[EDAV - Continuous Variable\|Continuous Variable]]
+    - [[Histogram\|Histogram]]
+    - [[Boxplot\|Boxplot]]
+    - [[Q-Q Plot\|Q-Q Plot]]
+    - [[Density Curve\|Density Curve]]
+    - [[Ridgeline\|Ridgeline]]
+- [[EDAV - Categorical Data\|Categorical Data]]
+    - [[Bar Chart\|Bar Chart]]
+    - [[Cleveland Dot Plot\|Cleveland Dot Plot]]
+- [[EDAV - Dependency Relationship\|Dependency Relationship]]
+    - [[Scatterplot\|Scatterplot]]
+    - [[Heatmap\|Heatmap]]
+    - [[Density Contour Plot\|Density Contour Plot]]
+- [[EDAV - Multivariate Continuous Data\|Multivariate Continuous Data]]
+    - [[Scatterplot Matrix\|Scatterplot Matrix]]
+    - [[Parallel Coordinate\|Parallel Coordinate]]
+    - [[Biplot\|Biplot]]
+- [[EDAV - Multivariate Categorical Data\|Multivariate Categorical Data]]
+    - [[Mosaic Plot\|Mosaic Plot]]
+    - [[Heatmap\|Heatmap]]
+    - [[Alluvial Diagram\|Alluvial Diagram]]
 - Other
-    - [[Graph Color|Graph Color]]
+    - [[Graph Color\|Graph Color]]
 
-## [[R|R]] References
+## [[R\|R]] References
 
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
@@ -86,20 +86,20 @@ sup:: [[EDAV|EDAV]]
 
 ## References
 
-* [[R Basics|R Basics]]
-* [[R Type|R Type]]
-* [[R Data Structure|R Data Structure]]
-* [[R Function|R Function]]
-* [[R Function List|R Function List]]
-* [[R Operator|R Operator]]
-* [[R Package|R Package]]
+* [[R Basics\|R Basics]]
+* [[R Type\|R Type]]
+* [[R Data Structure\|R Data Structure]]
+* [[R Function\|R Function]]
+* [[R Function List\|R Function List]]
+* [[R Operator\|R Operator]]
+* [[R Package\|R Package]]
     - tidyverse
-        - [[ggplot2|ggplot2]]
-        - [[dplyr|dplyr]]
-        - [[forcats|forcats]]
-        - [[tidyr|tidyr]]
-    - [[R Package - Plotly|Plotly]]
-    - [[rvest|rvest]]
+        - [[ggplot2\|ggplot2]]
+        - [[dplyr\|dplyr]]
+        - [[forcats\|forcats]]
+        - [[tidyr\|tidyr]]
+    - [[R Package - Plotly\|Plotly]]
+    - [[rvest\|rvest]]
 
 
 </div></div>
@@ -107,4 +107,4 @@ sup:: [[EDAV|EDAV]]
 
 ## Course Log
 
-> For a time log of notes, see this [[EDAV#Notes|course log]].
+> For a time log of notes, see this [[EDAV#Notes\|course log]].
