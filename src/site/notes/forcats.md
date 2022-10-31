@@ -1,18 +1,18 @@
 ---
-{"dg-publish":true,"permalink":"/forcats/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/forcats/"}
 ---
 
 > [!meta]-  
-sup:: [[R Package|R Package]]  
+sup:: [[R Package\|R Package]]  
 state:: done  
 
 # forcats
 
-Package `forcats` contain tools for working with [[EDAV - Categorical Data|EDAV - Categorical Data]] ([[R Type#Factors|R Type#Factors]])
+Package `forcats` contain tools for working with [[EDAV - Categorical Data\|EDAV - Categorical Data]] ([[R Type#Factors\|R Type#Factors]])
 
 ## Recode Factor Levels
 
-To recode the levels, do not use `levels(x) <- c("A", "B")`; use `fct_recode()` in [[forcats|forcats]] instead.
+To recode the levels, do not use `levels(x) <- c("A", "B")`; use `fct_recode()` in [[forcats\|forcats]] instead.
 
 ```r
 library(forcats)
