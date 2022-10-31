@@ -1,17 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/scatterplot/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
-state:: [[%wip|%wip]]  
-related:: [[EDAV - Dependency Relationship|EDAV - Dependency Relationship]]  
+sup:: [[EDAV\|EDAV]]  
+state:: [[%wip\|%wip]]  
+related:: [[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]  
 
 # Scatterplot
 
 A scatter plot uses Cartesian coordinates to display values for typically **two variables** for a set of data. The data are displayed as a collection of points, each having the value of two variables determining the position.
 
-The major role of scatterplots lies in **revealing associations** ([[EDAV - Dependency Relationship|EDAV - Dependency Relationship]]) between variables, not just linear associations, but any kind of association.
+The major role of scatterplots lies in **revealing associations** ([[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]) between variables, not just linear associations, but any kind of association.
 
 ## Features
 
@@ -50,22 +50,22 @@ As we can see in the above example, scatterplots may **overplot**, making dots s
         - `geom_point(alpha = .3, stroke = 0)`
     - smaller dots
         - Default value in `geom_point` is `size = 1.5`
-            - [~] We can use `ggplot2:::check_subclass("point", "Geom")$default_aes` to see the default values in [[ggplot2|ggplot2]]
+            - [~] We can use `ggplot2:::check_subclass("point", "Geom")$default_aes` to see the default values in [[ggplot2\|ggplot2]]
         - Make `shape = "."`
 - Don't plot all points
     - randomly sample data
         - `|> slice_sample(n = 1000)`
     - subset data
         - static: by percentiles
-        - interactive: [[R Package - Plotly|ggplotly(), plot_ly()]]
+        - interactive: [[R Package - Plotly\|ggplotly(), plot_ly()]]
     - remove outliers
 - Transform to log scale
     - `+ scale_x_log10()`
     - `+ scale_x_log10(breaks = c(1, 10, 100, 1000, 10000))`
-    - [ ] [[!todo|!todo]] Complement [[ggplot2#Scale|ggplot2#Scale]]
+    - [ ] [[!todo\|!todo]] Complement [[ggplot2#Scale\|ggplot2#Scale]]
 
 ## Smooth Scatterplot
 
-A smooth scatterplot is a combination of a scatterplot, a [[Heatmap|Heatmap]], and a [[Density Contour Plot|Density Contour Plot]]. It plots the points and uses colors and shapes to show the magnitude of clusters. Use the [[R|R]] built-in function `smoothScatter(x,y)` to create a smooth scatterplot.
+A smooth scatterplot is a combination of a scatterplot, a [[Heatmap\|Heatmap]], and a [[Density Contour Plot\|Density Contour Plot]]. It plots the points and uses colors and shapes to show the magnitude of clusters. Use the [[R\|R]] built-in function `smoothScatter(x,y)` to create a smooth scatterplot.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013010542.png)
