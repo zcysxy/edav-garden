@@ -5,7 +5,8 @@
       <div class="sidebar" :style="open && isDesktop ? 'box-shadow: -5px 0 15px rgba(0,0,0,0.3);' : ''">
             <div x-show="isDesktop" class="expand-line">
 
-                  <button style="font-size: 48px; background: transparent;" @click="toggleOpen()">
+                  <button style="font-size: 48px; background: transparent; border:none; box-shadow: none;" @click="toggleOpen()">
+
                         <i x-show="open" style="display: none;" class="fa fa-caret-right"></i>
                         <i x-show="!open" class="fa fa-caret-left"></i>
                   </button>
@@ -13,14 +14,14 @@
 
             <div x-show="open || !isDesktop" class="sidebar-container" style="display: none;">
 
-                  {%if dgShowLocalGraph === true%}
+                  {%if settings.dgShowLocalGraph === true%}
                         <div x-show="isDesktop">
                               <h3>Graph</h3>
                               <div id="link-graph" style="margin-bottom:20px; background-color: var(--background-primary); border-radius: 10px; width: fit-content;"></div>
                         </div>
                         {%endif%}
 
-                        {%if dgShowBacklinks === true %}
+                        {%if settings.dgShowBacklinks === true %}
                               <h3>Links to this page</h3>
                               {%- if backlinks.length === 0 -%}
                                     <div class="backlink-card">
@@ -38,7 +39,7 @@
             </div>
       </div>
 
-            {%if dgShowLocalGraph === true %}
+            {%if settings.dgShowLocalGraph === true %}
                   {%include "components/graphScript.njk"%}
             {% endif %}
 
@@ -46,7 +47,7 @@
                   document.addEventListener('alpine:init', () => {
 
                         const isDesktop = window.innerWidth >= 1100;
-                        {% if dgShowLocalGraph === true %}
+                        {% if settings.dgShowLocalGraph === true %}
                               renderGraph(600, 400);
                         {% endif %}
 
