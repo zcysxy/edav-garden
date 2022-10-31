@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/edav-categorical-data/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-categorical-data/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 source:: [Nominal vs Ordinal Scale: What is the Difference? | QuestionPro](https://www.questionpro.com/blog/nominal-vs-ordinal-scale/)
 
@@ -13,13 +13,13 @@ Categorical data is a type of data that can be divided into groups or **categori
 
 ## Graphs
 
-- [[Bar Chart|Bar Chart]]
-    - since the bars in a [[Bar Chart|Bar Chart]] always have the same width, you compare lengths, not areas, which is much easier
+- [[Bar Chart\|Bar Chart]]
+    - since the bars in a [[Bar Chart\|Bar Chart]] always have the same width, you compare lengths, not areas, which is much easier
 - Pie Chart
-- [[Cleveland Dot Plot|Cleveland Dot Plot]]
+- [[Cleveland Dot Plot\|Cleveland Dot Plot]]
 
 > [!rmk] Points vs Areas
-> There are suggestions for using **individual points** (not the same as [[Cleveland Dot Plot|Cleveland Dot Plot]]) for cases and jittering to keep them apart. This does not work well for high-frequency groups, as it is hard to assess their densities, and the displays for low-frequency groups may exhibit non-existent patterns due to the random jittering.
+> There are suggestions for using **individual points** (not the same as [[Cleveland Dot Plot\|Cleveland Dot Plot]]) for cases and jittering to keep them apart. This does not work well for high-frequency groups, as it is hard to assess their densities, and the displays for low-frequency groups may exhibit non-existent patterns due to the random jittering.
 > Nevertheless, as always with exploratory graphics, if a graphic helps to uncover information, it is worth using.
 
 ## Ordinal vs Nominal
@@ -53,7 +53,7 @@ Nominal Scale and Ordinal Scale are two typical categorical variable measure
 
 ## Facets
 
-Sometimes categories can be further divided into different groups, with different scales. We can use [[ggplot2#Facet|facets]] w/ different scales if needed. See [[ggplot2#^32e6e9|ggplot2#^32e6e9]] for code. However usually, we should not use different scales in a plot.
+Sometimes categories can be further divided into different groups, with different scales. We can use [[ggplot2#Facet\|facets]] w/ different scales if needed. See [[ggplot2#^32e6e9\|ggplot2#^32e6e9]] for code. However usually, we should not use different scales in a plot.
 
 ## Top/Bottom-Coded Data
 
@@ -95,13 +95,13 @@ Likert data is a special categorical data that uses a **psychometric scale** com
 - disagree
 - strongly disagree
 
-Relative frequency stacked [[Bar Chart|Bar Chart]]s are used to present this kind of data.
+Relative frequency stacked [[Bar Chart\|Bar Chart]]s are used to present this kind of data.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png)
 
 Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.
 
-Another type of [[Bar Chart|Bar Chart]], **diverging stacked bar chart**s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33
+Another type of [[Bar Chart\|Bar Chart]], **diverging stacked bar chart**s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225854.png)
 
@@ -109,7 +109,7 @@ Furthermore, we can separate and even remove the neutral category.
 
 ## Combine Continuous Variables and Categorical Variables
 
-When combining [[EDAV - Continuous Variable|Continuous Variable]]s and [[EDAV - Categorical Data|Categorical Variable]]s, we should consider
+When combining [[EDAV - Continuous Variable\|Continuous Variable]]s and [[EDAV - Categorical Data\|Categorical Variable]]s, we should consider
 
 - mapping options:
     - Continuous: x-axis, y-axis, color (not so great), size (not so great)
