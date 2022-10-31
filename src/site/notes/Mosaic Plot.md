@@ -1,19 +1,19 @@
 ---
-{"dg-publish":true,"permalink":"/mosaic-plot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/mosaic-plot/"}
 ---
 
 > [!meta]-
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Mosaic Plot
 
 A mosaic plot is a filled rectangular plot (no white space) with consistent numbers of rows and columns, in which the area of each small rectangle is proportional to the frequency count for a unique combination of levels of the categorical variables displayed.
 
-- Mosaic plots are like stacked [[Bar Chart|Bar Chart]]s, except that the width and height of the bars are proportional to the amount of data.
+- Mosaic plots are like stacked [[Bar Chart\|Bar Chart]]s, except that the width and height of the bars are proportional to the amount of data.
 - Mosaic plots are not **treemaps**, which are another type of filled rectangular plots representing **hierarchical data** (fill color does not necessarily represent frequency count)
 - Mosaic plots with only one horizontal cut are called ==spine plots==, where vertical cuts are called ==spines==
-- Mosaic plots with the same bin width are relative frequency stacked [[Bar Chart|Bar Chart]]s
+- Mosaic plots with the same bin width are relative frequency stacked [[Bar Chart\|Bar Chart]]s
     - All bars sum up to 100%, thus have the same height
 
 ![|400](https://upload.wikimedia.org/wikipedia/commons/8/84/Mosaic-big.png)
@@ -25,7 +25,7 @@ The *steeper* the *stairs*, the stronger the relationship.
 
 ## More Variables
 
-Mosaic plots are powerful for presenting [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]]. We can put multiple variables on the x-axis and y-axis. The most important problem is **cutting** the variables.
+Mosaic plots are powerful for presenting [[EDAV - Multivariate Categorical Data\|Multivariate Categorical Data]]. We can put multiple variables on the x-axis and y-axis. The most important problem is **cutting** the variables.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013185846.png)
 
@@ -52,11 +52,11 @@ As in the above example, we put variables
 
 ## Implementation
 
-- `geom_mosaic` in [[ggplot2|ggplot2]]
+- `geom_mosaic` in [[ggplot2\|ggplot2]]
 - `mosaic()` in package `vcd`
     - [@] `mosaic(Music ~ Age, data = counts3, direction = c("v", "h"))`
     - [@] `mosaic(Music ~ Age + Favorite, data = counts3, direction = c("v", "v", "h"))`
-    - Here [[R Type - Formula|R Type - Formula]] can be read as "on", especially for dependent variables
+    - Here [[R Type - Formula\|R Type - Formula]] can be read as "on", especially for dependent variables
     - There should be a `Freq` column in the date, which is a standard column in a dataframe
     - use `vcd::labelings` functions to abbreviate labels
         - use option `rot_labels = c(0,0,0,0)` to rotate labels
@@ -64,8 +64,8 @@ As in the above example, we put variables
 
 ## Simpson's Paradox
 
-Simpson's paradox is a phenomenon in [[Probability Theory|Probability Theory]] and [[Statistics|Statistics]] in which a trend appears in several groups of data but disappears or reverses when the groups are combined.
-An example of Simpson's paradox is [[A Plausible Treatment Test|A Plausible Treatment Test]].
+Simpson's paradox is a phenomenon in [[Probability Theory\|Probability Theory]] and [[Statistics\|Statistics]] in which a trend appears in several groups of data but disappears or reverses when the groups are combined.
+An example of Simpson's paradox is [[A Plausible Treatment Test\|A Plausible Treatment Test]].
 An visual example of Simpson's paradox:
 
 ![200x200](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222838.png) ==> ![200x200](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222903.png)
