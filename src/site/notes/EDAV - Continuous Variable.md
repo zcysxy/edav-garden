@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/edav-continuous-variable/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/edav-continuous-variable/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
-state:: [[%wip|%wip]]  
+sup:: [[EDAV\|EDAV]]  
+state:: [[%wip\|%wip]]  
 
 # Continuous Variable
 
@@ -15,7 +15,7 @@ A **continuous variable** can in theory take any value over its range, as oppose
 ## Features of Continuous Variables
 
 - **Asymmetry**
-    - the distribution may not be symmetric like [[Normal Distribution|Normal Distribution]]
+    - the distribution may not be symmetric like [[Normal Distribution\|Normal Distribution]]
     - the distribution may be skewed to the left or right
     - [@] distributions of income
 - **Outliers**
@@ -34,25 +34,25 @@ Different graphs emphasize different features.
 
 ## Graphs
 
-- [[Histogram|Histogram]]
+- [[Histogram\|Histogram]]
     - asymmetry
     - multimodality
     - gaps
     - heaping
     - rounding
-- [[Boxplot|Boxplot]]
+- [[Boxplot\|Boxplot]]
     - outliers
     - statistics
     - ❌ multimodality
-- [[Density Curve|Density Curve]]
+- [[Density Curve\|Density Curve]]
     - asymmetry
     - multimodality
     - ❌ gaps
     - ❌ heaping
-- [[Ridgeline|Ridgeline]]
-- [[Bar Chart|Bar Chart]]
+- [[Ridgeline\|Ridgeline]]
+- [[Bar Chart\|Bar Chart]]
     - gaps, heaping
-- [[Dotplot|Dotplot]]
+- [[Dotplot\|Dotplot]]
     - gaps
 
 ## Combine Combine Continuous Variables and Categorical Variables
@@ -64,7 +64,7 @@ Different graphs emphasize different features.
 
 ## Combine Continuous Variables and Categorical Variables
 
-When combining [[EDAV - Continuous Variable|Continuous Variable]]s and [[EDAV - Categorical Data|Categorical Variable]]s, we should consider
+When combining [[EDAV - Continuous Variable\|Continuous Variable]]s and [[EDAV - Categorical Data\|Categorical Variable]]s, we should consider
 
 - mapping options:
     - Continuous: x-axis, y-axis, color (not so great), size (not so great)
