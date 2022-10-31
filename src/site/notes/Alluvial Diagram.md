@@ -1,15 +1,15 @@
 ---
-{"dg-publish":true,"permalink":"/alluvial-diagram/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/alluvial-diagram/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Alluvial Diagram
 
 Alluvial diagrams take inspiration from alluvial fans.
-They use [[Parallel Coordinate|Parallel Coordinate]]s for [[EDAV - Multivariate Categorical Data|Multivariate Categorical Data]].
+They use [[Parallel Coordinate\|Parallel Coordinate]]s for [[EDAV - Multivariate Categorical Data\|Multivariate Categorical Data]].
 They show how data move from one category to some other categories.
 Alluvial diagrams work well for data with *flows* in it. Observations with the same movement are drawn together to show the flow.
 Some examples of data types that are suitable for alluvial diagrams are
@@ -22,7 +22,7 @@ Some examples of data types that are suitable for alluvial diagrams are
 
 Other than axes, we can use colors for one variable to better visualize the patterns. The variable we choose to color should be our most interested one.
 
-Different categories in axes are called ==strata==. Without alluviums, these strata form a [[Bar Chart|Bar Chart]].
+Different categories in axes are called ==strata==. Without alluviums, these strata form a [[Bar Chart\|Bar Chart]].
 The height of the strata and flows represent the size of the clusters.
 
 ## Implementation
@@ -57,7 +57,7 @@ While we can use `geom_flow` to create similar diagrams, where flows may not be 
 - Able to present *ghosted* data, which doesn't have all categorical variables
 - Need not specify the axes
 
-To transform a dataframe to a lodes form, use `to_lodes_form(df, axes = 1:2)`. It works like `pivot_longer` in [[tidyr|tidyr]], making one row per lode.
+To transform a dataframe to a lodes form, use `to_lodes_form(df, axes = 1:2)`. It works like `pivot_longer` in [[tidyr\|tidyr]], making one row per lode.
 
 ```R
 df %>%
