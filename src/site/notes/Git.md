@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/git/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/git/"}
 ---
 
 > [!meta]-
-> sup:: [[App|App]], [[Computer Science|Computer Science]]  
+> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
 > state:: done  
 
 # Git
@@ -57,7 +57,7 @@
 
 
 > [!meta]-
-> sup:: [[App|App]], [[Computer Science|Computer Science]]  
+> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
 > state:: done  
 
 # Git
@@ -111,7 +111,7 @@
 
 
 > [!meta]-
-> sup:: [[App|App]], [[Computer Science|Computer Science]]  
+> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
 > state:: done  
 
 # Git
@@ -165,7 +165,7 @@
 
 
 > [!meta]-
-> sup:: [[App|App]], [[Computer Science|Computer Science]]  
+> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
 > state:: done  
 
 # Git
@@ -219,7 +219,7 @@
 
 
 > [!meta]-
-> sup:: [[App|App]], [[Computer Science|Computer Science]]  
+> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
 > state:: done  
 
 # Git
@@ -266,7 +266,7 @@
 
 1. **Modified**: changed the file but have not committed it to your database yet
 2. **Staged**: marked a modified file in its current version to go into your next commit snapshot
-    * ![[Git#^d876a5|#^d876a5]]
+    * ![[Git#^d876a5\|#^d876a5]]
 3. **Committed**: the data is safely stored in your local database
 
 ![](https://git-scm.com/book/en/v2/images/areas.png)
@@ -304,7 +304,7 @@ In essence, when a branch gets merged into master, its commits get added to the 
 
 ### Update
 
-> On [[Linux|Linux]]
+> On [[Linux\|Linux]]
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -341,7 +341,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -419,7 +419,7 @@ In essence, when a branch gets merged into master, its commits get added to the 
 
 ### Update
 
-> On [[Linux|Linux]]
+> On [[Linux\|Linux]]
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -456,7 +456,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -534,7 +534,7 @@ In essence, when a branch gets merged into master, its commits get added to the 
 
 ### Update
 
-> On [[Linux|Linux]]
+> On [[Linux\|Linux]]
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -571,7 +571,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -649,7 +649,7 @@ In essence, when a branch gets merged into master, its commits get added to the 
 
 ### Update
 
-> On [[Linux|Linux]]
+> On [[Linux\|Linux]]
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -686,7 +686,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -764,7 +764,7 @@ In essence, when a branch gets merged into master, its commits get added to the 
 
 ### Update
 
-> On [[Linux|Linux]]
+> On [[Linux\|Linux]]
 
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -801,7 +801,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
