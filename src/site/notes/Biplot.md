@@ -1,15 +1,15 @@
 ---
-{"dg-publish":true,"permalink":"/biplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/biplot/"}
 ---
 
 > [!meta]-  
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
-related:: [[Principal Components Analysis|Principal Components Analysis]]
+related:: [[Principal Components Analysis\|Principal Components Analysis]]
 
 # Biplot
 
-- A biplot is a generalization of the simple two-variable [[Scatterplot|Scatterplot]]
+- A biplot is a generalization of the simple two-variable [[Scatterplot\|Scatterplot]]
 - A biplot overlays a **score plot** with a **loading plot**
     - This allows displaying information on both samples and variables
     - Samples are displayed as points
@@ -23,15 +23,15 @@ related:: [[Principal Components Analysis|Principal Components Analysis]]
 
 We can use dimension-reduction methods to select or form two main variables, then *project* other selected/formed variables to the plane (make them linear combinations of the two main variables).
 
-For example, using [[Principal Components Analysis|Principal Components Analysis]], we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.
+For example, using [[Principal Components Analysis\|Principal Components Analysis]], we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165028.png)
 
-As [[Principal Components Analysis|PCA]] theory suggests, the first PCs should have wider angles, meaning they have higher variance. Therefore, two vectors with a small angle (or near 180 degrees) have a high correlation; and two vectors that are near perpendicular have a small correlation. We can also compare a loading plot with a [[Scatterplot Matrix|Scatterplot Matrix]] to verify this property.
+As [[Principal Components Analysis\|PCA]] theory suggests, the first PCs should have wider angles, meaning they have higher variance. Therefore, two vectors with a small angle (or near 180 degrees) have a high correlation; and two vectors that are near perpendicular have a small correlation. We can also compare a loading plot with a [[Scatterplot Matrix\|Scatterplot Matrix]] to verify this property.
 
 ## Score Plot
 
-In [[Principal Components Analysis|PCA]], transformed data is called PC scores. Similarly, score plots present transformed samples. A biplot combines a loading plot and a score plot.
+In [[Principal Components Analysis\|PCA]], transformed data is called PC scores. Similarly, score plots present transformed samples. A biplot combines a loading plot and a score plot.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165628.png)
 
