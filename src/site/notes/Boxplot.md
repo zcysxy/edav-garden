@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/boxplot/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/boxplot/"}
 ---
 
 > [!meta]-
-sup:: [[EDAV|EDAV]]  
+sup:: [[EDAV\|EDAV]]  
 state:: done  
 
 # Boxplot
@@ -12,7 +12,7 @@ Boxplots display individual outliers and robust statistics for the data, useful 
 
 - Boxplots follow the 5-data summary
     - min, first quartile/ lower hinge, median, third quartile/ upper hinge, max
-        - [ ] [[!tocheck|!tocheck]] Sometimes quartiles are different than hinges
+        - [ ] [[!tocheck\|!tocheck]] Sometimes quartiles are different than hinges
 - Area != number of data points; each area contains the same number of points
     - Area represents the **density**
 - Outliers: data outside the **fences**
@@ -24,6 +24,6 @@ Boxplots display individual outliers and robust statistics for the data, useful 
 
 - Box width
     - A disadvantage of boxplots is that they don't convey information on how big the different groups are
-    - Set `varwidth = TRUE` in [[ggplot2|ggplot2]], the width of boxes will be proportional to $\sqrt{n}$
+    - Set `varwidth = TRUE` in [[ggplot2\|ggplot2]], the width of boxes will be proportional to $\sqrt{n}$
 - Extreme outliers
     - We can define **outer fences** to be over 3 times the box length away from the box; then outliers outside outer fences are extreme outliers
