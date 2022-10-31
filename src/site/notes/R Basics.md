@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/r-basics/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/r-basics/"}
 ---
 
 > [!meta]-
-sup:: [[R|R]]  
+sup:: [[R\|R]]  
 state:: done
 
 # R Basics
@@ -17,9 +17,9 @@ state:: done
     * `x <- 1` (preferred traditionally)
     * `1 -> x`
     * `x = 1`
-* Variables in [[R|R]] are dynamic typing like [[Python|Python]]
-* The default arithmetics in [[R|R]] are **element-wise**, unlike [[MATLAB|MATLAB]] ^1e9b8c
-* The interactive shell of [[R|R]] uses an indicator `[x]` to show the index of the printed vector
+* Variables in [[R\|R]] are dynamic typing like [[Python\|Python]]
+* The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] ^1e9b8c
+* The interactive shell of [[R\|R]] uses an indicator `[x]` to show the index of the printed vector
     * example:
   
   ```R
