@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/r-type/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/r-type/"}
 ---
 
 > [!meta]-
-sup:: [[R|R]]  
+sup:: [[R\|R]]  
 state:: done
 
 # R Types
@@ -12,7 +12,7 @@ state:: done
 
 - [!] Here we just introduce some basic "atomic" data types. There are many more, like dates and time series.
 
-- [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R|R]] object.
+- [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R\|R]] object.
 
 | Type            | Abbreviation |
 | --------------- | ------------ |
@@ -47,7 +47,7 @@ class(NaN)
 
 ## Complex
 
-The imaginary part of a complex is appended with an `i` in [[R|R]].
+The imaginary part of a complex is appended with an `i` in [[R\|R]].
 
 ```r
 x <- 1 + 1i
@@ -58,7 +58,7 @@ class(x - 1i) # complex
 
 ## Characters
 
-There is no difference between strings and characters in [[R|R]], unlike [[MATLAB|MATLAB]].
+There is no difference between strings and characters in [[R\|R]], unlike [[MATLAB\|MATLAB]].
 And a string and a character are both char vectors of length 1.
 Characters are surrounded by double quotes `"` (or single quotes `'`).
 
@@ -69,7 +69,7 @@ length(c("Hello","World"))
 
 ## Logical
 
-Capital `TRUE`, `FALSE`, and `NA` are three logicals in [[R|R]]
+Capital `TRUE`, `FALSE`, and `NA` are three logicals in [[R\|R]]
 
 ```r
 TRUE # not true or True
@@ -81,7 +81,7 @@ FALSE == FALSE # TRUE
 
 ## Factors
 
-Factors are used to represent [[EDAV - Categorical Data|EDAV - Categorical Data]] and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a _label_.
+Factors are used to represent [[EDAV - Categorical Data\|EDAV - Categorical Data]] and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a _label_.
 
 ```r
 x <- factor(c("yes", "yes", "no", "yes", "no")) 
@@ -103,10 +103,10 @@ unclass(x)
 ```
 
 - Factor levels have an **order**
-    - Not like [[R Type#Characters|#Characters]], which obey alphabetical order
+    - Not like [[R Type#Characters\|#Characters]], which obey alphabetical order
 - Factor levels serve as **labels** for data
-- [[forcats|forcats]] is a useful package for manipulating factors
+- [[forcats\|forcats]] is a useful package for manipulating factors
 
 ## NULL
 
-Capital `NULL` is a special empty object in [[R|R]].
+Capital `NULL` is a special empty object in [[R\|R]].
