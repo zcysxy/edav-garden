@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/tidyr/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/tidyr/"}
 ---
 
 > [!meta]-  
-sup:: [[R Package|R Package]]  
+sup:: [[R Package\|R Package]]  
 state:: done  
 
 # tidyr
