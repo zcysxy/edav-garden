@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/r-function-list/","dgHomeLink":true,"dgPassFrontmatter":false,"dgShowBacklinks":true,"dgShowLocalGraph":true,"dgShowInlineTitle":true}
+{"dg-publish":true,"permalink":"/r-function-list/"}
 ---
 
 > [!meta]-
-sup:: [[R|R]]  
-state:: [[%wip|%wip]]  
-related:: [[R Function|R Function]]
+sup:: [[R\|R]]  
+state:: [[%wip\|%wip]]  
+related:: [[R Function\|R Function]]
 
 # R Function List
 
