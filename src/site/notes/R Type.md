@@ -8,8 +8,6 @@ state:: done
 
 # R Types
 
-[[R Type#Integer\|Integer]]
-
 - [!] Here we just introduce some basic "atomic" data types. There are many more, like dates and time series.
 
 - [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R\|R]] object.
@@ -81,7 +79,7 @@ FALSE == FALSE # TRUE
 
 ## Factors
 
-Factors are used to represent [[EDAV - Categorical Data\|EDAV - Categorical Data]] and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a _label_.
+Factors are used to represent [[EDAV - Categorical Data\|EDAV - Categorical Data]] and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a *label*.
 
 ```r
 x <- factor(c("yes", "yes", "no", "yes", "no")) 
