@@ -187,3 +187,7 @@ G --> H[Communicate]
     - *good-shape* data
         - balance between the number of observations and variables
 - [[Graph Color\|Graph Color]]
+
+### 2022-11-01
+
+- For later parts, you do not need to strictly follow the proposal
