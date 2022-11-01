@@ -69,25 +69,13 @@ To make color vision deficiency (CVD) friendly graphs,
     - [@] Color Oracle
 - Use high contrast
 
----
-title: chagne
-alias:
-type: note
-created: 2022-10-29T02:03:24
-modified: 2022-10-29T02:04:25
----
-> [!meta]-  
-sup::
-state:: [[%wip\|%wip]]  
+## General Tips
 
-<% tp.file.cursor(2) %>
-
-# helllo
-
-- [!] this is the thing
-
-- [@] ehi
-
-> [!ex] hello
-> dd
-
+-  Be consistent with colors
+    - the color of the same object should be consistent among different graphs
+    - manually set up the color if needed
+- Legend order matches graph order
+    - If your legend is on the right, it better matches the right ends of the graph
+    - try label instead of legend
+    - for some plots, like [[Bar Chart\|Bar Plot]], legends at the bottom may be better
+- 
