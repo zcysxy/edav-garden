@@ -78,4 +78,7 @@ To make color vision deficiency (CVD) friendly graphs,
     - If your legend is on the right, it better matches the right ends of the graph
     - try label instead of legend
     - for some plots, like [[Bar Chart\|Bar Plot]], legends at the bottom may be better
-- 
+- Sequential scheme for [[EDAV - Continuous Variable\|Continuous Data]]; qualitative scheme for [[EDAV - Categorical Data\|Categorical Data]]
+- Do not use diverging scheme for non-likert data
+- Colors should be a separate dimension
+    - if a variable is already presented along the x-axis, there is no need to color the variable
