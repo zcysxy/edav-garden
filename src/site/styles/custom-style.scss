@@ -23,5 +23,7 @@ body {
          .admonition-title::before { content: "🪴" }
     }
     div.callout-meta { display: none; }
+
+    div.content { max-width: 800px; }
 }
 
