@@ -191,3 +191,5 @@ G --> H[Communicate]
 ### 2022-11-01
 
 - For later parts, you do not need to strictly follow the proposal
+- [[Graph Color#General Tips\|Graph Color#General Tips]]
+- [[EDAV - Time Series\|EDAV - Time Series]]
