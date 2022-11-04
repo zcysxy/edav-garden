@@ -193,3 +193,9 @@ G --> H[Communicate]
 - For later parts, you do not need to strictly follow the proposal
 - [[Graph Color#General Tips\|Graph Color#General Tips]]
 - [[EDAV - Time Series\|EDAV - Time Series]]
+
+### 2022-11-03
+
+- [[R Type - Date\|R Type - Date]]
+- [[lubridate\|lubridate]]
+- [[EDAV - Missing Data\|EDAV - Missing Data]]
