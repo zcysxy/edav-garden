@@ -12,7 +12,7 @@ state:: done
 
 Match data types to color palettes/schemes
 
-- Sequential <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FFFFFF"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#C0C0C0"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#808080"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#000000"/></svg>
+- Sequential <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FFFFFF"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#C0C0C0"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#808080"/></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#000000"/></svg> ^1dc7c8
     - suitable for **ordinal** variables
     - easy to tell the level of a color
     - e.g. [[Heatmap\|Heatmap]]
