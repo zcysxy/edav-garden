@@ -18,6 +18,7 @@ Also, R is supported by [[Jupyter\|Jupyter]] by default.
 
 * [[R Basics\|R Basics]]
 * [[R Type\|R Type]]
+    * [[R Type - Date\|R Type - Date]]
 * [[R Data Structure\|R Data Structure]]
 * [[R Function\|R Function]]
 * [[R Function List\|R Function List]]
@@ -28,5 +29,6 @@ Also, R is supported by [[Jupyter\|Jupyter]] by default.
         - [[dplyr\|dplyr]]
         - [[forcats\|forcats]]
         - [[tidyr\|tidyr]]
+        - [[lubridate\|lubridate]]
     - [[R Package - Plotly\|Plotly]]
     - [[rvest\|rvest]]
