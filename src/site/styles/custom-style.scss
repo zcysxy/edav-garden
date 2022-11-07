@@ -11,10 +11,11 @@ body {
     //  h1 {
     //   color: black;
     //  }
+    --content-font-size: 1.4rem;
     div.content {
         padding-right: 90px;
         max-width: 900px;
-        font-size: 1.4em;
+        font-size: var(--content-font-size);
     }
 
     div[class*=callout-], 
@@ -35,9 +36,9 @@ body {
 
     /* Callouts */
     div[class*=callout-] {
-        font-size: 1.5rem;
+        font-size: var(--content-font-size);
         .admonition-title, .admonition-title:before { 
-            font-size: 1.7rem; 
+            font-size: 1.6rem; 
             font-weight: 800;
         }
     }
