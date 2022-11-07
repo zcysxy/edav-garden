@@ -36,20 +36,20 @@ sup:: [[EDAV\|EDAV]]
     - Exploratory vs. Explanatory
     - Not mutually exclusive
     - Visualizations offering insight are likely to be shared
-* Aims
-    * look for patterns
-    * identify outliers
-    * make comparisons
-    * discover clusters
-* Textbook
-    * Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
-* Website
-    * <https://edav.info>
-* Tools
-    * [[R\|R]]
-    * [[Git\|Git]]
-    * [[JavaScript\|JavaScript]]
-    * D3 (library for JS)
+- Aims
+    - look for patterns
+    - identify outliers
+    - make comparisons
+    - discover clusters
+- Textbook
+    - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
+- Website
+    - <https://edav.info>
+- Tools
+    - [[R\|R]]
+    - [[Git\|Git]]
+    - [[JavaScript\|JavaScript]]
+    - D3 (library for JS)
 
 ## Plots Gallery
 
@@ -88,15 +88,16 @@ sup:: [[EDAV\|EDAV]]
 
 ## References
 
-* [[R Basics\|R Basics]]
-* [[R Type\|R Type]]
-    * [[R Type - Date\|R Type - Date]]
-* [[R Data Structure\|R Data Structure]]
+- [[R Basics\|R Basics]]
+- [[R Type\|R Type]]
+    - [[R Type - Date\|R Type - Date]]
+- [[R Data Structure\|R Data Structure]]
 - [[R Control Statement\|R Control Statement]]
-* [[R Function\|R Function]]
-* [[R Function List\|R Function List]]
-* [[R Operator\|R Operator]]
-* [[R Package\|R Package]]
+- [[R Function\|R Function]]
+- [[R Function List\|R Function List]]
+- [[R Operator\|R Operator]]
+    - [[R Operator - Pipe\|R Operator - Pipe]]
+- [[R Package\|R Package]]
     - tidyverse
         - [[ggplot2\|ggplot2]]
         - [[dplyr\|dplyr]]

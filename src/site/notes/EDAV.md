@@ -43,27 +43,27 @@ G --> H[Communicate]
 
 ## Logistics
 
-* Aims
-    * look for patterns
-    * identify outliers
-    * make comparisons
-    * discover clusters
-* Textbook
-    * *Graphical Data Analysis with R*
-* Website
-    * <https://edav.info>
-* Requirements
-    * Problems sets (5)
-    * Midterm & Final
-    * Community contribution
-    * Final project
-* Tools
-    * [[R\|R]]
-    * [[JavaScript\|JavaScript]]
-    * D3 (library for JS)
-* Grade
+- Aims
+    - look for patterns
+    - identify outliers
+    - make comparisons
+    - discover clusters
+- Textbook
+    - *Graphical Data Analysis with R*
+- Website
+    - <https://edav.info>
+- Requirements
+    - Problems sets (5)
+    - Midterm & Final
+    - Community contribution
+    - Final project
+- Tools
+    - [[R\|R]]
+    - [[JavaScript\|JavaScript]]
+    - D3 (library for JS)
+- Grade
     - 35% Final Project
-    * 25% Problem Sets
+    - 25% Problem Sets
     - 25% Final Exam
     - 10% Community Contribution
         - give a well-rehearsed 5 minute lightning talk in class (live or video) on a datavis topic (theory or tool) • create a cheatsheet or other resource

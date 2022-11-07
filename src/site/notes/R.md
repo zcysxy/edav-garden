@@ -16,15 +16,16 @@ Also, R is supported by [[Jupyter\|Jupyter]] by default.
 
 ## References
 
-* [[R Basics\|R Basics]]
-* [[R Type\|R Type]]
-    * [[R Type - Date\|R Type - Date]]
-* [[R Data Structure\|R Data Structure]]
+- [[R Basics\|R Basics]]
+- [[R Type\|R Type]]
+    - [[R Type - Date\|R Type - Date]]
+- [[R Data Structure\|R Data Structure]]
 - [[R Control Statement\|R Control Statement]]
-* [[R Function\|R Function]]
-* [[R Function List\|R Function List]]
-* [[R Operator\|R Operator]]
-* [[R Package\|R Package]]
+- [[R Function\|R Function]]
+- [[R Function List\|R Function List]]
+- [[R Operator\|R Operator]]
+    - [[R Operator - Pipe\|R Operator - Pipe]]
+- [[R Package\|R Package]]
     - tidyverse
         - [[ggplot2\|ggplot2]]
         - [[dplyr\|dplyr]]
