@@ -13,7 +13,7 @@ body {
     @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
     div[class*=callout-], 
-    .content :not(.sidbar) {
+    .content:not(.sidebar) {
         font-family: 'Merriweather', 'Marion';
     }
 
