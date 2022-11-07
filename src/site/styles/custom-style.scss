@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
+body.theme-dark {--text-color: hsl(169.74, 88.68%, 39.22%);}
 body {
     /***
       ADD YOUR CUSTOM STYLIING HERE. (INSIDE THE body {...} section.)
@@ -11,7 +12,6 @@ body {
     //  h1 {
     //   color: black;
     //  }
-    --text-color: hsl(169.74, 88.68%, 39.22%);
     --content-font-size: 1.4rem;
     div.content {
         padding-right: 90px;
