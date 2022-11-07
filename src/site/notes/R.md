@@ -24,6 +24,7 @@ Also, R is supported by [[Jupyter\|Jupyter]] by default.
 * [[R Function\|R Function]]
 * [[R Function List\|R Function List]]
 * [[R Operator\|R Operator]]
+    - [[R pip\|R pip]]
 * [[R Package\|R Package]]
     - tidyverse
         - [[ggplot2\|ggplot2]]
