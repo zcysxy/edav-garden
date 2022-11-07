@@ -18,9 +18,25 @@ body {
         display: none;
     }
 
+    /* Callouts */
+    div[class*=callout-] {
+        font-size: 1.5rem;
+    }
+    div[class*=callout-] .admonition-title {
+        font-size: 1.7rem;
+    }
+    
     div.callout-garden {
          background-color: rgba(255, 200, 60, .2);
          .admonition-title::before { content: "🪴" }
+    }
+    div.callout-rmk {
+         background-color: rgba(194, 42, 42, 0.2);
+         .admonition-title::before { content: "⚠️" }
+    }
+    div.callout-ex {
+         background-color: rgba(179, 165, 79, 0.2);
+         .admonition-title::before { content: "📗" }
     }
     div.callout-meta { display: none; }
 
