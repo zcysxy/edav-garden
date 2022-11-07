@@ -54,10 +54,16 @@ body {
          .admonition-title::before { content: "⚠️" }
     }
     div.callout-ex {
-         background-color: rgba(179, 165, 79, 0.2);
-         .admonition-title { color: rgb(179, 165, 79); }
+         background-color: rgba(79, 179, 87, 0.2);
+         .admonition-title { color: rgb(79, 179, 87); }
          .admonition-title::before { content: "📗" }
     }
+    div.callout-tip {
+         background-color: rgba(0, 184, 212, 0.2);
+         .admonition-title { color: rgb(0, 184, 212); }
+         .admonition-title::before { content: "💡" }
+    }
+
     div.callout-meta { display: none; }
 
 }
