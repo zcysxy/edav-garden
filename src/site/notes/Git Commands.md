@@ -8,6 +8,15 @@
 
 # Git Commands
 
+## Add
+
+- `git add -A` stages **all changes**
+    - = `git add .` + `git add -u`
+- `git add .` stages new files and modifications, ~~without deletions~~ (on the current directory and its subdirectories)
+    - [!] For Git >= 2.0, `git add .` will add deletions! Use flag `--ignore-removal` to ignore deletion
+    - [!] Therefore, `git add -A` is redundant for Git >= 2.0
+- `git add -u` stages modifications and deletions, **without new files**
+
 ## Combine add and commit
 
 ```bash
@@ -17,7 +26,7 @@ git commit -am "commit message"
 is equal to
 
 ```bash
-git add .
+git add -u
 git commit -m "commit message"
 ```
 
