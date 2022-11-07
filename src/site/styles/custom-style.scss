@@ -21,9 +21,7 @@ body {
     /* Callouts */
     div[class*=callout-] {
         font-size: 1.5rem;
-    }
-    div[class*=callout-] .admonition-title {
-        font-size: 1.7rem;
+        .admonition-title, .admonition-title:before { font-size: 1.7rem; }
     }
     
     div.callout-garden {
