@@ -28,6 +28,7 @@ body {
     /* Callouts */
     div[class*=callout-] {
         font-size: 1.5rem;
+        font-weight: 800;
         .admonition-title, .admonition-title:before { font-size: 1.7rem; }
     }
     
@@ -37,8 +38,8 @@ body {
          .admonition-title::before { content: "🪴" }
     }
     div.callout-rmk {
-         background-color: rgba(255, 56, 96, 0.2);
-         .admonition-title { color: rgb(255, 56, 96); }
+         background-color: rgba(255, 36, 76, 0.2);
+         .admonition-title { color: rgb(255, 36, 76); }
          .admonition-title::before { content: "⚠️" }
     }
     div.callout-ex {
