@@ -29,7 +29,7 @@ body {
     
     div.callout-garden {
          background-color: rgba(255, 200, 60, .2);
-         .admonition-title: { color: rgb(255, 200, 60); }
+         .admonition-title { color: rgb(255, 200, 60); }
          .admonition-title::before { content: "🪴" }
     }
     div.callout-rmk {
