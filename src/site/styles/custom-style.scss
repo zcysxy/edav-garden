@@ -10,7 +10,9 @@ body {
     //  h1 {
     //   color: black;
     //  }
-    @import 'https://fonts.googleapis.com/css?family=Merriweather';
+    @import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+    div[class*=callout-], 
     .content {
         font-family: 'Merriweather', 'Marion';
     }
@@ -26,7 +28,6 @@ body {
     /* Callouts */
     div[class*=callout-] {
         font-size: 1.5rem;
-        font-family: "Merriweather";
         .admonition-title, .admonition-title:before { font-size: 1.7rem; }
     }
     
