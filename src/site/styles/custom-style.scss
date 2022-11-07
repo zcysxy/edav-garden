@@ -28,8 +28,10 @@ body {
     /* Callouts */
     div[class*=callout-] {
         font-size: 1.5rem;
-        font-weight: 800;
-        .admonition-title, .admonition-title:before { font-size: 1.7rem; }
+        .admonition-title, .admonition-title:before { 
+            font-size: 1.7rem; 
+            font-weight: 800;
+        }
     }
     
     div.callout-garden {
