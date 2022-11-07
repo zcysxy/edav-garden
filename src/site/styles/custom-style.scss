@@ -67,5 +67,9 @@ body {
 
     div.callout-meta { display: none; }
 
+    center > blockquote {
+        margin-left: 0;
+        padding-left: 0;
+    }
 }
 
