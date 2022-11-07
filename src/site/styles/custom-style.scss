@@ -11,6 +11,12 @@ body {
     //  h1 {
     //   color: black;
     //  }
+    div.content {
+        padding-right: 90px;
+        max-width: 900px;
+        font-size: 1.4em;
+    }
+
     div[class*=callout-], 
     .content {
         font-family: 'Merriweather', var(--font-default);
@@ -53,10 +59,5 @@ body {
     }
     div.callout-meta { display: none; }
 
-    div.content {
-        padding-right: 90px;
-        max-width: 900px;
-        font-size: 1.5em;
-    }
 }
 
