@@ -1,8 +1,10 @@
 # EDAV Garden
 
-<div style="text-align: center">
+<p align="center">
+<a href="https://edav-garden.netlify.app">
 <img width="250" height="250" src="https://raw.githubusercontent.com/zcysxy/edav-garden/main/src/site/favicon.svg" style="background: transparent; border: none; box-shadow: none;">
-</div>
+</a>
+</p>
 
 > **Note** This site is a [**digital garden**](https://github.com/MaggieAppleton/digital-gardeners)[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
 > - made by [me](https://github.com/zcysxy)
