@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
 body {
     /***
       ADD YOUR CUSTOM STYLIING HERE. (INSIDE THE body {...} section.)
@@ -10,8 +11,6 @@ body {
     //  h1 {
     //   color: black;
     //  }
-    @import url(https://fonts.googleapis.com/css?family=Merriweather);
-
     div[class*=callout-], 
     .content {
         font-family: 'Merriweather', var(--font-default);
