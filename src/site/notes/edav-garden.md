@@ -96,6 +96,7 @@ sup:: [[EDAV\|EDAV]]
 * [[R Function\|R Function]]
 * [[R Function List\|R Function List]]
 * [[R Operator\|R Operator]]
+    - [[R Operator - Pipe\|R Operator - Pipe]]
 * [[R Package\|R Package]]
     - tidyverse
         - [[ggplot2\|ggplot2]]
