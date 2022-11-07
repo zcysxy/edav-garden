@@ -13,8 +13,11 @@ body {
     @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
     div[class*=callout-], 
-    .content:not(.sidebar) {
-        font-family: 'Merriweather', 'Marion';
+    .content {
+        font-family: 'Merriweather', var(--font-default);
+    }
+    .sidebar {
+        font-family: var(--font-default);
     }
 
     .markdown-embed > h2,
