@@ -36,20 +36,20 @@ sup:: [[EDAV\|EDAV]]
     - Exploratory vs. Explanatory
     - Not mutually exclusive
     - Visualizations offering insight are likely to be shared
-* Aims
-    * look for patterns
-    * identify outliers
-    * make comparisons
-    * discover clusters
-* Textbook
-    * Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
-* Website
-    * <https://edav.info>
-* Tools
-    * [[R\|R]]
-    * [[Git\|Git]]
-    * [[JavaScript\|JavaScript]]
-    * D3 (library for JS)
+- Aims
+    - look for patterns
+    - identify outliers
+    - make comparisons
+    - discover clusters
+- Textbook
+    - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
+- Website
+    - <https://edav.info>
+- Tools
+    - [[R\|R]]
+    - [[Git\|Git]]
+    - [[JavaScript\|JavaScript]]
+    - D3 (library for JS)
 
 ## Plots Gallery
 
