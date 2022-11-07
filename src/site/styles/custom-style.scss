@@ -25,5 +25,9 @@ body {
     div.callout-meta { display: none; }
 
     div.content { max-width: 800px; }
+
+    .content {
+        --font-text-size: 22px;
+    }
 }
 
