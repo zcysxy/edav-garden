@@ -10,6 +10,9 @@ body {
     //  h1 {
     //   color: black;
     //  }
+    @import 'https://fonts.googleapis.com/css?family=Merriweather';
+    .content { font-family: "Merriweather" }
+
     .markdown-embed > h2,
     .markdown-embed > h3,
     .markdown-embed > h4,
@@ -26,6 +29,7 @@ body {
     
     div.callout-garden {
          background-color: rgba(255, 200, 60, .2);
+         .admonition-title { color: rgb(255, 200, 60); }
          .admonition-title::before { content: "🪴" }
     }
     div.callout-rmk {
@@ -34,6 +38,7 @@ body {
     }
     div.callout-ex {
          background-color: rgba(179, 165, 79, 0.2);
+         .admonition-title { color: rgb(179, 165, 79); }
          .admonition-title::before { content: "📗" }
     }
     div.callout-meta { display: none; }
