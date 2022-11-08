@@ -17,8 +17,10 @@ body {
         max-width: 900px;
         font-size: var(--content-font-size);
     }
-    div[x-data^="{isDesktop: true"] ~ div.content {
-        padding-right: 90px;
+    @media (min-width: 800px) {
+        div.content {
+            padding-right: 90px;
+        }
     }
 
     div[class*=callout-], 
