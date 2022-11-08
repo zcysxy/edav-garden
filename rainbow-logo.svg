@@ -9,12 +9,12 @@
 <rect x="320" y="20" width="100" height="500" fill="#018F3E"/>
 <rect x="220" y="20" width="100" height="500" fill="#E5C331"/>
 <rect x="120" y="20" width="100" height="500" fill="#E57405"/>
-<circle cx="448" cy="270" r="45" fill="#FEFEFE"/>
-<circle cx="104" cy="270" r="45" fill="#FEFEFE"/>
-<circle cx="315" cy="370" r="80" fill="#FEFEFE"/>
-<circle cx="237" cy="170" r="80" fill="#FEFEFE"/>
-<line x1="113.215" y1="262.079" x2="248.748" y2="159.948" stroke="#FEFEFE" stroke-width="20"/>
-<line x1="227.541" y1="154.528" x2="325.377" y2="396.679" stroke="#FEFEFE" stroke-width="20"/>
-<line x1="300.982" y1="379.145" x2="436.515" y2="277.014" stroke="#FEFEFE" stroke-width="20"/>
+<circle cx="442.139" cy="225.483" r="45" transform="rotate(-15 442.139 225.483)" fill="#FEFEFE"/>
+<circle cx="109.861" cy="314.517" r="45" transform="rotate(-15 109.861 314.517)" fill="#FEFEFE"/>
+<circle cx="339.553" cy="356.499" r="80" transform="rotate(-15 339.553 356.499)" fill="#FEFEFE"/>
+<circle cx="212.447" cy="183.501" r="80" transform="rotate(-15 212.447 183.501)" fill="#FEFEFE"/>
+<line x1="116.712" y1="304.481" x2="221.193" y2="170.751" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="199.306" y1="171.004" x2="356.481" y2="379.583" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="328.379" y1="368.96" x2="432.861" y2="235.23" stroke="#FEFEFE" stroke-width="20"/>
 </g>
 </svg>
