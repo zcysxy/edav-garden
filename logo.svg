@@ -1,11 +1,11 @@
-<svg width="810" height="810" viewBox="0 0 810 810" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="405" cy="405" r="270" fill="#F9F9F9"/>
-<circle cx="405" cy="405" r="250" transform="rotate(-15 405 405)" fill="black"/>
-<circle cx="576.935" cy="358.93" r="45" transform="rotate(-15 576.935 358.93)" fill="#FEFEFE"/>
-<circle cx="244.656" cy="447.964" r="45" transform="rotate(-15 244.656 447.964)" fill="#FEFEFE"/>
-<circle cx="474.349" cy="489.946" r="80" transform="rotate(-15 474.349 489.946)" fill="#FEFEFE"/>
-<circle cx="347.243" cy="316.948" r="80" transform="rotate(-15 347.243 316.948)" fill="#FEFEFE"/>
-<line x1="251.508" y1="437.928" x2="355.989" y2="304.198" stroke="#FEFEFE" stroke-width="20"/>
-<line x1="334.102" y1="304.452" x2="491.277" y2="513.03" stroke="#FEFEFE" stroke-width="20"/>
-<line x1="463.175" y1="502.407" x2="567.656" y2="368.677" stroke="#FEFEFE" stroke-width="20"/>
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="270" cy="270" r="270" fill="#F9F9F9"/>
+<circle cx="270" cy="270" r="250" fill="black"/>
+<circle cx="442.139" cy="225.483" r="45" transform="rotate(-15 442.139 225.483)" fill="#FEFEFE"/>
+<circle cx="109.861" cy="314.517" r="45" transform="rotate(-15 109.861 314.517)" fill="#FEFEFE"/>
+<circle cx="339.553" cy="356.499" r="80" transform="rotate(-15 339.553 356.499)" fill="#FEFEFE"/>
+<circle cx="212.447" cy="183.501" r="80" transform="rotate(-15 212.447 183.501)" fill="#FEFEFE"/>
+<line x1="116.712" y1="304.481" x2="221.193" y2="170.751" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="199.306" y1="171.004" x2="356.481" y2="379.583" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="328.379" y1="368.96" x2="432.861" y2="235.23" stroke="#FEFEFE" stroke-width="20"/>
 </svg>
