@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://edav-garden.netlify.app">
-<img width="250" height="250" src="https://raw.githubusercontent.com/zcysxy/edav-garden/main/rainbow-logo.svg" style="background: transparent; border: none; box-shadow: none;">
+<img width="250" height="250" src="https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-garden.svg" style="background: transparent; border: none; box-shadow: none;">
 </a>
 </p>
 
