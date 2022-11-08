@@ -14,9 +14,11 @@ body {
     //  }
     --content-font-size: 1.4rem;
     div.content {
-        padding-right: 90px;
         max-width: 900px;
         font-size: var(--content-font-size);
+    }
+    div[x-data^="{isDesktop: true"] ~ div.content {
+        padding-right: 90px;
     }
 
     div[class*=callout-], 
