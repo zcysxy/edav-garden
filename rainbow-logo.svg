@@ -1,0 +1,20 @@
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="270" cy="270" r="270" fill="#F9F9F9"/>
+<mask id="mask0_6_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="20" width="500" height="500">
+<circle cx="270" cy="270" r="250" fill="#CC0606"/>
+</mask>
+<g mask="url(#mask0_6_2)">
+<rect x="20" y="20" width="100" height="500" fill="#A62E20"/>
+<rect x="420" y="20" width="100" height="500" fill="#1E3085"/>
+<rect x="320" y="20" width="100" height="500" fill="#018F3E"/>
+<rect x="220" y="20" width="100" height="500" fill="#E5C331"/>
+<rect x="120" y="20" width="100" height="500" fill="#E57405"/>
+<circle cx="448" cy="270" r="45" fill="#FEFEFE"/>
+<circle cx="104" cy="270" r="45" fill="#FEFEFE"/>
+<circle cx="315" cy="370" r="80" fill="#FEFEFE"/>
+<circle cx="237" cy="170" r="80" fill="#FEFEFE"/>
+<line x1="113.215" y1="262.079" x2="248.748" y2="159.948" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="227.541" y1="154.528" x2="325.377" y2="396.679" stroke="#FEFEFE" stroke-width="20"/>
+<line x1="300.982" y1="379.145" x2="436.515" y2="277.014" stroke="#FEFEFE" stroke-width="20"/>
+</g>
+</svg>
