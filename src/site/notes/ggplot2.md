@@ -161,9 +161,11 @@ ggplot(data = iris) +
 A coordinate controls how the axes and grid lines are drawn. One `ggplot` can only have one `coord`.
 
 ```r
-ggplot(data = iris) +
+library(ggplot2)
+p <- ggplot(data = iris) +
   geom_histogram(mapping=aes(x=Petal.Length, fill=Species), stat = 'bin',position = 'stack') +
   coord_polar()
+plot(p)
 ```
 
 The default coordinate is the Cartesian coordinate. Others are
