@@ -199,3 +199,9 @@ G --> H[Communicate]
 - [[R Type - Date\|R Type - Date]]
 - [[lubridate\|lubridate]]
 - [[EDAV - Missing Data\|EDAV - Missing Data]]
+
+### 2022-11-10
+
+- [[Spatial Data\|Spatial Data]]
+- [[Choropleth\|Choropleth]]
+- [[Geographic Coordinate\|Geographic Coordinate]]
