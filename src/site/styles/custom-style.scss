@@ -136,16 +136,20 @@ body {
     }
 
     @keyframes logoChange {
-        0%, 33% {
+        0%, 25% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png');
             background-size: cover;
         }
-        33.01%, 66% {
+        25.01%, 50% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-garden.svg') no-repeat;
             background-size: cover;
         }
-        66.01%, 100% {
+        50.01%, 75% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-ggplot.svg') no-repeat;
+            background-size: cover;
+        }
+        75.01%, 100% {
+            background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-tidy.svg') no-repeat;
             background-size: cover;
         }
     }
