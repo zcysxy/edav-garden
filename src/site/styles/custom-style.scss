@@ -155,8 +155,12 @@ body {
     }
 
     .logo-wrapper:hover {
-        transform: scale(1.05) translate(0px,-10px);
+        animation: hoverLogo 0.1s;
         filter: drop-shadow(0px 10px 10px rgba(0,0,0, 1)) drop-shadow(0px 10px 30px rgba(100,100,100,0.2)) ;
+    }
+    @keyframes hoverLogo {
+        0% { transform: scale(1) translate(0px,0px);}
+        100% { transform: scale(1.05) translate(0px,-10px);}
     }
 }
 
