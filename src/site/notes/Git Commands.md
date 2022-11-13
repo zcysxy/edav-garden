@@ -177,10 +177,6 @@ git remote update
 git status
 ```
 
-## Tagging
-
-- [ ] [[!todo\|!todo]] [Git - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
-
 ## List Files
 
 ### ls-files
