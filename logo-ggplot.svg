@@ -1,0 +1,24 @@
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="270" cy="270" r="270" fill="#424242"/>
+<mask id="mask0_18_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="20" width="500" height="500">
+<circle cx="270" cy="270" r="250" fill="black"/>
+</mask>
+<g mask="url(#mask0_18_2)">
+<rect x="20" y="20" width="500" height="500" fill="#E6E6E6"/>
+<line x1="20" y1="418" x2="520" y2="418" stroke="white" stroke-width="4"/>
+<line x1="20" y1="318" x2="520" y2="318" stroke="white" stroke-width="4"/>
+<line x1="20" y1="218" x2="520" y2="218" stroke="white" stroke-width="4"/>
+<line x1="20" y1="118" x2="520" y2="118" stroke="white" stroke-width="4"/>
+<line x1="418" y1="520" x2="418" y2="20" stroke="white" stroke-width="4"/>
+<line x1="318" y1="520" x2="318" y2="20" stroke="white" stroke-width="4"/>
+<line x1="218" y1="520" x2="218" y2="20" stroke="white" stroke-width="4"/>
+<line x1="118" y1="520" x2="118" y2="20" stroke="white" stroke-width="4"/>
+<line x1="110.652" y1="307.559" x2="215.133" y2="173.829" stroke="black" stroke-width="10"/>
+<line x1="204.313" y1="174.014" x2="361.488" y2="382.592" stroke="black" stroke-width="10"/>
+<line x1="326.319" y1="372.039" x2="430.801" y2="238.309" stroke="black" stroke-width="10"/>
+<circle cx="442.139" cy="225.483" r="45" transform="rotate(-15 442.139 225.483)" fill="#274E82"/>
+<circle cx="109.861" cy="314.517" r="45" transform="rotate(-15 109.861 314.517)" fill="#B1D5FB"/>
+<circle cx="339.553" cy="356.499" r="80" transform="rotate(-15 339.553 356.499)" fill="#2B63BA"/>
+<circle cx="212.447" cy="183.501" r="80" transform="rotate(-15 212.447 183.501)" fill="#68A5F2"/>
+</g>
+</svg>
