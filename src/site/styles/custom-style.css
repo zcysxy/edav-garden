@@ -1,0 +1,47 @@
+/* Logo */
+input#logo {
+  height: 0;
+  width: 0;
+  border: none;
+  outline: none;
+  display: none;
+}
+#logo:checked + label .logo {
+    background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo.svg');
+    background-size: cover;
+}
+#logo + label .logo {
+    background: transparent;
+}
+.logo-wrapper,
+.logo {
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-wrapper {
+    /*background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png');*/
+    animation: logoChange 0.1s infinite;
+    animation-play-state: paused;
+    background-size: cover !important;
+}
+#logo:checked + label .logo-wrapper {
+    animation-play-state: running;
+}
+
+@keyframes logoChange {
+    0%, 32% {
+        background-image: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png');
+    }
+    33%, 66% {
+        background-image: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-garden.svg');
+        background-size: cover !important;
+    }
+    67%, 99% {
+        background-image: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-plot.svg');
+        background-size: cover !important;
+    }
+}
