@@ -9,7 +9,13 @@ sup:: [[EDAV\|EDAV]]
 # EDAV Garden
 
 <center>
-<div class="logo" ></div>
+<input type="checkbox" id="logo" checked></input>
+<input type="checkbox" id="logo" checked></input>
+<label for="logo">
+    <div class="logo-wrapper">
+        <div class="logo"></div>
+    </div>
+</label>
 <blockquote> "Visualization is a fundamentally human activity."
 </blockquote>
 </center>
