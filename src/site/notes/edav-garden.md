@@ -10,7 +10,6 @@ sup:: [[EDAV\|EDAV]]
 
 <center>
 <input type="checkbox" id="logo" checked></input>
-<input type="checkbox" id="logo" checked></input>
 <label for="logo">
     <div class="logo-wrapper">
         <div class="logo"></div>
