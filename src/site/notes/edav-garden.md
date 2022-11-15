@@ -9,7 +9,7 @@ sup:: [[EDAV\|EDAV]]
 # EDAV Garden
 
 <center>
-<input type="checkbox" id="logo" checked></input>
+<input type="checkbox" id="logo" checked>
 <label for="logo">
     <div class="logo-wrapper">
         <div class="logo"></div>
@@ -27,34 +27,26 @@ sup:: [[EDAV\|EDAV]]
 
 [^1]: In plain English: A collection of *notes*.
 
-## Basic Elements
+## What is EDAV
 
-- Interdisciplinary
-    - [[Statistics\|Statistics]]
-    - [[Computer Science\|Computer Science]]
+- **Exploratory data analysis and visualization (EDAV)** is an **interdisciplinary** field combining
+    - Statistics
+    - Computer Science
     - Graphic Design
     - Journalism
     - Subject Expertise
     - Psychology
-- Fundamental problems
+- The **task** of EDAV is to
+    - Look for patterns
+    - Identify outliers
+    - Make comparisons
+    - Discover clusters
+- The fundamental **problem** of EDAV is
     - Exploration vs. Visualization
-    - Exploratory vs. Explanatory
-    - Not mutually exclusive
-    - Visualizations offering insight are likely to be shared
-- Aims
-    - look for patterns
-    - identify outliers
-    - make comparisons
-    - discover clusters
-- Textbook
-    - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
-- Website
-    - <https://edav.info>
-- Tools
-    - [[R\|R]]
-    - [[Git\|Git]]
-    - [[JavaScript\|JavaScript]]
-    - D3 (library for JS)
+    - or, Exploratory vs. Explanatory
+    - Explorations reveal information hidden in the data, which is deep and precise but can be convoluted
+    - Visualizations offer insight into the data, which can be easily shared but may be misleading and biased
+    - These two aspects are not mutually exclusive
 
 ## Plots Gallery
 
@@ -87,7 +79,7 @@ sup:: [[EDAV\|EDAV]]
 - Other
     - [[Graph Color\|Graph Color]]
 
-## [[R\|R]] References
+## [[R\|R]] Garden
 
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
@@ -119,6 +111,18 @@ sup:: [[EDAV\|EDAV]]
 </div></div>
 
 
-## Course Log
+## [[Git\|Git]] Garden
 
-> For a time log of notes, see this [[EDAV#Notes\|course log]].
+- [[Git\|Git]]
+- [[Git Commands\|Git Commands]]
+- [[Git Tagging\|Git Tagging]]
+
+## References
+
+- For [[edav-garden#Plots Gallery\|#Plots Gallery]]:
+    - Robbins, Joyce. *<https://edav.info>*. 2022.
+    - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
+- For [[edav-garden#R Garden\|#R Garden]]:
+    - Wickham, Hadley, and Garrett Grolemund. *[R for data science: import, tidy, transform, visualize, and model data](https://r4ds.had.co.nz)*. O'Reilly Media, Inc., 2017.
+- For [[edav-garden#Git Garden\|#Git Garden]]:
+    - Chacon, Scott, and Ben Straub. *[Pro Git](https://git-scm.com/book/en/v2)*. Springer Nature, 2014.
