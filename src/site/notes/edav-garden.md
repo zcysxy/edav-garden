@@ -24,6 +24,7 @@ sup:: [[EDAV\|EDAV]]
 > - on materials from GR5702 Exploratory Data Analysis and Visualization course with [Joyce Robbins](https://github.com/jtr13) at Columbia University
 > - with [Obsidian](https://obsidian.md) and [Obsidian Digital Garden](https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0)
 > - source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
+> - Interested in logos/favicon? Get them [here](https://www.figma.com/community/file/1174213011958814978)
 
 [^1]: In plain English: A collection of *notes*.
 
@@ -79,8 +80,9 @@ sup:: [[EDAV\|EDAV]]
 - Other
     - [[Graph Color\|Graph Color]]
 
-## [[R\|R]] Garden
+## R Garden
 
+- [[R\|R]]
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
@@ -111,7 +113,7 @@ sup:: [[EDAV\|EDAV]]
 </div></div>
 
 
-## [[Git\|Git]] Garden
+## Git Garden
 
 - [[Git\|Git]]
 - [[Git Commands\|Git Commands]]
