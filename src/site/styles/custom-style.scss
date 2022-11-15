@@ -101,13 +101,13 @@ body {
       outline: none;
       display: none;
     }
-    #logo:checked + label .logo {
-        background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo.svg');
-        background-size: cover;
-    }
-    #logo + label .logo {
-        background: transparent;
-    }
+    //#logo:checked + label .logo {
+        //background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo.svg');
+        //background-size: cover;
+    //}
+    //#logo + label .logo {
+        //background: transparent;
+    //}
     .logo-wrapper, 
     .logo {
         width: 250px;
@@ -125,42 +125,55 @@ body {
         width: 250px;
         height: 250px;
         /*background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png');*/
-        animation: logoChange 0.01s infinite;
-        animation-play-state: paused;
+        //animation: logoChange 0.01s infinite;
+        animation: logoChange 5s infinite, flip 1s infinite;
+        //animation-play-state: paused;
         background-size: cover;
     }
     #logo:checked + label .logo-wrapper:before {
         animation-play-state: running;
         background-size: cover;
-        opacity: 0;
+        //opacity: 0;
+    }
+
+    @keyframes flip {
+      0% { transform: rotateY(-90deg); -webkit-filter: drop-shadow(0px, 0px, 0px, black) }
+      10% { tranform: rotateY(-10deg); -webkit-filter: drop-shadow(10px, 10px, 10px, black) }
+      50% { transform: rotateY(0deg) }
+      90% { transform: rotateY(10deg) }
+      100% { transform: rotateY(90deg) }
     }
 
     @keyframes logoChange {
-        0.01%, 25% {
-            background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png');
+        0.01%, 20% {
+            background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo.svg');
             background-size: cover;
         }
-        25.01%, 50% {
+        20.01%, 40% {
+            background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-3d.png') no-repeat;
+            background-size: cover;
+        }
+        40.01%, 60% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-garden.svg') no-repeat;
             background-size: cover;
         }
-        50.01%, 75% {
+        60.01%, 80% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-ggplot.svg') no-repeat;
             background-size: cover;
         }
-        75.01%, 100% {
+            80.01%, 100% {
             background: url('https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-tidy.svg') no-repeat;
             background-size: cover;
         }
     }
 
-    .logo-wrapper:hover {
-        animation: hoverLogo 0.1s forwards;
-        filter: drop-shadow(0px 10px 10px rgba(0,0,0, 1)) drop-shadow(0px 10px 30px rgba(100,100,100,0.2)) ;
-    }
-    @keyframes hoverLogo {
-        0% { transform: scale(1) translate(0px,0px);}
-        100% { transform: scale(1.05) translate(0px,-10px);}
-    }
+    //.logo-wrapper:hover {
+        //animation: hoverLogo 0.1s forwards;
+        //filter: drop-shadow(0px 10px 10px rgba(0,0,0, 1)) drop-shadow(0px 10px 30px rgba(100,100,100,0.2)) ;
+    //}
+    //@keyframes hoverLogo {
+        //0% { transform: scale(1) translate(0px,0px);}
+        //100% { transform: scale(1.05) translate(0px,-10px);}
+    //}
 }
 
