@@ -205,3 +205,22 @@ G --> H[Communicate]
 - [[Spatial Data\|Spatial Data]]
 - [[Choropleth\|Choropleth]]
 - [[Geographic Coordinate\|Geographic Coordinate]]
+
+### 2022-11-15
+
+- [[D3\|D3]]
+- [[HTML\|HTML]] intro
+    - [[DOM\|DOM]]
+- [[CSS\|CSS]] intro
+- [[SVG\|SVG]]
+    - SVGs, Scalable Vector Graphics, is an [[XML\|XML]]-based vector image format for defining two-dimensional graphics, having support for interactivity and animation.
+- [[JavaScript\|JavaScript]] Intro
+    - Be generally familiar with arrays, objects, functions
+    - Be aware that ES6 does things differently
+    - [[JS Array Function\|JS Array Function]]
+- [[Developer Tools\|Developer Tools]]
+
+### 2022-11-17
+
+- [[D3\|D3]]
+- [[JS Array Function\|JS Array Function]]
