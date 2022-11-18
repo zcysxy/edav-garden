@@ -140,3 +140,5 @@ sup:: [[EDAV\|EDAV]]
     - Wickham, Hadley, and Garrett Grolemund. *[R for data science: import, tidy, transform, visualize, and model data](https://r4ds.had.co.nz)*. O'Reilly Media, Inc., 2017.
 - For [[edav-garden#Git Garden\|#Git Garden]]:
     - Chacon, Scott, and Ben Straub. *[Pro Git](https://git-scm.com/book/en/v2)*. Springer Nature, 2014.
+- For [[edav-garden#WebDev Garden\|#WebDev Garden]]
+    - Robbins, Joyce. *[D3 for R Users](https://jtr13.github.io/d3book/)*. 2022.
