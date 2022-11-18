@@ -3,7 +3,7 @@
 ---
 
 > [!meta]-  
-state:: [[%wip\|%wip]]  
+state:: done  
 sup:: [[EDAV\|EDAV]]  
 
 # EDAV Garden
@@ -118,6 +118,18 @@ sup:: [[EDAV\|EDAV]]
 - [[Git\|Git]]
 - [[Git Commands\|Git Commands]]
 - [[Git Tagging\|Git Tagging]]
+
+## WebDev Garden
+
+- Basics
+    - [[DOM\|DOM]]
+    - [[Developer Tools\|Developer Tools]]
+- [[HTML\|HTML]]
+- [[CSS\|CSS]]
+- [[JavaScript\|JavaScript]]
+    - [[JS Function\|JS Function]]
+        - [[JS Array Function\|JS Array Function]]
+    - ⭐️ [[D3\|D3]]
 
 ## References
 
