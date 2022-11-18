@@ -341,7 +341,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -456,7 +456,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -571,7 +571,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -686,7 +686,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -801,7 +801,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[MacOS\|macOS]]
+- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
