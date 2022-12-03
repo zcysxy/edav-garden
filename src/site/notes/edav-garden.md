@@ -129,7 +129,15 @@ sup:: [[EDAV\|EDAV]]
 - [[JavaScript\|JavaScript]]
     - [[JS Function\|JS Function]]
         - [[JS Array Function\|JS Array Function]]
+        - [[JS Function - map\|JS Function - map]]
     - ⭐️ [[D3\|D3]]
+        - [[D3 Bind Data\|D3 Bind Data]]
+        - [[D3 Scale\|D3 Scale]]
+        - [[D3 Margin\|D3 Margin]]
+        - [[D3 Axes\|D3 Axes]]
+        - [[D3 Functions\|D3 Functions]]
+        - [[D3 Interactivity\|D3 Interactivity]]
+        - [[D3 Transition\|D3 Transition]]
 
 ## References
 
