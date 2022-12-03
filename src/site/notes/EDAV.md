@@ -224,3 +224,35 @@ G --> H[Communicate]
 
 - [[D3\|D3]]
 - [[JS Array Function\|JS Array Function]]
+
+### 2022-11-29
+
+- [[D3 Bind Data\|D3 Bind Data]]
+- [[D3 Scale\|D3 Scale]]
+- [[D3 Margin\|D3 Margin]]
+
+### 2022-12-01
+
+- Final project tips
+    - The most important part: the result
+    - Do not use other libraries when using [[D3\|D3]]
+    - Use raw [[HTML\|HTML]] in RMarkdown like it is in the `<body>` section
+- Share D3 Online
+    - [~] there are advantages to an online setup, for example, not having to set up a local server as described in the chapter on reading files.
+    - [VizHub](https://vizhub.com/): host [[D3\|D3]] visualizations online
+    - [[R Package - Bookdown\|Bookdown]]: include D3 code directly in a bookdown book hosted online
+        - [+] everyone is in one document
+        - [-] the book must be knit to view the HTML which happens quickly without R code but is still an extra step
+        - Workflows
+            - Include everything in the `Rmd` files using raw [[HTML\|HTML]] code
+            - Put [[D3\|D3]] code in a separate `js` file, and then include it using `<script>` tag
+                - remember to include the link to the [[D3\|D3]] library first
+                - you can then create an identical `html` file for testing purposes only rather than render the full bookdown book each time you would like to observe changes to your D3 code
+            - Put the entire visualization ([[HTML\|HTML]] and [[D3\|D3]] code) in a separate `html` file, and then include it using `<iframe>` tag
+    - [Observable](https://observablehq.com): official D3 web tool for creating and sharing D3 code
+- [[D3 Axes\|D3 Axes]]
+- [[JS Type - Array\|JS Type - Array]]
+- [[JS Function - map\|JS Function - map]]
+- [[D3 Functions\|D3 Functions]]
+- [[D3 Interactivity\|D3 Interactivity]]
+- [[D3 Transition\|D3 Transition]]
