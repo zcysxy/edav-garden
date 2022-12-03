@@ -107,7 +107,6 @@ Now if the `para2` parameter is not passed, it will get the value `'no text give
 Within every function, there is an **[[JS Type - Array\|JS Type - Array]]-like** [[JS Types - Object\|JS Types - Object]] called `arguments` that contains the values of the arguments passed to that function.
 
 * The arguments object is not an [[JS Type - Array\|JS Type - Array]]: it lacks all Array properties and methods except length and property access `[]`
-*
 
 ## Anonymous Function
 
