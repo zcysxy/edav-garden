@@ -3,6 +3,7 @@
 ---
 
 > [!meta]-
+sup:: [[Computer Science\|Computer Science]]
 related:: [[CSS\|CSS]], [[JavaScript\|JavaScript]], [[HTML\|HTML]], [[Front-End, Back-End, and Full Stack\|Front-End, Back-End, and Full Stack]]
 state:: done  
 
