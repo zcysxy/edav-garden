@@ -24,24 +24,24 @@ For example, the **frequency histogram** of data `50, 51, 53, 55, 56, 60, 65, 65
 - Bin width ^e0e0f4
     - Choose the right bin width to better present the data
         - thin width will provide more details, but may not be necessary and give gaps
-            - thin bins are useful to look for **gaps** and **heaping**
+            - thin bins are useful for looking for **gaps** and **heaping**
         - wide width will wipe out much information
     - Changing the bin width can help discover the **rounding pattern**
     - **Uneven bin widths**
-        - When using uneven bin widths, use a **density** histogram
+        - When using uneven bin widths, use a **density** histogram ^904jrz
             - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220926010135.png)
 
 ## Types
 
-In a histogram, the x-axis is the [[EDAV - Continuous Variable\|Continuous Variable]] to be inspected. And Different **y-scales** gives different types of histograms.
+In a histogram, the x-axis is the [[EDAV - Continuous Variable\|Continuous Variable]] to be inspected. And Different **y-scales** give types of histograms.
 
 - Frequency histogram
 - Density histogram
-    - In a density histogram, the **area** of a bar equals to the **relative frequency**; thus the y-scale is the *density*: $\text{relative frequency} / \text{binwidth}$
+    - In a density histogram, the **area** of a bar equals the **relative frequency**; thus the y-scale is the *density*: $\text{relative frequency} / \text{binwidth}$ ^9qhqpv
     - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220908165957.png)
     - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220908170007.png)
     - In [[ggplot2\|ggplot2]], use `y = ..density..` to specify this scale
-    - It is also very useful to overlay a **density line** (`geom_density()`)
+    - It is also very useful to overlay a [[Density Curve\|Density Curve]] (`geom_density()`)
 - Cumulative frequency histogram
     - is suitable when some frequencies are small to present
     - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220908170058.png)
