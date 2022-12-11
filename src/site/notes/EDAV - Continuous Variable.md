@@ -17,11 +17,17 @@ A **continuous variable** can in theory take any value over its range, as oppose
 - **Asymmetry**
     - the distribution may not be symmetric like [[Normal Distribution\|Normal Distribution]]
     - the distribution may be skewed to the left or right
+        - A distribution is called skewed **left/negative** if, as in the distribution graph, the left tail (smaller values) is much longer than the right tail (larger values)
+        - A distribution is called skewed **right/positive** if, as in the distribution graph, the right tail (larger values) is much longer than the left tail (smaller values)
+        - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210173449.png)
     - [@] distributions of income
 - **Outliers**
     - there may be data far from the rest of the data
 - **Multimodality**
     - the distribution may have more than one peak
+    - the ==mode== is the value that appears most often in a set of data values
+        - For a discrete [[Random Variable\|Random Variable]], the mode is $\argmax_{k}P(X=k)$
+        - For a continuous [[Random Variable\|Random Variable]], the mode is the local maxima of the [[Probability Density Function\|PDF]]
 - **Gaps**
     - There may be ranges of values within the data where no cases are recorded
 - **Heaping**
@@ -55,7 +61,7 @@ Different graphs emphasize different features.
 - [[Dotplot\|Dotplot]]
     - gaps
 
-## Combine Combine Continuous Variables and Categorical Variables
+## Combine Continuous Variables and Categorical Variables
 
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
@@ -75,3 +81,4 @@ When combining [[EDAV - Continuous Variable\|Continuous Variable]]s and [[EDAV -
 
 
 </div></div>
+
