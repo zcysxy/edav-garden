@@ -4,7 +4,7 @@
 
 > [!meta]-  
 sup:: [[D3\|D3]]  
-state:: [[%wip\|%wip]]  
+state:: done
 
 # D3 Interactivity
 
