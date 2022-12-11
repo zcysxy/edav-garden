@@ -18,6 +18,8 @@ An example:
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013014825.png)
 
+![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/tidyr-pivoting.gif)
+
 The code for this example using package `tidyr` is
 
 ```r
