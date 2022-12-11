@@ -51,6 +51,7 @@ Different graphs emphasize different features.
     - statistics
     - ❌ multimodality
 - [[Density Curve\|Density Curve]]
+    - distribution
     - asymmetry
     - multimodality
     - ❌ gaps
@@ -58,8 +59,14 @@ Different graphs emphasize different features.
 - [[Ridgeline\|Ridgeline]]
 - [[Bar Chart\|Bar Chart]]
     - gaps, heaping
-- [[Dotplot\|Dotplot]]
+    - [~] treating discrete values as [[EDAV - Categorical Data\|Categorical Data]]
+- [[Cleveland Dot Plot\|Cleveland Dot Plot]]
     - gaps
+    - [-] heaping
+- [[Q-Q Plot\|Q-Q Plot]]
+    - distribution
+    - asymmetry
+    - multimodality
 
 ## Combine Continuous Variables and Categorical Variables
 
