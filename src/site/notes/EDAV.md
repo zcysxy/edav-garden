@@ -87,7 +87,7 @@ G --> H[Communicate]
 
 - [[Boxplot\|Boxplot]]
 - [[Density Curve\|Density Curve]]
-- [ ] [[Ridgeline\|Ridgeline]] lec-note 4
+- [[Ridgeline\|Ridgeline]]
 
 ### 2022-09-15
 
