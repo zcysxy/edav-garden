@@ -60,7 +60,7 @@ G --> H[Communicate]
 - Tools
     - [[R\|R]]
     - [[JavaScript\|JavaScript]]
-    - D3 (library for JS)
+    - [[D3\|D3]] (library for [[JavaScript\|JS]])
 - Grade
     - 35% Final Project
     - 25% Problem Sets
@@ -86,8 +86,7 @@ G --> H[Communicate]
 ### 2022-09-13
 
 - [[Boxplot\|Boxplot]]
-- [ ] Density curves are the composition of multiple normal distributions.
-    - Choose the *right* bandwidth that makes the curve not too smooth or not too sharp
+- [[Density Curve\|Density Curve]]
 - [ ] [[Ridgeline\|Ridgeline]] lec-note 4
 
 ### 2022-09-15
