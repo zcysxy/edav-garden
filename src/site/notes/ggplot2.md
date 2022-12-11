@@ -29,7 +29,7 @@ ggplot(data = <DATA>) +
   ) +
   <COORDINATE_FUNCTION> +
   <FACET_FUNCTION> +
-  <SCALE_FUNCTIONS>
+  <SCALE_FUNCTIONS> +
   <LABEL_FUNCTIONS> + 
   <THEME_FUNCTION>
 ```
@@ -38,9 +38,10 @@ An example:
 
 ```r
 library("ggplot2")
-ggplot(data = iris) +  #Data part
-  geom_point(aes(Petal.Length, Petal.Width)) +  # layer 1 with mapping 
-  geom_point(aes(Sepal.Length, Sepal.Width), color='red')  # layer 2 with a different mapping
+g <- ggplot(data = iris) +  # Data part
+  geom_point(aes(Petal.Length, Petal.Width)) +  # layer 1 with mapping
+  geom_point(aes(Sepal.Length, Sepal.Width), color="red")  # layer 2 with a different mapping
+plot(g)
 ```
 
 This template is the **grammar of graphics**.
@@ -72,7 +73,7 @@ Function `geom_*(...)` is a shortcut for `layer(geom="*", ...)`.
 
 Here are some examples for each component
 
-- aesthetic mapping
+- [[ggplot2#Aesthetic Mapping\|#Aesthetic Mapping]]
     - `shape`
     - `linetype`
     - `size`
@@ -80,7 +81,7 @@ Here are some examples for each component
     - `color`
     - `alpha`
     - `group`
-- geom
+- [[ggplot2#Geom\|#Geom]]
     - point
     - bar
     - boxplot
@@ -88,12 +89,12 @@ Here are some examples for each component
     - histogram
     - density
     - hex
-- stat
+- [[ggplot2#Statistical Transformation\|#Statistical Transformation]]
     - identity
     - bin
     - boxplot
     - density
-- position ^569ce1
+- [[ggplot2#Position Adjustment\|#Position Adjustment]] ^569ce1
     - identity
     - `stack`
     - `fill` stretch the object to fill the space
@@ -108,7 +109,7 @@ Thus, People often describe plots by the type of geom that the plot uses. For ex
 
 By creating multiple layers, you can overlap different geoms in the same graph. In code, just add multiple `geom_*()` functions.
 
-### Aesthetic Mappings
+### Aesthetic Mapping
 
 - An aesthetic is a visual property of the objects in your plot
 - Different geom has different aesthetic mappings
@@ -116,7 +117,7 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 - `x =` and `y =` can be omitted
 - To map an aesthetic to a **variable**, associate the name of the aesthetic to the name of the variable inside `aes()`
 - [@] `geom_point(mapping = aes(x = displ, y = hwy, color = class))`
-- [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data
+- [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data ^v9c3po
 - You can also set the aesthetic properties outside the `mapping=aes()`, treating them as standalone components; but then the RHS needs to be a specific value rather than a variable
     - `geom_point(mapping = aes(x = displ, y = hwy), color = "blue")`
 - [~] You can put `mapping` in the `ggplot()` function to get **global mappings** for all layers
@@ -128,11 +129,11 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 
 Not all graphs plot the same information about the data. Scatter plots plot the raw value, while [[Histogram\|Histogram]]s plots the frequencies. The algorithm used to calculate the statistics to plot is called a `stat`, short for statistical transformation.
 
-Like `bin`, it first put data in different bins, and then calculate the count in each bin.
+Like `bin`, it first puts data in different bins, and then calculates the count in each bin.
 
 `stat_*(...)` functions are another groups of functions short for `layer(stat = "*", ...)`.
 You can generally use geoms and stats interchangeably. Every geom has a default stat; and every stat has a default geom.
-To see which `stat` a `geom_*` is using by default, use `?geom_*`
+To see which `stat` a `geom_*` is using by default, use `?geom_*` ^5rmdan
 
 ### Position Adjustment
 
@@ -140,7 +141,8 @@ By default, `ggplot2` will plot objects "where they are", i.e., `position = "ide
 
 ## Scale
 
-A scale controls how data is mapped to aesthetic attributes, so one scale for one layer.
+A scale controls how data is mapped to aesthetic attributes, so one scale for one [[ggplot2#Aesthetic Mapping\|#Aesthetic Mapping]].
+Some examples: ^b78rgq
 
 | Mapping | Scale (example)          |
 | ------- | ------------------------ |
@@ -190,12 +192,12 @@ The output graph will be three, one for each species.
 To create two-dimensional facets:
 
 - Use option `nrow=x` in `facet_wrap()`
-- Use `facet_grid()` with [[R Type - Formula\|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns
+- Use `facet_grid()` with [[R Type - Formula\|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns ^b6alii
     - Use `facet_grid(. ~ x)` and `facet_grid(x ~ .)` when you only want facet on one variable
 
 To use different adaptive scales for each facet, use option `scales = "free"`, `scales = "free_y"`, or `scales = "free_x"`. ^32e6e9
 
-- [!] When comparing different facets, do not free the scales; use a consistant scale instead.s
+- [!] When comparing different facets, do not free the scales; use a consistent scale instead.
 
 ## Labels
 
