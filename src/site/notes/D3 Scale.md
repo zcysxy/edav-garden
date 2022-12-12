@@ -18,7 +18,7 @@ Note that these functions are for creating your own scales rather than alternati
 
 ## Ordinal Scales
 
-To create a [[EDAV - Categorical Data#Ordinal vs Nominal\|ordinal]] scale:
+To create an [[EDAV - Categorical Data#Ordinal vs Nominal\|ordinal]] scale:
 
 ```js
 const ordScale = d3.scaleBand()
@@ -28,14 +28,15 @@ const ordScale = d3.scaleBand()
 
 `.scaleBand()` evenly divide the range for each category.
 `ordScale.bandwidth()` returns the bandwidth of the result.
-And `ordScale(cate)` returns the **left boundary** of the category band.
+And `ordScale(category)` returns the **left boundary** of the category band.
 
 `.domain()` also accepts indexes of categories.
 In this case, to make the above snippet more flexible, we can use `.domain(d3.range(dataset.length))` instead of `.domain([0,1,2,3,4])`.
 
-- [~] Don't mix up `d3.range()`, which returns an [[JS Type - Array\|array]] of integers, and `.domain().range()`.
+- [~] Don't mix up `d3.range()`, which returns an [[JS Type - Array\|array]] of integers, and `.domain().range()`. ^vga7uq
 
 To have some padding between bands, use `.paddingInner([paddingPercent1,...])`; then the padding will be `.bandwidth() * paddingPercent1`.
+It won't add padding before the first band or after the last band.
 
 ## Continuous Scale
 
