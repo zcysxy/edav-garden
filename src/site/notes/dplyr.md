@@ -31,6 +31,8 @@ jan1 <- filter(flights, month == 1, day == 1)
 - [!] Don't use short-circuiting logical operators here. Because the expressions in `filter()` filter all the data items.
 - [!] `filter()` filters out both `FALSE` and `NA`
 
+^n9gqf8
+
 ## arrange()
 
 `arrange()` takes a data frame and a set of column names (or more complicated expressions) to order rows. If you provide more than one column name, each additional column will be used to break ties in the values of the preceding columns.
@@ -40,7 +42,7 @@ arrange(flights, year, desc(month), day)
 ```
 
 - `desc()` is used to reverse the order
-- Missing values `NA` are always sorted at the end
+- Missing values `NA` are always sorted at the end ^vphdjm
 
 ## select()
 
@@ -80,14 +82,36 @@ mutate(flights_sml,
 > [!rmk] Ungroup
 >
 > Grouped data frame has a `groups` attribute, while `summarise()` will remove it.
-> If the data frame is grouped by multiple variables, `summarise()` will remove one group variable.
+> If the data frame is grouped by multiple variables, `summarise()` will remove one (the last one) group variable.
 >
 > You can also use `ungroup()` to manually remove the groups.
+
+> [!ex] Grouped Percentages
+>
+> When calculating the proportions, pay attention to the groups. If you want to calculate the absolute proportion, `ungroup` first; if you want to calculate the relative proportion within the group, be careful when `summarise` removes the group.
+>
+> ```r
+> suppressMessages(library(tidyverse))
+> df <- as.data.frame(Titanic)
+> df2 <- df %>%  
+>     group_by(Class, Survived) %>%
+>     summarize(Freq = sum(Freq)) %>%
+>     ungroup() %>% # very important for absolute prop
+>     mutate(prop = Freq/sum(Freq))
+> print(df2)
+> 
+> df3 <- df %>%
+>     group_by(Class, Survived) %>%
+>     summarize(Freq = sum(Freq)) %>% # summersize removes the Survived group
+>     mutate(prop = Freq/sum(Freq)) # relative proportion in Classes
+> print(df3)
+> ```
+>
 
 Useful summary functions:
 
 - `mean()`, `median()`, `sum()`
     - use option `na.rm = TRUE` to remove the NAs before aggregation
 - `n()`, `n_distinct(var)` for count
-    - `n()` includes NAs, use `sum(!is.na(x))` to count non-NAs
+    - `n()` includes NAs, use `sum(!is.na(x))` to count non-NAs ^miop8n
 - `min()`, `max()`, `quantile(x, 0.25)`
