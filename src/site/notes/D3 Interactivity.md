@@ -86,7 +86,7 @@ d3.select("circle")
   });
 ```
 
-- [!] Note that starting with D3 v6, the data is the 2nd parameter to be passed: `function(event, d)`.
+- [!] Note that starting with D3 v6, the data is the 2nd parameter to be passed: `function(event, d)`. ^7c3n0k
 - [!] In addition, note that you do not need to pass `d` again when accessing the data: we use `d.s` not `d => d.s`**.
 
 ##  Get the Location of the Event
