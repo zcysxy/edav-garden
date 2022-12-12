@@ -158,6 +158,10 @@ ggplot(data = iris) +
   scale_y_continuous(limits = c(0, 50))
 ```
 
+Another useful scale for [[EDAV - Continuous Variable\|Continuous Variable]] is the log scale. It can present log-ly related data.
+
+- `scale_x_log10(breaks = c(1,10,100,1000,10000))`
+
 ## Coordinate
 
 A coordinate controls how the axes and grid lines are drawn. One `ggplot` can only have one `coord`.
