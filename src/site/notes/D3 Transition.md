@@ -16,6 +16,7 @@ state:: done
         - [+] changes in size and position can
         - [-] changes in font family cannot
     - we can add multiple transitions by chaining them
+        - then the transitions will happen one by one
         - [@] `d3.select("svg").select("circle").transition().duration(2000).attr("cx", "400").transition().duration(2000).attr("cy","200")`
 
 ## Do and Not
@@ -26,7 +27,7 @@ Transitions in different statements run **simultaneously**. Therefore
     - Run simultaneous transitions on **different** selections
     - Run sequential transitions on the same selection in **one chain**
     - Transition from *something* to *something*
-        - The attributes being transitioned should have a initial value before the transition
+        - The attributes being transitioned should have an initial value before the transition
 - **DO NOT**
     - Do not run two transitions on the same selection at the same time
         - i.e., in two statements/chains
