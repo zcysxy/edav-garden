@@ -4,7 +4,7 @@
 
 > [!meta]-  
 sup:: [[EDAV\|EDAV]]  
-state:: [[%wip\|%wip]]  
+state:: done
 related:: [[EDAV - Categorical Data\|EDAV - Categorical Data]]
 
 # Cleveland Dot Plot
