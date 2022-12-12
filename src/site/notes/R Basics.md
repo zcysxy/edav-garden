@@ -10,7 +10,9 @@ state:: done
 
 - Comments start with `#`
     - No specific syntax for multi-line comments
-- Index starts from ***1***
+- Index starts from ***1*** ^wqehih
+- Most index in R are **inclusive**
+    - [@] `c(1,2,3)[1:2]` returns `1 2`
 - The naming convention of files and variables is **snake_case**
 - Print variables using `print`
 - Assign a value to a variable using
@@ -21,8 +23,8 @@ state:: done
 - The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] ^1e9b8c
 - The interactive shell of [[R\|R]] uses an indicator `[x]` to show the index of the printed vector
     - example:
-  
-  ```R
+
+```R
     > x <- 11:30
     > x
      [1] 11 12 13 14 15 16 17 18 19 20 21 22
