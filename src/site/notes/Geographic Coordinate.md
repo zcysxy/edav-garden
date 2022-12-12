@@ -11,6 +11,8 @@ state:: done
 Geographic coordinate uses **latitude and longitude** to locate a position.
 Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like [[Scatterplot\|Scatterplot]] and [[Density Contour Plot\|Density Contour Plot]].
 
+- [!] In a geographic coordinate, **latitude** comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates. ^5kd68p
+
 There are also some special graphs for geographic coordinate system, but with controversial performance, like
 
 - [-] Radius Map: use a circle with a radius dependent on an additional variable to represent a dot
