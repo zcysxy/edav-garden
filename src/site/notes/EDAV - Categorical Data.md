@@ -31,6 +31,13 @@ Nominal Scale and Ordinal Scale are two typical categorical variable measure
 - **Ordinal Scale** involves arranging information in a specific order
     - [@] rank, age
 
+## Discrete Data
+
+Though not strictly categorical, when a variable has discrete values and the range is small, we can regard it as a categorical variable.
+In this case, a [[Bar Chart\|Bar Chart]] is the same as a [[Histogram\|Histogram]] if each bin in the histogram contains only one value.
+
+![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211171912.png)
+
 ## Features
 
 - **Unexpected patterns**
@@ -39,7 +46,7 @@ Nominal Scale and Ordinal Scale are two typical categorical variable measure
 - **Uneven distributions**
     - Observational studies may exhibit some form of bias
         - [@] too many males
-        - [@] In medical meta analyses many trials are analysed together, although it can turn out that most of the trials were small and that the results are dominated by the one or two major trials
+        - [@] In medical meta-analyses, many trials are analyzed together, although it can turn out that most of the trials were small and that the results are dominated by one or two major trials
 - **Extra categories**
     - [@] Gender may be recorded as ‘M’ and ‘F’, but also as ‘m’ and ‘f’, ‘male’ and ‘female’
     - [@] In a study of patients with two medical conditions, there may be some patients diagnosed with a third condition
@@ -66,14 +73,12 @@ When there are too many categories to present, we can combine top/bottom categor
 - counts (`Freq`)
 - contingency/pivot table
     - [@] Ex:
-        
-        ```txt
+      ```txt
               Favorite
         Age     bubble gum  coffee
           old   2           4 
           young 7           1
         ```
-        
 
 Conversions:
 
