@@ -31,7 +31,7 @@ To plot the axis, **call** it on **a selection**, then some [[SVG\|SVG]] element
 Since all axes are rendered at the origin, we need to translate them. For example:
 
 ```js
-const yAxis = d3.axisLeft() .scale(yScale);
+const yAxis = d3.axisLeft().scale(yScale);
 const svg = d3.select("svg")
 
 svg.append("g")
@@ -68,5 +68,5 @@ and then create y continuous scale using `value`. Then the axes will automatical
 Or, we can add the tick values *explicitly*
 
 ```js
-const yAxis = d3.axisLeft(xScale) .tickValues([1, 2, 3, 5, 8, 13, 21]);
+const yAxis = d3.axisLeft(xScale).tickValues([1, 2, 3, 5, 8, 13, 21]);
 ```
