@@ -20,11 +20,11 @@ Time series are essentially discrete data and have **short-term noise**. We can 
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221101170338.png)
 
-In the above example, the blue curve is a global non-parametric smoother, while the red segments are linear smoothers constrained to specific time windows (groups). We can see that, the smoothers eliminate the short-term noise (e.g. intra-weekly oscillations) and present the long-term trend.
+In the above example, the blue curve is a global non-parametric smoother, while the red segments are linear smoothers constrained to specific time windows (groups). We can see that the smoothers eliminate the short-term noise (e.g. intra-weekly oscillations) and present the long-term trend.
 
 Add a smoother using [[ggplot2\|ggplot2]]: `geom_smooth(method = "loess", span = .75, se = FALSE)`
 
-- [~] Choose the right parameters for smoothers to avoid [[Overfitting and Underfitting\|Overfitting and Underfitting]]. Small `span` tends to overfit; while large `span` tends to underfit.
+- [~] Choose the right parameters for smoothers to avoid [[Overfitting and Underfitting\|Overfitting and Underfitting]]. Small `span` tends to overfit; while large `span` tends to underfit. ^4j85jk
 
 > [!rmk] Rolling Average vs Smoother
 > A rolling average and a smoother are alike, but they are not the same thing. A rolling average is fitting a **constant** instead of a line. Therefore, there are more *jumps* in a rolling average. Rolling averages only aggregate the previous information and do not capture future information.
