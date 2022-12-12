@@ -38,4 +38,4 @@ The pipe operator enable us to focus on the [[dplyr\|transformations]], not what
 In [[R\|R]] 4.1, a built-in pipe operator is introduced: `|>`. This operator doesn't rely on third-party packages and may be faster. But it lacks two important features that `%>%` has
 
 - represent the value being piped in by `.`, as in the above example
-- when you pipe into a function with no other arguments, you can ommit the parentheses `()`
+- when you pipe into a function with no other arguments, you can omit the parentheses `()`
