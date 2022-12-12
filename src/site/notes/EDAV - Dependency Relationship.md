@@ -26,15 +26,15 @@ When we focus on two [[EDAV - Multivariate Continuous Data\|continuous variables
 ## Features
 
 - Causal relationships
-    - correlation ≠ causation, but still use y-axis for what appears to be the dependent variable
+    - correlation ≠ causation, but we still use the y-axis for what appears to be the dependent variable
 - Associations
-- describe what you see
+    - describe what you see
 - Outliers
 - Clusters
 - Gaps
 - Barriers (boundaries)
 - Conditional relationships
-- (different relationships for different intervals of x)
+    - different relationships for different intervals of x
 
 
 </div></div>
