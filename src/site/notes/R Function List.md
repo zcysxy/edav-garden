@@ -4,7 +4,7 @@
 
 > [!meta]-
 sup:: [[R\|R]]  
-state:: [[%wip\|%wip]]  
+state:: [[%watch\|%watch]]
 related:: [[R Function\|R Function]]
 
 # R Function List
@@ -84,7 +84,7 @@ tail(x,3)
 
 ```R
 x <- c(6, 8, 7, 5, 3, 0, 9)
-which(x %% 2 == 0)
+which(x %% 2 == 0) # return indexes
 any(x == 10)
 ```
 
