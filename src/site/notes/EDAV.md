@@ -3,7 +3,7 @@
 ---
 
 > [!meta]-  
-state:: [[%wip\|%wip]]  
+state:: done  
 sup:: [[Columbia\|Columbia]]  
 sub:: [[edav-garden\|edav-garden]], [[edav-output-1\|edav-output-1]]  
 
@@ -216,13 +216,13 @@ G --> H[Communicate]
 - [[JavaScript\|JavaScript]] Intro
     - Be generally familiar with arrays, objects, functions
     - Be aware that ES6 does things differently
-    - [[JS Array Function\|JS Array Function]]
+    - [[JS Arrow Function\|JS Arrow Function]]
 - [[Developer Tools\|Developer Tools]]
 
 ### 2022-11-17
 
 - [[D3\|D3]]
-- [[JS Array Function\|JS Array Function]]
+- [[JS Arrow Function\|JS Arrow Function]]
 
 ### 2022-11-29
 
