@@ -20,7 +20,7 @@ When there are only two parallel coordinates, the graph is called a **slope grap
 To make the patterns in a slope graph more obvious, we can apply some data transformation
 
 - Standardization: `(x - mean(x)) / sd(x)`
-- Rescaling (to $[0,1]$): `scales:rescale()`
+- Rescaling (to $[0,1]$): `scales::rescale()`
 
 A drawback of these transformations is that we lose the actual units. A remedy is to label the units on each axis.
 
@@ -35,7 +35,7 @@ We can use `ggparcoord` in `GGally` to create parallel coordinate plots.
 Other methods to reveal the patterns:
 
 - Reorder the variables
-    - Making lines cross maybe better than making them parallel
+    - Making lines cross may be better than making them parallel ^o9j70v
 - Make lines transparent (change alpha)
 - Interpolation
     - Instead of using straight lines, we can use splines or other interpolated curves
