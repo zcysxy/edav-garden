@@ -19,10 +19,9 @@ Some examples of data types that are suitable for alluvial diagrams are
 
 ![500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013170436.png) ![500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018161618.png)
 
-
 Other than axes, we can use colors for one variable to better visualize the patterns. The variable we choose to color should be our most interested one.
 
-Different categories in axes are called ==strata==. Without alluviums, these strata form a [[Bar Chart\|Bar Chart]].
+Different categories in axes are called ==strata==. Without alluviums, these strata form a relative stacked [[Bar Chart\|Bar Chart]].
 The height of the strata and flows represent the size of the clusters.
 
 ## Implementation
@@ -31,7 +30,7 @@ We can use `geom_alluvium` in package `ggalluvial` to draw alluvial diagrams.
 
 ```r
 library(ggalluvial)
-ggplot(
+g = ggplot(
     as.data.frame(UCBAdmissions),
     aes(y = Freq, axis1 = Gender, axis2 = Dept, axis3 = Admit)
 ) +
@@ -45,12 +44,13 @@ ggplot(
     scale_fill_brewer(type = "qual", palette = "Set1") +
     ggtitle("UC Berkeley admissions and rejections") +
     theme_void()
+plot(g)
 ```
 
 An important feature of an alluvial diagram is the **consistent flow**, which means an observation is a continuous curve.
 While we can use `geom_flow` to create similar diagrams, where flows may not be connected. Such diagrams are only useful if you only focus on the association between adjacent categorical variables.
 
-![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013182109.png)
+![geom_flow|500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013182109.png)
 
 ## Lodes Form
 
@@ -58,6 +58,19 @@ While we can use `geom_flow` to create similar diagrams, where flows may not be 
 - Need not specify the axes
 
 To transform a dataframe to a lodes form, use `to_lodes_form(df, axes = 1:2)`. It works like `pivot_longer` in [[tidyr\|tidyr]], making one row per lode.
+
+An example lodes form (corresponding to the graph below):
+
+```txt
+##   Freq alluvium      x stratum
+## 1   30        1 Class1   Stats
+## 2    5        2 Class1    Math
+## 3   45        3 Class1   Stats
+## 4   20        4 Class1    Math
+## 5   30        1 Class2  French
+## 6    5        2 Class2  French
+## 7   45        3 Class2     Art
+```
 
 ```R
 df %>%
@@ -69,4 +82,3 @@ df %>%
 ```
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018162557.png)
-
