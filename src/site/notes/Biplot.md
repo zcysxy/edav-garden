@@ -17,7 +17,11 @@ related:: [[Principal Components Analysis\|Principal Components Analysis]]
         - vectors,
         - linear axes
         - or nonlinear trajectories
-- In the case of categorical variables, category level points may be used to represent the levels of a categorical variable. A generalised biplot displays information on both continuous and categorical variables.
+- In the case of categorical variables, category level points may be used to represent the levels of a categorical variable. A generalized biplot displays information on both continuous and categorical variables.
+
+> [!rmk] Axis Positions
+> [[Scatterplot\|Scatterplot]], [[Parallel Coordinate\|Parallel Coordinate]], and biplot represent three different axis positions.
+> ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211232720.png)
 
 ## Loading Plot
 
