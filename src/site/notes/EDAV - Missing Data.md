@@ -46,7 +46,7 @@ ggplot(tidycars, aes(x = key, y = fct_rev(id), fill = missing)) +
   theme_bw()
 ```
 
-![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103225656.png)
+![|500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103225656.png)
 
 A better idea is to combine the normal [[Heatmap\|Heatmap]] with missing data: use one color to present missing data, and a [[Graph Color#^1dc7c8\|sequential color palette]] to present the magnitude of other values.
 
@@ -60,10 +60,19 @@ Function `plot_missing()` from [[R Package\|R Package]] `redav` is a powerful 
 
 - The top part shows the **number** of missing values in each column
 - The middle part presents the **missing patterns**
-- The right part shows the **counts** for each missing pattern (consecutive missing values)
+    - repeated missing patterns are reduced to one row
+- The right part shows the **counts** for each missing pattern ~~(consecutive missing values)~~
 - You can also show the percentage in the top/right graphs by setting `percentage = True`.
 
 ## Value Missing Patterns
 
 - Are missing patterns correlated with values of another variable?
 - Are certain value ranges more likely to be missing?
+
+A pattern according to package `mi` is a **subset** of variables. So there are total $2^{n}$ possible variables, and each observation has one pattern (if it has all values, then the pattern is "nothing").
+
+```r
+library(mi)
+x <- mi::missing_data.frame(mycars)
+summary(x@patterns)
+```
