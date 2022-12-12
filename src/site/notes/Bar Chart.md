@@ -4,7 +4,7 @@
 
 > [!meta]-  
 sup:: [[EDAV\|EDAV]]  
-state:: [[%wip\|%wip]]  
+state:: done
 related:: [[EDAV - Categorical Data\|EDAV - Categorical Data]]
 
 # Bar Chart
@@ -22,13 +22,15 @@ Some bar graphs present bars clustered in groups of more than one, showing the v
 ## Ordering
 
 There are [[EDAV - Categorical Data#Ordinal vs Nominal\|two typical scales]] of a categorical variable.
-For ordinal data, sort bars in the logical order of the categories. For example: novice -> advanced -> expert.
-You can sort in either direction (top <-> bottom, left <-> right).
-For nomial data, sort bars from **highest to lowest** (top -> bottom, left -> right).
+For ordinal data, sort bars in the logical order of the categories. For example, novice -> advanced -> expert.
+You can sort in either direction top <-> bottom, or left -> right).
+For nomial data, sort bars from **highest to lowest** (top -> bottom, left -> right).  ^ok2cg8
 
 ## Rebinning
 
-When plotting bar plots, rows of different categories are automatically stacked up. To bin the data by hand, we can use [[dplyr#summarise()\|dplyr#summarise()]] with `group_by(category)`.
+When plotting bar plots, rows ~~of different categories~~ in the same category are automatically stacked up.
+However, when coloring, stacked bars are colored separately.
+To bin the data by hand, we can use [[dplyr#summarise()\|dplyr#summarise()]] with `group_by(category)`.
 
 ```r
 df %>%
