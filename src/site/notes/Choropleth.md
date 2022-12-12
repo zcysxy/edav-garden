@@ -31,7 +31,7 @@ There are several attempts to alleviate this problem.
 A **cartogram** distorts the area of regions in order to convey the information of an alternate variable. The region area will be inflated or deflated according to the numeric value of that variable.
 
 Note that the variable determining the distortion and the variable determining the color are not necessarily the same. Actually, there would be redundancy if they were the same one.
-For example, we can use color to present the election result, and distort the cartogram according to the number of voters.
+For example, we can use color to present the election result, and distort the cartogram according to the number of voters. ^m0zedk
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110181426.png)
 
