@@ -8,19 +8,19 @@ state:: done
 
 # R Types
 
-- [!] Here we just introduce some basic "atomic" data types. There are many more, like dates and time series.
+- [!] Here we just introduce some basic "atomic" data types. There are many more, like ~~dates and~~ time series.
 
 - [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R\|R]] object.
 
-| Type            | Abbreviation |
-| --------------- | ------------ |
-| [[R Type#Integer\|Integer]]    | `int`        |
-| [[R Type#Numeric\|Numeric]]    | `dbl`        |
+| Type                              | Abbreviation |
+| --------------------------------- | ------------ |
+| [[R Type#Integer\|Integer]]       | `int`        |
+| [[R Type#Numeric\|Numeric]]       | `dbl`        |
 | [[R Type#Characters\|Characters]] | `chr`        |
-| [[R Type#Logical\|Logical]]    | `lgl`        |
-| [[R Type#Factors\|Factors]]    | `fctr`       |
-| Date            | `date`       |
-| Date-times      | `dttm`       |
+| [[R Type#Logical\|Logical]]       | `lgl`        |
+| [[R Type#Factors\|Factors]]       | `fctr`       |
+| [[R Type - Date\|Date]]           | `date`       |
+| Date-times                        | `dttm`       |
 
 ## Integer
 
@@ -58,7 +58,7 @@ class(x - 1i) # complex
 
 There is no difference between strings and characters in [[R\|R]], unlike [[MATLAB\|MATLAB]].
 And a string and a character are both char vectors of length 1.
-Characters are surrounded by double quotes `"` (or single quotes `'`).
+Characters are surrounded by double quotes `"` (or single quotes `'`). ^55dclb
 
 ```r
 length("Hello")
