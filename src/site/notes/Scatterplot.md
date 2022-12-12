@@ -4,7 +4,7 @@
 
 > [!meta]-  
 sup:: [[EDAV\|EDAV]]  
-state:: [[%wip\|%wip]]  
+state:: done
 related:: [[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]  
 
 # Scatterplot
@@ -16,15 +16,15 @@ The major role of scatterplots lies in **revealing associations** ([[EDAV - Depe
 ## Features
 
 - Causal relationships
-    - correlation ≠ causation, but still use y-axis for what appears to be the dependent variable
+    - correlation ≠ causation, but we still use the y-axis for what appears to be the dependent variable
 - Associations
-- describe what you see
+    - describe what you see
 - Outliers
 - Clusters
 - Gaps
 - Barriers (boundaries)
 - Conditional relationships
-- (different relationships for different intervals of x)
+    - different relationships for different intervals of x
 
 ## An Example
 
@@ -35,7 +35,7 @@ We can observe that
 - Boundaries
     - No films have high votes and low ratings
     - No films have high votes and an average rating close to the maximum possible
-- For films with more than a few cotes, the average rating increases w/ # of votes
+- For films with more than a few votes, the average rating increases w/ # of votes
 - Outliers: some films appear to have lower-than-expected ratings
 - Films with low votes may have any average rating (full range)
     - The only films with very high ratings are those with relatively few votes
@@ -62,7 +62,6 @@ As we can see in the above example, scatterplots may **overplot**, making dots s
 - Transform to log scale
     - `+ scale_x_log10()`
     - `+ scale_x_log10(breaks = c(1, 10, 100, 1000, 10000))`
-    - [ ] [[!todo\|!todo]] Complement [[ggplot2#Scale\|ggplot2#Scale]]
 
 ## Smooth Scatterplot
 
