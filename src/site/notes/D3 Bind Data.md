@@ -9,8 +9,13 @@ state:: done
 # D3 Bind Data
 
 - `.data(data)` binds data to the selected elements
-    - if multiple elements are selected, `data` can be an array of values; then values will automatically match the elements
+    - `.data` only accepts an **array** of values; `.data(2)` will not bind the data
+    - if multiple elements are selected, ~~`data` can be an array of values~~; then values will automatically match the elements
     - `.data()` shows the data
+- `.datum(datum)` binds a datum to all the selected elements
+    - every selected element will get the same datum
+    - the datum can be a scalar `2`
+    - or it can be an array, then every selected element will get the same array
 
 Binding data to elements using d3 will not make explicit changes to the element: the data will not show up in the [[DOM\|DOM]].
 
@@ -76,7 +81,7 @@ Binding data to elements using d3 will not make explicit changes to the element:
 ## Merge
 
 The above examples manipulate the update, enter,  and exit selection respectively.
-To do  some manipulations on the broader selection after some manipulations on some selection, we can use the `.merge(other_selection)` function.
+To do some manipulations on the broader selection after some manipulations on some selection, we can use the `.merge(other_selection)` function.
 
 For example:
 
@@ -124,7 +129,7 @@ The above function works no matter if `bars.enter()` or `bars.exit()` is empty.
 
 ## Groups
 
-We can manually create groups by creating a parent element for that group. For example:
+We can manually create groups by creating a parent element `<g>` for that group. For example:
 
 ```js
 const svg = d3.select("svg");
