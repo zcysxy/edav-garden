@@ -44,3 +44,5 @@ ggplot(SpeedSki, aes(Year, Speed)) +
 ```r
 ggplot(con2tr(f1, aes(x, y)) + geom_contour(aes(z = z))
 ```
+
+- [[Scatterplot#Smooth Scatterplot\|Scatterplot#Smooth Scatterplot]]
