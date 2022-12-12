@@ -10,7 +10,7 @@ state:: done
 
 When creating a graph for multivariate categorical data, we don't want multiple graphs for each categorical variable. Instead, we want to see the magnitude of phenomena (counts, frequency, etc.) **in the multivariate combinations of categorical variables**.
 
-![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013124743.png)
+![|500](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013124743.png)
 
 ## Graphs
 
