@@ -32,9 +32,8 @@ typeof(x) # "double"
 
 ### Conversion Specification
 
-| Conversion specification | Description                                        | Example            |
+|Conversion specification| Description                                        | Example            |
 | ------------------------ | -------------------------------------------------- | ------------------ |
-| %A                       |Full weekday| Sunday, Thursday   |
 | %A                       | Full weekday                                       | Sunday, Thursday   |
 | %b or %h                 | Abbreviated month                                  | May, Jul           |
 | %B                       | Full month                                         | May, July          |
