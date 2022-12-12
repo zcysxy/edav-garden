@@ -49,7 +49,10 @@ We want to perceive the difference between data by observing colors.
     - own diverging: `+scale_color_gradient2(low="blue", mid="white", hight="red")`
 - Discrete data
     - scheme function: `+scale_color_viridis_d()` (`d` for discrete)
+    - palette option: `+scale_color_brewer(palette = "PuBu")`
     - own: `+scale_color_manual(values=c("red", "yellow", "#FFFFFF")`
+- [!] The `color` in the above scales can be `fill` for scaling the `fill` variable
+- [!] continuous vs discrete: `c` vs `v`, `distiller` vs `brewer`, `gradient` vs `manual` ^v99m26
 
 ## With Other Packages
 
@@ -71,7 +74,7 @@ To make color vision deficiency (CVD) friendly graphs,
 
 ## General Tips
 
--  Be consistent with colors
+- Be consistent with colors
     - the color of the same object should be consistent among different graphs
     - manually set up the color if needed
 - Legend order matches graph order
