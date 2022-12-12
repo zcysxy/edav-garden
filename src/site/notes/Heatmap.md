@@ -18,7 +18,7 @@ In [[ggplot2\|ggplot2]], use `geom_bin2d()` to create a heatmap.
 
 ## Hex Heatmap
 
-Rather than using squares, hex heatmaps use hexagons. Hexagons are more compact, provide more accurate information, and make more natural transitions. In [[ggplot2\|ggplot2]], use `geom_hex`
+Rather than using squares, hex heatmaps use hexagons. Hexagons are more compact, provide more accurate information, and make more natural transitions. In [[ggplot2\|ggplot2]], use `geom_hex` to create hex heatmaps.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013000420.png)
 
@@ -34,7 +34,7 @@ Colors in heatmaps show the magnitudes of the phenomenon (cluster). An example t
 
 ## Three Variables
 
-The color can not only represent the magnitude of the cluster, but it can also represent a **third** variable. By doing this, heatmaps are no longer restricted to [[EDAV - Continuous Variable\|Continuous Variable]]s, but can also for [[EDAV - Categorical Data\|categorical]].
+The color can not only represent the magnitude of the cluster, but it can also represent a **third** variable. By doing this, heatmaps are no longer restricted to [[EDAV - Continuous Variable\|Continuous Variable]]s, but can also be for [[EDAV - Categorical Data\|categorical]].
 
 For three variables, we cannot use `geom_bin2d` anymore. Some choices in [[ggplot2\|ggplot2]] are
 
