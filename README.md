@@ -1,16 +1,9 @@
-# EDAV Garden
+# Digital Obsidian Garden
+This is the template to be used together with the [Digital Garden Obsidian Plugin](https://github.com/oleeskild/Obsidian-Digital-Garden). 
+See the README in the plugin repo for information on how to set it up.
 
-<p align="center">
-<a href="https://edav-garden.netlify.app">
-<img width="250" height="250" src="https://raw.githubusercontent.com/zcysxy/edav-garden/main/logo-garden.svg" style="background: transparent; border: none; box-shadow: none;">
-</a>
-</p>
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/oleeskild/digitalgarden)
 
-> **Note** This site is a [**digital garden**](https://github.com/MaggieAppleton/digital-gardeners)[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
-> - made by [me](https://github.com/zcysxy)
-> - on materials from GR5702 Exploratory Data Analysis and Visualization course with [Joyce Robbins](https://github.com/jtr13) at Columbia University
-> - with [Obsidian](https://obsidian.md) and [Obsidian Digital Garden](https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0)
-> - source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
-
-[^1]: In plain English: A collection of *notes*.
-
+---
+## Custom Styling
+I encourage you to change the default styling to make the site your own. Please modify the custom-style.scss when doing so to avoid future conflict when updating the template.

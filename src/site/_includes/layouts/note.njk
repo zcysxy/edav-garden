@@ -5,7 +5,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <title>{{ page.fileSlug }}</title>
     {%include "components/pageheader.njk"%}
   </head>
@@ -28,12 +27,9 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {% endif %}
       {{ content | link | highlight | safe}}
 
-      {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true%}
+      {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true%}
         {%include "components/sidebar.njk"%}
       {% endif %}
     </div>
-    {% if dgShowBacklinks === true or dgShowLocalGraph === true%}
-      {%include "components/sidebar.njk"%}
-    {% endif %}
   </body>
 </html>
