@@ -41,6 +41,7 @@ G --> H[Communicate]
     - Not mutually exclusive
     - Visualizations offering insight are likely to be shared
 
+```markdown
 ## Logistics
 
 - Aims
@@ -58,9 +59,9 @@ G --> H[Communicate]
     - Community contribution
     - Final project
 - Tools
-    - [[R\|R]]
-    - [[JavaScript\|JavaScript]]
-    - [[D3\|D3]] (library for [[JavaScript\|JS]])
+    - [[R]]
+    - [[JavaScript]]
+    - [[D3]] (library for [[JavaScript|JS]])
 - Grade
     - 35% Final Project
     - 25% Problem Sets
@@ -79,53 +80,53 @@ G --> H[Communicate]
 
 ### 2022-09-08
 
-- [[EDAV - Continuous Variable\|EDAV - Continuous Variable]]
-- [[Histogram\|Histogram]]
-- [[ggplot2\|ggplot2]]
+- [[EDAV - Continuous Variable]]
+- [[Histogram]]
+- [[ggplot2]]
 
 ### 2022-09-13
 
-- [[Boxplot\|Boxplot]]
-- [[Density Curve\|Density Curve]]
-- [[Ridgeline\|Ridgeline]]
+- [[Boxplot]]
+- [[Density Curve]]
+- [[Ridgeline]]
 
 ### 2022-09-15
 
-- [[Q-Q Plot\|Q-Q Plot]]
+- [[Q-Q Plot]]
 
 ### 2022-09-20
 
-- [[EDAV - Categorical Data\|EDAV - Categorical Data]]
-    - [[Bar Chart\|Bar Chart]]
-    - [[Cleveland Dot Plot\|Cleveland Dot Plot]]
-- [[forcats\|forcats]]
-- [[dplyr#summarise()\|dplyr#summarise()]]
+- [[EDAV - Categorical Data]]
+    - [[Bar Chart]]
+    - [[Cleveland Dot Plot]]
+- [[forcats]]
+- [[dplyr#summarise()]]
 
 ### 2022-09-22
 
-- [[forcats#Lumping\|forcats#Lumping]]
-- [[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]
-    - [[Scatterplot\|Scatterplot]]
-    - [[Heatmap\|Heatmap]]
-    - [[Density Contour Plot\|Density Contour Plot]]
-- [[R Package - Plotly\|R Package - Plotly]]
+- [[forcats#Lumping]]
+- [[EDAV - Dependency Relationship]]
+    - [[Scatterplot]]
+    - [[Heatmap]]
+    - [[Density Contour Plot]]
+- [[R Package - Plotly]]
 
 ### 2022-09-27
 
-- [[Scatterplot Matrix\|Scatterplot Matrix]]
-- [[tidyr\|tidyr]]
-- [[ggplot2#Facet\|ggplot2#Facet]]
-- [[EDAV - Categorical Data#Combine Continuous Variables and Categorical Variables\|EDAV - Categorical Data#Combine Continuous Variables and Categorical Variables]]
+- [[Scatterplot Matrix]]
+- [[tidyr]]
+- [[ggplot2#Facet]]
+- [[EDAV - Categorical Data#Combine Continuous Variables and Categorical Variables]]
 
 ### 2022-09-29
 
-- [[EDAV - Multivariate Continuous Data\|EDAV - Multivariate Continuous Data]]
-    - [[Parallel Coordinate\|Parallel Coordinate]]
-- [[EDAV - Multivariate Categorical Data\|EDAV - Multivariate Categorical Data]]
+- [[EDAV - Multivariate Continuous Data]]
+    - [[Parallel Coordinate]]
+- [[EDAV - Multivariate Categorical Data]]
 
 ### 2022-10-06
 
-- [[Mosaic Plot\|Mosaic Plot]]
+- [[Mosaic Plot]]
 
 ### 2022-10-11
 
@@ -136,7 +137,7 @@ G --> H[Communicate]
         - Available formats
         - Time to process data
     - Methods
-        - Dedicated [[R Package\|R Package]]s, for example, `atus`
+        - Dedicated [[R Package]]s, for example, `atus`
         - APIs with `httr` package
         - Web scraping
             - is the last resort
@@ -147,20 +148,20 @@ G --> H[Communicate]
                 - think about ethical questions
                 - limit bandwidth use
                 - scrape only what you need
-    - [[rvest\|rvest]]
-- [[Mosaic Plot#Simpson's Paradox\|Mosaic Plot#Simpson's Paradox]]
-- [[EDAV - Categorical Data\|EDAV - Categorical Data]]
+    - [[rvest]]
+- [[Mosaic Plot#Simpson's Paradox]]
+- [[EDAV - Categorical Data]]
 
 ### 2022-10-13
 
-- [[Heatmap\|Heatmap]]
-- [[Alluvial Diagram\|Alluvial Diagram]]
+- [[Heatmap]]
+- [[Alluvial Diagram]]
 
 ### 2022-10-18
 
-- [[R Package - Bookdown\|R Package - Bookdown]]
+- [[R Package - Bookdown]]
     - [Home | Bookdown](https://bookdown.org)
-- [[Git\|Git]]/GitHub Tutorials
+- [[Git]]/GitHub Tutorials
     - [3 Contribute to this Resource | edav dot info, 1st edition](https://jtr13.github.io/EDAV/contribute.html)
     - [Chapter 6 GitHub/git Resources | edav.info, 2nd edition](https://edav.info/github.html)
     - [Let’s Git started | Happy Git and GitHub for the useR](https://happygitwithr.com)
@@ -172,7 +173,7 @@ G --> H[Communicate]
 
 ### 2022-10-25
 
-- [[Biplot\|Biplot]]
+- [[Biplot]]
 
 ### 2022-10-27
 
@@ -185,73 +186,75 @@ G --> H[Communicate]
         - no wrong data
     - *good-shape* data
         - balance between the number of observations and variables
-- [[Graph Color\|Graph Color]]
+- [[Graph Color]]
 
 ### 2022-11-01
 
 - For later parts, you do not need to strictly follow the proposal
-- [[Graph Color#General Tips\|Graph Color#General Tips]]
-- [[EDAV - Time Series\|EDAV - Time Series]]
+- [[Graph Color#General Tips]]
+- [[EDAV - Time Series]]
 
 ### 2022-11-03
 
-- [[R Type - Date\|R Type - Date]]
-- [[lubridate\|lubridate]]
-- [[EDAV - Missing Data\|EDAV - Missing Data]]
+- [[R Type - Date]]
+- [[lubridate]]
+- [[EDAV - Missing Data]]
 
 ### 2022-11-10
 
-- [[Spatial Data\|Spatial Data]]
-- [[Choropleth\|Choropleth]]
-- [[Geographic Coordinate\|Geographic Coordinate]]
+- [[Spatial Data]]
+- [[Choropleth]]
+- [[Geographic Coordinate]]
 
 ### 2022-11-15
 
-- [[D3\|D3]]
-- [[HTML\|HTML]] intro
-    - [[DOM\|DOM]]
-- [[CSS\|CSS]] intro
-- [[SVG\|SVG]]
-    - SVGs, Scalable Vector Graphics, is an [[XML\|XML]]-based vector image format for defining two-dimensional graphics, having support for interactivity and animation.
-- [[JavaScript\|JavaScript]] Intro
+- [[D3]]
+- [[HTML]] intro
+    - [[DOM]]
+- [[CSS]] intro
+- [[SVG]]
+    - SVGs, Scalable Vector Graphics, is an [[XML]]-based vector image format for defining two-dimensional graphics, having support for interactivity and animation.
+- [[JavaScript]] Intro
     - Be generally familiar with arrays, objects, functions
     - Be aware that ES6 does things differently
-    - [[JS Arrow Function\|JS Arrow Function]]
-- [[Developer Tools\|Developer Tools]]
+    - [[JS Arrow Function]]
+- [[Developer Tools]]
 
 ### 2022-11-17
 
-- [[D3\|D3]]
-- [[JS Arrow Function\|JS Arrow Function]]
+- [[D3]]
+- [[JS Arrow Function]]
 
 ### 2022-11-29
 
-- [[D3 Bind Data\|D3 Bind Data]]
-- [[D3 Scale\|D3 Scale]]
-- [[D3 Margin\|D3 Margin]]
+- [[D3 Bind Data]]
+- [[D3 Scale]]
+- [[D3 Margin]]
 
 ### 2022-12-01
 
 - Final project tips
     - The most important part: the result
-    - Do not use other libraries when using [[D3\|D3]]
-    - Use raw [[HTML\|HTML]] in RMarkdown like it is in the `<body>` section
+    - Do not use other libraries when using [[D3]]
+    - Use raw [[HTML]] in RMarkdown like it is in the `<body>` section
 - Share D3 Online
     - [~] there are advantages to an online setup, for example, not having to set up a local server as described in the chapter on reading files.
-    - [VizHub](https://vizhub.com/): host [[D3\|D3]] visualizations online
-    - [[R Package - Bookdown\|Bookdown]]: include D3 code directly in a bookdown book hosted online
+    - [VizHub](https://vizhub.com/): host [[D3]] visualizations online
+    - [[R Package - Bookdown|Bookdown]]: include D3 code directly in a bookdown book hosted online
         - [+] everyone is in one document
         - [-] the book must be knit to view the HTML which happens quickly without R code but is still an extra step
         - Workflows
-            - Include everything in the `Rmd` files using raw [[HTML\|HTML]] code
-            - Put [[D3\|D3]] code in a separate `js` file, and then include it using `<script>` tag
-                - remember to include the link to the [[D3\|D3]] library first
+            - Include everything in the `Rmd` files using raw [[HTML]] code
+            - Put [[D3]] code in a separate `js` file, and then include it using `<script>` tag
+                - remember to include the link to the [[D3]] library first
                 - you can then create an identical `html` file for testing purposes only rather than render the full bookdown book each time you would like to observe changes to your D3 code
-            - Put the entire visualization ([[HTML\|HTML]] and [[D3\|D3]] code) in a separate `html` file, and then include it using `<iframe>` tag
+            - Put the entire visualization ([[HTML]] and [[D3]] code) in a separate `html` file, and then include it using `<iframe>` tag
     - [Observable](https://observablehq.com): official D3 web tool for creating and sharing D3 code
-- [[D3 Axes\|D3 Axes]]
-- [[JS Type - Array\|JS Type - Array]]
-- [[JS Function - map\|JS Function - map]]
-- [[D3 Functions\|D3 Functions]]
-- [[D3 Interactivity\|D3 Interactivity]]
-- [[D3 Transition\|D3 Transition]]
+- [[D3 Axes]]
+- [[JS Type - Array]]
+- [[JS Function - map]]
+- [[D3 Functions]]
+- [[D3 Interactivity]]
+- [[D3 Transition]]
+
+```
