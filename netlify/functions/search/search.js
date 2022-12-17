@@ -3,7 +3,6 @@ const lunrjs = require('lunr');
 const handler = async (event) => {
   try {
 
-
     const search = event.queryStringParameters.term;
     if(!search) throw('Missing term query parameter');
 
