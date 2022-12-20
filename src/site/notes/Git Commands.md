@@ -224,3 +224,12 @@ You can create a global `.gitignore` file to ignore files for all git repositori
 ```shell
 git config --global core.excludesfile <path_to_your_gitignore_global>
 ```
+
+## Separate Git Directory
+
+Sometimes, you don't want the `.git` directory to be in the same directory as the working tree (for example, to prevent sync issues).
+
+```shell
+cd ~/work/dir # working dir
+git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
+```
