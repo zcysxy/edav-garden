@@ -4,7 +4,7 @@
 
 > [!meta]-
 sup:: [[R\|R]]  
-state:: [[%wip\|%wip]]  
+state:: done
 
 # R Package
 
