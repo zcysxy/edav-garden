@@ -4,7 +4,7 @@
 
 > [!meta]-
 sup:: [[Language\|Language]]  
-state:: [[%wip\|%wip]]  
+state:: done  
 
 # R
 
