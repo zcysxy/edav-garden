@@ -28,6 +28,9 @@ sup:: [[EDAV\|EDAV]]
 
 [^1]: In plain English: A collection of *notes*.
 
+> [!success] Promotion
+> Are you interested in the relationship between the reviews and streams of music? Please have a look at our EDAV project: [Review vs. Stream](https://edav-42.github.io/review-vs-stream).
+
 ## What is EDAV
 
 - **Exploratory data analysis and visualization (EDAV)** is an **interdisciplinary** field combining
