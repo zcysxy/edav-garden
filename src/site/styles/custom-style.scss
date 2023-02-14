@@ -40,7 +40,7 @@ body {
     }
 
     /* Callouts */
-    div[class*=callout-] {
+    div.callout {
         font-size: var(--content-font-size);
         .admonition-title, .admonition-title:before { 
             font-size: 1.5rem; 
@@ -48,27 +48,27 @@ body {
         }
     }
     
-    div.callout-garden {
+    div.callout[data-callout="garden"] {
          .admonition-title::before { content: "🪴" }
          background-color: rgba(68, 207, 110, .2);
          .admonition-title { color: rgb(68, 207, 110); }
     }
-    div.callout-success {
+    div.callout[data-callout="success"] {
          background-color: rgba(255, 200, 60, .2);
          .admonition-title { color: rgb(255, 200, 60); }
          .admonition-title::before { content: "🎉" }
     }
-    div.callout-rmk {
+    div.callout[data-callout="rmk"] {
          background-color: rgba(255, 36, 76, 0.2);
          .admonition-title { color: rgb(255, 36, 76); }
          .admonition-title::before { content: "⚠️" }
     }
-    div.callout-ex {
+    div.callout[data-callout="ex"] {
          background-color: rgba(79, 179, 87, 0.2);
          .admonition-title { color: rgb(79, 179, 87); }
          .admonition-title::before { content: "📗" }
     }
-    div.callout-tip {
+    div.callout[data-callout="tip"] {
          background-color: rgba(0, 184, 212, 0.2);
          .admonition-title { color: rgb(0, 184, 212); }
          .admonition-title::before { content: "💡" }
