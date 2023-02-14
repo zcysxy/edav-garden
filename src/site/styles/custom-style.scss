@@ -55,7 +55,7 @@ body {
     }
     div.callout[data-callout="success"] {
          background-color: rgba(255, 200, 60, .2);
-         .callout-title { color: rgb(255, 200, 60); }
+        --callout-color: rgb(255, 200, 60);
         --callout-icon: party-popper;
     }
     div.callout[data-callout="rmk"] {
