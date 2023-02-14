@@ -74,7 +74,7 @@ body {
          .admonition-title::before { content: "💡" }
     }
 
-    div.callout-meta { display: none; }
+    div.callout[data-callout="meta"] { display: none; }
 
     div.content center > blockquote {
         margin-left: 0;
