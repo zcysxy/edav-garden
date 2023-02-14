@@ -12,7 +12,7 @@ body {
     //  h1 {
     //   color: black;
     //  }
-    --content-font-size: 1.4rem;
+    --content-font-size: 1rem;
     div.content {
         max-width: 900px;
         font-size: var(--content-font-size);
@@ -43,7 +43,7 @@ body {
     div.callout {
         font-size: var(--content-font-size);
         .callout-title, .callout-icon { 
-            font-size: 1.5rem; 
+            //font-size: 1.5rem; 
             font-weight: 800;
         }
     }
