@@ -15,7 +15,8 @@ body {
     --content-font-size: 1rem;
     div.content {
         max-width: 900px;
-        font-size: var(--content-font-size);
+        //font-size: var(--content-font-size);
+        --font-text-size: 1.4rem;
     }
     @media (min-width: 800px) {
         div.content {
