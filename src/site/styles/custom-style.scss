@@ -23,7 +23,7 @@ body {
         }
     }
 
-    div[class*=callout-], 
+    div.callout, 
     .content {
         font-family: 'Merriweather', var(--font-default);
     }
