@@ -49,14 +49,14 @@ body {
     }
     
     div.callout[data-callout="garden"] {
-         .callout-title::before { content: "🪴" }
+        --callout-icon: sprout;
          background-color: rgba(68, 207, 110, .2);
          .callout-title { color: rgb(68, 207, 110); }
     }
     div.callout[data-callout="success"] {
          background-color: rgba(255, 200, 60, .2);
          .callout-title { color: rgb(255, 200, 60); }
-         .callout-title::before { content: "🎉" }
+        --callout-icon: party-popper;
     }
     div.callout[data-callout="rmk"] {
          background-color: rgba(255, 36, 76, 0.2);
