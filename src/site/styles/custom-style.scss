@@ -19,7 +19,7 @@ body {
         --font-text-size: 1.4rem;
     }
     @media (min-width: 800px) {
-        div.content {
+        .content {
             padding-right: 90px;
         }
     }
@@ -77,7 +77,7 @@ body {
 
     div.callout[data-callout="meta"] { display: none; }
 
-    div.content center > blockquote {
+    .content center > blockquote {
         margin-left: 0;
         margin-inline-start: 0;
         padding-left: 0;
