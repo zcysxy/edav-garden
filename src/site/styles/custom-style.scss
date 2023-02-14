@@ -66,12 +66,12 @@ body {
     div.callout[data-callout="ex"] {
          background-color: rgba(79, 179, 87, 0.2);
          .callout-title { color: rgb(79, 179, 87); }
-         .callout-title::before { content: "📗" }
+        --callout-icon: book;
     }
     div.callout[data-callout="tip"] {
          background-color: rgba(0, 184, 212, 0.2);
          .callout-title { color: rgb(0, 184, 212); }
-         .callout-title::before { content: "💡" }
+        --callout-icon: lightbulb;
     }
 
     div.callout[data-callout="meta"] { display: none; }
