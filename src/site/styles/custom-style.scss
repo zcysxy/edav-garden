@@ -42,7 +42,7 @@ body {
     /* Callouts */
     div.callout {
         font-size: var(--content-font-size);
-        .callout-title, .callout-title:before { 
+        .callout-title, .callout-icon { 
             font-size: 1.5rem; 
             font-weight: 800;
         }
@@ -61,7 +61,7 @@ body {
     div.callout[data-callout="rmk"] {
          background-color: rgba(255, 36, 76, 0.2);
          .callout-title { color: rgb(255, 36, 76); }
-         .callout-title::before { content: "⚠️" }
+        --callout-icon: alert-triangle;
     }
     div.callout[data-callout="ex"] {
          background-color: rgba(79, 179, 87, 0.2);
