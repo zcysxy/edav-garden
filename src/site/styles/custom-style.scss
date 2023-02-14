@@ -52,7 +52,7 @@ body {
     div.callout[data-callout="garden"] {
         --callout-icon: sprout;
          background-color: rgba(68, 207, 110, .2);
-         .callout-title { color: rgb(68, 207, 110); }
+        --callout-color: 68, 207, 110;
     }
     div.callout[data-callout="success"] {
          background-color: rgba(255, 200, 60, .2);
@@ -61,17 +61,17 @@ body {
     }
     div.callout[data-callout="rmk"] {
          background-color: rgba(255, 36, 76, 0.2);
-         .callout-title { color: rgb(255, 36, 76); }
         --callout-icon: alert-triangle;
+        --callout-color: 255, 36, 76;
     }
     div.callout[data-callout="ex"] {
          background-color: rgba(79, 179, 87, 0.2);
-         .callout-title { color: rgb(79, 179, 87); }
+        --callout-color: 79, 179, 87;
         --callout-icon: book;
     }
     div.callout[data-callout="tip"] {
          background-color: rgba(0, 184, 212, 0.2);
-         .callout-title { color: rgb(0, 184, 212); }
+        --callout-color: 0, 184, 212;
         --callout-icon: lightbulb;
     }
 
