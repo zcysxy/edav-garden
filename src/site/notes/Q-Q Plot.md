@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/q-q-plot/"}
+{"dg-publish":true,"permalink":"/q-q-plot/","title":"Q-Q Plot","created":"2022-09-15T19:09:00","updated":""}
 ---
 
 > [!meta]-
