@@ -53,13 +53,13 @@ button {
 .theme-dark {
     background: var(--background-primary);
     color: var(--text-normal);
-    font-family: var(--font-default);
+    font-family: "Roboto", sans-serif;
 }
 
 .theme-light {
     background: white;
     color: black;
-    font-family: var(--font-default);
+    font-family: "Roboto", sans-serif;
 }
 
 a.is-unresolved {

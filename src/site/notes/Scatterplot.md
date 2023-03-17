@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot/","title":"Scatterplot","created":"2022-10-12T23:24:08","updated":""}
+{"dg-publish":true,"permalink":"/scatterplot/"}
 ---
 
 > [!meta]-  

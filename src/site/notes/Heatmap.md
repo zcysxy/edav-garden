@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/heatmap/","title":"Heatmap","created":"2022-09-22T17:06:10","updated":""}
+{"dg-publish":true,"permalink":"/heatmap/"}
 ---
 
 > [!meta]-

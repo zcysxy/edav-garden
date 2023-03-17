@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/js-arrow-function/","title":"JS Array Function","created":"2022-11-17T17:22:24","updated":""}
+{"dg-publish":true,"permalink":"/js-arrow-function/"}
 ---
 
 > [!meta]-  

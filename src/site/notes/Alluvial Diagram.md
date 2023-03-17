@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/alluvial-diagram/","title":"Alluvial Diagram","created":"2022-10-13T16:58:30","updated":""}
+{"dg-publish":true,"permalink":"/alluvial-diagram/"}
 ---
 
 > [!meta]-  

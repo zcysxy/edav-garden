@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lubridate/","title":"lubridate","created":"2022-11-03T22:36:27","updated":""}
+{"dg-publish":true,"permalink":"/lubridate/"}
 ---
 
 > [!meta]-  

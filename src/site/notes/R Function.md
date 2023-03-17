@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-function/","title":"R Function","created":"2022-09-08T19:18:55","updated":""}
+{"dg-publish":true,"permalink":"/r-function/"}
 ---
 
 > [!meta]-

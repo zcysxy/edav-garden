@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-type/","title":"R Types","created":"2022-09-06T17:38:35","updated":""}
+{"dg-publish":true,"permalink":"/r-type/"}
 ---
 
 > [!meta]-
@@ -58,9 +58,7 @@ class(x - 1i) # complex
 
 There is no difference between strings and characters in [[R\|R]], unlike [[MATLAB\|MATLAB]].
 And a string and a character are both char vectors of length 1.
-Characters are surrounded by double quotes `"` (or single quotes `'`).
-{ #55dclb}
-
+Characters are surrounded by double quotes `"` (or single quotes `'`). ^55dclb
 
 ```r
 length("Hello")

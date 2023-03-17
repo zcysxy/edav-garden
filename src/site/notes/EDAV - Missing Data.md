@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-missing-data/","title":"EDAV - Missing Data","created":"2022-11-03T16:45:22","updated":""}
+{"dg-publish":true,"permalink":"/edav-missing-data/"}
 ---
 
 > [!meta]-  

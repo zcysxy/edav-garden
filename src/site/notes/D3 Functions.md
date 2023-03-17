@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/d3-functions/","title":"D3 Functions","created":"2022-12-01T17:19:32","updated":""}
+{"dg-publish":true,"permalink":"/d3-functions/"}
 ---
 
 > [!meta]-  

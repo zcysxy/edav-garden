@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git-commands/","title":"Git Commands","created":"2021-09-08T20:50:01","updated":""}
+{"dg-publish":true,"permalink":"/git-commands/"}
 ---
 
 > [!meta]-

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-multivariate-categorical-data/","title":"EDAV - Multivariate Categorical Data","created":"2022-10-13T12:40:21","updated":""}
+{"dg-publish":true,"permalink":"/edav-multivariate-categorical-data/"}
 ---
 
 > [!meta]-  

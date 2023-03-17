@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-basics/","title":"R Basics","created":"2022-09-06T16:38:48","updated":""}
+{"dg-publish":true,"permalink":"/r-basics/"}
 ---
 
 > [!meta]-
@@ -10,9 +10,7 @@ state:: done
 
 - Comments start with `#`
     - No specific syntax for multi-line comments
-- Index starts from ***1***
-{ #wqehih}
-
+- Index starts from ***1*** ^wqehih
 - Most index in R are **inclusive**
     - [@] `c(1,2,3)[1:2]` returns `1 2`
 - The naming convention of files and variables is **snake_case**
@@ -22,9 +20,7 @@ state:: done
     - `1 -> x`
     - `x = 1`
 - Variables in [[R\|R]] are dynamic typing like [[Python\|Python]]
-- The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]]
-{ #1e9b8c}
-
+- The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] ^1e9b8c
 - The interactive shell of [[R\|R]] uses an indicator `[x]` to show the index of the printed vector
     - example:
 

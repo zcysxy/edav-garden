@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/ggplot2/","title":"ggplot2","created":"2022-09-08T17:04:00","updated":""}
+{"dg-publish":true,"permalink":"/ggplot2/"}
 ---
 
 > [!meta]-
@@ -94,9 +94,7 @@ Here are some examples for each component
     - bin
     - boxplot
     - density
-- [[ggplot2#Position Adjustment\|#Position Adjustment]]
-{ #569ce1}
-
+- [[ggplot2#Position Adjustment\|#Position Adjustment]] ^569ce1
     - identity
     - `stack`
     - `fill` stretch the object to fill the space
@@ -119,9 +117,7 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 - `x =` and `y =` can be omitted
 - To map an aesthetic to a **variable**, associate the name of the aesthetic to the name of the variable inside `aes()`
 - [@] `geom_point(mapping = aes(x = displ, y = hwy, color = class))`
-- [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data
-{ #v9c3po}
-
+- [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data ^v9c3po
 - You can also set the aesthetic properties outside the `mapping=aes()`, treating them as standalone components; but then the RHS needs to be a specific value rather than a variable
     - `geom_point(mapping = aes(x = displ, y = hwy), color = "blue")`
 - [~] You can put `mapping` in the `ggplot()` function to get **global mappings** for all layers
@@ -137,9 +133,7 @@ Like `bin`, it first puts data in different bins, and then calculates the count 
 
 `stat_*(...)` functions are another groups of functions short for `layer(stat = "*", ...)`.
 You can generally use geoms and stats interchangeably. Every geom has a default stat; and every stat has a default geom.
-To see which `stat` a `geom_*` is using by default, use `?geom_*`
-{ #5rmdan}
-
+To see which `stat` a `geom_*` is using by default, use `?geom_*` ^5rmdan
 
 ### Position Adjustment
 
@@ -148,9 +142,7 @@ By default, `ggplot2` will plot objects "where they are", i.e., `position = "ide
 ## Scale
 
 A scale controls how data is mapped to aesthetic attributes, so one scale for one [[ggplot2#Aesthetic Mapping\|#Aesthetic Mapping]].
-Some examples:
-{ #b78rgq}
-
+Some examples: ^b78rgq
 
 | Mapping | Scale (example)          |
 | ------- | ------------------------ |
@@ -204,14 +196,10 @@ The output graph will be three, one for each species.
 To create two-dimensional facets:
 
 - Use option `nrow=x` in `facet_wrap()`
-- Use `facet_grid()` with [[R Type - Formula\|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns
-{ #b6alii}
-
+- Use `facet_grid()` with [[R Type - Formula\|R Type - Formula]]--`x ~ y`; then `x` will be mapped to rows and `y` to columns ^b6alii
     - Use `facet_grid(. ~ x)` and `facet_grid(x ~ .)` when you only want facet on one variable
 
-To use different adaptive scales for each facet, use option `scales = "free"`, `scales = "free_y"`, or `scales = "free_x"`.
-{ #32e6e9}
-
+To use different adaptive scales for each facet, use option `scales = "free"`, `scales = "free_y"`, or `scales = "free_x"`. ^32e6e9
 
 - [!] When comparing different facets, do not free the scales; use a consistent scale instead.
 

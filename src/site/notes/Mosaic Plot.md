@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mosaic-plot/","created":"2022-10-06T16:42:45","updated":""}
+{"dg-publish":true,"permalink":"/mosaic-plot/"}
 ---
 
 > [!meta]-
@@ -62,9 +62,7 @@ Just like [[Scatterplot Matrix\|Scatterplot Matrix]], we can make mosaic plot ma
 - `mosaic()` in package `vcd`
     - [@] `mosaic(Music ~ Age, data = counts3, direction = c("v", "h"))`
     - [@] `mosaic(Music ~ Age + Favorite, data = counts3, direction = c("v", "v", "h"))`
-    - Here [[R Type - Formula\|R Type - Formula]] can be read as "on", especially for dependent variables
-{ #hv0kpp}
-
+    - Here [[R Type - Formula\|R Type - Formula]] can be read as "on", especially for dependent variables ^hv0kpp
     - There should be a `Freq` column in the date, which is a standard column in a dataframe
     - use `vcd::labelings` functions to
         - abbreviate labels using option `abbreviate_labs = c(FALSE, 3, 6)`

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-continuous-variable/","title":"EDAV - Continuous Variable","created":"2022-09-26T00:35:53","updated":""}
+{"dg-publish":true,"permalink":"/edav-continuous-variable/"}
 ---
 
 > [!meta]-  
@@ -71,7 +71,7 @@ Different graphs emphasize different features.
 ## Combine Continuous Variables and Categorical Variables
 
 
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/edav-categorical-data/#combine-continuous-variables-and-categorical-variables" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
 
 

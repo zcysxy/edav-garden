@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-data-structure/","title":"R Data Structure","created":"2022-09-08T19:22:59","updated":""}
+{"dg-publish":true,"permalink":"/r-data-structure/"}
 ---
 
 > [!meta]-
@@ -14,9 +14,7 @@ state:: done
 
 In [[R\|R]], every single value, like `5L`, is considered a vector of length 1.
 There is one rule about vectors: **a vector can only contain objects of the same type**.
-If you combine objects of different types into a vector, the objects will be transformed into the same type.
-{ #ikola8}
-
+If you combine objects of different types into a vector, the objects will be transformed into the same type. ^ikola8
 
 Use function `c` (for "combine") to create a vector with more than 1 element.
 
@@ -155,8 +153,8 @@ list1[[1]] # by index
 > [!rmk]
 > - List is the only heterogeneous structure so far ([[R Data Structure#Vector\|#Vector]], [[R Data Structure#Matrix\|#Matrix]], and [[R Data Structure#Array\|#Array]] are all homogenous)
 > - List also has special index—it needs **double brackets**
-{ #2135c8}
 
+^2135c8
 
 > [!info]
 > Lists are not the most efficient data structure to work with in R; unless you have a very good reason, you should stick to [`data.frames`](<#data frame>).

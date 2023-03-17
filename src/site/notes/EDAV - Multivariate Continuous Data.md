@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/","title":"EDAV - Multivariate Continuous Data","created":"2022-10-13T02:31:53","updated":""}
+{"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/"}
 ---
 
 > [!meta]-  

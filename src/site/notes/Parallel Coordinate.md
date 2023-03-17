@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/parallel-coordinate/","title":"Parallel Coordinate","created":"2022-10-13T02:36:23","updated":""}
+{"dg-publish":true,"permalink":"/parallel-coordinate/"}
 ---
 
 > [!meta]-  
@@ -35,9 +35,7 @@ We can use `ggparcoord` in `GGally` to create parallel coordinate plots.
 Other methods to reveal the patterns:
 
 - Reorder the variables
-    - Making lines cross may be better than making them parallel
-{ #o9j70v}
-
+    - Making lines cross may be better than making them parallel ^o9j70v
 - Make lines transparent (change alpha)
 - Interpolation
     - Instead of using straight lines, we can use splines or other interpolated curves
