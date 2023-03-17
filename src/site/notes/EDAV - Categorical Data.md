@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-categorical-data/"}
+{"dg-publish":true,"permalink":"/edav-categorical-data/","title":"Categorical Data","created":"2022-10-12T22:41:56","updated":""}
 ---
 
 > [!meta]-  
@@ -106,7 +106,9 @@ Relative frequency stacked [[Bar Chart\|Bar Chart]]s are used to present this ki
 
 Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.
 
-Another type of [[Bar Chart\|Bar Chart]], **diverging stacked bar chart**s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33
+Another type of [[Bar Chart\|Bar Chart]], **diverging stacked bar chart**s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out.
+{ #99cd33}
+
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225854.png)
 
