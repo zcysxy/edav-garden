@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/forcats/"}
+{"dg-publish":true,"permalink":"/forcats/","title":"forcats","created":"2022-10-12T21:59:31","updated":""}
 ---
 
 > [!meta]-  
