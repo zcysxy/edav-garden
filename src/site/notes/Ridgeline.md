@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/ridgeline/"}
+{"dg-publish":true,"permalink":"/ridgeline/","title":"Ridgeline","created":"2022-10-21T23:11:54","updated":""}
 ---
 
 > [!meta]-  
