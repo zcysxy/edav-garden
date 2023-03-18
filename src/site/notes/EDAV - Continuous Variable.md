@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-continuous-variable/","title":"EDAV - Continuous Variable","created":"2022-09-26T00:35:53","updated":""}
+{"dg-publish":true,"permalink":"/edav-continuous-variable/","title":"EDAV - Continuous Variable","created":"2022-09-26T00:35:53","updated":"2022-12-11T01:07:55"}
 ---
 
 > [!meta]-  
