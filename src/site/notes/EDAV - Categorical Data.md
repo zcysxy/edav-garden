@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-categorical-data/","title":"Categorical Data","created":"2022-10-12T22:41:56","updated":""}
+{"dg-publish":true,"permalink":"/edav-categorical-data/","title":"Categorical Data","created":"2022-10-12T22:41:56","updated":"2022-12-11T17:23:32"}
 ---
 
 > [!meta]-  
