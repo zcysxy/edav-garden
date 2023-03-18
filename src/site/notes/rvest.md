@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rvest/","title":"rvest","created":"2022-10-13T21:54:22","updated":""}
+{"dg-publish":true,"permalink":"/rvest/","title":"rvest","created":"2022-10-13T21:54:22","updated":"2022-10-13T22:20:21"}
 ---
 
 > [!meta]-  
