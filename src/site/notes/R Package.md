@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-package/"}
+{"dg-publish":true,"permalink":"/r-package/","title":"R Package","created":"2022-09-11T20:20:44","updated":"2022-09-19T00:00:10"}
 ---
 
 > [!meta]-

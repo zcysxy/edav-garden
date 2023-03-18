@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/d3-axes/"}
+{"dg-publish":true,"permalink":"/d3-axes/","title":"D3 Axes","created":"2022-12-01T16:35:19","updated":"2022-12-01T20:13:33"}
 ---
 
 > [!meta]-  

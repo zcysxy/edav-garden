@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-operator/"}
+{"dg-publish":true,"permalink":"/r-operator/","title":"R Operator","created":"2022-09-08T18:33:13","updated":"2022-09-22T17:33:42"}
 ---
 
 > [!meta]-
@@ -29,7 +29,7 @@ c(1,2,3) * c(3,2,1)
 ```
 
 Note that 
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r-basics/#1e9b8c" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 
 $<div class="markdown-embed-title">
 
@@ -38,37 +38,7 @@ $<div class="markdown-embed-title">
 </div>
 
 
-
-> [!meta]-
-sup:: [[R\|R]]  
-state:: done
-
-# R Basics
-
-- Comments start with `#`
-    - No specific syntax for multi-line comments
-- Index starts from ***1*** ^wqehih
-- Most index in R are **inclusive**
-    - [@] `c(1,2,3)[1:2]` returns `1 2`
-- The naming convention of files and variables is **snake_case**
-- Print variables using `print`
-- Assign a value to a variable using
-    - `x <- 1` (preferred traditionally)
-    - `1 -> x`
-    - `x = 1`
-- Variables in [[R\|R]] are dynamic typing like [[Python\|Python]]
-- The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] ^1e9b8c
-- The interactive shell of [[R\|R]] uses an indicator `[x]` to show the index of the printed vector
-    - example:
-
-```R
-    > x <- 11:30
-    > x
-     [1] 11 12 13 14 15 16 17 18 19 20 21 22
-    [13] 23 24 25 26 27 28 29 30
-    ```
-- Use function `View()` to view data in a specific RStudio viewer
-
+- The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] 
 
 </div></div>
 . There are special operators for matrix arithmetics.

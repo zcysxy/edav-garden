@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/dom/"}
+{"dg-publish":true,"permalink":"/dom/","title":"DOM","created":"2021-08-30T13:51:14","updated":"2022-11-17T18:13:44"}
 ---
 
 > [!meta]-

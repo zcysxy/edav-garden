@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/choropleth/"}
+{"dg-publish":true,"permalink":"/choropleth/","title":"Choropleth","created":"2022-11-10T16:33:30","updated":"2022-11-10T20:34:11"}
 ---
 
 > [!meta]-  
@@ -31,7 +31,9 @@ There are several attempts to alleviate this problem.
 A **cartogram** distorts the area of regions in order to convey the information of an alternate variable. The region area will be inflated or deflated according to the numeric value of that variable.
 
 Note that the variable determining the distortion and the variable determining the color are not necessarily the same. Actually, there would be redundancy if they were the same one.
-For example, we can use color to present the election result, and distort the cartogram according to the number of voters. ^m0zedk
+For example, we can use color to present the election result, and distort the cartogram according to the number of voters.
+{ #m0zedk}
+
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110181426.png)
 
@@ -104,7 +106,7 @@ plot(p)
 ### sf and tmap
 
 
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 
 
 

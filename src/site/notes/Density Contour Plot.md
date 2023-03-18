@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/density-contour-plot/"}
+{"dg-publish":true,"permalink":"/density-contour-plot/","title":"Density Contour Plot","created":"2022-10-13T00:39:21","updated":"2022-10-13T01:02:34"}
 ---
 
 > [!meta]-  

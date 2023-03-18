@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/geographic-coordinate/"}
+{"dg-publish":true,"permalink":"/geographic-coordinate/","title":"Geographic Coordinate","created":"2022-11-10T19:15:08","updated":"2022-12-12T01:28:28"}
 ---
 
 > [!meta]-  
@@ -11,7 +11,9 @@ state:: done
 Geographic coordinate uses **latitude and longitude** to locate a position.
 Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like [[Scatterplot\|Scatterplot]] and [[Density Contour Plot\|Density Contour Plot]].
 
-- [!] In a geographic coordinate, **latitude** comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates. ^5kd68p
+- [!] In a geographic coordinate, **latitude** comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates.
+{ #5kd68p}
+
 
 There are also some special graphs for geographic coordinate system, but with controversial performance, like
 
@@ -32,7 +34,7 @@ There are also some special graphs for geographic coordinate system, but with co
 ### sf and tmap
 
 
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 
 
 

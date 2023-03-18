@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r/"}
+{"dg-publish":true,"permalink":"/r/","title":"R","created":"2022-09-06T15:23:58","updated":"2022-09-11T19:48:16"}
 ---
 
 > [!meta]-

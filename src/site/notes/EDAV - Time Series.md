@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-time-series/"}
+{"dg-publish":true,"permalink":"/edav-time-series/","title":"EDAV - Time Series","created":"2022-11-01T16:53:01","updated":"2022-11-03T15:56:36"}
 ---
 
 > [!meta]-  
@@ -24,7 +24,9 @@ In the above example, the blue curve is a global non-parametric smoother, while 
 
 Add a smoother using [[ggplot2\|ggplot2]]: `geom_smooth(method = "loess", span = .75, se = FALSE)`
 
-- [~] Choose the right parameters for smoothers to avoid [[Overfitting and Underfitting\|Overfitting and Underfitting]]. Small `span` tends to overfit; while large `span` tends to underfit. ^4j85jk
+- [~] Choose the right parameters for smoothers to avoid [[Overfitting and Underfitting\|Overfitting and Underfitting]]. Small `span` tends to overfit; while large `span` tends to underfit.
+{ #4j85jk}
+
 
 > [!rmk] Rolling Average vs Smoother
 > A rolling average and a smoother are alike, but they are not the same thing. A rolling average is fitting a **constant** instead of a line. Therefore, there are more *jumps* in a rolling average. Rolling averages only aggregate the previous information and do not capture future information.

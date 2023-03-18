@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/tidyr/"}
+{"dg-publish":true,"permalink":"/tidyr/","title":"tidyr","created":"2022-10-13T01:40:00","updated":"2022-12-11T20:34:00"}
 ---
 
 > [!meta]-  

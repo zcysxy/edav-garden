@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-type-date/"}
+{"dg-publish":true,"permalink":"/r-type-date/","title":"R Type - Date","created":"2022-11-03T16:19:58","updated":"2022-11-03T22:34:28"}
 ---
 
 > [!meta]-  

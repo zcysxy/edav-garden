@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav/"}
+{"dg-publish":true,"permalink":"/edav/","title":"Exploratory Data Analysis and Visualization","created":"2022-08-10T03:52:20","updated":"2022-12-16T21:53:33"}
 ---
 
 > [!meta]-  
