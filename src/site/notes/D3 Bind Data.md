@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/d3-bind-data/"}
+{"dg-publish":true,"permalink":"/d3-bind-data/","title":"D3 Bind Data","created":"2022-12-01T20:45:08","updated":""}
 ---
 
 > [!meta]-  
