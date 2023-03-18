@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/parallel-coordinate/","title":"Parallel Coordinate","created":"2022-10-13T02:36:23","updated":""}
+{"dg-publish":true,"permalink":"/parallel-coordinate/","title":"Parallel Coordinate","created":"2022-10-13T02:36:23","updated":"2022-12-11T21:44:09"}
 ---
 
 > [!meta]-  
