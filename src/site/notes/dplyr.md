@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/dplyr/"}
+{"dg-publish":true,"permalink":"/dplyr/","title":"dplyr","created":"2022-09-20T16:27:00","updated":""}
 ---
 
 > [!meta]-
@@ -30,8 +30,8 @@ jan1 <- filter(flights, month == 1, day == 1)
 - [!] Multiple arguments to `filter()` are combined with "and": every expression must be true in order for a row to be included in the output.
 - [!] Don't use short-circuiting logical operators here. Because the expressions in `filter()` filter all the data items.
 - [!] `filter()` filters out both `FALSE` and `NA`
+{ #n9gqf8}
 
-^n9gqf8
 
 ## arrange()
 
@@ -42,7 +42,9 @@ arrange(flights, year, desc(month), day)
 ```
 
 - `desc()` is used to reverse the order
-- Missing values `NA` are always sorted at the end ^vphdjm
+- Missing values `NA` are always sorted at the end
+{ #vphdjm}
+
 
 ## select()
 
@@ -113,5 +115,7 @@ Useful summary functions:
 - `mean()`, `median()`, `sum()`
     - use option `na.rm = TRUE` to remove the NAs before aggregation
 - `n()`, `n_distinct(var)` for count
-    - `n()` includes NAs, use `sum(!is.na(x))` to count non-NAs ^miop8n
+    - `n()` includes NAs, use `sum(!is.na(x))` to count non-NAs
+{ #miop8n}
+
 - `min()`, `max()`, `quantile(x, 0.25)`
