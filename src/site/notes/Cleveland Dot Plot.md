@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cleveland-dot-plot/","title":"Cleveland Dot Plot","created":"2022-10-12T21:20:51","updated":""}
+{"dg-publish":true,"permalink":"/cleveland-dot-plot/","title":"Cleveland Dot Plot","created":"2022-10-12T21:20:51","updated":"2022-10-12T21:34:35"}
 ---
 
 > [!meta]-  
