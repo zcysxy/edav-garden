@@ -144,12 +144,12 @@ sup:: [[EDAV\|EDAV]]
 
 ## References
 
-- For [[edav-garden#Plots Gallery\|#Plots Gallery]]:
+- For [[edav-gardent#Plots Gallery\|Plots Gallery]]:
     - Robbins, Joyce. *<https://edav.info>*. 2022.
     - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
-- For [[edav-garden#R Garden\|#R Garden]]:
+- For [[edav-garden#R Garden\|R Garden]]:
     - Wickham, Hadley, and Garrett Grolemund. *[R for data science: import, tidy, transform, visualize, and model data](https://r4ds.had.co.nz)*. O'Reilly Media, Inc., 2017.
-- For [[edav-garden#Git Garden\|#Git Garden]]:
+- For [[edav-garden#Git Garden\|Git Garden]]:
     - Chacon, Scott, and Ben Straub. *[Pro Git](https://git-scm.com/book/en/v2)*. Springer Nature, 2014.
-- For [[edav-garden#WebDev Garden\|#WebDev Garden]]
+- For [[edav-garden#WebDev Garden\|WebDev Garden]]
     - Robbins, Joyce. *[D3 for R Users](https://jtr13.github.io/d3book/)*. 2022.
