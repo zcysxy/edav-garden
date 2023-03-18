@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/biplot/","title":"Biplot","created":"2022-10-25T16:20:42","updated":""}
+{"dg-publish":true,"permalink":"/biplot/","title":"Biplot","created":"2022-10-25T16:20:42","updated":"2022-12-11T23:27:22"}
 ---
 
 > [!meta]-  
