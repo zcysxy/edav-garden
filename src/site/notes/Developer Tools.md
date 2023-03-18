@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/developer-tools/"}
+{"dg-publish":true,"permalink":"/developer-tools/","title":"Developer Tools","created":"2021-08-29T13:53:12","updated":""}
 ---
 
 > [!meta]-
