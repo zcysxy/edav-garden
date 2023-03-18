@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot-matrix/","title":"Scatterplot Matrix","created":"2022-10-13T01:12:05","updated":""}
+{"dg-publish":true,"permalink":"/scatterplot-matrix/","title":"Scatterplot Matrix","created":"2022-10-13T01:12:05","updated":"2022-10-13T01:37:30"}
 ---
 
 > [!meta]-  
