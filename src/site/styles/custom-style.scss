@@ -192,5 +192,11 @@ body {
     div#tooltip-content > div:first-child {
         display: none;
     }
+    
+    //toc
+    nav.toc > ol {
+        padding-left: 0;
+        margin: 0;
+    }
 }
 
