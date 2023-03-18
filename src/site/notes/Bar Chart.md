@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/bar-chart/","title":"Bar Chart","created":"2022-10-12T22:07:38","updated":""}
+{"dg-publish":true,"permalink":"/bar-chart/","title":"Bar Chart","created":"2022-10-12T22:07:38","updated":"2022-12-11T19:14:39"}
 ---
 
 > [!meta]-  
