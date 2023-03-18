@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/density-curve/","title":"Density Curve","created":"2022-12-10T17:51:41","updated":""}
+{"dg-publish":true,"permalink":"/density-curve/","title":"Density Curve","created":"2022-12-10T17:51:41","updated":"2022-12-10T19:54:25"}
 ---
 
 > [!meta]-  
