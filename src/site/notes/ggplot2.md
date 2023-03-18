@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/ggplot2/","title":"ggplot2","created":"2022-09-08T17:04:00","updated":""}
+{"dg-publish":true,"permalink":"/ggplot2/","title":"ggplot2","created":"2022-09-08T17:04:00","updated":"2022-12-11T20:14:17"}
 ---
 
 > [!meta]-
