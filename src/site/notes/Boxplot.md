@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/boxplot/"}
+{"dg-publish":true,"permalink":"/boxplot/","title":"Boxplot","created":"2022-09-13T16:24:30","updated":""}
 ---
 
 > [!meta]-
@@ -12,7 +12,9 @@ Boxplots display individual outliers and robust statistics for the data, useful 
 
 - Boxplots follow the 5-data summary
     - min, first quartile/ lower hinge, median, third quartile/ upper hinge, max
-        - Sometimes quartiles are different than hinges  ^f281ji
+        - Sometimes quartiles are different than hinges 
+{ #f281ji}
+
             - **Hinge**
                 - The lower hinge is the median of the lower half of the data up to the median, and including the median if and only if the median is a real data point
                     - i.e., the median is not the average of two points; i.e., the size of the data is odd
@@ -25,12 +27,16 @@ Boxplots display individual outliers and robust statistics for the data, useful 
                     3. If this is an integer, **add 0.5**; if it isn't an integer round **up**
                     4. Find the datum in this position; If your depth ends in 0.5, then take the midpoint between the two data points
             - [*] Therefore, the hinges are the same as the quartiles *unless* the remainder when dividing the sample size by 4 is 3
-- Area != number of data points; each area contains the same number of points ^blnqta
+- Area != number of data points; each area contains the same number of points
+{ #blnqta}
+
     - Area represents the **density**
 - Outliers: data outside the **fences**
     - fences: upper-hinge + 1.5 x **H-spread**, lower-hinge - 1.5 x H-spread
     - H-spread/ interquartile/ forth spread: upper-hinge - lower-hinge
-- A multiple-class boxplot should be **re-ordered by the median** ^dw30i4
+- A multiple-class boxplot should be **re-ordered by the median**
+{ #dw30i4}
+
 
 ## Elements
 
