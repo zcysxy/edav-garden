@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-control-statement/"}
+{"dg-publish":true,"permalink":"/r-control-statement/","title":"R Statement","created":"2022-09-08T19:07:28","updated":""}
 ---
 
 > [!meta]-
