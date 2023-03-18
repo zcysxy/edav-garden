@@ -144,7 +144,7 @@ sup:: [[EDAV\|EDAV]]
 
 ## References
 
-- For [[edav-gardent#Plots Gallery\|Plots Gallery]]:
+- For [[edav-garden#Plots Gallery\|Plots Gallery]]:
     - Robbins, Joyce. *<https://edav.info>*. 2022.
     - Unwin, Antony. *Graphical data analysis with R*. Chapman and Hall/CRC, 2018.
 - For [[edav-garden#R Garden\|R Garden]]:
