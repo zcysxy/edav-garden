@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/js-function/","title":"JS Functions","created":"2021-08-25T23:18:27","updated":""}
+{"dg-publish":true,"permalink":"/js-function/","title":"JS Functions","created":"2021-08-25T23:18:27","updated":"2022-11-18T02:32:01"}
 ---
 
 > [!meta]-
