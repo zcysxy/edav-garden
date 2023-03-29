@@ -8,19 +8,6 @@
 
 # 🌐 Areas
 
-| File                                                          | file.mtime                  |
-| ------------------------------------------------------------- | --------------------------- |
-| [[Alluvial Diagram\|Alluvial Diagram]]                     | 5:29 PM - December 18, 2022 |
-| [[Bar Chart\|Bar Chart]]                                   | 5:29 PM - December 18, 2022 |
-| [[Biplot\|Biplot]]                                         | 5:29 PM - December 18, 2022 |
-| [[Boxplot\|Boxplot]]                                       | 5:29 PM - December 18, 2022 |
-| [[Choropleth\|Choropleth]]                                 | 5:29 PM - December 18, 2022 |
-| [[Cleveland Dot Plot\|Cleveland Dot Plot]]                 | 6:24 PM - December 12, 2022 |
-| [[Density Contour Plot\|Density Contour Plot]]             | 5:29 PM - December 18, 2022 |
-| [[Density Curve\|Density Curve]]                           | 5:29 PM - December 18, 2022 |
-| [[EDAV - Categorical Data\|EDAV - Categorical Data]]       | 5:29 PM - December 18, 2022 |
-| [[EDAV - Continuous Variable\|EDAV - Continuous Variable]] | 6:24 PM - December 12, 2022 |
-
 <div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">14</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr></tbody></table></div>
 
 ```expander
