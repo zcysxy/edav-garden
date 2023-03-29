@@ -8,27 +8,7 @@
 
 # 🌐 Areas
 
-```dataviewjs-hold
-// Helper function to remove duplicate links
-let unique = function(array) {
-	const unique_set = [...new Set(array.map(s => String(s)))];
-    return Array.from(unique_set)
-}
-dv.table(["banner", "link", "related"],
-	dv.pages('-"templates"')
-	.where(p => p.type === "index" && p.banner) // Index notes with a banner
- 	.sort(p => p.file.inlinks.length, 'desc')
-	.map(p => [
-		"![](" + p.banner + ")",
-		p.banner_icon + " " + p.file.link,
-  		// Show most related notes
-        unique(p.file.inlinks.filter(s => (dv.page(s) && dv.array(dv.page(s).sup).some(u => dv.equal(u,p.file.link))))
-        			   		 .sort(s => -dv.page(s).file.inlinks.length)
-                  			 .map(s => dv.page(s).file.link)
-        ).splice(0,5).join(" ")
-	])
-)
-```
+<div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">14</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr></tbody></table></div>
 
 ```expander
 "[[@Area]]" -file:(@)
