@@ -313,6 +313,10 @@ https://github.com/sponsors/kepano
 	}
 }
 
+.table-view-table > tbody > tr > td {
+    border: none;
+}
+
 .note-gallery td:nth-child(3) a {
     background-color: rgba(155,155,155,0.1);
     border-radius: 5px;
