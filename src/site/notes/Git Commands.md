@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git-commands/","title":"Git Commands","created":"2021-09-08T20:50:01","updated":"2022-12-18T17:10:56"}
+{"dg-publish":true,"permalink":"/git-commands/","title":"Git Commands","created":"2021-09-08T20:50:01","updated":"2023-03-24T17:26:55"}
 ---
 
 > [!meta]-
@@ -232,4 +232,13 @@ Sometimes, you don't want the `.git` directory to be in the same directory as th
 ```shell
 cd ~/work/dir # working dir
 git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
+```
+
+## Merge Changes from Another Branch
+
+```shell
+# In branch main
+git merge patch_branch
+# or merge from a specific commit
+git cherry-pick commit-hash
 ```
