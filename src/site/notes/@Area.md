@@ -8,10 +8,10 @@
 
 # 🌐 Areas
 
-| File                        | file.mtime               | banner_icon |
-| --------------------------- | ------------------------ | ----------- |
-| [[Algorithm\|Algorithm]] | 1:36 AM - March 29, 2023 | 🧩          |
-| [[Python\|Python]]       | 1:39 AM - March 29, 2023 | 🐍          |
+| File                        | file.mtime               | banner_icon | "![](" + banner + ")"                                                                                                             |
+| --------------------------- | ------------------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [[Algorithm\|Algorithm]] | 1:36 AM - March 29, 2023 | 🧩          | ![](https://sfmoma-media-dev.s3.us-west-1.amazonaws.com/www-media/2022/05/21014105/FC.671_01_H02-Artsy-JPEG_4000-pixels-long.jpg) |
+| [[Python\|Python]]       | 1:39 AM - March 29, 2023 | 🐍          | ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/1059-333-After-Marc-Chagall-La-flute-enchan.jpeg)               |
 
 
 <div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">14</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr></tbody></table></div>
