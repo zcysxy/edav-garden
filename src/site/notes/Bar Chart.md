@@ -17,7 +17,7 @@ Some bar graphs present bars clustered in groups of more than one, showing the v
 - For binned data, use `geom_col` in [[ggplot2\|ggplot2]]
 - We can use `geom_text` to put labels directly in/on bars
 
-- ⚠️ Do not color bars when it is not necessary. Colors are needed [[Bar Chart#For Multivariate Categorical Data\|#For Multivariate Categorical Data]].
+- <span style='color:red'>⚠️</span> Do not color bars when it is not necessary. Colors are needed [[Bar Chart#For Multivariate Categorical Data\|#For Multivariate Categorical Data]].
 
 ## Ordering
 
