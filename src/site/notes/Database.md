@@ -8,8 +8,9 @@ state:: [[%wip\|%wip]]
 
 # Database
 
-- [*] [[Database Cheatsheet\|Database Cheatsheet]]
-- [*] [[Database Last Minute\|Database Last Minute]]
+- <span style='color:yellow'>⭐️</span> [[Database Cheatsheet\|Database Cheatsheet]]
+- <span style='color:yellow'>⭐️</span> [[Database Last Minute\|Database Last Minute]]
+- <span style='color:yellow'>⭐️</span> [[Database Database\|Database Database]]
 
 ## [[Database Intro\|Database Intro]]
 
