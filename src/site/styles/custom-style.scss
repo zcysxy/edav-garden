@@ -17,13 +17,15 @@ body {
         max-width: 900px;
         font-size: var(--content-font-size);
         --font-text-size: 1.4rem;
-        &.note-gallery {
-            max-width: 1200px;
-        }
     }
     @media (min-width: 800px) {
         .content {
             padding-right: 90px;
+        }
+    }
+    @media (min-width: 1500px) {
+        .content.note-gallery {
+            max-width: 1200px;
         }
     }
 
