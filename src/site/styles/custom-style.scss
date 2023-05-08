@@ -18,7 +18,7 @@ body {
         font-size: var(--content-font-size);
         --font-text-size: 1.4rem;
         &.note-gallary {
-            max-width: 1200;
+            max-width: 1200px;
         }
     }
     @media (min-width: 800px) {
