@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/area/","title":"Areas","created":"2021-08-17T21:58:15","updated":"2023-03-29T02:01:27"}
+{"dg-publish":true,"permalink":"/area/","title":"Areas","contentClasses":"cards cards-cover cards-2-1 cards-cols-3 note-gallery","created":"2021-08-17T21:58:15","updated":"2023-03-29T02:01:27"}
 ---
 
 > [!meta]-
