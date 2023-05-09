@@ -60,13 +60,13 @@ It is common that we need to combine spatial and [[EDAV - Time Series\|temporal 
 
 - facet on time
     - then each facet is a choropleth
-    - <span style='color ![|300](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110185612.png)
+    - <span style='color:green'>📗</span> ![|300](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110185612.png)
 
 - facet on space
     - then each facet can be any plot presenting the temporal data
     - and the facets are laid out in a grid that mimics the original geographic topology
     - this technique is also called [geofacet](https://ryanhafen.com/blog/geofacet/)
-    - <span style='color ![|300](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110190145.png)
+    - <span style='color:green'>📗</span> ![|300](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110190145.png)
 
 ### Linked Micromaps
 
