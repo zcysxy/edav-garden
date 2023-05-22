@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git-commands/","title":"Git Commands","created":"2021-09-08T20:50:01","updated":"2023-03-24T17:26:55"}
+{"dg-publish":true,"permalink":"/git-commands/","title":"Git Commands","created":"2021-09-08T20:50:01","updated":"2023-04-13T13:53:42"}
 ---
 
 > [!meta]-
@@ -13,8 +13,8 @@
 - `git add -A` stages **all changes**
     - = `git add .` + `git add -u`
 - `git add .` stages new files and modifications, ~~without deletions~~ (on the current directory and its subdirectories)
-    - [!] For Git >= 2.0, `git add .` will add deletions! Use flag `--ignore-removal` to ignore deletion
-    - [!] Therefore, `git add -A` is redundant for Git >= 2.0
+    - <span class="alt-check alt-check-rmk">For Git >= 2.0, `git add .` will add deletions! Use flag `--ignore-removal` to ignore deletion</span>
+    - <span class="alt-check alt-check-rmk">Therefore, `git add -A` is redundant for Git >= 2.0</span>
 - `git add -u` stages modifications and deletions, **without new files**
 
 ## Combine add and commit
@@ -241,4 +241,16 @@ git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
 git merge patch_branch
 # or merge from a specific commit
 git cherry-pick commit-hash
+```
+
+## Compare Current and Last Version
+
+```shell
+# HEAD~n is the nth generation ancestor of the named commit object (HEAD here)
+git diff HEAD~1 HEAD
+# Shortcuts
+git diff HEAD~ HEAD
+git diff HEAD~
+git diff @~ # @ is an alias for HEAD
+git show # doesn't work for merge commit
 ```
