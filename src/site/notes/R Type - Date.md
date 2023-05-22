@@ -52,7 +52,7 @@ typeof(x) # "double"
 | %n                       | Newline on output or arbitrary whitespace on input |                    |
 |%t| Tab on output or arbitrary whitespace on input     |                    |
 
-- [~] See `?strptime` for the reference inside [[R\|R]].
+- <span class="alt-check alt-check-tip">See `?strptime` for the reference inside [[R\|R]].</span>
 
 ## Date Operation
 
