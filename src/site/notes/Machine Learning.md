@@ -192,7 +192,7 @@ A --Supervise--> D
 - [[Classification\|Classification]]
 	- [[Nearest Neighbor\|Nearest Neighbor]]
 - Statistical Learning
-    - [?] How to find an accurate regression function/ classifier?
+    - <span class="alt-check alt-check-qn">How to find an accurate regression function/ classifier?</span>
     - Key assumption: data (feature and label) are **i.i.d.** from a distribution, then the **past** should look like the **future**
 - [ ] [[Generative vs Discriminative Model\|Generative vs Discriminative Model]]
 
