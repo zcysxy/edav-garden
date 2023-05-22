@@ -72,7 +72,7 @@ d3.select("circle")
   });
 ```
 
-- [~] `.select(this)` can be used instead of `.select(event.currentTarget)`. In the context of event handlers, `this` is the element that received the event, a.k.a. what you clicked on if it's a click event.
+- <span class="alt-check alt-check-tip">`.select(this)` can be used instead of `.select(event.currentTarget)`. In the context of event handlers, `this` is the element that received the event, a.k.a. what you clicked on if it's a click event.</span>
 
 ##  Do Something with the Data
 
