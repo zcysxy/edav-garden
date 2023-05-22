@@ -63,7 +63,7 @@ c(1,2,3) == 1 # TRUE FALSE FALSE
 1 %in% c(1,2,3)
 ```
 
-- [~] Use `near(x,y)` to compare two floating point numbers.
+- <span class="alt-check alt-check-tip">Use `near(x,y)` to compare two floating point numbers.</span>
 
 ## Logic
 
@@ -89,7 +89,7 @@ z <<- 1
 cat(x, y, z, u, w)
 ```
 
-- [~] It's a convention to use `<-` rather than `=` for assignment, and leave `=` only for function arguments. The reasons are compatibility and precedence (`<-` is slightly higher, and `=` is used for function arguments before the assignment)
+- <span class="alt-check alt-check-tip">It's a convention to use `<-` rather than `=` for assignment, and leave `=` only for function arguments. The reasons are compatibility and precedence (`<-` is slightly higher, and `=` is used for function arguments before the assignment)</span>
 
 The special assignment operators `<<-` and `->>` are **looking up** operators, and can maintain states. They can assign value to the variables in the parent scopes. See the example
 
