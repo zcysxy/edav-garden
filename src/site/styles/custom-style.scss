@@ -12,6 +12,8 @@ body {
     //  h1 {
     //   color: black;
     //  }
+    --rmk-color: 255, 36, 36;
+
     --content-font-size: 1.2rem;
     .content {
         max-width: 900px;
@@ -89,16 +91,21 @@ body {
     }
 
     // Alternate Checkboxes
-    li:has(span.list-rmk),
-    li:has(p span.list-rmk) {
-        background-color: rgba(255, 36, 36, 0.2);
+    .alt-check-rmk {
+        --alt-check-color: rgba(var(--rmk-color), 0.2);
+        --alt-check-marker: "❗️";
+    }
+    li:has(span.alt-check),
+    li:has(p span.alt-check) {
+        background-color: var(--alt-check-color);
         padding: 5px;
         border-radius: 5px;
+        margin-left: -3px;
     }
-    li:has(span.list-rmk)::marker,
-    li:has(p span.list-rmk)::marker {
-        content: "❗️";
-        font-size: 1.2em;
+    li:has(span.alt-check)::marker,
+    li:has(p span.alt-check)::marker {
+        content: var(--alt-check-marker);
+        font-size: 1em;
     }
 
     /* Logo */
