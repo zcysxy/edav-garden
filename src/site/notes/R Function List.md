@@ -36,7 +36,7 @@ cor(x,y)
 ## Generation
 
 - `vector`
-    - [@] `vector("numeric", length = 10)` generates a vector having 10 zeros
+    - <span class="alt-check alt-check-ex">`vector("numeric", length = 10)` generates a vector having 10 zeros</span>
 - `seq([from =] a, [to =] b, [by =] stepsize)`
 
 ```r
