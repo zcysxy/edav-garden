@@ -53,7 +53,7 @@ For [[EDAV - Multivariate Categorical Data\|Multivariate Categorical Data]], ins
 
 ![Stacked bar chart](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013145609.png)![Grouped bar chart](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013145634.png)
 
-- [~] Grouped bar charts are less used but more recommended
+- <span class="alt-check alt-check-tip">Grouped bar charts are less used but more recommended</span>
 
 ### Relative Frequency and Diverging Stacked Bar Chart
 
