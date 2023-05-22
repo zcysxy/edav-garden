@@ -78,7 +78,7 @@ tail(x,3)
 
 ## Logic
 
-- [~] The argument of the below functions is **conditional expressions**
+- <span class="alt-check alt-check-tip">The argument of the below functions is **conditional expressions**</span>
 - `which`
 - `any`
 
