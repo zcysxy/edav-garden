@@ -22,4 +22,4 @@ state:: done
         - Not conveying the multivariate structure but only pair-wise relationships
     - [[Parallel Coordinate\|Parallel Coordinate]]
 
-- [~] When manipulating dataframes with multivariate categorical data, remember to transform values into numerics (continuous).
+- <span class="alt-check alt-check-tip">When manipulating dataframes with multivariate categorical data, remember to transform values into numerics (continuous).</span>
