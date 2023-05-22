@@ -14,7 +14,7 @@ state:: done
 { #wqehih}
 
 - Most index in R are **inclusive**
-    - [@] `c(1,2,3)[1:2]` returns `1 2`
+    - <span class="alt-check alt-check-ex">`c(1,2,3)[1:2]` returns `1 2`</span>
 - The naming convention of files and variables is **snake_case**
 - Print variables using `print`
 - Assign a value to a variable using
