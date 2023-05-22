@@ -89,11 +89,13 @@ body {
     }
 
     // Alternate Checkboxes
+    li:has(span.list-rmk),
     li:has(p span.list-rmk) {
         background-color: rgba(255, 36, 36, 0.2);
         padding: 5px;
         border-radius: 5px;
     }
+    li:has(span.list-rmk)::marker,
     li:has(p span.list-rmk)::marker {
         content: "❗️";
         font-size: 1.2em;
