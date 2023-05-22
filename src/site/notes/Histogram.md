@@ -10,7 +10,7 @@ state:: done
 
 A histogram is a graph grouping data into intervals, and drawing a bar for each interval, shows the empirical distribution
 
-- [~] It's a *discrete* distribution, where events are intervals but not values
+- <span class="alt-check alt-check-tip">It's a *discrete* distribution, where events are intervals but not values</span>
 
 For example, the **frequency histogram** of data `50, 51, 53, 55, 56, 60, 65, 65, 68` with **`binwidth = 5`**.
 
