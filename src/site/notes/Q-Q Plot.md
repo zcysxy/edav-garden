@@ -20,7 +20,7 @@ Q–Q plots can also be used to compare collections of data, which can be viewed
 
 Since Q–Q plots compare distributions, there is no need for the values to be observed as pairs, as in a scatter plot, or even for the numbers of values in the two groups being compared to be equal.
 
-- [~] Another graphical method to compare distributions is to compare the [[Density Curve\|Density Curve]]s.
+- <span class="alt-check alt-check-tip">Another graphical method to compare distributions is to compare the [[Density Curve\|Density Curve]]s.</span>
 
 ## Q-Q Line
 
