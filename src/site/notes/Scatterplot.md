@@ -50,7 +50,7 @@ As we can see in the above example, scatterplots may **overplot**, making dots s
         - `geom_point(alpha = .3, stroke = 0)`
     - smaller dots
         - Default value in `geom_point` is `size = 1.5`
-            - [~] We can use `ggplot2:::check_subclass("point", "Geom")$default_aes` to see the default values in [[ggplot2\|ggplot2]]
+            - <span class="alt-check alt-check-tip">We can use `ggplot2:::check_subclass("point", "Geom")$default_aes` to see the default values in [[ggplot2\|ggplot2]]</span>
         - Make `shape = "."`
 - Don't plot all points
     - randomly sample data
