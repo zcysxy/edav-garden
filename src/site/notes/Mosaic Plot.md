@@ -53,15 +53,15 @@ Just like [[Scatterplot Matrix\|Scatterplot Matrix]], we can make mosaic plot ma
     - 5 vars: VHVVH
 - Color fill is set to a dependent variable
     - Use color to stress the relationship
-        - [@] ![|100x100](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192907.png) vs. ![|100x100](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192932.png)
+        - <span class="alt-check alt-check-ex">![|100x100](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192907.png) vs. ![|100x100](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192932.png)</span>
 - The most important level of the dependent variable is the closest to the x-axis and with the most noticeable shade
 
 ## Implementation
 
 - `geom_mosaic` in [[ggplot2\|ggplot2]]
 - `mosaic()` in package `vcd`
-    - [@] `mosaic(Music ~ Age, data = counts3, direction = c("v", "h"))`
-    - [@] `mosaic(Music ~ Age + Favorite, data = counts3, direction = c("v", "v", "h"))`
+    - <span class="alt-check alt-check-ex">`mosaic(Music ~ Age, data = counts3, direction = c("v", "h"))`</span>
+    - <span class="alt-check alt-check-ex">`mosaic(Music ~ Age + Favorite, data = counts3, direction = c("v", "v", "h"))`</span>
     - Here [[R Type - Formula\|R Type - Formula]] can be read as "on", especially for dependent variables
 { #hv0kpp}
 
