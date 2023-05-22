@@ -112,15 +112,15 @@ body {
         --alt-check-marker: "📗";
     }
     .alt-check-impt {
-        --alt-check-color: rgba(var(--ex-impt), 0.2);
+        --alt-check-color: rgba(var(--impt-color), 0.2);
         --alt-check-marker: "⭐️";
     }
     .alt-check-tip {
-        --alt-check-color: rgba(var(--ex-tip), 0.2);
+        --alt-check-color: rgba(var(--tip-color), 0.2);
         --alt-check-marker: "💡";
     }
     .alt-check-oth {
-        --alt-check-color: rgba(var(--ex-oth), 0.2);
+        --alt-check-color: rgba(var(--oth-color), 0.2);
         --alt-check-marker: "📎";
     }
     li:has(span.alt-check),
