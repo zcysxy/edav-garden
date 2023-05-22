@@ -10,7 +10,7 @@ state:: done
 
 A **continuous variable** can in theory take any value over its range, as opposed to a **discrete variable**.
 
-- [~] The real world is discrete: in practice data for continuous variables are generally **rounded** to some level of measurement accuracy.
+- <span class="alt-check alt-check-tip">The real world is discrete: in practice data for continuous variables are generally **rounded** to some level of measurement accuracy.</span>
 
 ## Features of Continuous Variables
 
@@ -59,7 +59,7 @@ Different graphs emphasize different features.
 - [[Ridgeline\|Ridgeline]]
 - [[Bar Chart\|Bar Chart]]
     - gaps, heaping
-    - [~] treating discrete values as [[EDAV - Categorical Data\|Categorical Data]]
+    - <span class="alt-check alt-check-tip">treating discrete values as [[EDAV - Categorical Data\|Categorical Data]]</span>
 - [[Cleveland Dot Plot\|Cleveland Dot Plot]]
     - gaps
     - [-] heaping
