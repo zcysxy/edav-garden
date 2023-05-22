@@ -102,7 +102,7 @@ Here are some examples for each component
     - `fill` stretch the object to fill the space
     - `dodge` places overlapping objects beside one another
     - `jitter` add noise to objects to separate them
-        - [~] `geom_jitter()` is shorthand for `geom_point(position = "jitter")`
+        - <span class="alt-check alt-check-tip">`geom_jitter()` is shorthand for `geom_point(position = "jitter")`</span>
 
 ### Geom
 
@@ -119,15 +119,15 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 - `x =` and `y =` can be omitted
 - To map an aesthetic to a **variable**, associate the name of the aesthetic to the name of the variable inside `aes()`
 - <span class="alt-check alt-check-ex">`geom_point(mapping = aes(x = displ, y = hwy, color = class))`</span>
-- [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data
+- <span class="alt-check alt-check-tip">`x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data
 { #v9c3po}
-
+</span>
 - You can also set the aesthetic properties outside the `mapping=aes()`, treating them as standalone components; but then the RHS needs to be a specific value rather than a variable
     - `geom_point(mapping = aes(x = displ, y = hwy), color = "blue")`
-- [~] You can put `mapping` in the `ggplot()` function to get **global mappings** for all layers
+- <span class="alt-check alt-check-tip">You can put `mapping` in the `ggplot()` function to get **global mappings** for all layers</span>
     - <span class="alt-check alt-check-ex">`ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth()`</span>
     - And then the `mapping` in a specific can overwrite the global `mapping`s
-    - [~] Similarly, you can overwrite `data` for a specific layer
+    - <span class="alt-check alt-check-tip">Similarly, you can overwrite `data` for a specific layer</span>
 
 ### Statistical Transformation
 
