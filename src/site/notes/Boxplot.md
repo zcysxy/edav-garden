@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/boxplot/","title":"Boxplot","created":"2022-09-13T16:24:30","updated":"2022-12-10T19:37:21"}
+{"dg-publish":true,"permalink":"/boxplot/","title":"Boxplot","created":"2022-09-13T16:24:30","updated":"2023-05-22T15:28:48"}
 ---
 
 > [!meta]-
