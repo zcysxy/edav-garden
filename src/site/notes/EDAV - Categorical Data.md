@@ -27,9 +27,9 @@ Categorical data is a type of data that can be divided into groups or **categori
 Nominal Scale and Ordinal Scale are two typical categorical variable measurement scales.
 
 - **Nominal Scale** is derived from the Latin word "nomalis" which denotes "related to names". Variables of nominal scale have names, but usually do not have a natural order
-    - [@] gender, race
+    - <span class="alt-check alt-check-ex">gender, race</span>
 - **Ordinal Scale** involves arranging information in a specific order
-    - [@] rank, age
+    - <span class="alt-check alt-check-ex">rank, age</span>
 
 ## Discrete Data
 
@@ -45,18 +45,18 @@ In this case, a [[Bar Chart\|Bar Chart]] is the same as a [[Histogram\|Histogram
     - Some categories may be missing completely
 - **Uneven distributions**
     - Observational studies may exhibit some form of bias
-        - [@] too many males
-        - [@] In medical meta-analyses, many trials are analyzed together, although it can turn out that most of the trials were small and that the results are dominated by one or two major trials
+        - <span class="alt-check alt-check-ex">too many males</span>
+        - <span class="alt-check alt-check-ex">In medical meta-analyses, many trials are analyzed together, although it can turn out that most of the trials were small and that the results are dominated by one or two major trials</span>
 - **Extra categories**
-    - [@] Gender may be recorded as ‘M’ and ‘F’, but also as ‘m’ and ‘f’, ‘male’ and ‘female’
-    - [@] In a study of patients with two medical conditions, there may be some patients diagnosed with a third condition
+    - <span class="alt-check alt-check-ex">Gender may be recorded as ‘M’ and ‘F’, but also as ‘m’ and ‘f’, ‘male’ and ‘female’</span>
+    - <span class="alt-check alt-check-ex">In a study of patients with two medical conditions, there may be some patients diagnosed with a third condition</span>
 - **Unbalanced experiments**
     - Although experiments are usually carefully designed and carried out, there is always the chance that some data are missing or unusable
     - It is important to know if this occurs and leads to unequal group sizes
 - **Large numbers of categories**
 - **Don’t knows, refusals, errors, missings, ...**
     - Data may not be available for a wide variety of reasons, and plots summarising how many cases of each type have arisen can be helpful both in deciding how to handle the data and in properly qualifying the results from the data that are available
-    - [@] Opinion polls
+    - <span class="alt-check alt-check-ex">Opinion polls</span>
 
 ## Facets
 
@@ -72,7 +72,7 @@ When there are too many categories to present, we can combine top/bottom categor
     - w/o counts
 - counts (`Freq`)
 - contingency/pivot table
-    - [@] Ex:
+    - <span class="alt-check alt-check-ex">Ex:</span>
       ```txt
               Favorite
         Age     bubble gum  coffee

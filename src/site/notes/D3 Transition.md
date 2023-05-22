@@ -11,13 +11,13 @@ state:: done
 - `.transition().duration(time)` adds a transition to the change
     - `time` should be a [[JS Types - Number\|number]]; its unit is ms
     - these two methods should be between the selection and the change
-        - [@] `d3.select("svg").select("circle").transition().duration(2000).attr("cx", "400")`
+        - <span class="alt-check alt-check-ex">`d3.select("svg").select("circle").transition().duration(2000).attr("cx", "400")`</span>
     - not all changes can be added with a transition
         - [+] changes in size and position can
         - [-] changes in font family cannot
     - we can add multiple transitions by chaining them
         - then the transitions will happen one by one
-        - [@] `d3.select("svg").select("circle").transition().duration(2000).attr("cx", "400").transition().duration(2000).attr("cy","200")`
+        - <span class="alt-check alt-check-ex">`d3.select("svg").select("circle").transition().duration(2000).attr("cx", "400").transition().duration(2000).attr("cy","200")`</span>
 
 ## Do and Not
 

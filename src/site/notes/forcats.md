@@ -35,7 +35,7 @@ y
     - works with `.desc = False`
 - `fct_reorder2(x,y,z)`: by sorting along another 2 variables
 
-- [!] All the above functions return **new factors**.
+- <span class="alt-check alt-check-rmk">All the above functions return **new factors**.</span>
 
 ## Include NA
 
@@ -58,7 +58,7 @@ df %>%
 - `fct_lump_*`: lump together factor levels into "other"
     - `fct_lump_min()`: lumps levels that appear fewer than `min`
           times
-        - [@] `cc |> mutate(continent_new = fct_lump_min(continent, 30))` puts all continents with less than 30 countries (items) into the "Other" category (level)
+        - <span class="alt-check alt-check-ex">`cc |> mutate(continent_new = fct_lump_min(continent, 30))` puts all continents with less than 30 countries (items) into the "Other" category (level)</span>
     - `fct_lump_prop()`: lumps levels that appear in fewer `prop * n` times, where `n` is the size of the data
     - `fct_lump_n()`: lumps all levels except for the `n` most frequent (or least frequent if `n < 0`)
     - `fct_lump_lowfreq()`: lumps together the least frequent

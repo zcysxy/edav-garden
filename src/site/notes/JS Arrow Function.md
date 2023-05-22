@@ -25,7 +25,7 @@ let myFun = function(para1, para2) {
 ```
 
 * If we have only one parameter, then parentheses around parameters can be omitted
-    - [*] This gives the simplest form of a function: `para => expression`
+    - <span class="alt-check alt-check-impt">This gives the simplest form of a function: `para => expression`</span>
 * If there are no parameters, parentheses will be empty (but they should be present)
 * For more complex expressions, like multiple expressions or statements, we should enclose them in curly braces `{}`, then use a normal `return` within them
 

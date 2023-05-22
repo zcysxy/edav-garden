@@ -135,7 +135,7 @@ ssh-keygen -C "hello@gmail.com"
 cat ~/.ssh/id_rsa.pub | clip.exe
 ```
 
-- [!] `clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]
+- <span class="alt-check alt-check-rmk">`clip.exe` is only available on WSL, use `xclip` on other Linux systems, use `pbcopy` on [[macOS\|macOS]]</span>
 
 * Go to GitHub to add the SSH key
 * Test the key (for GitHub)
@@ -144,7 +144,7 @@ cat ~/.ssh/id_rsa.pub | clip.exe
 ssh -T git@github.com
 ```
 
-- [!] When first run, it will ask you to add a host to known hosts, type `yes`
+- <span class="alt-check alt-check-rmk">When first run, it will ask you to add a host to known hosts, type `yes`</span>
 
 ### Workflow
 

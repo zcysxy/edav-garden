@@ -16,15 +16,15 @@ class(x)  # "Date"
 typeof(x) # "double"
 ```
 
-- [!] The only *correct* date format: `YYYY-MM-DD`
+- <span class="alt-check alt-check-rmk">The only *correct* date format: `YYYY-MM-DD`</span>
 
 ## Conversion to Date
 
 - Use `as.Date(x)` to convert to Date class
     - You need to specify the format of `x` if it is not in `YYYY-MM-DD`
-        - [@] `as.Date("1/12/2019", format="%m/%d/%Y")`
+        - <span class="alt-check alt-check-ex">`as.Date("1/12/2019", format="%m/%d/%Y")`</span>
         - Pay attention to the format: wrong format may give the wrong date
-            - [@] `as.Date("1/12/2019", format="%m/%d/%y")` gives `"2020-01-12"` because `%y` is for a two-digit year, and is replaced by `20` here
+            - <span class="alt-check alt-check-ex">`as.Date("1/12/2019", format="%m/%d/%y")` gives `"2020-01-12"` because `%y` is for a two-digit year, and is replaced by `20` here</span>
         - See [[R Type - Date#Conversion Specification\|#Conversion Specification]] for the conversion specification reference
 - A similar function: `reader::parse_date`
     - `parse_date` will return `NA` for `parse_date("1/12/2019", format="%m/%d/%y")`

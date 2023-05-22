@@ -27,9 +27,9 @@ The second and subsequent arguments are the expressions that filter the data fra
 jan1 <- filter(flights, month == 1, day == 1)
 ```
 
-- [!] Multiple arguments to `filter()` are combined with "and": every expression must be true in order for a row to be included in the output.
-- [!] Don't use short-circuiting logical operators here. Because the expressions in `filter()` filter all the data items.
-- [!] `filter()` filters out both `FALSE` and `NA`
+- <span class="alt-check alt-check-rmk">Multiple arguments to `filter()` are combined with "and": every expression must be true in order for a row to be included in the output.</span>
+- <span class="alt-check alt-check-rmk">Don't use short-circuiting logical operators here. Because the expressions in `filter()` filter all the data items.</span>
+- <span class="alt-check alt-check-rmk">`filter()` filters out both `FALSE` and `NA`</span>
 { #n9gqf8}
 
 

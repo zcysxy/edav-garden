@@ -118,14 +118,14 @@ By creating multiple layers, you can overlap different geoms in the same graph. 
 - `mapping` always pairs with `aes()`, whose arguments are aesthetic-value pairs
 - `x =` and `y =` can be omitted
 - To map an aesthetic to a **variable**, associate the name of the aesthetic to the name of the variable inside `aes()`
-- [@] `geom_point(mapping = aes(x = displ, y = hwy, color = class))`
+- <span class="alt-check alt-check-ex">`geom_point(mapping = aes(x = displ, y = hwy, color = class))`</span>
 - [~] `x,y` being aesthetics highlights a useful insight about `x` and `y`: the x and y locations of a point are themselves aesthetics, visual properties that you can map to variables to display information about the data
 { #v9c3po}
 
 - You can also set the aesthetic properties outside the `mapping=aes()`, treating them as standalone components; but then the RHS needs to be a specific value rather than a variable
     - `geom_point(mapping = aes(x = displ, y = hwy), color = "blue")`
 - [~] You can put `mapping` in the `ggplot()` function to get **global mappings** for all layers
-    - [@] `ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth()`
+    - <span class="alt-check alt-check-ex">`ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth()`</span>
     - And then the `mapping` in a specific can overwrite the global `mapping`s
     - [~] Similarly, you can overwrite `data` for a specific layer
 
@@ -213,7 +213,7 @@ To use different adaptive scales for each facet, use option `scales = "free"`, `
 { #32e6e9}
 
 
-- [!] When comparing different facets, do not free the scales; use a consistent scale instead.
+- <span class="alt-check alt-check-rmk">When comparing different facets, do not free the scales; use a consistent scale instead.</span>
 
 ## Labels
 

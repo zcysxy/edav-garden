@@ -50,7 +50,7 @@ ggplot(tidycars, aes(x = key, y = fct_rev(id), fill = missing)) +
 
 A better idea is to combine the normal [[Heatmap\|Heatmap]] with missing data: use one color to present missing data, and a [[Graph Color#^1dc7c8\|sequential color palette]] to present the magnitude of other values.
 
-- [!] To better explore the patterns (the combination of columns missing), we can sort column names by the number of missing.
+- <span class="alt-check alt-check-rmk">To better explore the patterns (the combination of columns missing), we can sort column names by the number of missing.</span>
 
 ### plot_missing()
 

@@ -20,7 +20,7 @@ A **continuous variable** can in theory take any value over its range, as oppose
         - A distribution is called skewed **left/negative** if, as in the distribution graph, the left tail (smaller values) is much longer than the right tail (larger values)
         - A distribution is called skewed **right/positive** if, as in the distribution graph, the right tail (larger values) is much longer than the left tail (smaller values)
         - ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210173449.png)
-    - [@] distributions of income
+    - <span class="alt-check alt-check-ex">distributions of income</span>
 - **Outliers**
     - there may be data far from the rest of the data
 - **Multimodality**

@@ -40,7 +40,7 @@ We want to perceive the difference between data by observing colors.
 - Large range
     - the color range should be large enough to help distinguish differences
 - Sharp break at important thresholds
-    - [@] ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221027170006.png)
+    - <span class="alt-check alt-check-ex">![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221027170006.png)</span>
 
 ## With ggplot2
 
@@ -53,10 +53,10 @@ We want to perceive the difference between data by observing colors.
     - scheme function: `+scale_color_viridis_d()` (`d` for discrete)
     - palette option: `+scale_color_brewer(palette = "PuBu")`
     - own: `+scale_color_manual(values=c("red", "yellow", "#FFFFFF")`
-- [!] The `color` in the above scales can be `fill` for scaling the `fill` variable
-- [!] continuous vs discrete: `c` vs `v`, `distiller` vs `brewer`, `gradient` vs `manual`
+- <span class="alt-check alt-check-rmk">The `color` in the above scales can be `fill` for scaling the `fill` variable</span>
+- <span class="alt-check alt-check-rmk">continuous vs discrete: `c` vs `v`, `distiller` vs `brewer`, `gradient` vs `manual`
 { #v99m26}
-
+</span>
 
 ## With Other Packages
 
@@ -71,9 +71,9 @@ barplot(1:4,  col = colors)
 To make color vision deficiency (CVD) friendly graphs,
 
 - Use palettes that have already been tested
-    - [@] viridis, `scale_color_colorblind()` in ggthemes
+    - <span class="alt-check alt-check-ex">viridis, `scale_color_colorblind()` in ggthemes</span>
 - Use a color vision deficiency simulator
-    - [@] Color Oracle
+    - <span class="alt-check alt-check-ex">Color Oracle</span>
 - Use high contrast
 
 ## General Tips

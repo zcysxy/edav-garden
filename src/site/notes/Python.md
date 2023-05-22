@@ -7,8 +7,8 @@
 
 # Python
 
-- [*] [Official Library](https://docs.python.org/3.9/library/index.html)
-- [*] [My Code Library](file:///D:/OneDrive1/6-UT/62-CB/62.01-python)
+- <span class="alt-check alt-check-impt">[Official Library](https://docs.python.org/3.9/library/index.html)</span>
+- <span class="alt-check alt-check-impt">[My Code Library](file:///D:/OneDrive1/6-UT/62-CB/62.01-python)</span>
 
 ## [[Python Basics\|Python Basics]]
 

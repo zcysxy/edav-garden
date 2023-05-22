@@ -26,7 +26,7 @@ Boxplots display individual outliers and robust statistics for the data, useful 
                     2. Find $k$% of the sample size
                     3. If this is an integer, **add 0.5**; if it isn't an integer round **up**
                     4. Find the datum in this position; If your depth ends in 0.5, then take the midpoint between the two data points
-            - [*] Therefore, the hinges are the same as the quartiles *unless* the remainder when dividing the sample size by 4 is 3
+            - <span class="alt-check alt-check-impt">Therefore, the hinges are the same as the quartiles *unless* the remainder when dividing the sample size by 4 is 3</span>
 - Area != number of data points; each area contains the same number of points
 { #blnqta}
 
