@@ -8,7 +8,7 @@ state:: done
 
 # R Types
 
-- [!] Here we just introduce some basic "atomic" data types. There are many more, like ~~dates and~~ time series.
+- <span class="alt-check alt-check-rmk">Here we just introduce some basic "atomic" data types. There are many more, like ~~dates and~~ time series.</span>
 
 - [~] Use function `is.x()`, such as `is.na()` and `is.complex()`, to test the type of an [[R\|R]] object.
 
