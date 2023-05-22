@@ -38,4 +38,4 @@ mtcars %>%
     head()
 ```
 
-- [~] "Tidy" or "messy" depends on the use case. Sometimes, "tidy" data can be "messy" in other scenarios.
+- <span class="alt-check alt-check-tip">"Tidy" or "messy" depends on the use case. Sometimes, "tidy" data can be "messy" in other scenarios.</span>
