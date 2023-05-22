@@ -238,7 +238,7 @@ G --> H[Communicate]
     - Do not use other libraries when using [[D3]]
     - Use raw [[HTML]] in RMarkdown like it is in the `<body>` section
 - Share D3 Online
-    - [~] there are advantages to an online setup, for example, not having to set up a local server as described in the chapter on reading files.
+    - <span class="alt-check alt-check-tip">there are advantages to an online setup, for example, not having to set up a local server as described in the chapter on reading files.</span>
     - [VizHub](https://vizhub.com/): host [[D3]] visualizations online
     - [[R Package - Bookdown|Bookdown]]: include D3 code directly in a bookdown book hosted online
         - [+] everyone is in one document
