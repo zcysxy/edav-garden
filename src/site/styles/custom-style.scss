@@ -99,39 +99,37 @@ body {
     }
 
     // Alternate Checkboxes
-    .alt-check-rmk {
+    li:has(.alt-check-rmk) {
         --alt-check-color: rgba(var(--rmk-color), 0.2);
         --alt-check-marker: "❗️";
     }
-    .alt-check-qn {
+    li:has(.alt-check-qn) {
         --alt-check-color: rgba(var(--qn-color), 0.2);
         --alt-check-marker: "❓";
     }
-    .alt-check-ex {
+    li:has(.alt-check-ex) {
         --alt-check-color: rgba(var(--ex-color), 0.2);
         --alt-check-marker: "📗";
     }
-    .alt-check-impt {
+    li:has(.alt-check-impt) {
         --alt-check-color: rgba(var(--impt-color), 0.2);
         --alt-check-marker: "⭐️";
     }
-    .alt-check-tip {
+    li:has(.alt-check-tip) {
         --alt-check-color: rgba(var(--tip-color), 0.2);
         --alt-check-marker: "💡";
     }
-    .alt-check-oth {
+    li:has(.alt-check-oth) {
         --alt-check-color: rgba(var(--oth-color), 0.2);
         --alt-check-marker: "📎";
     }
-    li:has(span.alt-check),
-    li:has(p span.alt-check) {
+    li:has(.alt-check) {
         background-color: var(--alt-check-color);
         padding: 5px;
         border-radius: 5px;
         margin-left: -3px;
     }
-    li:has(span.alt-check)::marker,
-    li:has(p span.alt-check)::marker {
+    li:has(.alt-check)::marker {
         content: var(--alt-check-marker);
         font-size: 1em;
     }
