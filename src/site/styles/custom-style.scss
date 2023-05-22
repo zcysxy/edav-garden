@@ -12,7 +12,15 @@ body {
     //  h1 {
     //   color: black;
     //  }
-    --rmk-color: 255, 36, 36;
+    //--rmk-color: 255, 36, 36;
+    --impt-color: 255,221,87;
+    --tip-color: 0,209,178;
+    --todo-color: 138,43,226;
+  	--rmk-color: 219, 1, 1; /* 255,56,96; */
+	--qn-color: 251, 146, 76;/*255,120,15;*/
+	--ex-color: 79, 165, 79;/*35,209,96;*/
+	--oth-color: 82, 139, 212;/*32,156,238;*/
+    --ref-color: 159, 186, 223;
 
     --content-font-size: 1.2rem;
     .content {
@@ -94,6 +102,26 @@ body {
     .alt-check-rmk {
         --alt-check-color: rgba(var(--rmk-color), 0.2);
         --alt-check-marker: "❗️";
+    }
+    .alt-check-qn {
+        --alt-check-color: rgba(var(--qn-color), 0.2);
+        --alt-check-marker: "❓";
+    }
+    .alt-check-ex {
+        --alt-check-color: rgba(var(--ex-color), 0.2);
+        --alt-check-marker: "📗";
+    }
+    .alt-check-impt {
+        --alt-check-color: rgba(var(--ex-impt), 0.2);
+        --alt-check-marker: "⭐️";
+    }
+    .alt-check-tip {
+        --alt-check-color: rgba(var(--ex-tip), 0.2);
+        --alt-check-marker: "💡";
+    }
+    .alt-check-oth {
+        --alt-check-color: rgba(var(--ex-oth), 0.2);
+        --alt-check-marker: "📎";
     }
     li:has(span.alt-check),
     li:has(p span.alt-check) {
