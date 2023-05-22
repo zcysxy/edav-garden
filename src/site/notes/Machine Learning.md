@@ -15,7 +15,7 @@ Machine Learning
 : A computer program is said to learn from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, as measured by $P$, improves with experience $E$
 - [r] Michell, *Machine Learning* 1997
 
-- <span style='color:red'>⚠️</span> From a scientific and philosophical point of view,  machine learning is interesting because developing our understanding of machine learning entails developing our understanding of the **principles that underlie intelligence**
+- <span class="alt-check alt-check-rmk">From a scientific and philosophical point of view,  machine learning is interesting because developing our understanding of machine learning entails developing our understanding of the **principles that underlie intelligence**</span>
 
 ### Task *T*
 
@@ -23,7 +23,7 @@ ML tasks are usually described in terms of how the ML system should **process an
 
 An example is a collection of **==features==** that have been **quantitatively measured** from some object or event that we want the ML system to process. We typically represent an example as a vector $x ∈ \mathbb{R}^n$ where each entry $x_i$ of the vector is an **feature**.
 
-- [@] The features of an image are usually the values of the pixels in the image.
+- <span class="alt-check alt-check-ex">The features of an image are usually the values of the pixels in the image.</span>
 
 Most common ML tasks:
 
@@ -141,8 +141,8 @@ ML algorithms can be broadly categorized as [[Unsupervised Learning\|Unsupervise
         - predictions
         - recommendations
         - efficient data exploration
-            - [@] Learn the dominant topics from a set of news articles.
-- <span style='color:yellow'>⭐️</span> A probabilistic model is a set of probability distributions, $p(x|θ)$
+            - <span class="alt-check alt-check-ex">Learn the dominant topics from a set of news articles.</span>
+- <span class="alt-check alt-check-impt">A probabilistic model is a set of probability distributions, $p(x|θ)$</span>
 
 ```mermaid
 graph TD
