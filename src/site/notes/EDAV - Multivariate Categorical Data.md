@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/edav-multivariate-categorical-data/","title":"EDAV - Multivariate Categorical Data","created":"2022-10-13T12:40:21","updated":"2022-12-11T21:49:19"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # EDAV - Multivariate Categorical Data
 
