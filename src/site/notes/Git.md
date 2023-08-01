@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/git/","title":"Git","created":"2021-08-25T17:28:13","updated":"2022-10-18T16:54:12"}
 ---
 
-> [!meta]-
-> sup:: [[App\|App]], [[Computer Science\|Computer Science]]  
-> state:: done  
 
 # Git
 
