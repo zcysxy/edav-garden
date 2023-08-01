@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/d3-bind-data/","title":"D3 Bind Data","created":"2022-12-01T20:45:08","updated":"2022-12-12T15:17:15"}
 ---
 
-> [!meta]-  
-sup::  [[D3\|D3]]  
-state:: done
 
 # D3 Bind Data
 
