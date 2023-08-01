@@ -13,7 +13,7 @@ const {
   userMarkdownSetup,
   userEleventySetup,
 } = require("./src/helpers/userSetup");
-const mathjax = require("markdown-it-mathjax3");
+// const mathjax = require("markdown-it-mathjax3");
 
 const Image = require("@11ty/eleventy-img");
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
@@ -60,8 +60,10 @@ module.exports = function (eleventyConfig) {
       tex2chtml: "\\def\\R{\\mathbb{R}}",
       startup: {
         ready: () => {
-          mathjax.startup.defaultReaday();
-          mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
+          // mathjax.startup.defaultReaday();
+          // mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
+          MathJax.startup.defaultReady();
+          MathJax.tex2chtml('\\def\\R{\\mathbb{R}}');
           console.log('hi mathjax');
         }
       }
