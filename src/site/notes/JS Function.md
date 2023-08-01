@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/js-function/","title":"JS Functions","created":"2021-08-25T23:18:27","updated":"2022-11-18T02:32:01"}
 ---
 
-> [!meta]-
-sup:: [[JavaScript\|JavaScript]]  
-state:: done  
 
 # JS Functions
 
@@ -208,9 +205,6 @@ $<div class="markdown-embed-title">
 
 
 
-> [!meta]-  
-sup:: [[JS Function\|JS Function]]  
-state:: done
 
 # JS Array Function
 
@@ -231,7 +225,7 @@ let myFun = function(para1, para2) {
 ```
 
 * If we have only one parameter, then parentheses around parameters can be omitted
-    - [*] This gives the simplest form of a function: `para => expression`
+    - <span class="alt-check alt-check-impt">This gives the simplest form of a function: `para => expression`</span>
 * If there are no parameters, parentheses will be empty (but they should be present)
 * For more complex expressions, like multiple expressions or statements, we should enclose them in curly braces `{}`, then use a normal `return` within them
 
