@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/dplyr/","title":"dplyr","created":"2022-09-20T16:27:00","updated":"2022-12-11T21:34:56"}
 ---
 
-> [!meta]-
-sup:: [[R Package\|R Package]], [[EDAV\|EDAV]]  
-state:: done  
 source: [5 Data transformation | R for Data Science](https://r4ds.had.co.nz/transform.html)
 
 # dplyr
