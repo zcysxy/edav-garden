@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/alluvial-diagram/","title":"Alluvial Diagram","created":"2022-10-13T16:58:30","updated":"2022-12-11T23:19:16"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Alluvial Diagram
 
