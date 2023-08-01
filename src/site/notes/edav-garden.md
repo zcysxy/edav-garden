@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/edav-garden/","title":"EDAV Garden","tags":["gardenEntry"],"created":"2022-10-14T23:53:34","updated":"2022-11-18T02:35:10"}
 ---
 
-> [!meta]-  
-state:: done  
-sup:: [[EDAV\|EDAV]]  
 
 # EDAV Garden
 
