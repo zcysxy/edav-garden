@@ -53,15 +53,15 @@ module.exports = function (eleventyConfig) {
     .use(require("markdown-it-mathjax3"), {
       tex: {
         inlineMath: [["$", "$"]],
-          macros: {
-              R: "\\mathbb{R}"
-          }
+          // macros: {
+          //     R: "\\mathbb{R}"
+          // }
       },
       options: {
         skipHtmlTags: { "[-]": ["pre"] },
       },
-      tex2chtml: "\\def\\R{\\mathbb{R}}",
       startup: {
+        elements: ['<p>\\def\\R{\\mathbb{R}}</p>'],
         ready: () => {
           // mathjax.startup.defaultReaday();
           // mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
