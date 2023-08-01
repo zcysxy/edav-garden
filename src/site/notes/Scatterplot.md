@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/scatterplot/","title":"Scatterplot","created":"2022-10-12T23:24:08","updated":"2022-12-11T20:14:21"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
-related:: [[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]  
 
 # Scatterplot
 
