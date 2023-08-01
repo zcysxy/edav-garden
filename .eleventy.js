@@ -65,8 +65,8 @@ module.exports = function (eleventyConfig) {
         ready: () => {
           // mathjax.startup.defaultReaday();
           // mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
-          MathJax.startup.defaultReady();
-          MathJax.tex2chtml('\\def\\R{\\mathbb{R}}');
+          Startup.defaultReady();
+          require('markdown-it-mathjax3').renderMath('\\def\\R{\\mathbb{R}}');
           console.log('hi mathjax');
         }
       }
