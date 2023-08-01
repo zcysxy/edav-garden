@@ -60,7 +60,9 @@ module.exports = function (eleventyConfig) {
       tex2chtml: "\\def\\R{\\mathbb{R}}",
       startup: {
         ready: () => {
-          mathjax.tex2chtml("\\mathbb{R}");
+          mathjax.startup.defaultReaday();
+          mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
+          console.log('hi mathjax');
         }
       }
     })
