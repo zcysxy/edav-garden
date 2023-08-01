@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/r-operator/","title":"R Operator","created":"2022-09-08T18:33:13","updated":"2022-09-22T17:33:42"}
 ---
 
-> [!meta]-
-sup:: [[R\|R]]  
-state:: done  
 
 # Operator
 
