@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/r-operator-pipe/","title":"R Operator - Pipe","created":"2022-09-24T17:51:22","updated":"2022-09-25T01:23:45"}
 ---
 
-> [!meta]-
-sup:: [[R Operator\|R Operator]]  
-state:: done
-related:: [[dplyr\|dplyr]]
 
 # R Operator - Pipe
 
