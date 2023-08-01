@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/r-control-statement/","title":"R Statement","created":"2022-09-08T19:07:28","updated":"2022-09-08T19:07:33"}
 ---
 
-> [!meta]-
-sup:: [[R\|R]]  
-state:: done
 
 # Control Statement
 
