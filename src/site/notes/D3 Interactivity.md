@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/d3-interactivity/","title":"D3 Interactivity","created":"2022-12-01T21:43:56","updated":"2022-12-02T10:54:18"}
 ---
 
-> [!meta]-  
-sup:: [[D3\|D3]]  
-state:: done
 
 # D3 Interactivity
 
