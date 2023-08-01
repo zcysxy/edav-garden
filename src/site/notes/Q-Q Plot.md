@@ -5,7 +5,7 @@
 
 # Q-Q Plot
 
-A **Q–Q plot (quantile-quantile plot)** is a probability plot, a **graphical method** for **comparing two probability distributions** by plotting their **quantiles** against each other. A point $(x, y)$ on the plot corresponds to one of the quantiles of the second distribution (y-coordinate) plotted against the same quantile of the first distribution (x-coordinate).
+A **Q–Q plot (quantile-quantile plot)** is a probability plot, a **graphical method** for **comparing two probability distributions** by plotting their **quantiles** against each other. A point $(x, y)$ on the plot corresponds to one of the quantiles of the second distribution (y-coordinate) plotted against the same quantile of the first distribution (x-coordinate). $\R$
 
 > [!ex] Quartile-Quartile Plot
 > For example, when using quartiles as the only quantiles, there are only five points on a graph, representing (0%, 25%, 50%, 75%, 100%) respectively.
