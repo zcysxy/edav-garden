@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/d3-margin/","title":"D3 Margin","created":"2022-12-01T01:22:50","updated":"2022-12-01T20:53:33"}
 ---
 
-> [!meta]-  
-sup:: [[D3\|D3]]  
-state:: done
 
 # D3 Margin
 
