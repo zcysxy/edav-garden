@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/machine-learning/","title":"Machine Learning","created":"2021-07-25T23:36:31","updated":"2023-04-25T19:05:00"}
 ---
 
-> [!meta]-
-sup:: [[Computer Science\|Computer Science]]
-state:: done  
-reference:: [Outline of machine learning - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_machine_learning)  
 
 # Machine Learning
 
