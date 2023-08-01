@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/r-data-structure/","title":"R Data Structure","created":"2022-09-08T19:22:59","updated":"2022-12-12T14:11:39"}
 ---
 
-> [!meta]-
-sup:: [[R\|R]]  
-state:: done
 
 # R Data Structure
 
