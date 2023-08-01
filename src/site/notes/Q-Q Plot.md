@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/q-q-plot/","title":"Q-Q Plot","created":"2022-09-15T19:09:00","updated":"2022-12-11T01:05:27"}
 ---
 
-> [!meta]-
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Q-Q Plot
 
