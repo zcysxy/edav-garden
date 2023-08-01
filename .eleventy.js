@@ -61,7 +61,7 @@ module.exports = function (eleventyConfig) {
         skipHtmlTags: { "[-]": ["pre"] },
       },
       startup: {
-        elements: ['<p>\\def\\R{\\mathbb{R}}</p>'],
+        elements: ['<p>$\\def\\R{\\mathbb{R}}$</p>'],
         ready: () => {
           // mathjax.startup.defaultReaday();
           // mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
