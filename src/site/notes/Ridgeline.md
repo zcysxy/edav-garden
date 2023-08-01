@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/ridgeline/","title":"Ridgeline","created":"2022-10-21T23:11:54","updated":"2022-12-12T15:09:36"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
 
 # Ridgeline
 
