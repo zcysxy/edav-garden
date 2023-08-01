@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/edav-multivariate-continuous-data/","title":"EDAV - Multivariate Continuous Data","created":"2022-10-13T02:31:53","updated":"2022-10-21T15:31:17"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Multivariate Continuous Data
 
