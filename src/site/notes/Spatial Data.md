@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/spatial-data/","title":"Spatial Data","created":"2022-11-10T16:21:11","updated":"2022-11-10T20:13:28"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
 
 # Spatial Data
 
