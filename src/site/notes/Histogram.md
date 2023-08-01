@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/histogram/","title":"Histogram","created":"2022-09-08T16:45:14","updated":"2022-09-08T16:57:04"}
 ---
 
-> [!meta]-
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Histogram
 
