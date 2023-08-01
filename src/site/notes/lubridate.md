@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/lubridate/","title":"lubridate","created":"2022-11-03T22:36:27","updated":"2022-11-03T22:48:34"}
 ---
 
-> [!meta]-  
-sup:: [[R Package\|R Package]]  
-state:: done  
 
 # lubridate
 
