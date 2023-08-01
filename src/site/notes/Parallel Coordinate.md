@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/parallel-coordinate/","title":"Parallel Coordinate","created":"2022-10-13T02:36:23","updated":"2022-12-11T21:44:09"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
-related:: [[EDAV - Multivariate Continuous Data\|EDAV - Multivariate Continuous Data]]
 
 # Parallel Coordinate
 
