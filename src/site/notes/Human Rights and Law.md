@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/human-rights-and-law/","created":"2022-05-28T03:34:21","updated":"2023-03-28T19:45:38"}
 ---
 
-> [!meta]-
-sup:: [[Political Philosophy\|Political Philosophy]]
-state:: done  
 
 # Human Rights and Laws
 
