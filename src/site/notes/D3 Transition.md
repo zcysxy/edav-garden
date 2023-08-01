@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/d3-transition/","title":"D3 Transition","created":"2022-12-01T22:17:14","updated":"2022-12-12T12:47:58"}
 ---
 
-> [!meta]-  
-sup:: [[D3\|D3]]  
-state:: done
 
 # D3 Transition
 
