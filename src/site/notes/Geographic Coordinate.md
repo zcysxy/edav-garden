@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/geographic-coordinate/","title":"Geographic Coordinate","created":"2022-11-10T19:15:08","updated":"2022-12-12T01:28:28"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
 
 # Geographic Coordinate
 
