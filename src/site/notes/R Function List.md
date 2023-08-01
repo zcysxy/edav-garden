@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/r-function-list/","title":"R Function List","created":"2022-09-10T18:13:18","updated":"2022-12-12T14:25:06"}
 ---
 
-> [!meta]-
-sup:: [[R\|R]]  
-state:: [[%watch\|%watch]]
-related:: [[R Function\|R Function]]
 
 # R Function List
 
