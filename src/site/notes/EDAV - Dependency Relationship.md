@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/edav-dependency-relationship/","title":"Dependency Relationship","created":"2022-10-12T23:21:40","updated":"2022-10-21T15:27:02"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Dependency Relationship
 
