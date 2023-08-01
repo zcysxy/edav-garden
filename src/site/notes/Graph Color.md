@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/graph-color/","title":"Graph Color","created":"2022-10-27T16:25:37","updated":"2022-12-11T23:46:22"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Graph Color
 
