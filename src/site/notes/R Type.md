@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/r-type/","title":"R Types","created":"2022-09-06T17:38:35","updated":"2022-12-11T18:40:45"}
 ---
 
-> [!meta]-
-sup:: [[R\|R]]  
-state:: done
 
 # R Types
 
