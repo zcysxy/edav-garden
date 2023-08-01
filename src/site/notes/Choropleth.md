@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/choropleth/","title":"Choropleth","created":"2022-11-10T16:33:30","updated":"2022-11-10T20:34:11"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
 
 # Choropleth
 
