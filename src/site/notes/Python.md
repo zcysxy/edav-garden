@@ -2,8 +2,6 @@
 {"dg-publish":true,"permalink":"/python/","created":"2021-08-17T21:58:15","updated":"2023-03-28T19:29:10"}
 ---
 
-> [!meta]-
-> sup:: [[Language\|Language]]
 
 # Python
 
