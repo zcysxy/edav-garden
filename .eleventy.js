@@ -53,6 +53,9 @@ module.exports = function (eleventyConfig) {
     .use(require("markdown-it-mathjax3"), {
       tex: {
         inlineMath: [["$", "$"]],
+          macros: {
+              R: "\\mathbb{R}"
+          }
       },
       options: {
         skipHtmlTags: { "[-]": ["pre"] },
