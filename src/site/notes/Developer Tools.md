@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/developer-tools/","title":"Developer Tools","created":"2021-08-29T13:53:12","updated":"2022-11-17T18:25:34"}
 ---
 
-> [!meta]-
-sup:: [[Computer Science\|Computer Science]]
-related:: [[CSS\|CSS]], [[JavaScript\|JavaScript]], [[HTML\|HTML]], [[Front-End, Back-End, and Full Stack\|Front-End, Back-End, and Full Stack]]
-state:: done  
 
 # Developer Tools
 
