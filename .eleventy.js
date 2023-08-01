@@ -56,6 +56,7 @@ module.exports = function (eleventyConfig) {
       options: {
         skipHtmlTags: { "[-]": ["pre"] },
       },
+      tex2chtml: "\\def\\R{\\mathbb{R}}"
     })
     .use(require("markdown-it-attrs"))
     .use(require("markdown-it-task-checkbox"), {
