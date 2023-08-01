@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/mosaic-plot/","created":"2022-10-06T16:42:45","updated":"2022-12-11T22:35:07"}
 ---
 
-> [!meta]-
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Mosaic Plot
 
