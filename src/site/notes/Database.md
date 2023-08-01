@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/database/","created":"2022-05-28T03:34:23","updated":"2023-01-30T21:11:50"}
 ---
 
-> [!meta]-
-sup:: [[Computer Science\|Computer Science]]  
-state:: [[%wip\|%wip]]  
 
 # Database
 
