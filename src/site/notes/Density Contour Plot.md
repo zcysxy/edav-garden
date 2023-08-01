@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/density-contour-plot/","title":"Density Contour Plot","created":"2022-10-13T00:39:21","updated":"2022-10-13T01:02:34"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Density Contour Plot
 
