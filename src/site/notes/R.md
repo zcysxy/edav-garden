@@ -1,10 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/r/","title":"R","created":"2022-09-06T15:23:58","updated":"2022-09-11T19:48:16"}
+{"dg-publish":true,"permalink":"/r/","title":"R","created":"2022-09-06T15:23:58","updated":"2023-07-31T02:04:58"}
 ---
 
-> [!meta]-
-sup:: [[Language\|Language]]  
-state:: done  
 
 # R
 
