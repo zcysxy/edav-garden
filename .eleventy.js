@@ -13,6 +13,7 @@ const {
   userMarkdownSetup,
   userEleventySetup,
 } = require("./src/helpers/userSetup");
+const mathjax = require("markdown-it-mathjax3");
 
 const Image = require("@11ty/eleventy-img");
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
@@ -57,11 +58,11 @@ module.exports = function (eleventyConfig) {
         skipHtmlTags: { "[-]": ["pre"] },
       },
       tex2chtml: "\\def\\R{\\mathbb{R}}",
-        startup: {
-          ready: {
-            tex2chtml: "\\mathbb{R}"
-          }
+      startup: {
+        ready: () => {
+          mathjax.tex2chtml("\\mathbb{R}");
         }
+      }
     })
     .use(require("markdown-it-attrs"))
     .use(require("markdown-it-task-checkbox"), {
