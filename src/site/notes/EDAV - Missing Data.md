@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/edav-missing-data/","title":"EDAV - Missing Data","created":"2022-11-03T16:45:22","updated":"2022-12-12T00:51:11"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done  
 
 # Missing Data
 
