@@ -2,10 +2,6 @@
 {"dg-publish":true,"permalink":"/cleveland-dot-plot/","title":"Cleveland Dot Plot","created":"2022-10-12T21:20:51","updated":"2022-10-12T21:34:35"}
 ---
 
-> [!meta]-  
-sup:: [[EDAV\|EDAV]]  
-state:: done
-related:: [[EDAV - Categorical Data\|EDAV - Categorical Data]]
 
 # Cleveland Dot Plot
 
