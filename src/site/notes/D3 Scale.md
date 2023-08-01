@@ -2,9 +2,6 @@
 {"dg-publish":true,"permalink":"/d3-scale/","title":"D3 Scale","created":"2022-12-01T00:27:42","updated":"2022-12-12T13:11:22"}
 ---
 
-> [!meta]-  
-sup::  [[D3\|D3]]  
-state:: done
 
 # D3 Scale
 
