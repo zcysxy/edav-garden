@@ -61,12 +61,11 @@ module.exports = function (eleventyConfig) {
         skipHtmlTags: { "[-]": ["pre"] },
       },
       startup: {
-        elements: ['<p>$\\def\\R{\\mathbb{R}}$</p>'],
         ready: () => {
           // mathjax.startup.defaultReaday();
           // mathjax.tex2chtml("\\def\\R{\\mathbb{R}}");
           Startup.defaultReady();
-          require('markdown-it-mathjax3').renderMath('\\def\\R{\\mathbb{R}}');
+          require('markdown-it-mathjax3').render('\\def\\R{\\mathbb{R}}');
           console.log('hi mathjax');
         }
       }
