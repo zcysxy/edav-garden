@@ -1,7 +1,4 @@
----
-{"title":"R Statement","alias":null,"type":"note","created":"2022-09-08T19:07:28","modified":"2022-09-08T19:07:33","dg-publish":true,"sup":[{}],"state":"done","permalink":"/r-control-statement/","dgPassFrontmatter":true,"updated":"2022-09-08T19:07:33"}
----
-
+[object Promise]
 
 # Control Statement
 
