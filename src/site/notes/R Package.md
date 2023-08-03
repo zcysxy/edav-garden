@@ -1,5 +1,5 @@
 ---
-{"title":"R Package","alias":null,"type":"note","created":"2022-09-11T20:20:44","modified":"2022-09-19T00:00:10","dg-publish":true,"sup":["R Package.md/r"],"state":"done","permalink":"/r-package/","dgPassFrontmatter":true,"updated":"2022-09-19T00:00:10"}
+{"title":"R Package","alias":null,"type":"note","created":"2022-09-11T20:20:44","modified":"2022-09-19T00:00:10","dg-publish":true,"sup":["r"],"state":"done","permalink":"/r-package/","dgPassFrontmatter":true,"updated":"2022-09-19T00:00:10"}
 ---
 
 
