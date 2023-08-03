@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/git/","title":"Git","created":"2021-08-25T17:28:13","updated":"2022-10-18T16:54:12"}
+{"type":"note","title":"Git","alias":null,"created":"2021-08-25T17:28:13","modified":"2022-10-18T16:54:12","dg-publish":true,"sup":["[[App]]","[[Computer Science]]"],"state":"done","permalink":"/git/","dgPassFrontmatter":true,"updated":"2022-10-18T16:54:12"}
 ---
 
 
