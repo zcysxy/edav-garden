@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dependency Relationship</title>
+    <title>Density Curve</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -272,7 +272,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/database/">Database </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Database </a>
                 </div>
             
         </div>
@@ -281,7 +281,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/density-contour-plot/">Density Contour Plot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Density Contour Plot </a>
                 </div>
             
         </div>
@@ -290,7 +290,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/density-curve/">Density Curve </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Density Curve </a>
                 </div>
             
         </div>
@@ -299,7 +299,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/developer-tools/">Developer Tools </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Developer Tools </a>
                 </div>
             
         </div>
@@ -308,7 +308,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/dom/">DOM </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">DOM </a>
                 </div>
             
         </div>
@@ -326,7 +326,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-continuous-variable/">EDAV - Continuous Variable </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV - Continuous Variable </a>
                 </div>
             
         </div>
@@ -335,7 +335,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-dependency-relationship/">Dependency Relationship </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV - Dependency Relationship </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-12T23:21:40"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-21T15:27:02"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,39 +967,20 @@
       </header>
       
       
-      <h1 id="dependency-relationship" tabindex="-1">Dependency Relationship</h1>
-<p>When we focus on two <a class="internal-link " data-note-icon="" href="/edav-multivariate-continuous-data/">continuous variables</a>, we want to find out how they <strong>relate</strong>, is one variable dependent on the other?</p>
-<h2 id="graphs" tabindex="-1">Graphs</h2>
+      <p>[object Promise]</p>
+<h1 id="density-curve" tabindex="-1">Density Curve</h1>
+<p>In <a class="internal-link is-unresolved"  href="/notes/probability-theory">Probability Theory</a>, a density curve is a function that describes how a random variable is distributed. It is a smooth curve that shows how often each value of the random variable occurs.</p>
+<p>In <a class="internal-link " data-note-icon="" href="/edav/">EDAV</a>, a density curve for some data is the density curve of any distribution that approximates the data empirical distribution.<br>
+A common technique is to give each point a <a class="internal-link is-unresolved"  href="/notes/normal-distribution">Normal Distribution</a> with mean equal to its value. Then the density curve is the <strong>composition</strong> of multiple normal distributions.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210194447.png" alt="variance one"></p>
+<p>Then the variance of the normal distribution, which can be seen as <strong>binwidth</strong> in <a class="internal-link " data-note-icon="" href="/histogram/">Histogram</a>, controls the shape of the curve.</p>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
-<li><a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a></li>
-<li><a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
+<li>If the variance is too small, then the <a class="internal-link is-unresolved"  href="/notes/normal-distribution">Normal Distribution</a> becomes a <a class="internal-link is-unresolved"  href="/notes/dirac-distribution">Dirac Distribution</a>, and the composite density curve becomes too sharp</li>
+<li>If the variance is too large, then the <a class="internal-link is-unresolved"  href="/notes/normal-distribution">Normal Distribution</a> becomes a constant, and the composite density curve becomes too flat</li>
 </ul>
-<h2 id="features" tabindex="-1">Features</h2>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/scatterplot/#features" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
-<h2 id="features-1" tabindex="-1">Features</h2>
-<ul>
-<li>Causal relationships
-<ul>
-<li>correlation ≠ causation, but we still use the y-axis for what appears to be the dependent variable</li>
-</ul>
-</li>
-<li>Associations
-<ul>
-<li>describe what you see</li>
-</ul>
-</li>
-<li>Outliers</li>
-<li>Clusters</li>
-<li>Gaps</li>
-<li>Barriers (boundaries)</li>
-<li>Conditional relationships
-<ul>
-<li>different relationships for different intervals of x</li>
-</ul>
-</li>
-</ul>
-</div></div>
+<p>In real implementations, such variance is controlled by parameter <strong>bandwidth</strong> <code>h</code>.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210194717.png" alt=""></p>
+<p>Sometimes due to the x-axis limits, the density curve doesn't go to zero at two ends (see the last graph above). We can expand the x-axis limits in such cases.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1246,19 +1225,7 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#dependency-relationship">Dependency Relationship</a>
-            
-                <ol>
-                    
-                    <li><a href="#graphs">Graphs</a>
-            		</li>
-
-                    <li><a href="#features">Features</a>
-            		</li>
-
-                    <li><a href="#features-1">Features</a>
-            		</li>
-                </ol>
+                    <li><a href="#density-curve">Density Curve</a>
             		</li>
                 </ol>
             </nav>
@@ -1272,7 +1239,11 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/scatterplot/" data-note-icon="" class="backlink">Scatterplot</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Density Contour Plot/" data-note-icon="" class="backlink">Density Contour Plot</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Continuous Variable/" data-note-icon="" class="backlink">EDAV - Continuous Variable</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/histogram/" data-note-icon="" class="backlink">Histogram</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/q-q-plot/" data-note-icon="" class="backlink">Q-Q Plot</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/ridgeline/" data-note-icon="" class="backlink">Ridgeline</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
