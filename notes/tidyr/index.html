@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Choropleth</title>
+    <title>tidyr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -146,7 +146,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">@Area </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/area/">Areas </a>
                 </div>
             
         </div>
@@ -155,7 +155,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Alluvial Diagram </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/alluvial-diagram/">Alluvial Diagram </a>
                 </div>
             
         </div>
@@ -164,7 +164,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Bar Chart </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/bar-chart/">Bar Chart </a>
                 </div>
             
         </div>
@@ -173,7 +173,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Biplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/biplot/">Biplot </a>
                 </div>
             
         </div>
@@ -182,7 +182,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Boxplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/boxplot/">Boxplot </a>
                 </div>
             
         </div>
@@ -191,7 +191,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Choropleth </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/choropleth/">Choropleth </a>
                 </div>
             
         </div>
@@ -488,7 +488,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/lubridate/">lubridate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">lubridate </a>
                 </div>
             
         </div>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">rvest </a>
                 </div>
             
         </div>
@@ -686,7 +686,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/tidyr/">tidyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">tidyr </a>
                 </div>
             
         </div>
@@ -967,99 +967,32 @@
       </header>
       
       
-      <h1 id="choropleth" tabindex="-1">Choropleth</h1>
-<p>A choropleth map is a type of <a class="internal-link " data-note-icon="" href="/notes/heatmap">Heatmap</a> with units using <strong>political boundaries</strong>.<br>
-In a choropleth, colors usually correspond with an aggregate summary of a geographic characteristic within spatial enumeration units, such as population density or per-capita income.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg/2560px-Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg.png" alt=""></p>
-<p>Compared to <a class="internal-link " data-note-icon="" href="/notes/heatmap">Heatmap</a>, choropleths have an additional variable for each unit, that is <strong>area (and shape)</strong>.</p>
-<p>Also, we can think of the choice of the political boundary as a meta-variable; just like in heatmaps, we can use <a class="internal-link " data-note-icon="" href="/notes/heatmap#hex-heatmap">hexagons</a> or squares.<br>
-But for choropleths, choosing an appropriate political boundary is more important; it should be determined by the nature of the data.</p>
-<h2 id="land-area-problem" tabindex="-1">Land Area Problem</h2>
-<p>A serious problem with choropleths is that if the data has an &quot;absolute&quot; value (not relative to the area), the choropleth can be misleading. For example, the election results always show a larger red area than blue, even though more people voted for Democrats.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110164809.png" alt=""></p>
-<p>There are several attempts to alleviate this problem.</p>
-<h3 id="cartogram" tabindex="-1">Cartogram</h3>
-<p>A <strong>cartogram</strong> distorts the area of regions in order to convey the information of an alternate variable. The region area will be inflated or deflated according to the numeric value of that variable.</p>
-<p id="m0zedk">Note that the variable determining the distortion and the variable determining the color are not necessarily the same. Actually, there would be redundancy if they were the same one.<br>
-For example, we can use color to present the election result, and distort the cartogram according to the number of voters.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110181426.png" alt=""></p>
-<p>Although the graph clarifies the possible misconception that &quot;most people voted for Trump&quot;, it makes the map almost unreadable. Two ways to address this problem</p>
+      <h1 id="tidyr" tabindex="-1">tidyr</h1>
+<p>Principles of tidy data:</p>
 <ul>
-<li>Use animation to animate the distortion process</li>
-<li>Only distort a part of the map while keeping other regions unchanged</li>
+<li>Every column is a variable</li>
+<li>Every row is an observation</li>
+<li>Every cell is a single value</li>
 </ul>
-<p>Both methods keep a reference to the unchanged map, with which we can compare the distorted map.</p>
-<h3 id="uniform-area" tabindex="-1">Uniform Area</h3>
-<p>Another approach is to give each region the same area and shape. This eliminates the area and shape variable unique to choropleths, thus reducing them to general <a class="internal-link " data-note-icon="" href="/notes/heatmap">Heatmap</a>s.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110182733.png" alt=""></p>
-<p>Also, this approach doesn't convey additional information of an alternate variable like <a class="internal-link " data-note-icon="" href="/notes/choropleth#cartogram"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Cartogram">#Cartogram</a></a>s. Therefore, this approach &quot;hides&quot; the problem rather than addresses it.</p>
-<h2 id="combination-with-other-graphs" tabindex="-1">Combination with Other Graphs</h2>
-<h3 id="spatial-and-temporal" tabindex="-1">Spatial and Temporal</h3>
-<p>It is common that we need to combine spatial and <a class="internal-link " data-note-icon="" href="/notes/edav-time-series">temporal data</a>. To this end, we can use facets. We can either</p>
-<ul>
-<li>
-<p>facet on time</p>
-<ul>
-<li>then each facet is a choropleth</li>
-<li><span class="alt-check alt-check-ex"><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110185612.png" alt="|300" width="300px"></span></li>
-</ul>
-</li>
-<li>
-<p>facet on space</p>
-<ul>
-<li>then each facet can be any plot presenting the temporal data</li>
-<li>and the facets are laid out in a grid that mimics the original geographic topology</li>
-<li>this technique is also called <a href="https://ryanhafen.com/blog/geofacet/" target="_blank" class="external-link">geofacet</a></li>
-<li><span class="alt-check alt-check-ex"><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110190145.png" alt="|300" width="300px"></span></li>
-</ul>
-</li>
-</ul>
-<h3 id="linked-micromaps" tabindex="-1">Linked Micromaps</h3>
-<p>We can also use choropleths as a <em>legend</em> for other plots to tell where places are. These graphs are called linked micromaps. The following example is for a <a class="internal-link " data-note-icon="" href="/notes/cleveland-dot-plot">Cleveland Dot Plot</a></p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110190509.png" alt=""></p>
-<h2 id="implementation" tabindex="-1">Implementation</h2>
-<h3 id="choroplethr" tabindex="-1">choroplethr</h3>
-<p><a class="internal-link " data-note-icon="" href="/notes/r-package">Package</a> <code>choroplethr</code> is capable of drawing state and county level maps without using shape files. The data frame must contain <code>region</code> and <code>value</code> columns, and the values of <code>region</code> should be recognizable by <code>choroplethr</code> (for example, they should be lowercase). Related functions:</p>
-<ul>
-<li><code>state_choropleth()</code></li>
-<li><code>county_choropleth()</code>
-<ul>
-<li>This function creates a US map at county level; to zoom into a state, use option <code>county_zoom</code></li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-r">library(dplyr)
-library(tidyr)
-library(tibble)
-library(ggplot2)
-library(choroplethr)
-
-# data frame must contain &quot;region&quot; and &quot;value&quot; columns
-
-df_illiteracy &lt;- state.x77 %&gt;% as.data.frame() %&gt;% 
-  rownames_to_column(&quot;state&quot;) %&gt;% 
-  transmute(region = tolower(`state`), value = Illiteracy)
-
-p &lt;- state_choropleth(df_illiteracy,
-                 title = &quot;State Illiteracy Rates, 1977&quot;,
-                 legend = &quot;Percent Illiterate&quot;)
-plot(p)
+<p>An example:</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013014825.png" alt=""></p>
+<p>The code for this example using package <code>tidyr</code> is</p>
+<pre><code class="language-r">tidydata &lt;- messydata %&gt;%
+    pivot_longer(cols = !id, names_to = &quot;roadtype&quot;, values_to = &quot;mpg&quot;)
 </code></pre>
-<h3 id="sf-and-tmap" tabindex="-1">sf and tmap</h3>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
-<h2 id="sf-and-tmap-1" tabindex="-1">sf and tmap</h2>
-<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
-<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
-<ol>
-<li>Get the spatial data by reading the shape file using <code>sf</code></li>
-<li>Combine spatial data and other data
+<blockquote>
+<p><code>pivot_longer()</code> &quot;lengthens&quot; data, increasing the number of rows and decreasing the number of columns. The inverse transformation  is <code>pivot_wider()</code></p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/tidyr-pivoting.gif" alt=""></p>
+<p>As we can see, the <code>id</code> column is essential. Sometimes data have row names, but don't have a column name for them. Then we can create one manually</p>
+<pre><code class="language-r">library(tidyverse)
+mtcars %&gt;%
+    rownames_to_column(&quot;carname&quot;) %&gt;%
+    head()
+</code></pre>
 <ul>
-<li>e.g. use <code>left_join()</code></li>
+<li><span class="alt-check alt-check-tip">&quot;Tidy&quot; or &quot;messy&quot; depends on the use case. Sometimes, &quot;tidy&quot; data can be &quot;messy&quot; in other scenarios.</span></li>
 </ul>
-</li>
-<li>plot the combined data using <code>tmap</code></li>
-</ol>
-</div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1304,49 +1237,7 @@ plot(p)
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#choropleth">Choropleth</a>
-            
-                <ol>
-                    
-                    <li><a href="#land-area-problem">Land Area Problem</a>
-            
-                <ol>
-                    
-                    <li><a href="#cartogram">Cartogram</a>
-            		</li>
-
-                    <li><a href="#uniform-area">Uniform Area</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#combination-with-other-graphs">Combination with Other Graphs</a>
-            
-                <ol>
-                    
-                    <li><a href="#spatial-and-temporal">Spatial and Temporal</a>
-            		</li>
-
-                    <li><a href="#linked-micromaps">Linked Micromaps</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#implementation">Implementation</a>
-            
-                <ol>
-                    
-                    <li><a href="#choroplethr">choroplethr</a>
-            		</li>
-
-                    <li><a href="#sf-and-tmap">sf and tmap</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#sf-and-tmap-1">sf and tmap</a>
-            		</li>
-                </ol>
+                    <li><a href="#tidyr">tidyr</a>
             		</li>
                 </ol>
             </nav>
@@ -1360,7 +1251,10 @@ plot(p)
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Spatial Data/" data-note-icon="" class="backlink">Spatial Data</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/alluvial-diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Missing Data/" data-note-icon="" class="backlink">EDAV - Missing Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Parallel Coordinate/" data-note-icon="" class="backlink">Parallel Coordinate</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
