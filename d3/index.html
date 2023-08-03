@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Git Commands</title>
+    <title>D3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -272,7 +272,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3/">D3 </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3/">D3 </a>
                 </div>
             
         </div>
@@ -425,7 +425,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
                 </div>
             
         </div>
@@ -968,11 +968,15 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2021-09-08T20:50:01"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2023-04-13T13:53:42"></span></div>
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-11-15T16:25:28"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-12T02:16:54"></span></div>
             <div><i icon-name="corner-left-ip"></i>
-            <a href="/git/">Git</a>
+            <a href="/js-package/">JS Package</a>
             </div>
             
+            
+            <div><i icon-name="arrow-left-right"></i>
+            <a href="/js-package/">JS Package</a>
+            </div>
             
           </div></div>
       
@@ -980,184 +984,131 @@
       </header>
       
       
-      <h1 id="git-commands" tabindex="-1">Git Commands</h1>
-<h2 id="add" tabindex="-1">Add</h2>
+      <h1 id="d3" tabindex="-1">D3</h1>
+<p><strong>D3.js</strong>, short for Data-Driven Documents, is a <a class="internal-link is-unresolved"  href="/notes/js-package">JS Package</a> for manipulating documents based on <strong>data</strong> and is well suited to interactive graphics.</p>
+<p>In an <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> file, we should add the link to D3 in the <code>&lt;head&gt;</code> element. And then write <a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a> in the <code>&lt;body&gt;</code>.</p>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script src=&quot;https://d3js.org/d3.v7.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;svg width=&quot;500&quot; height=&quot;300&quot;&gt;  &lt;!-- some SVG --&gt;
+        &lt;rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;460&quot; height=&quot;260&quot; fill=&quot;lightblue&quot;&gt;&lt;/rect&gt;
+        &lt;circle cx=&quot;200&quot; cy=&quot;75&quot; r=&quot;20&quot; fill=&quot;blue&quot;&gt;&lt;/circle&gt;
+        &lt;ellipse cx=&quot;175&quot; cy=&quot;100&quot; rx=&quot;45&quot; ry=&quot;30&quot; fill=&quot;green&quot;&gt;&lt;/ellipse&gt;
+        &lt;text x=&quot;150&quot; y=&quot;200&quot;&gt;(150, 200)&lt;/text&gt;
+        &lt;line x1=&quot;250&quot; y1=&quot;150&quot; x2=&quot;300&quot; y2=&quot;200&quot; stroke=&quot;red&quot; stroke-width=&quot;5&quot;&gt;&lt;/line&gt;
+    &lt;/svg&gt;
+    
+    &lt;script&gt;
+        // JavaScript / D3 will go here
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p>D3 helps us conveniently interact with the <a class="internal-link " data-note-icon="" href="/dom/">DOM</a>. Some basic commands (try them in the console of <a class="internal-link " data-note-icon="" href="/developer-tools/">Developer Tools</a>):</p>
+<pre><code class="language-js">d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, &quot;200&quot;);
+d3.select(&quot;circle&quot;).attr(&quot;r&quot;, &quot;30&quot;);
+d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
+</code></pre>
 <ul>
-<li><code>git add -A</code> stages <strong>all changes</strong>
-<ul>
-<li>= <code>git add .</code> + <code>git add -u</code></li>
+<li><span class="alt-check alt-check-tip">Effects of commands executed in the console will be gone after a refresh of the page.</span></li>
 </ul>
-</li>
-<li><code>git add .</code> stages new files and modifications, <s>without deletions</s> (on the current directory and its subdirectories)
-<ul>
-<li><span class="alt-check alt-check-rmk">For Git &gt;= 2.0, <code>git add .</code> will add deletions! Use flag <code>--ignore-removal</code> to ignore deletion</span></li>
-<li><span class="alt-check alt-check-rmk">Therefore, <code>git add -A</code> is redundant for Git &gt;= 2.0</span></li>
-</ul>
-</li>
-<li><code>git add -u</code> stages modifications and deletions, <strong>without new files</strong></li>
-</ul>
-<h2 id="combine-add-and-commit" tabindex="-1">Combine add and commit</h2>
-<pre><code class="language-bash">git commit -am &quot;commit message&quot;
+<p>As we can see, a basic D3 statement is a <s>combination</s> chain of D3 methods. Another example:</p>
+<pre><code class="language-js">d3.select(&quot;svg&quot;).select(&quot;circle&quot;).transition().duration(2000).attr(&quot;r&quot;, &quot;50&quot;);
 </code></pre>
-<p>is equal to</p>
-<pre><code class="language-bash">git add -u
-git commit -m &quot;commit message&quot;
-</code></pre>
-<h2 id="alias" tabindex="-1">Alias</h2>
-<pre><code class="language-bash">git config --global alias.ac &quot;commit -am&quot;
-git ac &quot;commit message&quot;
-</code></pre>
-<p>is equal to</p>
-<pre><code class="language-bash">git commit -am &quot;commit message&quot;
-</code></pre>
-<h2 id="branch" tabindex="-1">Branch</h2>
-<pre><code class="language-bash"># Create a branch
-git branch -M main
-# Rename a branch
-git branch -M master main
-</code></pre>
-<h2 id="log-in-terminal" tabindex="-1">Log in Terminal</h2>
-<p>To get better log info like in the GUI</p>
-<pre><code class="language-bash">git log --graph --oneline --decorate
-</code></pre>
-<h2 id="stash" tabindex="-1">Stash</h2>
-<p><code>stash</code> store your changes without commit, remove them now, and pop out when you need them again</p>
-<pre><code class="language-bash"># Store all your changes without commit, and hide them
-git stash
-# Pop out your hidden changes
-git stash pop
-# Stash your changes with a given name
-git stash save &quot;your stash name&quot;
-# Show all your stashes
-git stash list
-# Apply a certain stash in the list
-git stash apply index
-</code></pre>
-<h2 id="ignore" tabindex="-1">Ignore</h2>
-<p>To ignore some files or directories, add them to the <code>.gitignore</code> file. However, this will not work for files/dirs that have already been tracking. To remove those files/dirs from <strong>git tracking</strong> (not delete them), use</p>
-<pre><code class="language-bash">git rm -r --cached path_to_file_or_dir
-</code></pre>
-<h2 id="new-branch" tabindex="-1">New Branch</h2>
-<pre><code class="language-sh"># Create a new branch called new_branch
-git branch new_branch
-# Checkout (switch) to the new branch
-git checkout new_branch
-</code></pre>
-<p>These two commands have a shorthand:</p>
-<pre><code class="language-sh">git checkout -b new_branch
-</code></pre>
-<h2 id="discard-branch" tabindex="-1">Discard Branch</h2>
-<p>When a branch is pulled/merged into main, it is no longer needed.</p>
-<pre><code class="language-sh">git branch -d patch # delete branch
-git fetch -p        # stop tracking obsolete remote branches (prune)
-</code></pre>
-<h2 id="remotes" tabindex="-1">Remotes</h2>
-<pre><code class="language-sh"># View the remotes
-git remote -v
-# Add a remote called origin
-git remote add origin git@github.com:zcysxy/repo.git
-# Change the url of the remote origin
-git remote set-url origin https://github.com/zcysxy/repo.git
-</code></pre>
-<p>When forking an other's repo, remember to add the other's repo as an <strong>upstream repo</strong>.</p>
-<pre><code class="language-sh">git remote add upstream git@github.com:yiyi/repo.git
-</code></pre>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Forking and Making Pull Requests Best Practice</div></div>
-<div class="callout-content">
-<p>
+<p>What the above example does is</p>
 <ol>
-<li>Set the original repo as the upstream repo.</li>
-<li>Switch to a new branch before making any changes.</li>
-<li>Make a pull request from a new branch other than <code>main</code>/<code>master</code>.</li>
-<li>After the pull request is merged into the original repo, pull it into your own <code>main</code>/<code>master</code> branch.</li>
-<li>Delete the obsolete branch. <code>git branch -D obsolete-branch</code></li>
+<li>select the first element targeted by <a class="internal-link is-unresolved"  href="/notes/css-selector">CSS Selector</a> <code>svg circle</code></li>
+<li>change the value of attribute <code>r</code> of the selected element to <code>&quot;50&quot;</code></li>
+<li>add a transition of 2000ms to the change</li>
 </ol>
-</p></div></div>
-<h2 id="discard-changes" tabindex="-1">Discard Changes</h2>
-<pre><code class="language-bash"># Restore several files
-git restore file1 file2 file3
-
-# Restore all
-git restore .
+<h2 id="select-elements" tabindex="-1">Select Elements</h2>
+<p>Selecting elements in <a class="internal-link " data-note-icon="" href="/dom/">DOM</a> is the same as targeting elements using <a class="internal-link is-unresolved"  href="/notes/css-selector">CSS Selector</a>.</p>
+<ul>
+<li><code>.select(selector)</code> selects the <strong>first</strong> element targeted by <code>selector</code></li>
+<li><code>.selectAll(selector)</code> selects <strong>all</strong> elements targeted by <code>selector</code></li>
+</ul>
+<p>For a composite selector, for example, <code>svg#id1 circle.container</code>, we can use</p>
+<ul>
+<li>one <code>.select()</code>: <code>.select(&quot;svg#id1 circle.container&quot;)</code>;</li>
+<li><s>or chaining <code>.select()</code>s: <code>.select(&quot;svg&quot;).select(&quot;#id1&quot;).select(&quot;circle&quot;).select(&quot;.container&quot;)</code></s></li>
+<li><span class="alt-check alt-check-rmk">The above line is wrong: chaining selects select <strong>inside</strong> the previous selected element. So <code>.select(&quot;svg&quot;).select(&quot;#id1&quot;)</code> returns empty.</span></li>
+</ul>
+<p>We can store the selected elements in a variable/constant for future reference:</p>
+<pre><code class="language-js">const selection = d3.selectAll(&quot;circle&quot;)
 </code></pre>
-<h2 id="get-files-from-other-branches" tabindex="-1">Get Files from Other Branches</h2>
-<p>To get files from other branches, you can either use <code>checkout</code> command or <code>restore</code> command.</p>
-<pre><code class="language-bash"># main branch
-git checkout other_branch -- file1 file2
-# or
-git restore --source other_branch -- file1 file2
-</code></pre>
-<h2 id="show-tracked-files" tabindex="-1">Show Tracked Files</h2>
-<p>List all the files currently being tracked under the branch <code>master</code></p>
-<pre><code class="language-sh">git ls-tree -r master --name-only
-</code></pre>
-<h2 id="remote-status" tabindex="-1">Remote Status</h2>
-<p>To show what's going on in the remote branches, you need to fetch/update them first, then compare the differences.</p>
-<pre><code class="language-sh"># Method 1
-git fetch origin
-git diff origin/master
-git merge origin/master
-
-# Method2
-git remote update
-git status
-</code></pre>
-<h2 id="list-files" tabindex="-1">List Files</h2>
-<h3 id="ls-files" tabindex="-1">ls-files</h3>
-<pre><code class="language-shell">git ls-files # Show information about files in the index and the working tree
-    [-c|--cached] [-d|--deleted] [-o|--others] [-i|--|ignored]
-    [-s|--stage] [-u|--unmerged] [-k|--|killed] [-m|--modified]
-    [--directory [--no-empty-directory]] [--eol]
-    [--deduplicate]
-    [-x &lt;pattern&gt;|--exclude=&lt;pattern&gt;]
-    [-X &lt;file&gt;|--exclude-from=&lt;file&gt;]
-    [--exclude-per-directory=&lt;file&gt;]
-    [--exclude-standard]
-    [--error-unmatch] [--with-tree=&lt;tree-ish&gt;]
-    [--full-name] [--recurse-submodules]
-    [--abbrev[=&lt;n&gt;]] [--] [&lt;file&gt;…​]
-</code></pre>
-<h3 id="ls-tree" tabindex="-1">ls-tree</h3>
-<pre><code class="language-shell">git ls-tree -r main --name-only
-</code></pre>
-<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> <code>ls-tree</code> &gt; <code>ls-files</code><br></div></div>
-<div class="callout-content">
-<p>
-<code>ls-tree</code> is better than <code>ls-files</code> because <code>ls-files</code> may differ from the <code>--work-tree</code>.</p>
-</div></div>
-<h2 id="garbage-collection" tabindex="-1">Garbage Collection</h2>
-<p>To &quot;collect the garbage&quot; in the <code>.git</code> folder and reduce its size, use</p>
-<pre><code class="language-shell">git gc
-# or spend more time optimizing using
-git gc --aggressive
-</code></pre>
-<p>This command actually executes a bundle of other internal subcommands like <code>git prune</code>, <code>git repack</code>, <code>git pack</code> and <code>git rerere</code>. These subcommands identify any Git objects that are outside the threshold levels set from the <code>git gc</code> configuration, and then compress, or prune them accordingly.</p>
-<h2 id="global-code-gitignore-code" tabindex="-1">Global <code>.gitignore</code></h2>
-<p>You can create a global <code>.gitignore</code> file to ignore files for all git repositories. When you created that file, run the following command</p>
-<pre><code class="language-shell">git config --global core.excludesfile &lt;path_to_your_gitignore_global&gt;
-</code></pre>
-<h2 id="separate-git-directory" tabindex="-1">Separate Git Directory</h2>
-<p>Sometimes, you don't want the <code>.git</code> directory to be in the same directory as the working tree (for example, to prevent sync issues).</p>
-<pre><code class="language-shell">cd ~/work/dir # working dir
-git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
-</code></pre>
-<h2 id="merge-changes-from-another-branch" tabindex="-1">Merge Changes from Another Branch</h2>
-<pre><code class="language-shell"># In branch main
-git merge patch_branch
-# or merge from a specific commit
-git cherry-pick commit-hash
-</code></pre>
-<h2 id="compare-current-and-last-version" tabindex="-1">Compare Current and Last Version</h2>
-<pre><code class="language-shell"># HEAD~n is the nth generation ancestor of the named commit object (HEAD here)
-git diff HEAD~1 HEAD
-# Shortcuts
-git diff HEAD~ HEAD
-git diff HEAD~
-git diff @~ # @ is an alias for HEAD
-git show # doesn't work for merge commit
-</code></pre>
-<h2 id="see-commit-log-between-tags" tabindex="-1">See Commit Log Between Tags</h2>
-<pre><code class="language-shell">git log [tag_num]..HEAD &gt; changelog.md
+<ul>
+<li><span class="alt-check alt-check-rmk">Note that once a selection is stored to a variable, even if the elements in the selection are removed from the <a class="internal-link " data-note-icon="" href="/dom/">DOM</a>, the selection contains those elements.<br>
+{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#qahtei">#qahtei</a>}<br>
+</span></li>
+</ul>
+<h2 id="change-attributes-style-and-content" tabindex="-1">Change Attributes, Style, and Content</h2>
+<ul>
+<li>
+<p><code>.attr(attrName, attrValue)</code> changes or sets the attribute <code>attr</code> of the element to <code>attrValue</code></p>
+</li>
+<li>
+<p><code>.style(styleName, styleValue)</code> changes or sets the style <code>styleName</code> of the element to <code>styleValue</code></p>
+<ul id="a62hhs">
+<li><code>style</code> is just a special attribute; thus <code>.style(styleName, value)</code> is just shorthand for <code>.attr(&quot;style&quot;, &quot;styleName: value;&quot;)</code></li>
+<li>if there is a style rule and an attribute having the same name, the style rule takes precedence</li>
+</ul>
+</li>
+<li>
+<p><code>.text(&quot;new content&quot;)</code> changes or sets the tag text content</p>
+</li>
+<li>
+<p><span class="alt-check alt-check-tip">to see the value of an attribute/style rule/text content, just leave the argument empty</span></p>
+</li>
+</ul>
+<p>With <a class="internal-link " data-note-icon="" href="/js-function/">JS Function</a>s, <s>especially <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s</s>, we can easily modify the values of attributes/styles/content based on the original values.</p>
+<ul>
+<li><span class="alt-check alt-check-rmk">It is actually not easy to get original values! One way is to use <code>this.getAttribute()</code>. However, <code>this</code> is different in a <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a> and a normal function. To make this work, we should use a <strong>normal function</strong>.</span></li>
+</ul>
+<h2 id="add-and-remove-elements" tabindex="-1">Add and Remove Elements</h2>
+<ul id="w6u5ai">
+<li>
+<p><code>.append(element)</code> adds an element <strong>inside</strong> the selected element, as the <strong>last child</strong></p>
+<ul>
+<li>We can directly give the newly added element attributes, styles, and content using methods in <a class="internal-link " data-note-icon="" href="/d3/#change-attributes-style-and-content"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Change">#Change</a> Attributes, Style, and Content</a>
+<ul>
+<li><span class="alt-check alt-check-ex"><code>d3.select('svg').append('circle').attr('cx', '100').attr('r','30')</code></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>.insert(type[, before])</code> adds an element inside the selected element, <strong>before</strong> the child <code>before</code></p>
+<ul>
+<li>If <code>before</code> is not specified, <code>.insert()</code> = <code>.append()</code></li>
+<li>Use <a class="internal-link is-unresolved"  href="/notes/css-selector#adjacent-sibling-selector">CSS Selector#Adjacent Sibling Selector</a> <code>before + *</code>, the element is inserted <strong>after</strong> the child <code>before</code></li>
+</ul>
+</li>
+<li>
+<p><span class="alt-check alt-check-tip">After <code>.append()</code> or <code>.insert()</code>, the selection will be the new element.</span></p>
+</li>
+<li>
+<p><code>.remove()</code> removes the selected element</p>
+<ul>
+<li>If the selector targets multiple elements, <code>.select(selector).remove()</code> will only remove the <strong>first</strong> element</li>
+<li>Use <code>.selectAll(selector).remove()</code> to remove <strong>all</strong> the elements targeted by <code>selector</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="d3-bind-data-d3-bind-data" tabindex="-1"><a class="internal-link " data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></h2>
+<h2 id="data-function" tabindex="-1">Data Function</h2>
+<p>D3 is powerful for manipulating documents based on <strong>data</strong>. Now we've learned how to bind data to elements; then we can manipulate these elements based on their data.</p>
+<p>All the <strong>DOM manipulation</strong> methods introduced in previous sections, such as <code>.attr()</code>, <code>.style()</code>, <code>.text()</code>, <code>.append()</code>, etc., not only can take in a constant value, but also accepts <strong>a function</strong> as a parameter. This function is a <strong>function of data</strong>. The method will call the function using the bound data. To be exact, these parameters will be passed to the function</p>
+<ol>
+<li>first argument <code>d</code>: data bound to the element</li>
+<li>second argument <code>i</code>: index of the element</li>
+</ol>
+<ul>
+<li>Note that the selection will also be passed to the function as <code>this</code></li>
+</ul>
+<p>Then we can easily manipulate the elements based on their data using <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s as the functions of data. For example, to set the x-position of a circle to its data value:</p>
+<pre><code class="language-js">d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, d =&gt; d)
+// This is short for
+d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, function(d) {return d})
 </code></pre>
 
       
@@ -1403,80 +1354,23 @@ git show # doesn't work for merge commit
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#git-commands">Git Commands</a>
+                    <li><a href="#d3">D3</a>
             
                 <ol>
                     
-                    <li><a href="#add">Add</a>
+                    <li><a href="#select-elements">Select Elements</a>
             		</li>
 
-                    <li><a href="#combine-add-and-commit">Combine add and commit</a>
+                    <li><a href="#change-attributes-style-and-content">Change Attributes, Style, and Content</a>
             		</li>
 
-                    <li><a href="#alias">Alias</a>
+                    <li><a href="#add-and-remove-elements">Add and Remove Elements</a>
             		</li>
 
-                    <li><a href="#branch">Branch</a>
+                    <li><a href="#d3-bind-data-d3-bind-data">[[D3 Bind Data|D3 Bind Data]]</a>
             		</li>
 
-                    <li><a href="#log-in-terminal">Log in Terminal</a>
-            		</li>
-
-                    <li><a href="#stash">Stash</a>
-            		</li>
-
-                    <li><a href="#ignore">Ignore</a>
-            		</li>
-
-                    <li><a href="#new-branch">New Branch</a>
-            		</li>
-
-                    <li><a href="#discard-branch">Discard Branch</a>
-            		</li>
-
-                    <li><a href="#remotes">Remotes</a>
-            		</li>
-
-                    <li><a href="#discard-changes">Discard Changes</a>
-            		</li>
-
-                    <li><a href="#get-files-from-other-branches">Get Files from Other Branches</a>
-            		</li>
-
-                    <li><a href="#show-tracked-files">Show Tracked Files</a>
-            		</li>
-
-                    <li><a href="#remote-status">Remote Status</a>
-            		</li>
-
-                    <li><a href="#list-files">List Files</a>
-            
-                <ol>
-                    
-                    <li><a href="#ls-files">ls-files</a>
-            		</li>
-
-                    <li><a href="#ls-tree">ls-tree</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#garbage-collection">Garbage Collection</a>
-            		</li>
-
-                    <li><a href="#global-code-gitignore-code">Global .gitignore</a>
-            		</li>
-
-                    <li><a href="#separate-git-directory">Separate Git Directory</a>
-            		</li>
-
-                    <li><a href="#merge-changes-from-another-branch">Merge Changes from Another Branch</a>
-            		</li>
-
-                    <li><a href="#compare-current-and-last-version">Compare Current and Last Version</a>
-            		</li>
-
-                    <li><a href="#see-commit-log-between-tags">See Commit Log Between Tags</a>
+                    <li><a href="#data-function">Data Function</a>
             		</li>
                 </ol>
             		</li>
@@ -1492,7 +1386,9 @@ git show # doesn't work for merge commit
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/d3-axes/" data-note-icon="" class="backlink">D3 Axes</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/d3-scale/" data-note-icon="" class="backlink">D3 Scale</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
                         
