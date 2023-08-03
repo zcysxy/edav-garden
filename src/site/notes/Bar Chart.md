@@ -1,8 +1,11 @@
-[object Promise]
+---
+{"title":"Bar Chart","alias":"Barchart,Bar Plot","type":"note","created":"2022-10-12T22:07:38","modified":"2022-12-11T19:14:39","dg-publish":true,"sup":["[[EDAV - Categorical Data\|EDAV - Categorical Data]]"],"state":"done","related":["[[EDAV]]"],"permalink":"/bar-chart/","dgPassFrontmatter":true,"updated":"2022-12-11T19:14:39"}
+---
+
 
 # Bar Chart
 
-A bar chart is a chart or graph that presents [[EDAV - Categorical Data\|EDAV - Categorical Data]] with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a **column chart**.
+A bar chart is a chart or graph that presents [[EDAV - Categorical Data]] with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a **column chart**.
 One axis of the chart shows the specific categories being compared, and the other axis represents a measured value.
 Some bar graphs present bars clustered in groups of more than one, showing the values of more than one measured variable.
 
