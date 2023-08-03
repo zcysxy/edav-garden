@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>D3 Transition</title>
+    <title>DOM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -227,7 +227,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Functions </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-functions/">D3 Functions </a>
                 </div>
             
         </div>
@@ -236,7 +236,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Interactivity </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-interactivity/">D3 Interactivity </a>
                 </div>
             
         </div>
@@ -245,7 +245,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Margin </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-margin/">D3 Margin </a>
                 </div>
             
         </div>
@@ -254,7 +254,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Scale </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-scale/">D3 Scale </a>
                 </div>
             
         </div>
@@ -263,7 +263,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Transition </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-transition/">D3 Transition </a>
                 </div>
             
         </div>
@@ -308,7 +308,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">DOM </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/dom/">DOM </a>
                 </div>
             
         </div>
@@ -959,7 +959,11 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2021-08-30T13:51:14"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-11-17T18:13:44"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
+            
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
             
           </div></div>
       
@@ -967,63 +971,49 @@
       </header>
       
       
-      <h1 id="d3-transition" tabindex="-1">D3 Transition</h1>
-<ul>
-<li><code>.transition().duration(time)</code> adds a transition to the change
-<ul>
-<li><code>time</code> should be a <a class="internal-link is-unresolved"  href="/notes/js-types-number">number</a>; its unit is ms</li>
-<li>these two methods should be between the selection and the change
-<ul>
-<li><span class="alt-check alt-check-ex"><code>d3.select(&quot;svg&quot;).select(&quot;circle&quot;).transition().duration(2000).attr(&quot;cx&quot;, &quot;400&quot;)</code></span></li>
-</ul>
-</li>
-<li>not all changes can be added with a transition
-<ul>
-<li>[+] changes in size and position can</li>
-<li>[-] changes in font family cannot</li>
-</ul>
-</li>
-<li>we can add multiple transitions by chaining them
-<ul>
-<li>then the transitions will happen one by one</li>
-<li><span class="alt-check alt-check-ex"><code>d3.select(&quot;svg&quot;).select(&quot;circle&quot;).transition().duration(2000).attr(&quot;cx&quot;, &quot;400&quot;).transition().duration(2000).attr(&quot;cy&quot;,&quot;200&quot;)</code></span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="do-and-not" tabindex="-1">Do and Not</h2>
-<p>Transitions in different statements run <strong>simultaneously</strong>. Therefore</p>
-<ul>
-<li><strong>DO</strong>
-<ul>
-<li>Run simultaneous transitions on <strong>different</strong> selections</li>
-<li>Run sequential transitions on the same selection in <strong>one chain</strong></li>
-<li>Transition from <em>something</em> to <em>something</em>
-<ul>
-<li>The attributes being transitioned should have an initial value before the transition</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>DO NOT</strong>
-<ul>
-<li>Do not run two transitions on the same selection at the same time
-<ul>
-<li>i.e., in two statements/chains</li>
-</ul>
-</li>
-<li>Do not transition from <em>nothing</em> to something</li>
-<li>Do not store a selection with a transition
-<ul>
-<li>it is not a selection object anymore</li>
-<li>it becomes a <code>Transition</code> object</li>
-</ul>
-</li>
-<li>Do not put a transition before a <a class="internal-link " data-note-icon="" href="/d3-bind-data/#merge">merge</a></li>
-</ul>
-</li>
-</ul>
+      <h1 id="dom" tabindex="-1">DOM</h1>
+<p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> or <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> document as a <strong>tree structure</strong> wherein each node is an object representing a part of the document.</p>
+<h2 id="dom-and-html-html" tabindex="-1">DOM and <a class="internal-link is-unresolved"  href="/notes/html">HTML</a></h2>
+<p>When you use a web browser to request a page like <code>https://example.com</code> the server returns HTML like this:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;This is a hypertext document on the World Wide Web.&lt;/p&gt;
+        &lt;script src=&quot;/script.js&quot; async&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The browser parses the HTML and creates a tree of objects like this:</p>
+<pre><code class="language-text">html
+  head
+    title
+  body
+    h1
+    p
+    script
+</code></pre>
+<p>This tree of objects, or nodes, representing the page's content is called the DOM. Right now it looks the same as the HTML, but suppose that the script referenced at the bottom of the HTML runs this code:</p>
+<pre><code class="language-js">const h1 = document.querySelector('h1');
+h1.parentElement.removeChild(h1);
+const p = document.createElement('p');
+p.textContent = 'Wildcard!';
+document.body.appendChild(p);
+</code></pre>
+<p>That code removes the <code>h1</code> node and adds another <code>p</code> node to the DOM. The complete DOM now looks like this:</p>
+<pre><code class="language-text">html
+  head
+    title
+  body
+    p
+    script
+    p
+</code></pre>
+<p>The page's HTML is now different from its DOM. In other words, HTML represents <strong>initial</strong> page content, and the DOM represents <strong>current</strong> page content. When <a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a> adds, removes, or edits nodes, the DOM becomes different than the HTML.</p>
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="external-link">Introduction to the DOM</a> to learn more.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1268,11 +1258,11 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#d3-transition">D3 Transition</a>
+                    <li><a href="#dom">DOM</a>
             
                 <ol>
                     
-                    <li><a href="#do-and-not">Do and Not</a>
+                    <li><a href="#dom-and-html-html">DOM and [[HTML|HTML]]</a>
             		</li>
                 </ol>
             		</li>
@@ -1288,7 +1278,8 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/d3-bind-data/" data-note-icon="" class="backlink">D3 Bind Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         

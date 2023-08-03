@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>D3 Scale</title>
+    <title>D3 Interactivity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -227,7 +227,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Functions </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-functions/">D3 Functions </a>
                 </div>
             
         </div>
@@ -236,7 +236,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Interactivity </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-interactivity/">D3 Interactivity </a>
                 </div>
             
         </div>
@@ -245,7 +245,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Margin </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-margin/">D3 Margin </a>
                 </div>
             
         </div>
@@ -254,7 +254,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Scale </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-scale/">D3 Scale </a>
                 </div>
             
         </div>
@@ -263,7 +263,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Transition </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-transition/">D3 Transition </a>
                 </div>
             
         </div>
@@ -308,7 +308,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">DOM </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/dom/">DOM </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-12-01T21:43:56"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-02T10:54:18"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,96 +969,95 @@
       </header>
       
       
-      <h1 id="d3-scale" tabindex="-1">D3 Scale</h1>
-<p>Cartesian coordinates are different from the coordinates in an <a class="internal-link is-unresolved"  href="/notes/svg">SVG</a>.<br>
-<img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221201003039.png" alt=""></p>
-<p>So we need transformers to map Cartesian coordinates to <a class="internal-link is-unresolved"  href="/notes/svg">SVG</a> coordinates; <strong>scales</strong> in <a class="internal-link is-unresolved"  href="/notes/d3">D3</a> are such transformers.</p>
-<p>There are two functions in <a class="internal-link is-unresolved"  href="/notes/d3">D3</a> to create scales: one for <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">Categorical Data</a>—<code>.scaleBand()</code>, and one for <a class="internal-link " data-note-icon="" href="/notes/edav-continuous-variable">Continuous Data</a>—<code>.scaleLinear()</code>.<br>
-Note that these functions are for creating your own scales rather than alternating the current scales.</p>
-<h2 id="ordinal-scales" tabindex="-1">Ordinal Scales</h2>
-<p>To create an <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data#ordinal-vs-nominal">ordinal</a> scale:</p>
-<pre><code class="language-js">const ordScale = d3.scaleBand()
-    .domain([&quot;cold&quot;, &quot;warm&quot;, &quot;hotel&quot;])
-    .range([0,600])
-</code></pre>
-<p><code>.scaleBand()</code> evenly divide the range for each category.<br>
-<code>ordScale.bandwidth()</code> returns the bandwidth of the result.<br>
-And <code>ordScale(category)</code> returns the <strong>left boundary</strong> of the category band.</p>
-<p><code>.domain()</code> also accepts indexes of categories.<br>
-In this case, to make the above snippet more flexible, we can use <code>.domain(d3.range(dataset.length))</code> instead of <code>.domain([0,1,2,3,4])</code>.</p>
+      <h1 id="d3-interactivity" tabindex="-1">D3 Interactivity</h1>
+<p>Interaction contains two parts</p>
 <ul>
-<li><span class="alt-check alt-check-tip">Don't mix up <code>d3.range()</code>, which returns an <a class="internal-link is-unresolved"  href="/notes/js-type-array">array</a> of integers, and <code>.domain().range()</code>.<br>
-{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#vga7uq">#vga7uq</a>}<br>
+<li>What do users do?
+<ul>
+<li>event listener</li>
+<li>information needed</li>
+</ul>
+</li>
+<li>What will happen?</li>
+</ul>
+<p>This note consists of many examples.</p>
+<h2 id="do-something-to-the-event-element" tabindex="-1">Do Something to the Event Element</h2>
+<ul>
+<li><code>.on(event, function)</code> passes <code>event</code> and the selection as <code>this</code>/<code>event.currentTarget</code> to <code>function</code> when <code>event</code> is fired</li>
+</ul>
+<pre><code class="language-js">// A function to turn the fill color to yellow:
+function goYellow() {d3.select(this).attr(&quot;fill&quot;, &quot;yellow&quot;)};
+
+d3.select(&quot;svg&quot;).select(&quot;circle&quot;).on(&quot;mouseover&quot;, goYellow);
+// This in goYellow() in this call will be &quot;circle&quot;
+
+// Use an anonymous function
+d3.select(&quot;svg&quot;).select(&quot;line&quot;).on(&quot;click&quot;, function()
+    {d3.select(this).attr(&quot;stroke-width&quot;, &quot;10&quot;);});
+
+// Pass the event
+d3.select(&quot;svg&quot;).on(&quot;click&quot;, function(event)
+    {d3.select(&quot;text&quot;).text(`(${d3.pointer(event)})`)});
+</code></pre>
+<h2 id="do-something-unrelated-to-the-event-element" tabindex="-1">Do Something Unrelated to the Event Element</h2>
+<pre><code class="language-js">d3.select(&quot;svg&quot;)
+  .on(&quot;click&quot;, function () { // a function unrelated to the event
+    d3.select(&quot;svg&quot;)
+      .append(&quot;text&quot;)
+        .attr(&quot;x&quot;, &quot;100&quot;)
+        .attr(&quot;y&quot;, &quot;40&quot;)
+        .text(&quot;Hello World&quot;);
+  });
+</code></pre>
+<h2 id="change-an-attribute-of-the-event-element" tabindex="-1">Change an Attribute of the Event Element</h2>
+<pre><code class="language-js">d3.select(&quot;line&quot;)
+  .on(&quot;click&quot;,function() {
+    d3.select(this).attr(&quot;stroke-width&quot;,&quot;10&quot;);
+  });
+</code></pre>
+<h2 id="get-the-value-of-an-attribute-of-the-event-element" tabindex="-1">Get the Value of an Attribute of the Event Element</h2>
+<p>Use <code>event.currentTarget</code> to get the event selection.</p>
+<pre><code class="language-js">d3.select(&quot;circle&quot;)
+  .on(&quot;click&quot;,function(event) {
+    const rad = d3.select(event.currentTarget).attr(&quot;r&quot;);
+    d3.select(&quot;text&quot;)
+      .text(`The radius is ${rad} pixels.`);
+  });
+</code></pre>
+<ul>
+<li><span class="alt-check alt-check-tip"><code>.select(this)</code> can be used instead of <code>.select(event.currentTarget)</code>. In the context of event handlers, <code>this</code> is the element that received the event, a.k.a. what you clicked on if it's a click event.</span></li>
+</ul>
+<h2 id="do-something-with-the-data" tabindex="-1">Do Something with the Data</h2>
+<pre><code class="language-js">d3.select(&quot;circle&quot;)
+  .data([{s:&quot;red&quot;,sw:&quot;15&quot;}])
+  .on(&quot;click&quot;,function(event, d) {    
+      d3.select(event.currentTarget)
+        .attr(&quot;stroke&quot;, d.s) // get the data
+        .attr(&quot;stroke-width&quot;, d.sw);
+  });
+</code></pre>
+<ul>
+<li><span class="alt-check alt-check-rmk">Note that starting with D3 v6, the data is the 2nd parameter to be passed: <code>function(event, d)</code>.<br>
+{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#7c3n0k">#7c3n0k</a>}<br>
 </span></li>
+<li><span class="alt-check alt-check-rmk">In addition, note that you do not need to pass <code>d</code> again when accessing the data: we use <code>d.s</code> not <code>d =&gt; d.s</code>**.</span></li>
 </ul>
-<p>To have some padding between bands, use <code>.paddingInner([paddingPercent1,...])</code>; then the padding will be <code>.bandwidth() * paddingPercent1</code>.<br>
-It won't add padding before the first band or after the last band.</p>
-<h2 id="continuous-scale" tabindex="-1">Continuous Scale</h2>
-<p>To create a continuous scale:</p>
-<pre><code class="language-js">const yScale = d3.scaleLinear()
-    .domain([-100,100])
-    .range([0,500])
+<h2 id="get-the-location-of-the-event" tabindex="-1">Get the Location of the Event</h2>
+<p>Use <code>.pointer(event)</code> or <code>d3.mouse(this)</code> (D3 v5) to get the event/cursor location.</p>
+<pre><code class="language-js">d3.select(&quot;svg&quot;)
+  .on(&quot;click&quot;,function(event) {
+    d3.select(&quot;text&quot;)
+      .text(`(${d3.pointer(event).map(Math.round)})`)
+  });
 </code></pre>
-<p>Then <code>yScale(-100) == 0</code>, <code>yScale(0) == 250</code>, <code>yScale(50) == 375</code>, <code>yScale(100) == 500</code>.</p>
-<p>A more flexible pattern would be</p>
-<pre><code class="language-js">const yScale = d3.scaleLinear()
-    .domain([0,d3.max(data)])
-    .range([svgHeight,0])
+<h2 id="do-something-with-the-value-of-a-radio-button" tabindex="-1">Do Something with the Value of a Radio Button</h2>
+<p>A radio button with value: <code>&lt;input type=&quot;radio&quot; value=&quot;red&quot;&gt;</code>. The value can be directly get using <code>this.value</code>.</p>
+<pre><code class="language-js">d3.selectAll(&quot;input&quot;) // button
+  .on(&quot;click&quot;, function(event) {
+    const favcolor = event.currentTarget.value;
+    d3.select(&quot;p#color&quot;).style(&quot;color&quot;, favcolor);
+    });
 </code></pre>
-<p>Then to create a vertical bar, we can set</p>
-<ul>
-<li><code>rect.attr('y', d =&gt; yScale(d))</code></li>
-<li><code>rect.attr('height', d =&gt; svgHeight - yScale(d))</code></li>
-</ul>
-<h2 id="an-example" tabindex="-1">An Example</h2>
-<pre><code class="language-js">// Set the size of the svg
-const w = 400;
-const h = 300;
-
-// Create the svg
-const svg = d3.select(&quot;body&quot;)
-.append(&quot;svg&quot;)
-  .attr(&quot;width&quot;, w)
-  .attr(&quot;height&quot;, h)
-
-// Bar height
-const bardata = [5, 6, 10, 3, 2, 12];
-
-// Ordinal x scale
-const xScale = d3.scaleBand()
-  .domain(d3.range(bardata.length))
-  .range([0, w])
-  .paddingInner(.1);
-
-// Continuous y scale
-const yScale = d3.scaleLinear()
-  .domain([0, d3.max(bardata)])
-  .range([h, 0])
-
-// Create bars
-const bars = svg.selectAll(&quot;rect&quot;)
-  .data(bardata);
-
-bars.enter().append(&quot;rect&quot;)
-  .attr(&quot;x&quot;, (d, i) =&gt; xScale(i))
-  .attr(&quot;width&quot;, xScale.bandwidth())
-  .attr(&quot;y&quot;, d =&gt; yScale(d))
-  .attr(&quot;height&quot;, d =&gt; h - yScale(d))
-  .attr(&quot;fill&quot;, &quot;lightgreen&quot;);
-
-// Add text
-svg.selectAll(&quot;text&quot;)
-  .data(bardata)
-  .enter()
-  .append(&quot;text&quot;)
-  .attr(&quot;x&quot;, (d, i) =&gt; xScale(i) + .5*xScale.bandwidth())
-  .attr(&quot;y&quot;, d =&gt; yScale(d) + 25)
-  .text(d =&gt; d)
-  .attr(&quot;fill&quot;, &quot;blue&quot;)
-  .attr(&quot;text-anchor&quot;, &quot;middle&quot;);
-</code></pre>
-<p>The result:</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221201011728.png" alt="|500" width="500px"></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1301,17 +1302,29 @@ svg.selectAll(&quot;text&quot;)
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#d3-scale">D3 Scale</a>
+                    <li><a href="#d3-interactivity">D3 Interactivity</a>
             
                 <ol>
                     
-                    <li><a href="#ordinal-scales">Ordinal Scales</a>
+                    <li><a href="#do-something-to-the-event-element">Do Something to the Event Element</a>
             		</li>
 
-                    <li><a href="#continuous-scale">Continuous Scale</a>
+                    <li><a href="#do-something-unrelated-to-the-event-element">Do Something Unrelated to the Event Element</a>
             		</li>
 
-                    <li><a href="#an-example">An Example</a>
+                    <li><a href="#change-an-attribute-of-the-event-element">Change an Attribute of the Event Element</a>
+            		</li>
+
+                    <li><a href="#get-the-value-of-an-attribute-of-the-event-element">Get the Value of an Attribute of the Event Element</a>
+            		</li>
+
+                    <li><a href="#do-something-with-the-data">Do Something with the Data</a>
+            		</li>
+
+                    <li><a href="#get-the-location-of-the-event">Get the Location of the Event</a>
+            		</li>
+
+                    <li><a href="#do-something-with-the-value-of-a-radio-button">Do Something with the Value of a Radio Button</a>
             		</li>
                 </ol>
             		</li>
@@ -1327,8 +1340,7 @@ svg.selectAll(&quot;text&quot;)
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/d3-axes/" data-note-icon="" class="backlink">D3 Axes</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         
