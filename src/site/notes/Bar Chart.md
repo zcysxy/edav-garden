@@ -1,7 +1,4 @@
----
-{"title":"Bar Chart","alias":"Barchart,Bar Plot","type":"note","created":"2022-10-12T22:07:38","modified":"2022-12-11T19:14:39","dg-publish":true,"sup":[{}],"state":"done","related":{},"permalink":"/bar-chart/","dgPassFrontmatter":true,"updated":"2022-12-11T19:14:39"}
----
-
+[object Promise]
 
 # Bar Chart
 
