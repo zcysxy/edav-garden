@@ -1,5 +1,5 @@
 ---
-{"title":"Choropleth","alias":null,"type":"note","created":"2022-11-10T16:33:30","modified":"2022-11-10T20:34:11","dg-publish":true,"sup":{},"state":"done","permalink":"/choropleth/","dgPassFrontmatter":true,"updated":"2022-11-10T20:34:11"}
+{"title":"Choropleth","alias":null,"type":"note","created":"2022-11-10T16:33:30","modified":"2022-11-10T20:34:11","dg-publish":true,"sup":[{}],"state":"done","permalink":"/choropleth/","dgPassFrontmatter":true,"updated":"2022-11-10T20:34:11"}
 ---
 
 
