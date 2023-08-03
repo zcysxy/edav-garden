@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>D3 Axes</title>
+    <title>Cleveland Dot Plot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -164,7 +164,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Bar Chart </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/bar-chart/">Bar Chart </a>
                 </div>
             
         </div>
@@ -173,7 +173,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Biplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/biplot/">Biplot </a>
                 </div>
             
         </div>
@@ -182,7 +182,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Boxplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/boxplot/">Boxplot </a>
                 </div>
             
         </div>
@@ -191,7 +191,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Choropleth </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/choropleth/">Choropleth </a>
                 </div>
             
         </div>
@@ -200,7 +200,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Cleveland Dot Plot </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/cleveland-dot-plot/">Cleveland Dot Plot </a>
                 </div>
             
         </div>
@@ -209,7 +209,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Axes </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-axes/">D3 Axes </a>
                 </div>
             
         </div>
@@ -218,7 +218,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Bind Data </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-bind-data/">D3 Bind Data </a>
                 </div>
             
         </div>
@@ -959,7 +959,11 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-12T21:20:51"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-12T21:34:35"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
+            
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
             
           </div></div>
       
@@ -967,55 +971,23 @@
       </header>
       
       
-      <h1 id="d3-axes" tabindex="-1">D3 Axes</h1>
-<p>To render axes in <a class="internal-link is-unresolved"  href="/notes/d3">D3</a>, we need to first generate them, and then plot them.<br>
-There are four axis generators called axis components:</p>
+      <h1 id="cleveland-dot-plot" tabindex="-1">Cleveland Dot Plot</h1>
+<p>The Cleveland dot plot is an alternative to <a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a>, replacing a bar with a single dot.</p>
 <ul>
-<li><code>.axisTop()</code></li>
-<li><code>.axisBottom()</code></li>
-<li><code>.axisLeft()</code></li>
-<li><code>.axisRight()</code></li>
-</ul>
-<p>Axis components control the orientation of the axis, but not the location. All axes are rendered at the origin.</p>
-<p>There are two ways to pass a scale to an axis:</p>
+<li>Cleveland dot plots need to be sorted in descending order just like <a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a>s
 <ul>
-<li><code>d3.axisBottom().scale(xScale)</code></li>
-<li><code>d3.axisBottom(xScale)</code></li>
+<li>Use <code>fct_reorder</code> in <a class="internal-link " data-note-icon="" href="/notes/forcats">forcats</a></li>
 </ul>
-<p>To plot the axis, <strong>call</strong> it on <strong>a selection</strong>, then some <a class="internal-link is-unresolved"  href="/notes/svg">SVG</a> elements presenting the axis will be created as a child of that selection. Also, there are two ways:</p>
+</li>
+<li>Use <code>geom_point</code> in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a> to create a Cleveland dot plot</li>
+<li>When you have other variables other than the categorical variable, Cleveland dot plots can easily adopt multiple dots
 <ul>
-<li><code>d3.select(&quot;svg&quot;).append(&quot;g&quot;).call(xAxis)</code></li>
-<li><code>xAxis(d3.select(&quot;svg&quot;).append(&quot;g&quot;))</code></li>
+<li>Use <code>fct_reorder2</code> in <a class="internal-link " data-note-icon="" href="/notes/forcats">forcats</a> to reorder dots based on one variable</li>
 </ul>
-<p>Since all axes are rendered at the origin, we need to translate them. For example:</p>
-<pre><code class="language-js">const yAxis = d3.axisLeft().scale(yScale);
-const svg = d3.select(&quot;svg&quot;)
-
-svg.append(&quot;g&quot;)
-   .attr(&quot;class&quot;, &quot;yAxis&quot;)
-   .attr(&quot;transform&quot;,
-     `translate(${margin.left}, ${margin.top})`)
-   .call(yAxis);
-</code></pre>
-<h2 id="ticks" tabindex="-1">Ticks</h2>
-<p>To label the ticks, use labels when creating the <a class="internal-link " data-note-icon="" href="/notes/d3-scale">D3 Scale</a>. For example, for data</p>
-<pre><code class="language-js">const bardata = [{month: &quot;Jan&quot;, value: 300},
-                 {month: &quot;Feb&quot;, value: 100},
-                 {month: &quot;Mar&quot;, value: 150},
-                 {month: &quot;Apr&quot;, value: 220},
-                 {month: &quot;May&quot;, value: 70 },
-                 {month: &quot;Jun&quot;, value: 270}]
-</code></pre>
-<p>we can create the x ordinal scale using <code>month</code>,</p>
-<pre><code class="language-js">const xScale = d3.scaleBand()
-  .domain(bardata.map(d =&gt; d.month))
-  .range([0, innerWidth])
-  .paddingInner(.1);
-</code></pre>
-<p>and then create y continuous scale using <code>value</code>. Then the axes will automatically comply with the scale.</p>
-<p>Or, we can add the tick values <em>explicitly</em></p>
-<pre><code class="language-js">const yAxis = d3.axisLeft(xScale).tickValues([1, 2, 3, 5, 8, 13, 21]);
-</code></pre>
+</li>
+<li>Facets, the reasonable cut, and other techniques for <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">EDAV - Categorical Data</a> apply to Cleveland dot plots</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221012213125.png" alt="|500" width="500px"></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1260,13 +1232,7 @@ svg.append(&quot;g&quot;)
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#d3-axes">D3 Axes</a>
-            
-                <ol>
-                    
-                    <li><a href="#ticks">Ticks</a>
-            		</li>
-                </ol>
+                    <li><a href="#cleveland-dot-plot">Cleveland Dot Plot</a>
             		</li>
                 </ol>
             </nav>
@@ -1280,7 +1246,10 @@ svg.append(&quot;g&quot;)
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/choropleth/" data-note-icon="" class="backlink">Choropleth</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Continuous Variable/" data-note-icon="" class="backlink">EDAV - Continuous Variable</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Categorical Data/" data-note-icon="" class="backlink">EDAV - Multivariate Categorical Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         

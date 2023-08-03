@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bar Chart</title>
+    <title>D3 Axes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -164,7 +164,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Bar Chart </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/bar-chart/">Bar Chart </a>
                 </div>
             
         </div>
@@ -173,7 +173,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Biplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/biplot/">Biplot </a>
                 </div>
             
         </div>
@@ -182,7 +182,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Boxplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/boxplot/">Boxplot </a>
                 </div>
             
         </div>
@@ -191,7 +191,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Choropleth </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/choropleth/">Choropleth </a>
                 </div>
             
         </div>
@@ -200,7 +200,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Cleveland Dot Plot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/cleveland-dot-plot/">Cleveland Dot Plot </a>
                 </div>
             
         </div>
@@ -209,7 +209,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Axes </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-axes/">D3 Axes </a>
                 </div>
             
         </div>
@@ -218,7 +218,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Bind Data </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-bind-data/">D3 Bind Data </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-12-01T16:35:19"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-01T20:13:33"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,68 +969,55 @@
       </header>
       
       
-      <h1 id="bar-chart" tabindex="-1">Bar Chart</h1>
-<p>A bar chart is a chart or graph that presents <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">EDAV - Categorical Data</a> with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a <strong>column chart</strong>.<br>
-One axis of the chart shows the specific categories being compared, and the other axis represents a measured value.<br>
-Some bar graphs present bars clustered in groups of more than one, showing the values of more than one measured variable.</p>
+      <h1 id="d3-axes" tabindex="-1">D3 Axes</h1>
+<p>To render axes in <a class="internal-link is-unresolved"  href="/notes/d3">D3</a>, we need to first generate them, and then plot them.<br>
+There are four axis generators called axis components:</p>
 <ul>
-<li>For unbinned data, use <code>geom_bar</code> in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></li>
-<li>For binned data, use <code>geom_col</code> in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></li>
-<li>We can use <code>geom_text</code> to put labels directly in/on bars</li>
-<li><span class="alt-check alt-check-rmk">Do not color bars when it is not necessary. Colors are needed <a class="internal-link " data-note-icon="" href="/notes/bar-chart#for-multivariate-categorical-data"><a class="tag" onclick="toggleTagSearch(this)" data-content="#For">#For</a> Multivariate Categorical Data</a>.</span></li>
+<li><code>.axisTop()</code></li>
+<li><code>.axisBottom()</code></li>
+<li><code>.axisLeft()</code></li>
+<li><code>.axisRight()</code></li>
 </ul>
-<h2 id="ordering" tabindex="-1">Ordering</h2>
-<p id="ok2cg8">There are <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data#ordinal-vs-nominal">two typical scales</a> of a categorical variable.<br>
-For ordinal data, sort bars in the logical order of the categories. For example, novice -&gt; advanced -&gt; expert.<br>
-You can sort in either direction top &lt;-&gt; bottom, or left -&gt; right).<br>
-For nomial data, sort bars from <strong>highest to lowest</strong> (top -&gt; bottom, left -&gt; right).</p>
-<h2 id="rebinning" tabindex="-1">Rebinning</h2>
-<p>When plotting bar plots, rows <s>of different categories</s> in the same category are automatically stacked up.<br>
-However, when coloring, stacked bars are colored separately.<br>
-To bin the data by hand, we can use <a class="internal-link " data-note-icon="" href="/notes/dplyr#summarise">dplyr#summarise()</a> with <code>group_by(category)</code>.</p>
-<pre><code class="language-r">df %&gt;%
-  group_by(Class) %&gt;%
-  summarize(Freq = sum(Freq)) %&gt;%
-  ggplot(aes(fct_reorder(Class, Freq, .desc = TRUE), Freq)) +
-  geom_col() +
-  xlab(&quot;&quot;)
+<p>Axis components control the orientation of the axis, but not the location. All axes are rendered at the origin.</p>
+<p>There are two ways to pass a scale to an axis:</p>
+<ul>
+<li><code>d3.axisBottom().scale(xScale)</code></li>
+<li><code>d3.axisBottom(xScale)</code></li>
+</ul>
+<p>To plot the axis, <strong>call</strong> it on <strong>a selection</strong>, then some <a class="internal-link is-unresolved"  href="/notes/svg">SVG</a> elements presenting the axis will be created as a child of that selection. Also, there are two ways:</p>
+<ul>
+<li><code>d3.select(&quot;svg&quot;).append(&quot;g&quot;).call(xAxis)</code></li>
+<li><code>xAxis(d3.select(&quot;svg&quot;).append(&quot;g&quot;))</code></li>
+</ul>
+<p>Since all axes are rendered at the origin, we need to translate them. For example:</p>
+<pre><code class="language-js">const yAxis = d3.axisLeft().scale(yScale);
+const svg = d3.select(&quot;svg&quot;)
+
+svg.append(&quot;g&quot;)
+   .attr(&quot;class&quot;, &quot;yAxis&quot;)
+   .attr(&quot;transform&quot;,
+     `translate(${margin.left}, ${margin.top})`)
+   .call(yAxis);
 </code></pre>
-<h2 id="for-multivariate-categorical-data" tabindex="-1">For Multivariate Categorical Data</h2>
-<p>For <a class="internal-link " data-note-icon="" href="/notes/edav-multivariate-categorical-data">Multivariate Categorical Data</a>, instead of drawing multiple bar charts (possible with facets), we can put bars for different categories <em>together</em> by</p>
-<ul>
-<li>Stacked Bar Chart
-<ul>
-<li>Better for the overall value</li>
-</ul>
-</li>
-<li>Grouped Bar Chart
-<ul>
-<li>Better for the individual value</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013145609.png" alt="Stacked bar chart"><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013145634.png" alt="Grouped bar chart"></p>
-<ul>
-<li><span class="alt-check alt-check-tip">Grouped bar charts are less used but more recommended</span></li>
-</ul>
-<h3 id="relative-frequency-and-diverging-stacked-bar-chart" tabindex="-1">Relative Frequency and Diverging Stacked Bar Chart</h3>
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
-<h2 id="likert-data" tabindex="-1">Likert Data</h2>
-<p>Likert data is a special categorical data that uses a <strong>psychometric scale</strong> commonly involved in questionnaires. For example</p>
-<ul>
-<li>strongly agree</li>
-<li>agree</li>
-<li>don’t know</li>
-<li>disagree</li>
-<li>strongly disagree</li>
-</ul>
-<p>Relative frequency stacked <a class="internal-link " data-note-icon="" href="/notes/bar-chart">Bar Chart</a>s are used to present this kind of data.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png" alt=""></p>
-<p>Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.</p>
-<p>Another type of <a class="internal-link " data-note-icon="" href="/notes/bar-chart">Bar Chart</a>, <strong>diverging stacked bar chart</strong>s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225854.png" alt=""></p>
-<p>Furthermore, we can separate and even remove the neutral category.</p>
-</div></div>
+<h2 id="ticks" tabindex="-1">Ticks</h2>
+<p>To label the ticks, use labels when creating the <a class="internal-link " data-note-icon="" href="/notes/d3-scale">D3 Scale</a>. For example, for data</p>
+<pre><code class="language-js">const bardata = [{month: &quot;Jan&quot;, value: 300},
+                 {month: &quot;Feb&quot;, value: 100},
+                 {month: &quot;Mar&quot;, value: 150},
+                 {month: &quot;Apr&quot;, value: 220},
+                 {month: &quot;May&quot;, value: 70 },
+                 {month: &quot;Jun&quot;, value: 270}]
+</code></pre>
+<p>we can create the x ordinal scale using <code>month</code>,</p>
+<pre><code class="language-js">const xScale = d3.scaleBand()
+  .domain(bardata.map(d =&gt; d.month))
+  .range([0, innerWidth])
+  .paddingInner(.1);
+</code></pre>
+<p>and then create y continuous scale using <code>value</code>. Then the axes will automatically comply with the scale.</p>
+<p>Or, we can add the tick values <em>explicitly</em></p>
+<pre><code class="language-js">const yAxis = d3.axisLeft(xScale).tickValues([1, 2, 3, 5, 8, 13, 21]);
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1273,26 +1262,11 @@ To bin the data by hand, we can use <a class="internal-link " data-note-icon="" 
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#bar-chart">Bar Chart</a>
+                    <li><a href="#d3-axes">D3 Axes</a>
             
                 <ol>
                     
-                    <li><a href="#ordering">Ordering</a>
-            		</li>
-
-                    <li><a href="#rebinning">Rebinning</a>
-            		</li>
-
-                    <li><a href="#for-multivariate-categorical-data">For Multivariate Categorical Data</a>
-            
-                <ol>
-                    
-                    <li><a href="#relative-frequency-and-diverging-stacked-bar-chart">Relative Frequency and Diverging Stacked Bar Chart</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#likert-data">Likert Data</a>
+                    <li><a href="#ticks">Ticks</a>
             		</li>
                 </ol>
             		</li>
@@ -1308,14 +1282,7 @@ To bin the data by hand, we can use <a class="internal-link " data-note-icon="" 
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/alluvial-diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Cleveland Dot Plot/" data-note-icon="" class="backlink">Cleveland Dot Plot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/D3 Bind Data/" data-note-icon="" class="backlink">D3 Bind Data</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Continuous Variable/" data-note-icon="" class="backlink">EDAV - Continuous Variable</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Categorical Data/" data-note-icon="" class="backlink">EDAV - Multivariate Categorical Data</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Graph Color/" data-note-icon="" class="backlink">Graph Color</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Mosaic Plot/" data-note-icon="" class="backlink">Mosaic Plot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         

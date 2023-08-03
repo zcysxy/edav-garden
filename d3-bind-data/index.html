@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Biplot</title>
+    <title>D3 Bind Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -164,7 +164,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Bar Chart </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/bar-chart/">Bar Chart </a>
                 </div>
             
         </div>
@@ -173,7 +173,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Biplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/biplot/">Biplot </a>
                 </div>
             
         </div>
@@ -182,7 +182,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Boxplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/boxplot/">Boxplot </a>
                 </div>
             
         </div>
@@ -191,7 +191,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Choropleth </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/choropleth/">Choropleth </a>
                 </div>
             
         </div>
@@ -200,7 +200,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Cleveland Dot Plot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/cleveland-dot-plot/">Cleveland Dot Plot </a>
                 </div>
             
         </div>
@@ -209,7 +209,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Axes </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-axes/">D3 Axes </a>
                 </div>
             
         </div>
@@ -218,7 +218,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Bind Data </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-bind-data/">D3 Bind Data </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-12-01T20:45:08"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-12T15:17:15"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,70 +969,153 @@
       </header>
       
       
-      <h1 id="biplot" tabindex="-1">Biplot</h1>
+      <h1 id="d3-bind-data" tabindex="-1">D3 Bind Data</h1>
 <ul>
-<li>A biplot is a generalization of the simple two-variable <a class="internal-link " data-note-icon="" href="/notes/scatterplot">Scatterplot</a></li>
-<li>A biplot overlays a <strong>score plot</strong> with a <strong>loading plot</strong>
+<li><code>.data(data)</code> binds data to the selected elements
 <ul>
-<li>This allows displaying information on both samples and variables</li>
-<li>Samples are displayed as points</li>
-<li>while variables are displayed either as
+<li><code>.data</code> only accepts an <strong>array</strong> of values; <code>.data(2)</code> will not bind the data</li>
+<li>if multiple elements are selected, <s><code>data</code> can be an array of values</s>; then values will automatically match the elements</li>
+<li><code>.data()</code> shows the data</li>
+</ul>
+</li>
+<li><code>.datum(datum)</code> binds a datum to all the selected elements
 <ul>
-<li>vectors,</li>
-<li>linear axes</li>
-<li>or nonlinear trajectories</li>
+<li>every selected element will get the same datum</li>
+<li>the datum can be a scalar <code>2</code></li>
+<li>or it can be an array, then every selected element will get the same array</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>In the case of categorical variables, category level points may be used to represent the levels of a categorical variable. A generalized biplot displays information on both continuous and categorical variables.</li>
+<p>Binding data to elements using d3 will not make explicit changes to the element: the data will not show up in the <a class="internal-link " data-note-icon="" href="/notes/dom">DOM</a>.</p>
+<h2 id="update-enter-exit" tabindex="-1">Update, Enter, Exit</h2>
+<p><code>.data()</code> will return an <strong>update</strong>, an <strong>enter</strong>, and an <strong>exit</strong> selection</p>
+<ul>
+<li>update selection contains the <a class="internal-link " data-note-icon="" href="/notes/dom">DOM</a> elements that match the data
+<ul>
+<li>update selection is stored in the <code>_groups</code> attribute of the return, which is the <strong>default object</strong> on which further actions will apply</li>
 </ul>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Axis Positions<br></div></div>
+</li>
+<li>exit selection contains the <a class="internal-link " data-note-icon="" href="/notes/dom">DOM</a> elements that don't find data matches
+<ul>
+<li>exit selection is stored in the <code>_exit</code> attribute of the return; you can get it using method <code>.exit()</code>
+<ul>
+<li>then <code>_groups</code> of the return of <code>.exit()</code> will be the exit selection</li>
+</ul>
+</li>
+<li>matched element in the update selection will be <em>empty</em> in the exit selection</li>
+</ul>
+</li>
+<li>enter selection contains non-existent &quot;placeholder&quot; elements for data that don't find object matches
+<ul>
+<li>enter selection is stored in the <code>_enter</code> attribute of the return; you can get it using method <code>.enter()</code>
+<ul>
+<li>then <code>_groups</code> of the return of <code>.enter()</code> will be the exit selection</li>
+</ul>
+</li>
+<li>matched element in the update selection will be <em>empty</em> in the enter selection</li>
+<li>you can add <em>real</em> elements to the placeholder elements by <code>selection.enter().append()</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221122164308.png" alt="|500" width="500px"></p>
+<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Creating Elements Using Data<br></div></div>
 <div class="callout-content">
 <p>
-<a class="internal-link " data-note-icon="" href="/notes/scatterplot">Scatterplot</a>, <a class="internal-link " data-note-icon="" href="/notes/parallel-coordinate">Parallel Coordinate</a>, and biplot represent three different axis positions.<br>
-<img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211232720.png" alt=""></p>
+Suppose we have an empty svg element and an array of data. We want to create three rectangles inside of the svg with the data.</p>
+<pre><code class="language-js">const specialdata = [75, 150, 200];
+
+d3.select(&quot;svg&quot;)
+  .selectAll(&quot;rect&quot;)
+  .data(specialdata)
+  .enter() // placeholder elements
+  .append(&quot;rect&quot;) // change/append placeholder elements with rectangles
+    .attr(&quot;x&quot;, d =&gt; d)
+    .attr(&quot;y&quot;, d =&gt; d)
+    .attr(&quot;width&quot;, &quot;50&quot;)
+    .attr(&quot;height&quot;, &quot;30&quot;)
+    .attr(&quot;fill&quot;, &quot;pink&quot;);
+</code></pre>
 </div></div>
-<h2 id="loading-plot" tabindex="-1">Loading Plot</h2>
-<p>We can use dimension-reduction methods to select or form two main variables, then <em>project</em> other selected/formed variables to the plane (make them linear combinations of the two main variables).</p>
-<p>For example, using <a class="internal-link is-unresolved"  href="/notes/principal-components-analysis">Principal Components Analysis</a>, we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165028.png" alt=""></p>
-<p>As <a class="internal-link is-unresolved"  href="/notes/principal-components-analysis">PCA</a> theory suggests, the first PCs should have wider angles, meaning they have higher variance. Therefore, two vectors with a small angle (or near 180 degrees) have a high correlation; and two vectors that are near perpendicular have a small correlation. We can also compare a loading plot with a <a class="internal-link " data-note-icon="" href="/notes/scatterplot-matrix">Scatterplot Matrix</a> to verify this property.</p>
-<h2 id="score-plot" tabindex="-1">Score Plot</h2>
-<p>In <a class="internal-link is-unresolved"  href="/notes/principal-components-analysis">PCA</a>, transformed data is called PC scores. Similarly, score plots present transformed samples. A biplot combines a loading plot and a score plot.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165628.png" alt=""></p>
-<h2 id="elements" tabindex="-1">Elements</h2>
-<ul>
-<li>Calibrated axis
-<ul>
-<li>We can draw ticks on loading vectors</li>
-</ul>
-</li>
-<li>Projection Lines
-<ul>
-<li>We can project PC scores to vector lines</li>
-<li>to see how samples scale on certain variables</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025170312.png" alt=""></p>
-<h2 id="implementation" tabindex="-1">Implementation</h2>
-<ul>
-<li><a href="https://github.com/jtr13/redav" target="_blank" class="external-link">redav</a>
-<ul>
-<li>Install: <code>remotes::install_github(&quot;jtr13/redav&quot;)</code></li>
-<li>Use <code>draw_biplot()</code>
-<ul>
-<li>option <code>key_axis</code> for calibrated axis and projection lines to it
-<ul>
-<li>option <code>project = FALSE</code> to disable the projection lines</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Create a <a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a></div></div>
+<div class="callout-content">
+<p>
+<pre><code class="language-js">let bardata = [300, 100, 150, 225, 75, 275];
+svg = d3.select(&quot;body&quot;)
+  .append(&quot;svg&quot;)
+    .attr(&quot;width&quot;, &quot;700&quot;)
+    .attr(&quot;height&quot;, &quot;400&quot;);
+    
+let bars = svg.selectAll(&quot;rect&quot;)
+  .data(bardata);
+
+bars.enter()
+  .append(&quot;rect&quot;)
+    .attr(&quot;x&quot;, 0)
+    .attr(&quot;y&quot;,  (d, i) =&gt; i * 25 + 10)
+    .attr(&quot;width&quot;, d =&gt; d)
+    .attr(&quot;height&quot;, &quot;20&quot;)
+    .attr(&quot;fill&quot;, &quot;pink&quot;);
+</code></pre>
+</p></div></div>
+<h2 id="merge" tabindex="-1">Merge</h2>
+<p>The above examples manipulate the update, enter,  and exit selection respectively.<br>
+To do some manipulations on the broader selection after some manipulations on some selection, we can use the <code>.merge(other_selection)</code> function.</p>
+<p>For example:</p>
+<pre><code class="language-js">const newdata = [123, 52, 232, 90, 34, 12, 189, 110];
+const svg = d3.select(&quot;svg&quot;);
+const circ = svg.selectAll(&quot;circle&quot;)
+  .data(newdata);
+  
+circ.enter()  // 2 placeholders
+  .append(&quot;circle&quot;)  // placeholders -&gt; circles
+     .attr(&quot;cx&quot;, &quot;100&quot;)  // acts on enter selection only
+     .attr(&quot;cy&quot;, (d, i) =&gt; (i - 5) * 50)
+     .attr(&quot;r&quot;, &quot;20&quot;)
+     .attr(&quot;fill&quot;, &quot;red&quot;)
+  .merge(circ) // merge circ(update) into circ.enter
+     .transition()
+     .duration(2000)
+     .attr(&quot;cx&quot;, &quot;200&quot;);
+</code></pre>
+<p>Combine with a function:</p>
+<pre><code class="language-js">function changedata(data) {
+  const bars = d3.select(&quot;svg#gup&quot;) 
+    .selectAll(&quot;rect&quot;)
+    .data(data);    // bars is the update selection
+    
+  bars.enter()
+    .append(&quot;rect&quot;)
+      .attr(&quot;x&quot;, &quot;30&quot;)  // until merge, acts on
+      .attr(&quot;y&quot;, (d, i) =&gt; i * 50) // enter selection only
+      .attr(&quot;height&quot;, &quot;35&quot;)  
+      .attr(&quot;fill&quot;, &quot;lightgreen&quot;)
+    .merge(bars) // merge in the update selection
+      .attr(&quot;width&quot;, d =&gt; d); // acts on all bars
+      
+  bars.exit()
+    .remove();
+}
+</code></pre>
+<p>The above function works no matter if <code>bars.enter()</code> or <code>bars.exit()</code> is empty.</p>
+<h2 id="groups" tabindex="-1">Groups</h2>
+<p>We can manually create groups by creating a parent element <code>&lt;g&gt;</code> for that group. For example:</p>
+<pre><code class="language-js">const svg = d3.select(&quot;svg&quot;);
+const specialdata = [100, 250, 300];
+
+const bars = 
+  d3.select(&quot;svg&quot;)
+    .append(&quot;g&quot;) // group parent element
+      .attr(&quot;id&quot;, &quot;rects&quot;)
+    .selectAll(&quot;rect&quot;) // rects in the group g
+    .data(specialdata)
+    .enter()
+    .append(&quot;rect&quot;)
+      .attr(&quot;x&quot;, d =&gt; d)
+      .attr(&quot;y&quot;, d =&gt; d)
+      .attr(&quot;width&quot;, &quot;50&quot;)
+      .attr(&quot;height&quot;, &quot;30&quot;)
+      .attr(&quot;fill&quot;, &quot;red&quot;);
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1275,20 +1360,17 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#biplot">Biplot</a>
+                    <li><a href="#d3-bind-data">D3 Bind Data</a>
             
                 <ol>
                     
-                    <li><a href="#loading-plot">Loading Plot</a>
+                    <li><a href="#update-enter-exit">Update, Enter, Exit</a>
             		</li>
 
-                    <li><a href="#score-plot">Score Plot</a>
+                    <li><a href="#merge">Merge</a>
             		</li>
 
-                    <li><a href="#elements">Elements</a>
-            		</li>
-
-                    <li><a href="#implementation">Implementation</a>
+                    <li><a href="#groups">Groups</a>
             		</li>
                 </ol>
             		</li>
@@ -1304,7 +1386,8 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/D3 Transition/" data-note-icon="" class="backlink">D3 Transition</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         
