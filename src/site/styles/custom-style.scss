@@ -23,6 +23,9 @@ body {
     --ref-color: 159, 186, 223;
 
     --content-font-size: 1.2rem;
+    .timestamps {
+        margin-top: 10px;
+    }
     .content {
         max-width: 900px;
         font-size: var(--content-font-size);
