@@ -1,5 +1,5 @@
 ---
-{"title":"R","alias":null,"type":"index","created":"2022-09-06T15:23:58","modified":"2023-07-31T02:04:58","dg-publish":true,"sup":{},"state":"done","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20230731131736.png","banner_icon":"🌌","banner_y":0.2008,"permalink":"/r/","dgPassFrontmatter":true,"updated":"2023-07-31T02:04:58"}
+{"title":"R","alias":null,"type":"index","created":"2022-09-06T15:23:58","modified":"2023-07-31T02:04:58","dg-publish":true,"sup":[{}],"state":"done","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20230731131736.png","banner_icon":"🌌","banner_y":0.2008,"permalink":"/r/","dgPassFrontmatter":true,"updated":"2023-07-31T02:04:58"}
 ---
 
 
