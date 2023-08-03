@@ -1,16 +1,16 @@
-{% if sup %}<div class="timestamps">
+{% if sup %}<div class="timestamps" title="parents note">
 <i icon-name="corner-left-up"></i>{% for link in sup %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}|{% endif %}
 {% endfor %}</div>
 {% endif %}
 </div>
-{% if related %}<div class="timestamps">
+{% if related %}<div class="timestamps" title="related note">
 <i icon-name="arrow-left-right"></i>{% for link in related %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}|{% endif %}
 {% endfor %}</div>
 {% endif %}
 {% if sub %}
-<div class="timestamps">
+<div class="timestamps" title="children note">
 <i icon-name="corner-left-down"></i>{% for link in sub %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}|{% endif %}
 {% endfor %}</div>
