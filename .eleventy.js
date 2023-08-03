@@ -253,7 +253,6 @@ module.exports = function (eleventyConfig) {
         .map((m) => {
           return `"${m.split("#")[1]}"`;
         })
-        .join(", ");
     }
     if (tags) {
       return `${tags},`;
@@ -456,6 +455,7 @@ module.exports = function (eleventyConfig) {
   userEleventySetup(eleventyConfig);
 
   return {
+    pathPrefix: "edav-garden",
     dir: {
       input: "src/site",
       output: "dist",
