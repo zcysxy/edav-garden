@@ -1,5 +1,5 @@
 ---
-{"title":"Density Curve","alias":"Density Estimate","type":"note","created":"2022-12-10T17:51:41","modified":"2022-12-10T19:54:25","dg-publish":true,"sup":["[[EDAV\|EDAV]]"],"state":"done","permalink":"/density-curve/","dgPassFrontmatter":true,"updated":"2022-12-10T19:54:25"}
+{}
 ---
 
 
@@ -7,7 +7,7 @@
 
 In [[Probability Theory\|Probability Theory]], a density curve is a function that describes how a random variable is distributed. It is a smooth curve that shows how often each value of the random variable occurs.
 
-In [[EDAV]], a density curve for some data is the density curve of any distribution that approximates the data empirical distribution.
+In [[EDAV\|EDAV]], a density curve for some data is the density curve of any distribution that approximates the data empirical distribution.
 A common technique is to give each point a [[Normal Distribution\|Normal Distribution]] with mean equal to its value. Then the density curve is the **composition** of multiple normal distributions.
 
 ![variance one](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210194447.png)
