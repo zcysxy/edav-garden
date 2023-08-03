@@ -1,5 +1,5 @@
 ---
-{"type":"index","created":"2021-08-17T21:58:15","modified":"2023-03-28T19:29:10","banner_icon":"🐍","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/1059-333-After-Marc-Chagall-La-flute-enchan.jpeg","banner_y":0.41967,"dg-publish":true,"sup":["[[Language\\|Language]]"],"permalink":"/python/","dgPassFrontmatter":true,"updated":"2023-03-28T19:29:10"}
+{"type":"index","created":"2021-08-17T21:58:15","modified":"2023-03-28T19:29:10","banner_icon":"🐍","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/1059-333-After-Marc-Chagall-La-flute-enchan.jpeg","banner_y":0.41967,"dg-publish":true,"sup":["Python.md/language"],"permalink":"/python/","dgPassFrontmatter":true,"updated":"2023-03-28T19:29:10"}
 ---
 
 
