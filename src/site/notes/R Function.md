@@ -1,5 +1,5 @@
 ---
-{"title":"R Function","alias":null,"type":"note","created":"2022-09-08T19:18:55","modified":null,"dg-publish":true,"sup":["r"],"state":"done","permalink":"/r-function/","dgPassFrontmatter":true,"updated":""}
+{"title":"R Function","alias":null,"type":"note","created":"2022-09-08T19:18:55","modified":null,"dg-publish":true,"sup":[["R","r"]],"state":"done","permalink":"/r-function/","dgPassFrontmatter":true,"updated":""}
 ---
 
 
