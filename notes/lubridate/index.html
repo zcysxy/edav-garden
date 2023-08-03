@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>lubridate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -146,7 +146,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">@Area </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/area/">Areas </a>
                 </div>
             
         </div>
@@ -488,7 +488,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/lubridate/">lubridate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">lubridate </a>
                 </div>
             
         </div>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">rvest </a>
                 </div>
             
         </div>
@@ -686,7 +686,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/tidyr/">tidyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">tidyr </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,39 +967,36 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <p>[object Promise]</p>
+<h1 id="lubridate" tabindex="-1">lubridate</h1>
+<blockquote>
+<p>Lubridate provides tools that make it easier to parse and manipulate dates. These tools are grouped below by common purpose. More information about each function can be found in its help documentation.</p>
+</blockquote>
+<p>Lubridate comes with useful functions to</p>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li>Convert data to <a class="internal-link " data-note-icon="" href="/notes/r-type-date">Date class</a>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li><code>ymd()</code>, <code>ydm()</code>, <code>mdy()</code>, <code>myd()</code>, <code>dmy()</code> transform string with the right order to Date class
+<ul>
+<li><span class="alt-check alt-check-ex"><code>mdy(&quot;April 13, 1907&quot;)</code> returns <code>&quot;1907-04-13&quot;</code></span></li>
 </ul>
 </li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
 </ul>
 </li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<li>Extract information from data of <a class="internal-link " data-note-icon="" href="/notes/r-type-date">Date class</a>
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li><code>year()</code></li>
+<li><code>month()</code>
+<ul>
+<li><code>month(date, label = TRUE)</code> returns a <a class="internal-link " data-note-icon="" href="/notes/r-type#factors">factor</a> with levels being twelve months</li>
+</ul>
+</li>
+<li><code>yday()</code> returns the day of the year of a date
+<ul>
+<li><span class="alt-check alt-check-ex"><code>yday(Sys.Date())</code> returns <code>298</code></span></li>
+</ul>
+</li>
+<li><code>week()</code> returns the week of the year of a date</li>
 </ul>
 </li>
 </ul>
@@ -1249,7 +1244,7 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#lubridate">lubridate</a>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1258,8 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R Type - Date/" data-note-icon="" class="backlink">R Type - Date</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
