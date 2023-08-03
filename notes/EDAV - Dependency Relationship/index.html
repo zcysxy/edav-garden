@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>EDAV - Dependency Relationship</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,39 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="dependency-relationship" tabindex="-1">Dependency Relationship</h1>
+<p>When we focus on two <a class="internal-link " data-note-icon="" href="/notes/edav-multivariate-continuous-data">continuous variables</a>, we want to find out how they <strong>relate</strong>, is one variable dependent on the other?</p>
+<h2 id="graphs" tabindex="-1">Graphs</h2>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li><a class="internal-link " data-note-icon="" href="/notes/scatterplot">Scatterplot</a></li>
+<li><a class="internal-link " data-note-icon="" href="/notes/heatmap">Heatmap</a></li>
+<li><a class="internal-link " data-note-icon="" href="/notes/density-contour-plot">Density Contour Plot</a></li>
+</ul>
+<h2 id="features" tabindex="-1">Features</h2>
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/scatterplot/#features" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<h2 id="features-1" tabindex="-1">Features</h2>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li>Causal relationships
+<ul>
+<li>correlation ≠ causation, but we still use the y-axis for what appears to be the dependent variable</li>
 </ul>
 </li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<li>Associations
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li>describe what you see</li>
 </ul>
 </li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<li>Outliers</li>
+<li>Clusters</li>
+<li>Gaps</li>
+<li>Barriers (boundaries)</li>
+<li>Conditional relationships
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li>different relationships for different intervals of x</li>
 </ul>
 </li>
 </ul>
+</div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1244,19 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#dependency-relationship">Dependency Relationship</a>
+            
+                <ol>
+                    
+                    <li><a href="#graphs">Graphs</a>
+            		</li>
+
+                    <li><a href="#features">Features</a>
+            		</li>
+
+                    <li><a href="#features-1">Features</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1270,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Scatterplot/" data-note-icon="" class="backlink">Scatterplot</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

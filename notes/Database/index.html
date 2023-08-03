@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,81 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="database" tabindex="-1">Database</h1>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved"  href="/notes/database-cheatsheet">Database Cheatsheet</a></span></li>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved"  href="/notes/database-last-minute">Database Last Minute</a></span></li>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved"  href="/notes/database-database">Database Database</a></span></li>
+</ul>
+<h2 id="database-intro-database-intro" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/database-intro">Database Intro</a></h2>
+<h2 id="relational-database-relational-database" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/relational-database">Relational Database</a></h2>
+<h3 id="e-r-model-e-r-model" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/e-r-model">E-R Model</a></h3>
+<h3 id="relational-database-design-relational-database-design" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/relational-database-design">Relational Database Design</a></h3>
+<h2 id="sql-sql" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/sql">SQL</a></h2>
+<h2 id="formal-relational-query-language-formal-relational-query-language" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/formal-relational-query-language">Formal Relational Query Language</a></h2>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li><a class="internal-link is-unresolved"  href="/notes/relational-algebra">Relational Algebra</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/tuple-relational-calculus">Tuple Relational Calculus</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/domain-relational-calculus">Domain Relational Calculus</a></li>
 </ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<h2 id="physical-storage-systems-physical-storage-systems" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/physical-storage-systems">Physical Storage Systems</a></h2>
+<h2 id="file-organization-file-organization" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/file-organization">File Organization</a></h2>
+<h2 id="database-indexing-database-indexing" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/database-indexing">Database Indexing</a></h2>
+<h2 id="query-processing-query-processing" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/query-processing">Query Processing</a></h2>
+<h2 id="transaction-transaction" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/transaction">Transaction</a></h2>
+<h3 id="concurrency-control-concurrency-control" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/concurrency-control">Concurrency Control</a></h3>
+<h2 id="relational-database-management-system" tabindex="-1">Relational Database Management System</h2>
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li><a class="internal-link is-unresolved"  href="/notes/postgre-sql">PostgreSQL</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/sql-server">SQL Server</a></li>
 </ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<h2 id="project" tabindex="-1">Project</h2>
+<blockquote>
+<p><s><strong>Design a book sales management system</strong></s> Designed the <a class="internal-link is-unresolved"  href="/notes/salt-library">Salt Library</a></p>
+</blockquote>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> To add</label></li>
+</ul>
+<h2 id="conferences" tabindex="-1">Conferences</h2>
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li>SIGMOD/PODS</li>
+<li>VLDB</li>
+<li>ICDE</li>
+<li>DASFAA</li>
+<li>DEXA</li>
+<li>EDBT</li>
+<li>ICDT</li>
+<li>NDBC</li>
 </ul>
-</li>
+<h2 id="journals" tabindex="-1">Journals</h2>
+<ul>
+<li>KDD</li>
+<li>SIGIR</li>
+<li>CIKM</li>
+<li>PAKDD</li>
 </ul>
+<h2 id="archive" tabindex="-1">Archive</h2>
+<pre><code class="language-md">## Syllabus
+
+* [x] 第1周：数据库简介；关系数据库模型（数据库模式、键、模式图）；关系数据库模型（关系查询语言、关系操作）
+* [x] 第2周：SQL简介（SQL数据定义、SQL查询基本结构、集合操作、空值、聚集函数、嵌套子查询）；中级SQL（连接表达、视图、事务、完整性约束）；高级SQL（函数与过程、触发器）
+* [x] 第3周：形式化查询语言（关系代数）；第三节形式化查询语言（元组关系算子）
+* [x] 第4周：数据库设计与E-R模型（实体-关系模型、约束）；数据库设计与E-R模型（E-R图、模式约简）；数据库设计与E-R模型（E-R设计）
+* [x] 第5周：关系数据库设计（原子域与1NF、函数依赖）；关系数据库设计
+（BCNF）
+* [x] 第6周：关系数据库设计（3NF）；关系数据库设计（多值依赖、关系分解）；关系数据库设计（4NF、数据库设计过程与方法）
+* [x] 第7周：数据存储与文件系统（RAID、文件系统、记录的组织、数据库缓
+存）；索引与哈希（有序索引、B+树索引文件、多键值访问）
+* [x] 第8周：索引与哈希（静态哈希、动态哈希）；索引与哈希（位图索引）
+* [x] 第9周：查询处理（查询代价）；查询处理（选择操作）；查询处理（排序操作）
+* [x] 第10周：查询处理（连接等操作）；查询处理（查询表达式赋值）
+* [x] 第11周：查询优化（关系表达式转换）；查询优化（表达式结果的估计统计）；查询优化（查询计划的选择）
+* [x] 第12周：事务（事务的概念）；事务（ACID性质）；事务（序列化）
+* [x] 第13周：并发控制（基于锁的协议）；并发控制（死锁处理）；并发控制（多粒度锁）
+* [x] 第14周：并发控制（基于时间戳的协议）；并发控制（多版本模式）；并发控制（快照隔离）
+* [x] 第15周：系统恢复（失效分类）；系统恢复（恢复的原子性）
+* [x] 第16周：系统恢复（恢复算法、缓存管理）；系统恢复（缓存管理）
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1286,67 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#database">Database</a>
+            
+                <ol>
+                    
+                    <li><a href="#database-intro-database-intro">[[Database Intro|Database Intro]]</a>
+            		</li>
+
+                    <li><a href="#relational-database-relational-database">[[Relational Database|Relational Database]]</a>
+            
+                <ol>
+                    
+                    <li><a href="#e-r-model-e-r-model">[[E-R Model|E-R Model]]</a>
+            		</li>
+
+                    <li><a href="#relational-database-design-relational-database-design">[[Relational Database Design|Relational Database Design]]</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#sql-sql">[[SQL|SQL]]</a>
+            		</li>
+
+                    <li><a href="#formal-relational-query-language-formal-relational-query-language">[[Formal Relational Query Language|Formal Relational Query Language]]</a>
+            		</li>
+
+                    <li><a href="#physical-storage-systems-physical-storage-systems">[[Physical Storage Systems|Physical Storage Systems]]</a>
+            		</li>
+
+                    <li><a href="#file-organization-file-organization">[[File Organization|File Organization]]</a>
+            		</li>
+
+                    <li><a href="#database-indexing-database-indexing">[[Database Indexing|Database Indexing]]</a>
+            		</li>
+
+                    <li><a href="#query-processing-query-processing">[[Query Processing|Query Processing]]</a>
+            		</li>
+
+                    <li><a href="#transaction-transaction">[[Transaction|Transaction]]</a>
+            
+                <ol>
+                    
+                    <li><a href="#concurrency-control-concurrency-control">[[Concurrency Control|Concurrency Control]]</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#relational-database-management-system">Relational Database Management System</a>
+            		</li>
+
+                    <li><a href="#project">Project</a>
+            		</li>
+
+                    <li><a href="#conferences">Conferences</a>
+            		</li>
+
+                    <li><a href="#journals">Journals</a>
+            		</li>
+
+                    <li><a href="#archive">Archive</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,8 +1360,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/@Area/" data-note-icon="" class="backlink">@Area</a>
                                                 </div></div>
                               </div>
                         

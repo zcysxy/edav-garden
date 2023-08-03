@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>Geographic Coordinate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,46 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="geographic-coordinate" tabindex="-1">Geographic Coordinate</h1>
+<p>Geographic coordinate uses <strong>latitude and longitude</strong> to locate a position.<br>
+Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like <a class="internal-link " data-note-icon="" href="/notes/scatterplot">Scatterplot</a> and <a class="internal-link " data-note-icon="" href="/notes/density-contour-plot">Density Contour Plot</a>.</p>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li><span class="alt-check alt-check-rmk">In a geographic coordinate, <strong>latitude</strong> comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates.<br>
+{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#5kd68p">#5kd68p</a>}<br>
+</span></li>
+</ul>
+<p>There are also some special graphs for geographic coordinate system, but with controversial performance, like</p>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li>[-] Radius Map: use a circle with a radius dependent on an additional variable to represent a dot</li>
+<li>[-] Push Pin Map: use a push pin icon to represent a dot</li>
+</ul>
+<h2 id="implementation" tabindex="-1">Implementation</h2>
+<h3 id="ggmap" tabindex="-1">ggmap</h3>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">Package</a> <code>ggmap</code> can generate real-world maps. It is compatible with <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>, so you can easily add layers on top of the base map. Related functions:</p>
+<ul>
+<li><code>get_stamenmap</code>: get a US map
+<ul>
+<li>can be zoomed using option <code>bbox</code>, <code>zoom</code>, and the latitude-longitude range of the area</li>
 </ul>
 </li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<li><code>get_googlemap</code>: get the map of the specified latitude-longitude range from Google map</li>
+<li><code>ggmap</code>: render the map</li>
+</ul>
+<h3 id="sf-and-tmap" tabindex="-1">sf and tmap</h3>
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<h2 id="sf-and-tmap-1" tabindex="-1">sf and tmap</h2>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
+<ol>
+<li>Get the spatial data by reading the shape file using <code>sf</code></li>
+<li>Combine spatial data and other data
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li>e.g. use <code>left_join()</code></li>
 </ul>
 </li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+<li>plot the combined data using <code>tmap</code></li>
+</ol>
+</div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1251,25 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#geographic-coordinate">Geographic Coordinate</a>
+            
+                <ol>
+                    
+                    <li><a href="#implementation">Implementation</a>
+            
+                <ol>
+                    
+                    <li><a href="#ggmap">ggmap</a>
+            		</li>
+
+                    <li><a href="#sf-and-tmap">sf and tmap</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#sf-and-tmap-1">sf and tmap</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1283,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/spatial-data/" data-note-icon="" class="backlink">Spatial Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

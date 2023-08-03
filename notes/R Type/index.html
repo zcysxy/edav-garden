@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>R Type</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,119 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="r-types" tabindex="-1">R Types</h1>
 <ul>
 <li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
+<p><span class="alt-check alt-check-rmk">Here we just introduce some basic &quot;atomic&quot; data types. There are many more, like <s>dates and</s> time series.</span></p>
 </li>
 <li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
+<p><span class="alt-check alt-check-tip">Use function <code>is.x()</code>, such as <code>is.na()</code> and <code>is.complex()</code>, to test the type of an <a class="internal-link " data-note-icon="" href="/notes/r">R</a> object.</span></p>
 </li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Abbreviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type#integer">Integer</a></td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type#numeric">Numeric</a></td>
+<td><code>dbl</code></td>
+</tr>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type#characters">Characters</a></td>
+<td><code>chr</code></td>
+</tr>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type#logical">Logical</a></td>
+<td><code>lgl</code></td>
+</tr>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type#factors">Factors</a></td>
+<td><code>fctr</code></td>
+</tr>
+<tr>
+<td><a class="internal-link " data-note-icon="" href="/notes/r-type-date">Date</a></td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>Date-times</td>
+<td><code>dttm</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="integer" tabindex="-1">Integer</h2>
+<p>Long-storage integers are written with <code>L</code> (otherwise they will be numerics)</p>
+<pre><code class="language-r">class(5L) # &quot;integer&quot;
+</code></pre>
+<h2 id="numeric" tabindex="-1">Numeric</h2>
+<p>A &quot;numeric&quot; is a double-precision floating-point number.<br>
+Scientific notations, infinities, and Not-a-Number are supported.</p>
+<pre><code class="language-r">5e4
+1.6e-35
+Inf
+class(-Inf)
+class(NaN)
+</code></pre>
+<h2 id="complex" tabindex="-1">Complex</h2>
+<p>The imaginary part of a complex is appended with an <code>i</code> in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>.</p>
+<pre><code class="language-r">x &lt;- 1 + 1i
+y &lt;- -1i + 1
+x * y
+class(x - 1i) # complex
+</code></pre>
+<h2 id="characters" tabindex="-1">Characters</h2>
+<p id="55dclb">There is no difference between strings and characters in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>, unlike <a class="internal-link is-unresolved"  href="/notes/matlab">MATLAB</a>.<br>
+And a string and a character are both char vectors of length 1.<br>
+Characters are surrounded by double quotes <code>&quot;</code> (or single quotes <code>'</code>).</p>
+<pre><code class="language-r">length(&quot;Hello&quot;)
+length(c(&quot;Hello&quot;,&quot;World&quot;))
+</code></pre>
+<h2 id="logical" tabindex="-1">Logical</h2>
+<p>Capital <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> are three logicals in <a class="internal-link " data-note-icon="" href="/notes/r">R</a></p>
+<pre><code class="language-r">TRUE # not true or True
+class(NA)
+FALSE == FALSE # TRUE
+</code></pre>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li><span class="alt-check alt-check-tip"><code>T</code> and <code>F</code> are shorthands for <code>TRUE</code> and <code>FALSE</code>.</span></li>
 </ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<h2 id="factors" tabindex="-1">Factors</h2>
+<p>Factors are used to represent <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
+<pre><code class="language-r">x &lt;- factor(c(&quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;no&quot;)) 
+x
+# [1] yes yes no  yes no 
+# Levels: no yes
+## The &quot;levels&quot; are the values the categorical data can take
+levels(x)
+
+table(x) 
+# x
+# no yes 
+#  2   3 
+## See the underlying representation of a factor
+unclass(x)
+# 2 2 1 2 1
+# attr(x,&quot;levels&quot;)
+# [1] &quot;no&quot;  &quot;yes&quot;
+</code></pre>
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
-</ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<li>Factor levels have an <strong>order</strong>
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li>Not like <a class="internal-link " data-note-icon="" href="/notes/r-type#characters"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Characters">#Characters</a></a>, which obey alphabetical order</li>
 </ul>
 </li>
+<li>Factor levels serve as <strong>labels</strong> for data</li>
+<li><a class="internal-link " data-note-icon="" href="/forcats/">forcats</a> is a useful package for manipulating factors</li>
 </ul>
+<h2 id="null" tabindex="-1">NULL</h2>
+<p>Capital <code>NULL</code> is a special empty object in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1324,31 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#r-types">R Types</a>
+            
+                <ol>
+                    
+                    <li><a href="#integer">Integer</a>
+            		</li>
+
+                    <li><a href="#numeric">Numeric</a>
+            		</li>
+
+                    <li><a href="#complex">Complex</a>
+            		</li>
+
+                    <li><a href="#characters">Characters</a>
+            		</li>
+
+                    <li><a href="#logical">Logical</a>
+            		</li>
+
+                    <li><a href="#factors">Factors</a>
+            		</li>
+
+                    <li><a href="#null">NULL</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,8 +1362,13 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Time Series/" data-note-icon="" class="backlink">EDAV - Time Series</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R Data Structure/" data-note-icon="" class="backlink">R Data Structure</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R Type - Date/" data-note-icon="" class="backlink">R Type - Date</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/forcats/" data-note-icon="" class="backlink">forcats</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/lubridate/" data-note-icon="" class="backlink">lubridate</a>
                                                 </div></div>
                               </div>
                         

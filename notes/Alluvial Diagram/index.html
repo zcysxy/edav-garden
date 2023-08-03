@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>Alluvial Diagram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,66 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="alluvial-diagram" tabindex="-1">Alluvial Diagram</h1>
+<p>Alluvial diagrams take inspiration from alluvial fans.<br>
+They use <a class="internal-link " data-note-icon="" href="/notes/parallel-coordinate">Parallel Coordinate</a>s for <a class="internal-link " data-note-icon="" href="/notes/edav-multivariate-categorical-data">Multivariate Categorical Data</a>.<br>
+They show how data move from one category to some other categories.<br>
+Alluvial diagrams work well for data with <em>flows</em> in it. Observations with the same movement are drawn together to show the flow.<br>
+Some examples of data types that are suitable for alluvial diagrams are</p>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li>Hierarchical data</li>
+<li>Temporal data</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013170436.png" alt="500"> <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018161618.png" alt="500"></p>
+<p>Other than axes, we can use colors for one variable to better visualize the patterns. The variable we choose to color should be our most interested one.</p>
+<p>Different categories in axes are called <mark>strata</mark>. Without alluviums, these strata form a relative stacked <a class="internal-link " data-note-icon="" href="/notes/bar-chart">Bar Chart</a>.<br>
+The height of the strata and flows represent the size of the clusters.</p>
+<h2 id="implementation" tabindex="-1">Implementation</h2>
+<p>We can use <code>geom_alluvium</code> in package <code>ggalluvial</code> to draw alluvial diagrams.</p>
+<pre><code class="language-r">library(ggalluvial)
+g = ggplot(
+    as.data.frame(UCBAdmissions),
+    aes(y = Freq, axis1 = Gender, axis2 = Dept, axis3 = Admit)
+) +
+    geom_flow(aes(fill = Gender), width = 1/12) +
+    geom_stratum(width = 1/12, fill = &quot;grey80&quot;, color = &quot;grey&quot;) +
+    geom_label(
+        stat = &quot;stratum&quot;,
+        aes(label = after_stat(stratum))
+    ) +
+    scale_x_discrete(expand = c(.05, .05)) +
+    scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+    ggtitle(&quot;UC Berkeley admissions and rejections&quot;) +
+    theme_void()
+plot(g)
+</code></pre>
+<p>An important feature of an alluvial diagram is the <strong>consistent flow</strong>, which means an observation is a continuous curve.<br>
+While we can use <code>geom_flow</code> to create similar diagrams, where flows may not be connected. Such diagrams are only useful if you only focus on the association between adjacent categorical variables.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013182109.png" alt="geom_flow|500" width="500px"></p>
+<h2 id="lodes-form" tabindex="-1">Lodes Form</h2>
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li>Able to present <em>ghosted</em> data, which doesn't have all categorical variables</li>
+<li>Need not specify the axes</li>
 </ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
-</ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+<p>To transform a dataframe to a lodes form, use <code>to_lodes_form(df, axes = 1:2)</code>. It works like <code>pivot_longer</code> in <a class="internal-link " data-note-icon="" href="/tidyr/">tidyr</a>, making one row per lode.</p>
+<p>An example lodes form (corresponding to the graph below):</p>
+<pre><code class="language-txt">##   Freq alluvium      x stratum
+## 1   30        1 Class1   Stats
+## 2    5        2 Class1    Math
+## 3   45        3 Class1   Stats
+## 4   20        4 Class1    Math
+## 5   30        1 Class2  French
+## 6    5        2 Class2  French
+## 7   45        3 Class2     Art
+</code></pre>
+<pre><code class="language-R">df %&gt;%
+    to_lodes_form(axes = 1:2) %&gt;%
+    ggplot(, aes(alluvium = alluvium, x = x, stratum = stratum, y = Freq)) +
+        geom_alluvium(color = &quot;blue&quot;) +
+        geom_stratum() +
+        geom_text(stat = &quot;stratum&quot;, aes(label = paste(after_stat(stratum), &quot;\n&quot;, after_stat(count))))
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018162557.png" alt=""></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1271,16 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#alluvial-diagram">Alluvial Diagram</a>
+            
+                <ol>
+                    
+                    <li><a href="#implementation">Implementation</a>
+            		</li>
+
+                    <li><a href="#lodes-form">Lodes Form</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1294,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Categorical Data/" data-note-icon="" class="backlink">EDAV - Multivariate Categorical Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

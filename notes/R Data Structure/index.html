@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>R Data Structure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,124 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="r-data-structure" tabindex="-1">R Data Structure</h1>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-type">R Type</a>s are types for the smallest objects in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>. Furthermore, these objects can form more complex <strong>data structures</strong>.</p>
+<h2 id="vector" tabindex="-1">Vector</h2>
+<p id="ikola8">In <a class="internal-link " data-note-icon="" href="/notes/r">R</a>, every single value, like <code>5L</code>, is considered a vector of length 1.<br>
+There is one rule about vectors: <strong>a vector can only contain objects of the same type</strong>.<br>
+If you combine objects of different types into a vector, the objects will be transformed into the same type.</p>
+<p>Use function <code>c</code> (for &quot;combine&quot;) to create a vector with more than 1 element.</p>
+<pre><code class="language-r">length(5L)
+x &lt;- c(2L,5)
+length(x) # 2
+class(x) # numeric
+class(x[1]) # numeric
+</code></pre>
+<p>For integers and numerics, a shortcut for generating a vector is the <code>:</code> operator.</p>
+<pre><code class="language-r">c(1,2,3,4) == 1:4
+</code></pre>
+<h3 id="indexing" tabindex="-1">Indexing</h3>
+<p>Use square brackets <code>[]</code> and index (<em><strong>starting from 1</strong></em>) to fetch the elements from a vector. Use a colon <code>:</code> to specify a range.</p>
+<pre><code class="language-r">c(6,8)[1]
+x &lt;- c(6, 8, 7, 5, 3, 0, 9)
+x[1:3]
+x[c(1,4,5,8)]
+</code></pre>
+<h3 id="type-coercion" tabindex="-1">Type Coercion</h3>
+<p>In vectors, implicit type coercions will be done. You can also do explicit type coercions.</p>
+<pre><code class="language-r">as.character(c(6, 8))   # &quot;6&quot; &quot;8&quot;
+as.logical(c(1,0,1,1))  # TRUE FALSE  TRUE  TRUE
+# as.numeric(&quot;Bilbo&quot;)
+# Warning message:
+# NAs introduced by coercion    
+</code></pre>
+<h2 id="matrix" tabindex="-1">Matrix</h2>
+<p>Matrix is a special two-dimensional data structure in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>. The class of it is <code>&quot;matrix&quot; &quot;array&quot;</code>.<br>
+Like a vector, the elements in a matrix should/will be of the same <a class="internal-link " data-note-icon="" href="/notes/r-type">R Type</a>.<br>
+To create a matrix, using the following function</p>
+<pre><code class="language-r">M &lt;- matrix([data =] data, [nrow =] 3, [ncol =] 2)
+</code></pre>
+<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner">Rmk</div></div>
+<div class="callout-content">
+<p>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
-<ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li>When the first arg is missing, e.g. <code>matrix(,2,2)</code>, the matrix is empty (with elements being <code>NA</code>)</li>
+<li>The length of the first arg can be a <strong>sub-multiple</strong> or a <strong>multiple</strong> of the number of rows</li>
+<li>When the second or the third arg is missing, their default is 1</li>
 </ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+</p></div></div>
+<h3 id="indexing-1" tabindex="-1">Indexing</h3>
+<p>Since a matrix is two-dimensional, the index has two arguments, like <code>M[1,2]</code>. When the argument is missing, it is interpreted as a colon <code>:</code> in <a class="internal-link is-unresolved"  href="/notes/matlab-array-indexing">Matlab Array - Indexing</a>.</p>
+<pre><code class="language-r">M &lt;- matrix(1:4,2,2)
+M[,]
+M[1,]
+M[,2] &lt;- 5
+M[]
+</code></pre>
+<h2 id="data-frame" tabindex="-1">Data Frame</h2>
+<p>Data frames are used to store <strong>tabular data</strong> (2d) in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>. They are represented as a special type of <a href="#list" target="_blank" class="external-link">list</a> where every element of the list has to have the same length.</p>
+<p>Data frames are usually created by reading in a dataset using the <code>read.table()</code> or <code>read.csv()</code>. However, data frames can also be created explicitly with the <code>data.frame()</code>function or they can be coerced from other types of objects like lists.</p>
+<pre><code class="language-r">students &lt;- data.frame(c(&quot;Cedric&quot;, &quot;Fred&quot;, &quot;George&quot;, &quot;Cho&quot;, &quot;Draco&quot;, &quot;Ginny&quot;),
+                       c(       3,      2,        2,     1,       0,      -1),
+                       c(     &quot;H&quot;,    &quot;G&quot;,      &quot;G&quot;,   &quot;R&quot;,     &quot;S&quot;,     &quot;G&quot;))
+names(students) &lt;- c(&quot;name&quot;, &quot;year&quot;, &quot;house&quot;) # name the columns
+class(students) # &quot;data.frame&quot;
+students
+# =&gt;
+#     name year house
+# 1 Cedric    3     H
+# 2   Fred    2     G
+# 3 George    2     G
+# 4    Cho    1     R
+# 5  Draco    0     S
+# 6  Ginny   -1     G
+class(students$year)    # &quot;numeric&quot;
+class(students[,3])     # &quot;factor&quot;
+# find the dimensions
+nrow(students)  # 6
+ncol(students)  # 3
+dim(students)   # 6 3
+
+# There are many twisty ways to subset data frames, all subtly unalike
+students$year       # 3  2  2  1  0 -1
+students[, 2]       # 3  2  2  1  0 -1
+students[, &quot;year&quot;]  # 3  2  2  1  0 -1
+
+# To drop a column from a data.frame or data.table,
+# assign it the NULL value
+students$houseFounderName &lt;- NULL
+</code></pre>
+<h2 id="array" tabindex="-1">Array</h2>
+<p>An array in R is a <strong>multi-dimensional</strong> homogenous (of the same <a class="internal-link " data-note-icon="" href="/notes/r-type">R Type</a>) data structure, like <a class="internal-link is-unresolved"  href="/notes/matlab-array">Matlab Array</a>.</p>
+<pre><code class="language-r">array(c(c(c(2, 300, 4), c(8, 9, 0)), c(c(5, 60, 0), c(66, 7, 847))), dim = c(3, 2, 2))
+</code></pre>
+<h2 id="list" tabindex="-1">List</h2>
+<p>A list is a multi-dimensional <strong>heterogeneous</strong> data structure.</p>
+<pre><code class="language-r">x &lt;- list(1, &quot;a&quot;, TRUE, 1 + 4i)
+</code></pre>
+<p>Lists are like <a class="internal-link is-unresolved"  href="/notes/python-types-dictionary">dictionaries</a>: you can give each value a name:</p>
+<pre><code class="language-r">x &lt;- list(time = 1:40)
+x$price = c(rnorm(40, .5 * x$time, 4))
+</code></pre>
+<pre><code class="language-r"># You can get items in the list like so
+list1$time # by name
+list1[[&quot;time&quot;]] # by name
+list1[[1]] # by index
+</code></pre>
+<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner">Rmk</div></div>
+<div class="callout-content">
+<p>
+<ul id="2135c8">
+<li>List is the only heterogeneous structure so far (<a class="internal-link " data-note-icon="" href="/notes/r-data-structure#vector"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Vector">#Vector</a></a>, <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#matrix"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Matrix">#Matrix</a></a>, and <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#array"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Array">#Array</a></a> are all homogenous)</li>
+<li>List also has special index—it needs <strong>double brackets</strong></li>
 </ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+</p></div></div>
+<div class="callout " data-callout="info"><div class="callout-title"><div class="callout-title-inner">Info</div></div>
+<div class="callout-content">
+<p>
+Lists are not the most efficient data structure to work with in R; unless you have a very good reason, you should stick to <a href="#data%20frame" target="_blank" class="external-link"><code>data.frames</code></a>.<br>
+Lists are often returned by functions that perform linear regressions</p>
+</div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1329,40 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#r-data-structure">R Data Structure</a>
+            
+                <ol>
+                    
+                    <li><a href="#vector">Vector</a>
+            
+                <ol>
+                    
+                    <li><a href="#indexing">Indexing</a>
+            		</li>
+
+                    <li><a href="#type-coercion">Type Coercion</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#matrix">Matrix</a>
+            
+                <ol>
+                    
+                    <li><a href="#indexing-1">Indexing</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#data-frame">Data Frame</a>
+            		</li>
+
+                    <li><a href="#array">Array</a>
+            		</li>
+
+                    <li><a href="#list">List</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1265,6 +1378,7 @@
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
                                           <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/rvest/" data-note-icon="" class="backlink">rvest</a>
                                                 </div></div>
                               </div>
                         

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>R Control Statement</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,35 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
-<ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
-<ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
-</ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
-</ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+      <h1 id="control-statement" tabindex="-1">Control Statement</h1>
+<h2 id="for" tabindex="-1">for</h2>
+<pre><code class="language-r">for (i in 1:4) {
+    print(i)
+}
+</code></pre>
+<h2 id="while" tabindex="-1">while</h2>
+<pre><code class="language-r">a &lt;- 10
+while (a &gt; 4) {
+    cat(a, &quot;...&quot;, sep = &quot; &quot;)
+    a &lt;- a - 1
+}
+</code></pre>
+<div class="callout " data-callout="warning"><div class="callout-title"><div class="callout-title-inner">Warning</div></div>
+<div class="callout-content">
+<p>
+Keep in mind that for and while loops run slowly in <a class="internal-link " data-note-icon="" href="/notes/r">R</a>.<br>
+Operations on entire vectors (i.e. a whole row, a whole column)<br>
+or <code>apply()</code>-type functions are preferred</p>
+</div></div>
+<h2 id="if-else" tabindex="-1">if/else</h2>
+<pre><code class="language-r">if (4 &gt; 3) {
+    print(&quot;4 is greater than 3&quot;)
+} else if (4 == 3) {
+    print(&quot;4 is equal to 3&quot;)
+} else {
+    print(&quot;4 is less than 3&quot;)
+}
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1240,19 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#control-statement">Control Statement</a>
+            
+                <ol>
+                    
+                    <li><a href="#for">for</a>
+            		</li>
+
+                    <li><a href="#while">while</a>
+            		</li>
+
+                    <li><a href="#if-else">if/else</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>

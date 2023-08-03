@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>R Package</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,17 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
-<ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
-<ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
-</ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
-</ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+      <h1 id="r-package" tabindex="-1">R Package</h1>
+<pre><code class="language-r"># Install a package
+install.packages(&quot;tidyverse&quot;)
+# Load a package
+library(&quot;tidyverse&quot;)
+</code></pre>
+<p>If we need to be explicit about where a function (or dataset) comes from, we’ll use the special form <code>package::function()</code>. For example, <code>ggplot2::ggplot()</code> tells you explicitly that we’re using the <code>ggplot()</code> function from the <code>ggplot2</code> package</p>
+<p>To install from GitHub:</p>
+<pre><code class="language-R">library(devtools)
+devtools::install_github(&quot;metalyrics/rmetacritic&quot;)
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1222,7 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#r-package">R Package</a>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1236,12 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Choropleth/" data-note-icon="" class="backlink">Choropleth</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Missing Data/" data-note-icon="" class="backlink">EDAV - Missing Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Geographic Coordinate/" data-note-icon="" class="backlink">Geographic Coordinate</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R Operator - Pipe/" data-note-icon="" class="backlink">R Operator - Pipe</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/spatial-data/" data-note-icon="" class="backlink">Spatial Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

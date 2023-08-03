@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>Parallel Coordinate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,39 +967,61 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="parallel-coordinate" tabindex="-1">Parallel Coordinate</h1>
+<p>Instead of making coordinates orthogonal, we can make them <strong>parallel</strong> to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for <a class="internal-link " data-note-icon="" href="/notes/edav-multivariate-continuous-data">EDAV - Multivariate Continuous Data</a>.</p>
+<h2 id="slope-graph" tabindex="-1">Slope Graph</h2>
+<p>When there are only two parallel coordinates, the graph is called a <strong>slope graph</strong>.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013024024.png" alt=""></p>
+<p>To make the patterns in a slope graph more obvious, we can apply some data transformation</p>
+<ul>
+<li>Standardization: <code>(x - mean(x)) / sd(x)</code></li>
+<li>Rescaling (to <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.526ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2000.7 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(278,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(778,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(1222.7,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(1722.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>): <code>scales::rescale()</code></li>
+</ul>
+<p>A drawback of these transformations is that we lose the actual units. A remedy is to label the units on each axis.</p>
+<h2 id="more-variables" tabindex="-1">More Variables</h2>
+<p>We can use <code>ggparcoord</code> in <code>GGally</code> to create parallel coordinate plots.</p>
+<ul>
+<li><code>scale = &quot;std&quot;</code> (standardization) is the default scale</li>
+<li><code>scale = &quot;uniminmax&quot;</code> is rescaling</li>
+<li><code>scale = &quot;globalminmax&quot;</code> is the scale without transformation</li>
+</ul>
+<p>Other methods to reveal the patterns:</p>
 <ul>
 <li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
-<ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<p>Reorder the variables</p>
+<ul id="o9j70v">
+<li>Making lines cross may be better than making them parallel</li>
 </ul>
 </li>
 <li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<p>Make lines transparent (change alpha)</p>
+</li>
+<li>
+<p>Interpolation</p>
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li>Instead of using straight lines, we can use splines or other interpolated curves</li>
+<li>This helps separate lines sharing the same value of some variables</li>
 </ul>
 </li>
 <li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<p>Highlight a trend</p>
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li>Use colors to separate the trend and other lines</li>
+</ul>
+</li>
+</ul>
+<h2 id="implementations" tabindex="-1">Implementations</h2>
+<ul>
+<li><code>ggplot2::geom_line()</code>
+<ul>
+<li>Use <a class="internal-link " data-note-icon="" href="/tidyr/">tidyr</a> to transform variable names to x-axis first</li>
+</ul>
+</li>
+<li><code>GGally::ggparcoord()</code> (static, ggplot2)</li>
+<li><code>MASS:: parcoord()</code> (static, base)</li>
+<li><code>parcoords::parcoords()</code> (interactive)
+<ul>
+<li><code>devtools::install_github(“timelyportfolio/parcoords”)</code></li>
 </ul>
 </li>
 </ul>
@@ -1249,7 +1269,19 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#parallel-coordinate">Parallel Coordinate</a>
+            
+                <ol>
+                    
+                    <li><a href="#slope-graph">Slope Graph</a>
+            		</li>
+
+                    <li><a href="#more-variables">More Variables</a>
+            		</li>
+
+                    <li><a href="#implementations">Implementations</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1295,9 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Alluvial Diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Biplot/" data-note-icon="" class="backlink">Biplot</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Continuous Data/" data-note-icon="" class="backlink">EDAV - Multivariate Continuous Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

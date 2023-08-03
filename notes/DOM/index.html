@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>DOM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,49 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
-<ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
-<ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
-</ul>
-</li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
-</ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+      <h1 id="dom" tabindex="-1">DOM</h1>
+<p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> or <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> document as a <strong>tree structure</strong> wherein each node is an object representing a part of the document.</p>
+<h2 id="dom-and-html-html" tabindex="-1">DOM and <a class="internal-link is-unresolved"  href="/notes/html">HTML</a></h2>
+<p>When you use a web browser to request a page like <code>https://example.com</code> the server returns HTML like this:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;This is a hypertext document on the World Wide Web.&lt;/p&gt;
+        &lt;script src=&quot;/script.js&quot; async&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The browser parses the HTML and creates a tree of objects like this:</p>
+<pre><code class="language-text">html
+  head
+    title
+  body
+    h1
+    p
+    script
+</code></pre>
+<p>This tree of objects, or nodes, representing the page's content is called the DOM. Right now it looks the same as the HTML, but suppose that the script referenced at the bottom of the HTML runs this code:</p>
+<pre><code class="language-js">const h1 = document.querySelector('h1');
+h1.parentElement.removeChild(h1);
+const p = document.createElement('p');
+p.textContent = 'Wildcard!';
+document.body.appendChild(p);
+</code></pre>
+<p>That code removes the <code>h1</code> node and adds another <code>p</code> node to the DOM. The complete DOM now looks like this:</p>
+<pre><code class="language-text">html
+  head
+    title
+  body
+    p
+    script
+    p
+</code></pre>
+<p>The page's HTML is now different from its DOM. In other words, HTML represents <strong>initial</strong> page content, and the DOM represents <strong>current</strong> page content. When <a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a> adds, removes, or edits nodes, the DOM becomes different than the HTML.</p>
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="external-link">Introduction to the DOM</a> to learn more.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1254,13 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#dom">DOM</a>
+            
+                <ol>
+                    
+                    <li><a href="#dom-and-html-html">DOM and [[HTML|HTML]]</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,7 +1274,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/D3 Bind Data/" data-note-icon="" class="backlink">D3 Bind Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>

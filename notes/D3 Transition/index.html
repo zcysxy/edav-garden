@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>D3 Transition</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,39 +967,60 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="d3-transition" tabindex="-1">D3 Transition</h1>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li><code>.transition().duration(time)</code> adds a transition to the change
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li><code>time</code> should be a <a class="internal-link is-unresolved"  href="/notes/js-types-number">number</a>; its unit is ms</li>
+<li>these two methods should be between the selection and the change
+<ul>
+<li><span class="alt-check alt-check-ex"><code>d3.select(&quot;svg&quot;).select(&quot;circle&quot;).transition().duration(2000).attr(&quot;cx&quot;, &quot;400&quot;)</code></span></li>
 </ul>
 </li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
+<li>not all changes can be added with a transition
 <ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li>[+] changes in size and position can</li>
+<li>[-] changes in font family cannot</li>
 </ul>
 </li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
+<li>we can add multiple transitions by chaining them
 <ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
+<li>then the transitions will happen one by one</li>
+<li><span class="alt-check alt-check-ex"><code>d3.select(&quot;svg&quot;).select(&quot;circle&quot;).transition().duration(2000).attr(&quot;cx&quot;, &quot;400&quot;).transition().duration(2000).attr(&quot;cy&quot;,&quot;200&quot;)</code></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="do-and-not" tabindex="-1">Do and Not</h2>
+<p>Transitions in different statements run <strong>simultaneously</strong>. Therefore</p>
+<ul>
+<li><strong>DO</strong>
+<ul>
+<li>Run simultaneous transitions on <strong>different</strong> selections</li>
+<li>Run sequential transitions on the same selection in <strong>one chain</strong></li>
+<li>Transition from <em>something</em> to <em>something</em>
+<ul>
+<li>The attributes being transitioned should have an initial value before the transition</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>DO NOT</strong>
+<ul>
+<li>Do not run two transitions on the same selection at the same time
+<ul>
+<li>i.e., in two statements/chains</li>
+</ul>
+</li>
+<li>Do not transition from <em>nothing</em> to something</li>
+<li>Do not store a selection with a transition
+<ul>
+<li>it is not a selection object anymore</li>
+<li>it becomes a <code>Transition</code> object</li>
+</ul>
+</li>
+<li>Do not put a transition before a <a class="internal-link " data-note-icon="" href="/notes/d3-bind-data#merge">merge</a></li>
 </ul>
 </li>
 </ul>
@@ -1249,7 +1268,13 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#d3-transition">D3 Transition</a>
+            
+                <ol>
+                    
+                    <li><a href="#do-and-not">Do and Not</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1263,8 +1288,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
                         

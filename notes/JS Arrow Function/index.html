@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>rvest</title>
+    <title>JS Arrow Function</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-13T21:54:22"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-13T22:20:21"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[[R Package]]">[[R Package]]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,42 +967,37 @@
       </header>
       
       
-      <h1 id="rvest" tabindex="-1">rvest</h1>
+      <h1 id="js-array-function" tabindex="-1">JS Array Function</h1>
+<p>Another way to create a function and assign it to a variable (this process is called <a class="internal-link " data-note-icon="" href="/notes/js-arrow-function#function-expression"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>) is called <strong>arrow function</strong>, which is similar to <a class="internal-link is-unresolved"  href="/notes/python-lambda-function">Python Lambda Function</a></p>
+<pre><code class="language-js">let myFun = (para1, para2) =&gt; expression
+</code></pre>
+<p>This creates a function <code>myFun</code> that accepts arguments <code>para1</code> and <code>para2</code>, then evaluates the <code>expression</code> on the right side with their use and <strong>returns its result</strong>.</p>
+<p>In other words, it’s the shorter version of the <a class="internal-link " data-note-icon="" href="/notes/js-arrow-function#function-expression"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>:</p>
+<pre><code class="language-js">let myFun = function(para1, para2) {
+  return expression;
+};
+</code></pre>
 <ul>
-<li>
-<p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
-</li>
-<li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> page, returns a <a class="internal-link is-unresolved"  href="/notes/xml">XML</a> object</p>
-</li>
-<li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link " data-note-icon="" href="/notes/r-data-structure#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<li>If we have only one parameter, then parentheses around parameters can be omitted
 <ul>
-<li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
+<li><span class="alt-check alt-check-impt">This gives the simplest form of a function: <code>para =&gt; expression</code></span></li>
 </ul>
 </li>
-<li>
-<p><code>html_elements()</code> get specific elements, returns a list</p>
-<ul>
-<li><code>html_elements(x, &quot;h2&quot;)</code></li>
-<li><code>html_elements(x, &quot;#current_visitors&quot;)</code></li>
-<li><code>html_elements(x, &quot;.data&quot;)</code></li>
+<li>If there are no parameters, parentheses will be empty (but they should be present)</li>
+<li>For more complex expressions, like multiple expressions or statements, we should enclose them in curly braces <code>{}</code>, then use a normal <code>return</code> within them</li>
 </ul>
-</li>
-<li>
-<p><code>html_element()</code> works like <code>html_elements()</code>, except that it returns a single node</p>
-</li>
-<li>
-<p><code>html_text()</code> get the text out of nodes</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">rvest doesn't work with dynamically loaded content</span></p>
-<ul>
-<li>Download the loaded page as a local file</li>
-<li>Use another package <code>RSelenium</code></li>
-</ul>
-</li>
-</ul>
+<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Dynamically Create a Function</div></div>
+<div class="callout-content">
+<p>
+<pre><code class="language-js">let age = prompt(&quot;What is your age?&quot;, 18);
+
+let welcome = (age &lt; 18) ?
+  () =&gt; alert('Hello') :
+  () =&gt; alert(&quot;Greetings!&quot;);
+
+welcome();
+</code></pre>
+</p></div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1249,7 +1242,7 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#rvest">rvest</a>
+                    <li><a href="#js-array-function">JS Array Function</a>
             		</li>
                 </ol>
             </nav>
@@ -1263,8 +1256,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
                         
