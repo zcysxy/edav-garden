@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/scatterplot/","title":"Scatterplot","created":"2022-10-12T23:24:08","updated":"2022-12-11T20:14:21"}
+{"title":"Scatterplot","alias":null,"type":"note","created":"2022-10-12T23:24:08","modified":"2022-12-11T20:14:21","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","related":["[[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]"],"permalink":"/scatterplot/","dgPassFrontmatter":true,"updated":"2022-12-11T20:14:21"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 A scatter plot uses Cartesian coordinates to display values for typically **two variables** for a set of data. The data are displayed as a collection of points, each having the value of two variables determining the position.
 
-The major role of scatterplots lies in **revealing associations** ([[EDAV - Dependency Relationship\|EDAV - Dependency Relationship]]) between variables, not just linear associations, but any kind of association.
+The major role of scatterplots lies in **revealing associations** ([[EDAV - Dependency Relationship]]) between variables, not just linear associations, but any kind of association.
 
 ## Features
 
