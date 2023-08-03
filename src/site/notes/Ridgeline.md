@@ -1,7 +1,4 @@
----
-{"title":"Ridgeline","alias":null,"type":"note","created":"2022-10-21T23:11:54","modified":"2022-12-12T15:09:36","dg-publish":true,"sup":[{}],"state":"done","permalink":"/ridgeline/","dgPassFrontmatter":true,"updated":"2022-12-12T15:09:36"}
----
-
+[object Promise]
 
 # Ridgeline
 
