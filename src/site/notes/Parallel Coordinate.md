@@ -1,5 +1,5 @@
 ---
-{"title":"Parallel Coordinate","alias":null,"type":"note","created":"2022-10-13T02:36:23","modified":"2022-12-11T21:44:09","dg-publish":true,"sup":["Parallel Coordinate.md/edav"],"state":"done","related":["[[EDAV - Multivariate Continuous Data\\|EDAV - Multivariate Continuous Data]]"],"permalink":"/parallel-coordinate/","dgPassFrontmatter":true,"updated":"2022-12-11T21:44:09"}
+{"title":"Parallel Coordinate","alias":null,"type":"note","created":"2022-10-13T02:36:23","modified":"2022-12-11T21:44:09","dg-publish":true,"sup":["edav"],"state":"done","related":["edav-multivariate-continuous-data"],"permalink":"/parallel-coordinate/","dgPassFrontmatter":true,"updated":"2022-12-11T21:44:09"}
 ---
 
 
