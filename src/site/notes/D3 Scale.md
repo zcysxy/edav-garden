@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Scale","alias":null,"type":"note","created":"2022-12-01T00:27:42","modified":"2022-12-12T13:11:22","dg-publish":true,"sup":["[[D3\|D3]]"],"state":"done","permalink":"/d3-scale/","dgPassFrontmatter":true,"updated":"2022-12-12T13:11:22"}
+{"title":"D3 Scale","alias":null,"type":"note","created":"2022-12-01T00:27:42","modified":"2022-12-12T13:11:22","dg-publish":true,"sup":["[[D3\\|D3]]"],"state":"done","permalink":"/d3-scale/","dgPassFrontmatter":true,"updated":"2022-12-12T13:11:22"}
 ---
 
 
@@ -10,7 +10,7 @@ Cartesian coordinates are different from the coordinates in an [[SVG\|SVG]].
 
 So we need transformers to map Cartesian coordinates to [[SVG\|SVG]] coordinates; **scales** in [[D3\|D3]] are such transformers.
 
-There are two functions in [[D3]] to create scales: one for [[EDAV - Categorical Data\|Categorical Data]]—`.scaleBand()`, and one for [[EDAV - Continuous Variable\|Continuous Data]]—`.scaleLinear()`.
+There are two functions in [[D3\|D3]] to create scales: one for [[EDAV - Categorical Data\|Categorical Data]]—`.scaleBand()`, and one for [[EDAV - Continuous Variable\|Continuous Data]]—`.scaleLinear()`.
 Note that these functions are for creating your own scales rather than alternating the current scales.
 
 ## Ordinal Scales
