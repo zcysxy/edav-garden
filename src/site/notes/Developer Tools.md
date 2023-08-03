@@ -1,5 +1,5 @@
 ---
-{"type":"note","title":"Developer Tools","alias":"DevTools","dg-publish":true,"created":"2021-08-29T13:53:12","modified":"2022-11-17T18:25:34","sup":["computer-science"],"related":["css","java-script","html","front-end-back-end-and-full-stack"],"state":"done","permalink":"/developer-tools/","dgPassFrontmatter":true,"updated":"2022-11-17T18:25:34"}
+{"type":"note","title":"Developer Tools","alias":"DevTools","dg-publish":true,"created":"2021-08-29T13:53:12","modified":"2022-11-17T18:25:34","sup":[["Computer Science","computer-science"]],"related":["css","java-script","html","front-end-back-end-and-full-stack"],"state":"done","permalink":"/developer-tools/","dgPassFrontmatter":true,"updated":"2022-11-17T18:25:34"}
 ---
 
 
