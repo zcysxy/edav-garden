@@ -1,5 +1,5 @@
 ---
-{"title":"Bar Chart","alias":"Barchart,Bar Plot","type":"note","created":"2022-10-12T22:07:38","modified":"2022-12-11T19:14:39","dg-publish":true,"sup":[["EDAV - Categorical Data","edav-categorical-data"]],"state":"done","related":["edav"],"permalink":"/bar-chart/","dgPassFrontmatter":true,"updated":"2022-12-11T19:14:39"}
+{"title":"Bar Chart","alias":"Barchart,Bar Plot","type":"note","created":"2022-10-12T22:07:38","modified":"2022-12-11T19:14:39","dg-publish":true,"sup":[["EDAV - Categorical Data","edav-categorical-data"]],"state":"done","related":[["EDAV","edav"]],"permalink":"/bar-chart/","dgPassFrontmatter":true,"updated":"2022-12-11T19:14:39"}
 ---
 
 
@@ -54,7 +54,7 @@ For [[EDAV - Multivariate Categorical Data\|Multivariate Categorical Data]], ins
 ### Relative Frequency and Diverging Stacked Bar Chart
 
 
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/edav-categorical-data/#likert-data" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 
 
 
