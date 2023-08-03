@@ -1,5 +1,5 @@
 ---
-{"title":"R Function List","alias":null,"type":"note","created":"2022-09-10T18:13:18","modified":"2022-12-12T14:25:06","dg-publish":true,"sup":{},"state":"[[%watch]]","related":{},"permalink":"/r-function-list/","dgPassFrontmatter":true,"updated":"2022-12-12T14:25:06"}
+{"title":"R Function List","alias":null,"type":"note","created":"2022-09-10T18:13:18","modified":"2022-12-12T14:25:06","dg-publish":true,"sup":[{}],"state":"[[%watch]]","related":{},"permalink":"/r-function-list/","dgPassFrontmatter":true,"updated":"2022-12-12T14:25:06"}
 ---
 
 
