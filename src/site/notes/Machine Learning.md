@@ -1,5 +1,5 @@
 ---
-{"title":"Machine Learning","alias":"机器学习, ML, Learning","type":"index","created":"2021-07-25T23:36:31","modified":"2023-04-25T19:05:00","banner":"https://www.guggenheim.org/wp-content/uploads/1923/01/37.262_ph_web-1.jpg","banner_icon":"🤖","banner_y":0.308,"dg-publish":true,"sup":["[[Computer Science\\|Computer Science]]"],"state":"done","reference":"[Outline of machine learning - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_machine_learning)","permalink":"/machine-learning/","dgPassFrontmatter":true,"updated":"2023-04-25T19:05:00"}
+{"title":"Machine Learning","alias":"机器学习, ML, Learning","type":"index","created":"2021-07-25T23:36:31","modified":"2023-04-25T19:05:00","banner":"https://www.guggenheim.org/wp-content/uploads/1923/01/37.262_ph_web-1.jpg","banner_icon":"🤖","banner_y":0.308,"dg-publish":true,"sup":["Machine Learning.md/computer-science"],"state":"done","reference":"[Outline of machine learning - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_machine_learning)","permalink":"/machine-learning/","dgPassFrontmatter":true,"updated":"2023-04-25T19:05:00"}
 ---
 
 
