@@ -1,5 +1,5 @@
 ---
-{"title":"Scatterplot","alias":null,"type":"note","created":"2022-10-12T23:24:08","modified":"2022-12-11T20:14:21","dg-publish":true,"sup":["edav"],"state":"done","related":["edav-dependency-relationship"],"permalink":"/scatterplot/","dgPassFrontmatter":true,"updated":"2022-12-11T20:14:21"}
+{"title":"Scatterplot","alias":null,"type":"note","created":"2022-10-12T23:24:08","modified":"2022-12-11T20:14:21","dg-publish":true,"sup":[["EDAV","edav"]],"state":"done","related":["edav-dependency-relationship"],"permalink":"/scatterplot/","dgPassFrontmatter":true,"updated":"2022-12-11T20:14:21"}
 ---
 
 
