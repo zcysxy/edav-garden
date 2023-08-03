@@ -26,6 +26,9 @@ body {
     .timestamps {
         margin-top: 10px;
     }
+    .backlink-list {
+        max-height: unset;
+    }
     .content {
         max-width: 900px;
         font-size: var(--content-font-size);
