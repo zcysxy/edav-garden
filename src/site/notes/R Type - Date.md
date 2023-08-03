@@ -1,11 +1,11 @@
 ---
-{"title":"R Type - Date","alias":null,"type":"note","created":"2022-11-03T16:19:58","modified":"2022-11-03T22:34:28","dg-publish":true,"sup":["[[R Type\|R Type]]"],"state":"done","permalink":"/r-type-date/","dgPassFrontmatter":true,"updated":"2022-11-03T22:34:28"}
+{"title":"R Type - Date","alias":null,"type":"note","created":"2022-11-03T16:19:58","modified":"2022-11-03T22:34:28","dg-publish":true,"sup":["[[R Type\\|R Type]]"],"state":"done","permalink":"/r-type-date/","dgPassFrontmatter":true,"updated":"2022-11-03T22:34:28"}
 ---
 
 
 # Date
 
-`"Date"` is a special data **class** for date values in [[R\|R]]. Strictly saying, `Date` is not an [[R Type]], but a class. A class is an **attribute** assigned to an object regardless of its internal storage structure. To see this, execute the following code
+`"Date"` is a special data **class** for date values in [[R\|R]]. Strictly saying, `Date` is not an [[R Type\|R Type]], but a class. A class is an **attribute** assigned to an object regardless of its internal storage structure. To see this, execute the following code
 
 ```r
 x <- as.Date("2022-11-03")
