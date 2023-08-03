@@ -1,5 +1,5 @@
 ---
-{"title":"R Statement","alias":null,"type":"note","created":"2022-09-08T19:07:28","modified":"2022-09-08T19:07:33","dg-publish":true,"sup":["[[R\|R]]"],"state":"done","permalink":"/r-control-statement/","dgPassFrontmatter":true,"updated":"2022-09-08T19:07:33"}
+{}
 ---
 
 
@@ -24,7 +24,7 @@ while (a > 4) {
 ```
 
 > [!warning]
-> Keep in mind that for and while loops run slowly in [[R]].
+> Keep in mind that for and while loops run slowly in [[R\|R]].
 > Operations on entire vectors (i.e. a whole row, a whole column)
 > or `apply()`-type functions are preferred
 
