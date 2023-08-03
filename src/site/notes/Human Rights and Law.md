@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/human-rights-and-law/","created":"2022-05-28T03:34:21","updated":"2023-03-28T19:45:38"}
+{"type":"index","created":"2022-05-28T03:34:21","modified":"2023-03-28T19:45:38","alias":"人权与法","banner_icon":"🧑‍⚖️","banner":"https://static3.museoreinasofia.es/sites/default/files/obras/DE00050_0.jpg","banner_y":0.26707,"dg-publish":true,"sup":["[[Political Philosophy]]"],"state":"done","permalink":"/human-rights-and-law/","dgPassFrontmatter":true,"updated":"2023-03-28T19:45:38"}
 ---
 
 
