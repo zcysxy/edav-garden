@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>D3 Interactivity</title>
+    <title>D3 Margin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -218,7 +218,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-bind-data/">D3 Bind Data </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Bind Data </a>
                 </div>
             
         </div>
@@ -227,7 +227,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-functions/">D3 Functions </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Functions </a>
                 </div>
             
         </div>
@@ -236,7 +236,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-interactivity/">D3 Interactivity </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Interactivity </a>
                 </div>
             
         </div>
@@ -245,7 +245,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-margin/">D3 Margin </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Margin </a>
                 </div>
             
         </div>
@@ -254,7 +254,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/d3-scale/">D3 Scale </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">D3 Scale </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-12-01T21:43:56"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-02T10:54:18"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,95 +967,34 @@
       </header>
       
       
-      <h1 id="d3-interactivity" tabindex="-1">D3 Interactivity</h1>
-<p>Interaction contains two parts</p>
-<ul>
-<li>What do users do?
-<ul>
-<li>event listener</li>
-<li>information needed</li>
-</ul>
-</li>
-<li>What will happen?</li>
-</ul>
-<p>This note consists of many examples.</p>
-<h2 id="do-something-to-the-event-element" tabindex="-1">Do Something to the Event Element</h2>
-<ul>
-<li><code>.on(event, function)</code> passes <code>event</code> and the selection as <code>this</code>/<code>event.currentTarget</code> to <code>function</code> when <code>event</code> is fired</li>
-</ul>
-<pre><code class="language-js">// A function to turn the fill color to yellow:
-function goYellow() {d3.select(this).attr(&quot;fill&quot;, &quot;yellow&quot;)};
+      <p>[object Promise]</p>
+<h1 id="d3-margin" tabindex="-1">D3 Margin</h1>
+<p>To create margins for a plot, we need to <em>manually</em> set the inner height and width, and then translate the graph.</p>
+<pre><code class="language-js">// Margin Convention
+const w = 500;
+const h = 400;
+const margin = {top: 25, right: 0, bottom: 25, left: 25};
+const innerWidth = w - margin.left - margin.right;
+const innerHeight = h - margin.top - margin.bottom;
 
-d3.select(&quot;svg&quot;).select(&quot;circle&quot;).on(&quot;mouseover&quot;, goYellow);
-// This in goYellow() in this call will be &quot;circle&quot;
+// Add a canvas
+const svg = d3.select(&quot;svg&quot;);
+svg.append(&quot;rect&quot;)
+   .attr(&quot;x&quot;, 0)
+   .attr(&quot;y&quot;, 0)
+   .attr(&quot;width&quot;, w)
+   .attr(&quot;height&quot;, h)
+   .attr(&quot;fill&quot;, &quot;lightblue&quot;);
 
-// Use an anonymous function
-d3.select(&quot;svg&quot;).select(&quot;line&quot;).on(&quot;click&quot;, function()
-    {d3.select(this).attr(&quot;stroke-width&quot;, &quot;10&quot;);});
-
-// Pass the event
-d3.select(&quot;svg&quot;).on(&quot;click&quot;, function(event)
-    {d3.select(&quot;text&quot;).text(`(${d3.pointer(event)})`)});
+// Translate the content group
+const bars = svg.append(&quot;g&quot;)
+    .attr(&quot;transform&quot;,
+         `translate (${margin.left},
+                     ${margin.top})`)
+    .selectAll(&quot;rect&quot;)
+    .data(bardata);
 </code></pre>
-<h2 id="do-something-unrelated-to-the-event-element" tabindex="-1">Do Something Unrelated to the Event Element</h2>
-<pre><code class="language-js">d3.select(&quot;svg&quot;)
-  .on(&quot;click&quot;, function () { // a function unrelated to the event
-    d3.select(&quot;svg&quot;)
-      .append(&quot;text&quot;)
-        .attr(&quot;x&quot;, &quot;100&quot;)
-        .attr(&quot;y&quot;, &quot;40&quot;)
-        .text(&quot;Hello World&quot;);
-  });
-</code></pre>
-<h2 id="change-an-attribute-of-the-event-element" tabindex="-1">Change an Attribute of the Event Element</h2>
-<pre><code class="language-js">d3.select(&quot;line&quot;)
-  .on(&quot;click&quot;,function() {
-    d3.select(this).attr(&quot;stroke-width&quot;,&quot;10&quot;);
-  });
-</code></pre>
-<h2 id="get-the-value-of-an-attribute-of-the-event-element" tabindex="-1">Get the Value of an Attribute of the Event Element</h2>
-<p>Use <code>event.currentTarget</code> to get the event selection.</p>
-<pre><code class="language-js">d3.select(&quot;circle&quot;)
-  .on(&quot;click&quot;,function(event) {
-    const rad = d3.select(event.currentTarget).attr(&quot;r&quot;);
-    d3.select(&quot;text&quot;)
-      .text(`The radius is ${rad} pixels.`);
-  });
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-tip"><code>.select(this)</code> can be used instead of <code>.select(event.currentTarget)</code>. In the context of event handlers, <code>this</code> is the element that received the event, a.k.a. what you clicked on if it's a click event.</span></li>
-</ul>
-<h2 id="do-something-with-the-data" tabindex="-1">Do Something with the Data</h2>
-<pre><code class="language-js">d3.select(&quot;circle&quot;)
-  .data([{s:&quot;red&quot;,sw:&quot;15&quot;}])
-  .on(&quot;click&quot;,function(event, d) {    
-      d3.select(event.currentTarget)
-        .attr(&quot;stroke&quot;, d.s) // get the data
-        .attr(&quot;stroke-width&quot;, d.sw);
-  });
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk">Note that starting with D3 v6, the data is the 2nd parameter to be passed: <code>function(event, d)</code>.<br>
-{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#7c3n0k">#7c3n0k</a>}<br>
-</span></li>
-<li><span class="alt-check alt-check-rmk">In addition, note that you do not need to pass <code>d</code> again when accessing the data: we use <code>d.s</code> not <code>d =&gt; d.s</code>**.</span></li>
-</ul>
-<h2 id="get-the-location-of-the-event" tabindex="-1">Get the Location of the Event</h2>
-<p>Use <code>.pointer(event)</code> or <code>d3.mouse(this)</code> (D3 v5) to get the event/cursor location.</p>
-<pre><code class="language-js">d3.select(&quot;svg&quot;)
-  .on(&quot;click&quot;,function(event) {
-    d3.select(&quot;text&quot;)
-      .text(`(${d3.pointer(event).map(Math.round)})`)
-  });
-</code></pre>
-<h2 id="do-something-with-the-value-of-a-radio-button" tabindex="-1">Do Something with the Value of a Radio Button</h2>
-<p>A radio button with value: <code>&lt;input type=&quot;radio&quot; value=&quot;red&quot;&gt;</code>. The value can be directly get using <code>this.value</code>.</p>
-<pre><code class="language-js">d3.selectAll(&quot;input&quot;) // button
-  .on(&quot;click&quot;, function(event) {
-    const favcolor = event.currentTarget.value;
-    d3.select(&quot;p#color&quot;).style(&quot;color&quot;, favcolor);
-    });
-</code></pre>
+<p>Note that here we use <a class="internal-link is-unresolved"  href="/notes/js-types-string#literal">ES6 template literals</a>.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1302,31 +1239,7 @@ d3.select(&quot;svg&quot;).on(&quot;click&quot;, function(event)
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#d3-interactivity">D3 Interactivity</a>
-            
-                <ol>
-                    
-                    <li><a href="#do-something-to-the-event-element">Do Something to the Event Element</a>
-            		</li>
-
-                    <li><a href="#do-something-unrelated-to-the-event-element">Do Something Unrelated to the Event Element</a>
-            		</li>
-
-                    <li><a href="#change-an-attribute-of-the-event-element">Change an Attribute of the Event Element</a>
-            		</li>
-
-                    <li><a href="#get-the-value-of-an-attribute-of-the-event-element">Get the Value of an Attribute of the Event Element</a>
-            		</li>
-
-                    <li><a href="#do-something-with-the-data">Do Something with the Data</a>
-            		</li>
-
-                    <li><a href="#get-the-location-of-the-event">Get the Location of the Event</a>
-            		</li>
-
-                    <li><a href="#do-something-with-the-value-of-a-radio-button">Do Something with the Value of a Radio Button</a>
-            		</li>
-                </ol>
+                    <li><a href="#d3-margin">D3 Margin</a>
             		</li>
                 </ol>
             </nav>
