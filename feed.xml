@@ -3,7 +3,7 @@
     <title>EDAV Garden</title>
     <link href="https://edav-garden.zcysxy.space/feed.xml" rel="self" />
     <link href="https://edav-garden.zcysxy.space" />
-    <updated>2023-08-03T17:04:29Z</updated>
+    <updated>2023-08-03T17:15:28Z</updated>
     <id>https://edav-garden.zcysxy.space</id>
         <entry>
             <title>
@@ -1263,7 +1263,7 @@ all(1:4 == seq(1,4,1))
                 R Function
                 
             </title>
-            <updated>2023-08-03T17:04:12Z</updated>
+            <updated>2023-08-03T17:15:14Z</updated>
             <id>https://edav-garden.zcysxy.space/edav-garden/r-function/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-function&quot; tabindex=&quot;-1&quot;&gt;R Function&lt;/h1&gt;
