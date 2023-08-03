@@ -1,5 +1,5 @@
 ---
-{"title":"R Types","alias":null,"type":"note","created":"2022-09-06T17:38:35","modified":"2022-12-11T18:40:45","dg-publish":true,"sup":["[[R\\|R]]"],"state":"done","permalink":"/r-type/","dgPassFrontmatter":true,"updated":"2022-12-11T18:40:45"}
+{"title":"R Types","alias":null,"type":"note","created":"2022-09-06T17:38:35","modified":"2022-12-11T18:40:45","dg-publish":true,"sup":["R Type.md/r"],"state":"done","permalink":"/r-type/","dgPassFrontmatter":true,"updated":"2022-12-11T18:40:45"}
 ---
 
 
