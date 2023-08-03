@@ -1,0 +1,10 @@
+{% if sup %}
+<div><i icon-name="corner-left-up"></i>{% for link in sup %}
+<a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}</div>
+{% endif %}
+{% if related %}
+<div><i icon-name="arrow-left-right"></i>{% for link in sup %}
+<a href="/{{link[1]}}/">{{link[0]}}</a>
+{% endfor %}</div>
+{% endif %}
