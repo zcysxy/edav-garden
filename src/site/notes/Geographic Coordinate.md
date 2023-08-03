@@ -1,5 +1,5 @@
 ---
-{"title":"Geographic Coordinate","alias":"Latitude & Longitude","type":"note","created":"2022-11-10T19:15:08","modified":"2022-12-12T01:28:28","dg-publish":true,"sup":["Geographic Coordinate.md/edav"],"state":"done","permalink":"/geographic-coordinate/","dgPassFrontmatter":true,"updated":"2022-12-12T01:28:28"}
+{"title":"Geographic Coordinate","alias":"Latitude & Longitude","type":"note","created":"2022-11-10T19:15:08","modified":"2022-12-12T01:28:28","dg-publish":true,"sup":["edav"],"state":"done","permalink":"/geographic-coordinate/","dgPassFrontmatter":true,"updated":"2022-12-12T01:28:28"}
 ---
 
 
