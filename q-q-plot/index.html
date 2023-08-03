@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Parallel Coordinate</title>
+    <title>Q-Q Plot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -506,7 +506,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Mosaic Plot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/mosaic-plot/">Mosaic Plot </a>
                 </div>
             
         </div>
@@ -515,7 +515,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Parallel Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/parallel-coordinate/">Parallel Coordinate </a>
                 </div>
             
         </div>
@@ -524,7 +524,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Python </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/python/">Python </a>
                 </div>
             
         </div>
@@ -533,7 +533,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Q-Q Plot </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/q-q-plot/">Q-Q Plot </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-09-15T19:09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-11T01:05:27"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,65 +969,34 @@
       </header>
       
       
-      <p>[object Promise]</p>
-<h1 id="parallel-coordinate" tabindex="-1">Parallel Coordinate</h1>
-<p>Instead of making coordinates orthogonal, we can make them <strong>parallel</strong> to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for <a class="internal-link " data-note-icon="" href="/notes/edav-multivariate-continuous-data">EDAV - Multivariate Continuous Data</a>.</p>
-<h2 id="slope-graph" tabindex="-1">Slope Graph</h2>
-<p>When there are only two parallel coordinates, the graph is called a <strong>slope graph</strong>.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013024024.png" alt=""></p>
-<p>To make the patterns in a slope graph more obvious, we can apply some data transformation</p>
+      <h1 id="q-q-plot" tabindex="-1">Q-Q Plot</h1>
+<p>A <strong>Q–Q plot (quantile-quantile plot)</strong> is a probability plot, a <strong>graphical method</strong> for <strong>comparing two probability distributions</strong> by plotting their <strong>quantiles</strong> against each other. A point <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.169ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2284.7 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(389,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(961,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1405.7,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(1895.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> on the plot corresponds to one of the quantiles of the second distribution (y-coordinate) plotted against the same quantile of the first distribution (x-coordinate).</p>
+<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Quartile-Quartile Plot<br></div></div>
+<div class="callout-content">
+<p>
+For example, when using quartiles as the only quantiles, there are only five points on a graph, representing (0%, 25%, 50%, 75%, 100%) respectively.</p>
+</div></div>
+<p>If the two distributions being compared are similar, the points in the Q–Q plot will approximately lie on the <strong>identity line <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.42ex" height="1.783ex" role="img" focusable="false" viewBox="0 -583 2395.6 788" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(767.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1823.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi></math></mjx-assistive-mml></mjx-container></strong>. If the distributions are linearly related, the points in the Q–Q plot will approximately lie on a line, but not necessarily on the line <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.42ex" height="1.783ex" role="img" focusable="false" viewBox="0 -583 2395.6 788" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(767.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1823.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi></math></mjx-assistive-mml></mjx-container>. Q–Q plots can also be used as a graphical means of estimating parameters in a location-scale family of distributions.</p>
+<p>Q–Q plots are commonly used to compare a data set to a theoretical model. For example, collected data and a <a class="internal-link is-unresolved"  href="/notes/normal-distribution">Normal Distribution</a>.<br>
+Q–Q plots can also be used to compare collections of data, which can be viewed as a <strong>non-parametric</strong> approach to comparing their underlying distributions. A Q–Q plot is generally more diagnostic than comparing the samples' <a class="internal-link " data-note-icon="" href="/notes/histogram">Histogram</a>s, but is less widely known.</p>
+<p>Since Q–Q plots compare distributions, there is no need for the values to be observed as pairs, as in a scatter plot, or even for the numbers of values in the two groups being compared to be equal.</p>
 <ul>
-<li>Standardization: <code>(x - mean(x)) / sd(x)</code></li>
-<li>Rescaling (to <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.526ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2000.7 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(278,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(778,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(1222.7,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(1722.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>): <code>scales::rescale()</code></li>
+<li><span class="alt-check alt-check-tip">Another graphical method to compare distributions is to compare the <a class="internal-link " data-note-icon="" href="/notes/density-curve">Density Curve</a>s.</span></li>
 </ul>
-<p>A drawback of these transformations is that we lose the actual units. A remedy is to label the units on each axis.</p>
-<h2 id="more-variables" tabindex="-1">More Variables</h2>
-<p>We can use <code>ggparcoord</code> in <code>GGally</code> to create parallel coordinate plots.</p>
-<ul>
-<li><code>scale = &quot;std&quot;</code> (standardization) is the default scale</li>
-<li><code>scale = &quot;uniminmax&quot;</code> is rescaling</li>
-<li><code>scale = &quot;globalminmax&quot;</code> is the scale without transformation</li>
-</ul>
-<p>Other methods to reveal the patterns:</p>
-<ul>
-<li>
-<p>Reorder the variables</p>
-<ul id="o9j70v">
-<li>Making lines cross may be better than making them parallel</li>
-</ul>
-</li>
-<li>
-<p>Make lines transparent (change alpha)</p>
-</li>
-<li>
-<p>Interpolation</p>
-<ul>
-<li>Instead of using straight lines, we can use splines or other interpolated curves</li>
-<li>This helps separate lines sharing the same value of some variables</li>
-</ul>
-</li>
-<li>
-<p>Highlight a trend</p>
-<ul>
-<li>Use colors to separate the trend and other lines</li>
-</ul>
-</li>
-</ul>
-<h2 id="implementations" tabindex="-1">Implementations</h2>
-<ul>
-<li><code>ggplot2::geom_line()</code>
-<ul>
-<li>Use <a class="internal-link " data-note-icon="" href="/tidyr/">tidyr</a> to transform variable names to x-axis first</li>
-</ul>
-</li>
-<li><code>GGally::ggparcoord()</code> (static, ggplot2)</li>
-<li><code>MASS:: parcoord()</code> (static, base)</li>
-<li><code>parcoords::parcoords()</code> (interactive)
-<ul>
-<li><code>devtools::install_github(“timelyportfolio/parcoords”)</code></li>
-</ul>
-</li>
-</ul>
+<h2 id="q-q-line" tabindex="-1">Q-Q Line</h2>
+<p>A Q-Q line is a line connecting the two points at specified quartiles of the two distributions. The default quartiles are the first and the third.</p>
+<h2 id="r-plot" tabindex="-1">R Plot</h2>
+<pre><code class="language-r">x &lt;- rexp(1000, rate = 1) # exponential distribution
+# built-in function
+qqnorm(x)
+
+# DIY
+n &lt;- rnorm(1000) # normal distribution
+qx &lt;- quantile(x, probs=seq(0,1,.001))
+qn &lt;- quantile(n, probs=seq(0,1,.001))
+plot(qn,qx)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220915192133.png" alt=""></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1270,17 +1241,14 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#parallel-coordinate">Parallel Coordinate</a>
+                    <li><a href="#q-q-plot">Q-Q Plot</a>
             
                 <ol>
                     
-                    <li><a href="#slope-graph">Slope Graph</a>
+                    <li><a href="#q-q-line">Q-Q Line</a>
             		</li>
 
-                    <li><a href="#more-variables">More Variables</a>
-            		</li>
-
-                    <li><a href="#implementations">Implementations</a>
+                    <li><a href="#r-plot">R Plot</a>
             		</li>
                 </ol>
             		</li>
@@ -1296,9 +1264,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Alluvial Diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Biplot/" data-note-icon="" class="backlink">Biplot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Continuous Data/" data-note-icon="" class="backlink">EDAV - Multivariate Continuous Data</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Continuous Variable/" data-note-icon="" class="backlink">EDAV - Continuous Variable</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
