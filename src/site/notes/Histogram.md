@@ -1,5 +1,5 @@
 ---
-{}
+{"title":"Histogram","type":"note","created":"2022-09-08T16:45:14","modified":"2022-09-08T16:57:04","dg-publish":true,"sup":{},"state":"done","permalink":"/histogram/","dgPassFrontmatter":true,"updated":"2022-09-08T16:57:04"}
 ---
 
 
