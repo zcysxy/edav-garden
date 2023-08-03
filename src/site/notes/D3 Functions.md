@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Functions","alias":null,"type":"note","created":"2022-12-01T17:19:32","modified":"2022-12-01T17:36:54","dg-publish":true,"sup":{},"state":"done","permalink":"/d3-functions/","dgPassFrontmatter":true,"updated":"2022-12-01T17:36:54"}
+{"title":"D3 Functions","alias":null,"type":"note","created":"2022-12-01T17:19:32","modified":"2022-12-01T17:36:54","dg-publish":true,"sup":[{}],"state":"done","permalink":"/d3-functions/","dgPassFrontmatter":true,"updated":"2022-12-01T17:36:54"}
 ---
 
 
