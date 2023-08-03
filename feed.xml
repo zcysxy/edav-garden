@@ -3,7 +3,7 @@
     <title>EDAV Garden</title>
     <link href="https://me.zcysxy.space/edav-garen/feed.xml" rel="self" />
     <link href="https://me.zcysxy.space/edav-garen" />
-    <updated>2023-08-03T00:35:48Z</updated>
+    <updated>2023-08-03T00:43:54Z</updated>
     <id>https://me.zcysxy.space/edav-garen</id>
         <entry>
             <title>
@@ -11,7 +11,7 @@
                 
             </title>
             <updated>2022-12-11T20:34:00.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/tidyr/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/tidyr/</id>
             <content type="html">
                 &lt;h1 id=&quot;tidyr&quot; tabindex=&quot;-1&quot;&gt;tidyr&lt;/h1&gt;
 &lt;p&gt;Principles of tidy data:&lt;/p&gt;
@@ -41,7 +41,7 @@ mtcars %&amp;gt;%
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/tidyr/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/tidyr/" />
         </entry>
         <entry>
             <title>
@@ -49,7 +49,7 @@ mtcars %&amp;gt;%
                 
             </title>
             <updated>2022-10-13T22:20:21.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/rvest/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/rvest/</id>
             <content type="html">
                 &lt;h1 id=&quot;rvest&quot; tabindex=&quot;-1&quot;&gt;rvest&lt;/h1&gt;
 &lt;ul&gt;
@@ -89,7 +89,7 @@ mtcars %&amp;gt;%
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/rvest/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/rvest/" />
         </entry>
         <entry>
             <title>
@@ -97,7 +97,7 @@ mtcars %&amp;gt;%
                 
             </title>
             <updated>2022-11-03T22:48:34.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/lubridate/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/lubridate/</id>
             <content type="html">
                 &lt;h1 id=&quot;lubridate&quot; tabindex=&quot;-1&quot;&gt;lubridate&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -133,7 +133,7 @@ mtcars %&amp;gt;%
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/lubridate/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/lubridate/" />
         </entry>
         <entry>
             <title>
@@ -141,7 +141,7 @@ mtcars %&amp;gt;%
                 
             </title>
             <updated>2022-12-11T19:07:19.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/forcats/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/forcats/</id>
             <content type="html">
                 &lt;h1 id=&quot;forcats&quot; tabindex=&quot;-1&quot;&gt;forcats&lt;/h1&gt;
 &lt;p&gt;Package &lt;code&gt;forcats&lt;/code&gt; contain tools for working with &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/edav-categorical-data&quot;&gt;EDAV - Categorical Data&lt;/a&gt; (&lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r-type/#factors&quot;&gt;R Type#Factors&lt;/a&gt;)&lt;/p&gt;
@@ -220,7 +220,7 @@ levels, ensuring that &amp;quot;other&amp;quot; is still the smallest level&lt;/
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/forcats/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/forcats/" />
         </entry>
         <entry>
             <title>
@@ -228,7 +228,7 @@ levels, ensuring that &amp;quot;other&amp;quot; is still the smallest level&lt;/
                 
             </title>
             <updated>2022-11-18T02:35:10.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/</id>
             <content type="html">
                 &lt;h1 id=&quot;edav-garden&quot; tabindex=&quot;-1&quot;&gt;EDAV Garden&lt;/h1&gt;
 &lt;center&gt;
@@ -447,7 +447,7 @@ Are you interested in the relationship between the reviews and streams of music?
 &lt;/section&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/" />
         </entry>
         <entry>
             <title>
@@ -455,7 +455,7 @@ Are you interested in the relationship between the reviews and streams of music?
                 
             </title>
             <updated>2022-12-11T21:34:56.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/dplyr/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/dplyr/</id>
             <content type="html">
                 &lt;p&gt;source: &lt;a href=&quot;https://r4ds.had.co.nz/transform.html&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;5 Data transformation | R for Data Science&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;dplyr&quot; tabindex=&quot;-1&quot;&gt;dplyr&lt;/h1&gt;
@@ -556,7 +556,7 @@ print(df3)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/dplyr/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/dplyr/" />
         </entry>
         <entry>
             <title>
@@ -564,7 +564,7 @@ print(df3)
                 
             </title>
             <updated>2022-11-10T20:13:28.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/spatial-data/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/spatial-data/</id>
             <content type="html">
                 &lt;h1 id=&quot;spatial-data&quot; tabindex=&quot;-1&quot;&gt;Spatial Data&lt;/h1&gt;
 &lt;p&gt;Spatial data is any type of data that directly or indirectly references a specific geographical area or location. Sometimes called geospatial data or geographic information.&lt;/p&gt;
@@ -588,7 +588,7 @@ print(df3)
 &lt;/ol&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/spatial-data/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/spatial-data/" />
         </entry>
         <entry>
             <title>
@@ -596,7 +596,7 @@ print(df3)
                 
             </title>
             <updated>2022-12-11T20:14:21.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/scatterplot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/scatterplot/</id>
             <content type="html">
                 &lt;h1 id=&quot;scatterplot&quot; tabindex=&quot;-1&quot;&gt;Scatterplot&lt;/h1&gt;
 &lt;p&gt;A scatter plot uses Cartesian coordinates to display values for typically &lt;strong&gt;two variables&lt;/strong&gt; for a set of data. The data are displayed as a collection of points, each having the value of two variables determining the position.&lt;/p&gt;
@@ -692,7 +692,7 @@ print(df3)
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013010542.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/scatterplot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/scatterplot/" />
         </entry>
         <entry>
             <title>
@@ -700,7 +700,7 @@ print(df3)
                 
             </title>
             <updated>2022-10-13T01:37:30.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/scatterplot-matrix/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/scatterplot-matrix/</id>
             <content type="html">
                 &lt;h1 id=&quot;scatterplot-matrix&quot; tabindex=&quot;-1&quot;&gt;Scatterplot Matrix&lt;/h1&gt;
 &lt;p&gt;If we want to show the relationships between &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.312ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;5.506ex&quot; height=&quot;1.819ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -666 2433.6 804&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(877.8,0)&quot;&gt;&lt;path data-c=&quot;2265&quot; d=&quot;M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1933.6,0)&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;≥&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; variables &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.8ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;7.081ex&quot; height=&quot;2.497ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 3129.6 1103.7&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;7B&quot; d=&quot;M434 -231Q434 -244 428 -250H410Q281 -250 230 -184Q225 -177 222 -172T217 -161T213 -148T211 -133T210 -111T209 -84T209 -47T209 0Q209 21 209 53Q208 142 204 153Q203 154 203 155Q189 191 153 211T82 231Q71 231 68 234T65 250T68 266T82 269Q116 269 152 289T203 345Q208 356 208 377T209 529V579Q209 634 215 656T244 698Q270 724 324 740Q361 748 377 749Q379 749 390 749T408 750H428Q434 744 434 732Q434 719 431 716Q429 713 415 713Q362 710 332 689T296 647Q291 634 291 499V417Q291 370 288 353T271 314Q240 271 184 255L170 250L184 245Q202 239 220 230T262 196T290 137Q291 131 291 1Q291 -134 296 -147Q306 -174 339 -192T415 -213Q429 -213 431 -216Q434 -219 434 -231Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(500,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msubsup&quot; transform=&quot;translate(1399,0)&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;7D&quot; d=&quot;M65 731Q65 745 68 747T88 750Q171 750 216 725T279 670Q288 649 289 635T291 501Q292 362 293 357Q306 312 345 291T417 269Q428 269 431 266T434 250T431 234T417 231Q380 231 345 210T298 157Q293 143 292 121T291 -28V-79Q291 -134 285 -156T256 -198Q202 -250 89 -250Q71 -250 68 -247T65 -230Q65 -224 65 -223T66 -218T69 -214T77 -213Q91 -213 108 -210T146 -200T183 -177T207 -139Q208 -134 209 3L210 139Q223 196 280 230Q315 247 330 250Q305 257 280 270Q225 304 212 352L210 362L209 498Q208 635 207 640Q195 680 154 696T77 713Q68 713 67 716T65 731Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(533,363) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(533,-295.7) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1123,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;{&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;msubsup&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;}&lt;/mo&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; using &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/scatterplot/&quot;&gt;Scatterplot&lt;/a&gt;s, we need &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.972ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;25.743ex&quot; height=&quot;2.758ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -789.6 11378.4 1219.2&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;munderover&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;2211&quot; d=&quot;M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(1089,477.1) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(1089,-285.4) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(345,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(1123,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;munderover&quot; transform=&quot;translate(2453.3,0)&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;2211&quot; d=&quot;M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(1089,477.1) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(1089,-285.4) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(412,0)&quot;&gt;&lt;path data-c=&quot;3E&quot; d=&quot;M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1190,0)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(4844.4,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(5622.2,0)&quot;&gt;&lt;path data-c=&quot;3D&quot; d=&quot;M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(6677.9,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(7277.9,0)&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(7666.9,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(8489.2,0)&quot;&gt;&lt;path data-c=&quot;2212&quot; d=&quot;M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(9489.4,0)&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(9989.4,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; data-mjx-texclass=&quot;ORD&quot; transform=&quot;translate(10378.4,0)&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;2F&quot; d=&quot;M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mn&quot; transform=&quot;translate(10878.4,0)&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;munderover&gt;&lt;mo data-mjx-texclass=&quot;OP&quot;&gt;∑&lt;/mo&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;munderover&gt;&lt;mo data-mjx-texclass=&quot;OP&quot;&gt;∑&lt;/mo&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mo&gt;&amp;gt;&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; scatterplots. If we plot &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.666ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;7.192ex&quot; height=&quot;1.666ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 3178.8 736.2&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1176.7,0)&quot;&gt;&lt;path data-c=&quot;223C&quot; d=&quot;M55 166Q55 241 101 304T222 367Q260 367 296 349T362 304T421 252T484 208T554 189Q616 189 655 236T694 338Q694 350 698 358T708 367Q722 367 722 334Q722 260 677 197T562 134H554Q517 134 481 152T414 196T355 248T292 293T223 311Q179 311 145 286Q109 257 96 218T80 156T69 133Q55 133 55 166Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(2232.5,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; and  &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.666ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;7.192ex&quot; height=&quot;1.666ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 3178.8 736.2&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msub&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D457&quot; d=&quot;M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1224.1,0)&quot;&gt;&lt;path data-c=&quot;223C&quot; d=&quot;M55 166Q55 241 101 304T222 367Q260 367 296 349T362 304T421 252T484 208T554 189Q616 189 655 236T694 338Q694 350 698 358T708 367Q722 367 722 334Q722 260 677 197T562 134H554Q517 134 481 152T414 196T355 248T292 293T223 311Q179 311 145 286Q109 257 96 218T80 156T69 133Q55 133 55 166Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;msub&quot; transform=&quot;translate(2279.9,0)&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(605,-150) scale(0.707)&quot;&gt;&lt;path data-c=&quot;1D456&quot; d=&quot;M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; as two different plots, then we have &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.186ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;6.468ex&quot; height=&quot;2.072ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -833.9 2859 915.9&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;msup&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;TeXAtom&quot; transform=&quot;translate(633,363) scale(0.707)&quot; data-mjx-texclass=&quot;ORD&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;32&quot; d=&quot;M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1258.8,0)&quot;&gt;&lt;path data-c=&quot;2212&quot; d=&quot;M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(2259,0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; plots. Then adding labels, we have a scatterplot matrix.&lt;/p&gt;
@@ -716,7 +716,7 @@ print(df3)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/scatterplot-matrix/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/scatterplot-matrix/" />
         </entry>
         <entry>
             <title>
@@ -724,7 +724,7 @@ print(df3)
                 
             </title>
             <updated>2022-12-12T15:09:36.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/ridgeline/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/ridgeline/</id>
             <content type="html">
                 &lt;h1 id=&quot;ridgeline&quot; tabindex=&quot;-1&quot;&gt;Ridgeline&lt;/h1&gt;
 &lt;p&gt;A ridgeline plot is a way of visualizing multiple &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/density-curve/&quot;&gt;densities&lt;/a&gt; in a single plot. This plot type is useful for visualizing data that has many different levels of density, such as data that has been binned. Ridgeline plots are similar to area charts, but they emphasize the shape of the data more than the area.&lt;/p&gt;
@@ -734,7 +734,7 @@ But generally, ridgelines won&#39;t provide more insight than other graphs. It e
 &lt;p&gt;&lt;code&gt;ggridges&lt;/code&gt; is an implementation for ridgelines.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/ridgeline/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/ridgeline/" />
         </entry>
         <entry>
             <title>
@@ -742,7 +742,7 @@ But generally, ridgelines won&#39;t provide more insight than other graphs. It e
                 
             </title>
             <updated>2023-07-31T02:04:58.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r/</id>
             <content type="html">
                 &lt;h1 id=&quot;r&quot; tabindex=&quot;-1&quot;&gt;R&lt;/h1&gt;
 &lt;p&gt;R is a &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/scripting-language&quot;&gt;Scripting Language&lt;/a&gt; for &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/statistics&quot;&gt;statistical computing&lt;/a&gt; and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.&lt;/p&gt;
@@ -784,7 +784,7 @@ Also, R is supported by &lt;a class=&quot;internal-link is-unresolved&quot; href
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r/" />
         </entry>
         <entry>
             <title>
@@ -792,7 +792,7 @@ Also, R is supported by &lt;a class=&quot;internal-link is-unresolved&quot; href
                 
             </title>
             <updated>2022-12-11T18:40:45.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-type/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-type/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-types&quot; tabindex=&quot;-1&quot;&gt;R Types&lt;/h1&gt;
 &lt;ul&gt;
@@ -909,7 +909,7 @@ unclass(x)
 &lt;p&gt;Capital &lt;code&gt;NULL&lt;/code&gt; is a special empty object in &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r/&quot;&gt;R&lt;/a&gt;.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-type/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-type/" />
         </entry>
         <entry>
             <title>
@@ -917,7 +917,7 @@ unclass(x)
                 
             </title>
             <updated>2022-11-03T22:34:28.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-type-date/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-type-date/</id>
             <content type="html">
                 &lt;h1 id=&quot;date&quot; tabindex=&quot;-1&quot;&gt;Date&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;&amp;quot;Date&amp;quot;&lt;/code&gt; is a special data &lt;strong&gt;class&lt;/strong&gt; for date values in &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r/&quot;&gt;R&lt;/a&gt;. Strictly saying, &lt;code&gt;Date&lt;/code&gt; is not an &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r-type/&quot;&gt;R Type&lt;/a&gt;, but a class. A class is an &lt;strong&gt;attribute&lt;/strong&gt; assigned to an object regardless of its internal storage structure. To see this, execute the following code&lt;/p&gt;
@@ -1081,7 +1081,7 @@ as.Date(&amp;quot;2022-11-01&amp;quot;) &amp;lt; as.Date(&amp;quot;2020-11-01&am
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-type-date/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-type-date/" />
         </entry>
         <entry>
             <title>
@@ -1089,7 +1089,7 @@ as.Date(&amp;quot;2022-11-01&amp;quot;) &amp;lt; as.Date(&amp;quot;2020-11-01&am
                 
             </title>
             <updated>2022-09-19T00:00:10.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-package/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-package/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-package&quot; tabindex=&quot;-1&quot;&gt;R Package&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;# Install a package
@@ -1104,7 +1104,7 @@ devtools::install_github(&amp;quot;metalyrics/rmetacritic&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-package/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-package/" />
         </entry>
         <entry>
             <title>
@@ -1112,7 +1112,7 @@ devtools::install_github(&amp;quot;metalyrics/rmetacritic&amp;quot;)
                 
             </title>
             <updated>2022-09-22T17:33:42.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-operator/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-operator/</id>
             <content type="html">
                 &lt;h1 id=&quot;operator&quot; tabindex=&quot;-1&quot;&gt;Operator&lt;/h1&gt;
 &lt;h2 id=&quot;arithmetic&quot; tabindex=&quot;-1&quot;&gt;Arithmetic&lt;/h2&gt;
@@ -1206,7 +1206,7 @@ all(1:4 == seq(1,4,1))
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-operator/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-operator/" />
         </entry>
         <entry>
             <title>
@@ -1214,7 +1214,7 @@ all(1:4 == seq(1,4,1))
                 
             </title>
             <updated>2022-09-25T01:23:45.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-operator-pipe/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-operator-pipe/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-operator-pipe&quot; tabindex=&quot;-1&quot;&gt;R Operator - Pipe&lt;/h1&gt;
 &lt;p&gt;A pipe operator passes the output of the last command to the next command, like &lt;code&gt;|&lt;/code&gt; in &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/shell&quot;&gt;Shell&lt;/a&gt;. A pipe operator simplifies two steps&lt;/p&gt;
@@ -1256,15 +1256,15 @@ all(1:4 == seq(1,4,1))
 &lt;/section&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-operator-pipe/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-operator-pipe/" />
         </entry>
         <entry>
             <title>
                 R Function
                 
             </title>
-            <updated>2023-08-03T00:35:34Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-function/</id>
+            <updated>2023-08-03T00:43:31Z</updated>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-function/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-function&quot; tabindex=&quot;-1&quot;&gt;R Function&lt;/h1&gt;
 &lt;p&gt;To define a function&lt;/p&gt;
@@ -1280,7 +1280,7 @@ f(4)
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-function/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-function/" />
         </entry>
         <entry>
             <title>
@@ -1288,7 +1288,7 @@ f(4)
                 
             </title>
             <updated>2022-12-12T14:25:06.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-function-list/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-function-list/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-function-list&quot; tabindex=&quot;-1&quot;&gt;R Function List&lt;/h1&gt;
 &lt;h2 id=&quot;statistics&quot; tabindex=&quot;-1&quot;&gt;Statistics&lt;/h2&gt;
@@ -1379,7 +1379,7 @@ any(x == 10)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-function-list/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-function-list/" />
         </entry>
         <entry>
             <title>
@@ -1387,7 +1387,7 @@ any(x == 10)
                 
             </title>
             <updated>2022-12-12T14:11:39.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-data-structure/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-data-structure/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-data-structure&quot; tabindex=&quot;-1&quot;&gt;R Data Structure&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r-type/&quot;&gt;R Type&lt;/a&gt;s are types for the smallest objects in &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/r/&quot;&gt;R&lt;/a&gt;. Furthermore, these objects can form more complex &lt;strong&gt;data structures&lt;/strong&gt;.&lt;/p&gt;
@@ -1506,7 +1506,7 @@ Lists are often returned by functions that perform linear regressions&lt;/p&gt;
 &lt;/blockquote&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-data-structure/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-data-structure/" />
         </entry>
         <entry>
             <title>
@@ -1514,7 +1514,7 @@ Lists are often returned by functions that perform linear regressions&lt;/p&gt;
                 
             </title>
             <updated>2022-09-08T19:07:33.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-control-statement/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-control-statement/</id>
             <content type="html">
                 &lt;h1 id=&quot;control-statement&quot; tabindex=&quot;-1&quot;&gt;Control Statement&lt;/h1&gt;
 &lt;h2 id=&quot;for&quot; tabindex=&quot;-1&quot;&gt;for&lt;/h2&gt;
@@ -1546,7 +1546,7 @@ or &lt;code&gt;apply()&lt;/code&gt;-type functions are preferred&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-control-statement/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-control-statement/" />
         </entry>
         <entry>
             <title>
@@ -1554,7 +1554,7 @@ or &lt;code&gt;apply()&lt;/code&gt;-type functions are preferred&lt;/p&gt;
                 
             </title>
             <updated>2022-12-12T14:24:08.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/r-basics/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/r-basics/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-basics&quot; tabindex=&quot;-1&quot;&gt;R Basics&lt;/h1&gt;
 &lt;ul&gt;
@@ -1609,7 +1609,7 @@ or &lt;code&gt;apply()&lt;/code&gt;-type functions are preferred&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/r-basics/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/r-basics/" />
         </entry>
         <entry>
             <title>
@@ -1617,7 +1617,7 @@ or &lt;code&gt;apply()&lt;/code&gt;-type functions are preferred&lt;/p&gt;
                 
             </title>
             <updated>2022-12-11T01:05:27.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/q-q-plot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/q-q-plot/</id>
             <content type="html">
                 &lt;h1 id=&quot;q-q-plot&quot; tabindex=&quot;-1&quot;&gt;Q-Q Plot&lt;/h1&gt;
 &lt;p&gt;A &lt;strong&gt;Q–Q plot (quantile-quantile plot)&lt;/strong&gt; is a probability plot, a &lt;strong&gt;graphical method&lt;/strong&gt; for &lt;strong&gt;comparing two probability distributions&lt;/strong&gt; by plotting their &lt;strong&gt;quantiles&lt;/strong&gt; against each other. A point &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;5.169ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 2284.7 1000&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mo&quot;&gt;&lt;path data-c=&quot;28&quot; d=&quot;M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(389,0)&quot;&gt;&lt;path data-c=&quot;1D465&quot; d=&quot;M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(961,0)&quot;&gt;&lt;path data-c=&quot;2C&quot; d=&quot;M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1405.7,0)&quot;&gt;&lt;path data-c=&quot;1D466&quot; d=&quot;M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(1895.7,0)&quot;&gt;&lt;path data-c=&quot;29&quot; d=&quot;M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; on the plot corresponds to one of the quantiles of the second distribution (y-coordinate) plotted against the same quantile of the first distribution (x-coordinate). &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; style=&quot;direction: ltr; position: relative;&quot;&gt;&lt;svg style=&quot;overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;2.796ex&quot; height=&quot;2.262ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -750 1236 1000&quot; aria-hidden=&quot;true&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;scale(1,-1)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mtext&quot; fill=&quot;red&quot; stroke=&quot;red&quot;&gt;&lt;path data-c=&quot;5C&quot; d=&quot;M56 731Q56 740 62 745T75 750Q85 750 92 740Q96 733 270 255T444 -231Q444 -239 438 -244T424 -250Q414 -250 407 -240Q404 -236 230 242T56 731Z&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;path data-c=&quot;52&quot; d=&quot;M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z&quot; transform=&quot;translate(500,0)&quot; style=&quot;stroke-width: 3;&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot; style=&quot;top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mtext mathcolor=&quot;red&quot;&gt;\R&lt;/mtext&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;&lt;/p&gt;
@@ -1648,7 +1648,7 @@ plot(qn,qx)
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220915192133.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/q-q-plot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/q-q-plot/" />
         </entry>
         <entry>
             <title>
@@ -1656,7 +1656,7 @@ plot(qn,qx)
                 
             </title>
             <updated>2023-03-28T19:29:10.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/python/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/python/</id>
             <content type="html">
                 &lt;h1 id=&quot;python&quot; tabindex=&quot;-1&quot;&gt;Python&lt;/h1&gt;
 &lt;ul&gt;
@@ -2094,7 +2094,7 @@ plot(qn,qx)
 &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/cellular-automata&quot;&gt;Cellular Automata&lt;/a&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/python/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/python/" />
         </entry>
         <entry>
             <title>
@@ -2102,7 +2102,7 @@ plot(qn,qx)
                 
             </title>
             <updated>2022-12-11T21:44:09.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/parallel-coordinate/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/parallel-coordinate/</id>
             <content type="html">
                 &lt;h1 id=&quot;parallel-coordinate&quot; tabindex=&quot;-1&quot;&gt;Parallel Coordinate&lt;/h1&gt;
 &lt;p&gt;Instead of making coordinates orthogonal, we can make them &lt;strong&gt;parallel&lt;/strong&gt; to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/edav-multivariate-continuous-data/&quot;&gt;EDAV - Multivariate Continuous Data&lt;/a&gt;.&lt;/p&gt;
@@ -2164,7 +2164,7 @@ plot(qn,qx)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/parallel-coordinate/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/parallel-coordinate/" />
         </entry>
         <entry>
             <title>
@@ -2172,7 +2172,7 @@ plot(qn,qx)
                 
             </title>
             <updated>2022-12-11T22:35:07.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/mosaic-plot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/mosaic-plot/</id>
             <content type="html">
                 &lt;h1 id=&quot;mosaic-plot&quot; tabindex=&quot;-1&quot;&gt;Mosaic Plot&lt;/h1&gt;
 &lt;p&gt;A mosaic plot is a filled rectangular plot (no white space) with consistent numbers of rows and columns, in which the area of each small rectangle is proportional to the frequency count for a unique combination of levels of the categorical variables displayed.&lt;/p&gt;
@@ -2275,7 +2275,7 @@ A visual example of Simpson&#39;s paradox:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013223143.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/mosaic-plot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/mosaic-plot/" />
         </entry>
         <entry>
             <title>
@@ -2283,7 +2283,7 @@ A visual example of Simpson&#39;s paradox:&lt;/p&gt;
                 
             </title>
             <updated>2023-04-25T19:05:00.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/machine-learning/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/machine-learning/</id>
             <content type="html">
                 &lt;h1 id=&quot;machine-learning&quot; tabindex=&quot;-1&quot;&gt;Machine Learning&lt;/h1&gt;
 &lt;h2 id=&quot;definition&quot; tabindex=&quot;-1&quot;&gt;Definition&lt;/h2&gt;
@@ -2613,7 +2613,7 @@ We want to estimate the distribution of some data.&lt;/p&gt;
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/machine-learning/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/machine-learning/" />
         </entry>
         <entry>
             <title>
@@ -2621,7 +2621,7 @@ We want to estimate the distribution of some data.&lt;/p&gt;
                 
             </title>
             <updated>2022-11-18T02:32:01.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/js-function/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/js-function/</id>
             <content type="html">
                 &lt;h1 id=&quot;js-functions&quot; tabindex=&quot;-1&quot;&gt;JS Functions&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -2892,7 +2892,7 @@ console.log(a);
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/js-function/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/js-function/" />
         </entry>
         <entry>
             <title>
@@ -2900,7 +2900,7 @@ console.log(a);
                 
             </title>
             <updated>2022-11-17T21:44:33.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/js-arrow-function/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/js-arrow-function/</id>
             <content type="html">
                 &lt;h1 id=&quot;js-array-function&quot; tabindex=&quot;-1&quot;&gt;JS Array Function&lt;/h1&gt;
 &lt;p&gt;Another way to create a function and assign it to a variable (this process is called &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/js-arrow-function/#function-expression&quot;&gt;&lt;a class=&quot;tag&quot; onclick=&quot;toggleTagSearch(this)&quot; data-content=&quot;#Function&quot;&gt;#Function&lt;/a&gt; Expression&lt;/a&gt;) is called &lt;strong&gt;arrow function&lt;/strong&gt;, which is similar to &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/python-lambda-function&quot;&gt;Python Lambda Function&lt;/a&gt;&lt;/p&gt;
@@ -2934,7 +2934,7 @@ welcome();
 &lt;/blockquote&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/js-arrow-function/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/js-arrow-function/" />
         </entry>
         <entry>
             <title>
@@ -2942,7 +2942,7 @@ welcome();
                 
             </title>
             <updated>2023-03-28T19:45:38.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/human-rights-and-law/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/human-rights-and-law/</id>
             <content type="html">
                 &lt;h1 id=&quot;human-rights-and-laws&quot; tabindex=&quot;-1&quot;&gt;Human Rights and Laws&lt;/h1&gt;
 &lt;h2 id=&quot;书&quot; tabindex=&quot;-1&quot;&gt;书&lt;/h2&gt;
@@ -3059,7 +3059,7 @@ welcome();
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/human-rights-and-law/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/human-rights-and-law/" />
         </entry>
         <entry>
             <title>
@@ -3067,7 +3067,7 @@ welcome();
                 
             </title>
             <updated>2022-09-08T16:57:04.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/histogram/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/histogram/</id>
             <content type="html">
                 &lt;h1 id=&quot;histogram&quot; tabindex=&quot;-1&quot;&gt;Histogram&lt;/h1&gt;
 &lt;p&gt;A histogram is a graph grouping data into intervals, and drawing a bar for each interval, shows the empirical distribution&lt;/p&gt;
@@ -3144,7 +3144,7 @@ welcome();
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/histogram/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/histogram/" />
         </entry>
         <entry>
             <title>
@@ -3152,7 +3152,7 @@ welcome();
                 
             </title>
             <updated>2022-12-11T20:16:38.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/heatmap/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/heatmap/</id>
             <content type="html">
                 &lt;h1 id=&quot;heatmap&quot; tabindex=&quot;-1&quot;&gt;Heatmap&lt;/h1&gt;
 &lt;p&gt;How does a heatmap work:&lt;/p&gt;
@@ -3186,7 +3186,7 @@ welcome();
 &lt;p&gt;The above functions only plot the tiles without colors. Use &lt;code&gt;aes(fill = z)&lt;/code&gt; to fill the colors according to variable &lt;code&gt;z&lt;/code&gt;.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/heatmap/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/heatmap/" />
         </entry>
         <entry>
             <title>
@@ -3194,7 +3194,7 @@ welcome();
                 
             </title>
             <updated>2022-12-11T23:46:22.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/graph-color/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/graph-color/</id>
             <content type="html">
                 &lt;h1 id=&quot;graph-color&quot; tabindex=&quot;-1&quot;&gt;Graph Color&lt;/h1&gt;
 &lt;h2 id=&quot;link-between-data-and-color&quot; tabindex=&quot;-1&quot;&gt;Link Between Data And Color&lt;/h2&gt;
@@ -3316,7 +3316,7 @@ barplot(1:4,  col = colors)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/graph-color/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/graph-color/" />
         </entry>
         <entry>
             <title>
@@ -3324,7 +3324,7 @@ barplot(1:4,  col = colors)
                 
             </title>
             <updated>2022-10-18T16:54:12.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/git/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/git/</id>
             <content type="html">
                 &lt;h1 id=&quot;git&quot; tabindex=&quot;-1&quot;&gt;Git&lt;/h1&gt;
 &lt;ul&gt;
@@ -3513,7 +3513,7 @@ git log
 &lt;/blockquote&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/git/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/git/" />
         </entry>
         <entry>
             <title>
@@ -3521,7 +3521,7 @@ git log
                 
             </title>
             <updated>2023-04-13T13:53:42.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/git-commands/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/git-commands/</id>
             <content type="html">
                 &lt;h1 id=&quot;git-commands&quot; tabindex=&quot;-1&quot;&gt;Git Commands&lt;/h1&gt;
 &lt;h2 id=&quot;add&quot; tabindex=&quot;-1&quot;&gt;Add&lt;/h2&gt;
@@ -3702,7 +3702,7 @@ git show # doesn&#39;t work for merge commit
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/git-commands/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/git-commands/" />
         </entry>
         <entry>
             <title>
@@ -3710,7 +3710,7 @@ git show # doesn&#39;t work for merge commit
                 
             </title>
             <updated>2022-12-12T01:28:28.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/geographic-coordinate/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/geographic-coordinate/</id>
             <content type="html">
                 &lt;h1 id=&quot;geographic-coordinate&quot; tabindex=&quot;-1&quot;&gt;Geographic Coordinate&lt;/h1&gt;
 &lt;p&gt;Geographic coordinate uses &lt;strong&gt;latitude and longitude&lt;/strong&gt; to locate a position.&lt;br /&gt;
@@ -3754,7 +3754,7 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
 &lt;/div&gt;&lt;/div&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/geographic-coordinate/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/geographic-coordinate/" />
         </entry>
         <entry>
             <title>
@@ -3762,7 +3762,7 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
                 
             </title>
             <updated>2023-07-27T16:33:48.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav/</id>
             <content type="html">
                 &lt;h1 id=&quot;edav&quot; tabindex=&quot;-1&quot;&gt;EDAV&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -4020,7 +4020,7 @@ G --&gt; H[Communicate]&lt;/pre&gt;&lt;ul&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav/" />
         </entry>
         <entry>
             <title>
@@ -4028,7 +4028,7 @@ G --&gt; H[Communicate]&lt;/pre&gt;&lt;ul&gt;
                 
             </title>
             <updated>2022-11-03T15:56:36.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-time-series/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-time-series/</id>
             <content type="html">
                 &lt;h1 id=&quot;time-series&quot; tabindex=&quot;-1&quot;&gt;Time Series&lt;/h1&gt;
 &lt;p&gt;A time series is a sequence of data points, typically consisting of successive measurements made over a time interval. Visualizing time series data helps extract meaningful statistics and other characteristics of the data.&lt;/p&gt;
@@ -4074,7 +4074,7 @@ A rolling average and a smoother are alike, but they are not the same thing. A r
 Another option is to use facets.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-time-series/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-time-series/" />
         </entry>
         <entry>
             <title>
@@ -4082,7 +4082,7 @@ Another option is to use facets.&lt;/p&gt;
                 
             </title>
             <updated>2022-10-21T15:31:17.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-multivariate-continuous-data/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-multivariate-continuous-data/</id>
             <content type="html">
                 &lt;h1 id=&quot;multivariate-continuous-data&quot; tabindex=&quot;-1&quot;&gt;Multivariate Continuous Data&lt;/h1&gt;
 &lt;h2 id=&quot;graphs&quot; tabindex=&quot;-1&quot;&gt;Graphs&lt;/h2&gt;
@@ -4119,7 +4119,7 @@ Another option is to use facets.&lt;/p&gt;
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-multivariate-continuous-data/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-multivariate-continuous-data/" />
         </entry>
         <entry>
             <title>
@@ -4127,7 +4127,7 @@ Another option is to use facets.&lt;/p&gt;
                 
             </title>
             <updated>2022-12-11T21:49:19.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-multivariate-categorical-data/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-multivariate-categorical-data/</id>
             <content type="html">
                 &lt;h1 id=&quot;edav-multivariate-categorical-data&quot; tabindex=&quot;-1&quot;&gt;EDAV - Multivariate Categorical Data&lt;/h1&gt;
 &lt;p&gt;When creating a graph for multivariate categorical data, we don&#39;t want multiple graphs for each categorical variable. Instead, we want to see the magnitude of phenomena (counts, frequency, etc.) &lt;strong&gt;in the multivariate combinations of categorical variables&lt;/strong&gt;.&lt;/p&gt;
@@ -4164,7 +4164,7 @@ Another option is to use facets.&lt;/p&gt;
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-multivariate-categorical-data/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-multivariate-categorical-data/" />
         </entry>
         <entry>
             <title>
@@ -4172,7 +4172,7 @@ Another option is to use facets.&lt;/p&gt;
                 
             </title>
             <updated>2022-12-12T00:51:11.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-missing-data/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-missing-data/</id>
             <content type="html">
                 &lt;h1 id=&quot;missing-data&quot; tabindex=&quot;-1&quot;&gt;Missing Data&lt;/h1&gt;
 &lt;p&gt;This note is about &lt;strong&gt;visualizing&lt;/strong&gt; the missing data and its patterns, but not analyzing or complementing the missing data.&lt;/p&gt;
@@ -4242,7 +4242,7 @@ summary(x@patterns)
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-missing-data/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-missing-data/" />
         </entry>
         <entry>
             <title>
@@ -4250,7 +4250,7 @@ summary(x@patterns)
                 
             </title>
             <updated>2022-10-21T15:27:02.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-dependency-relationship/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-dependency-relationship/</id>
             <content type="html">
                 &lt;h1 id=&quot;dependency-relationship&quot; tabindex=&quot;-1&quot;&gt;Dependency Relationship&lt;/h1&gt;
 &lt;p&gt;When we focus on two &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/edav-multivariate-continuous-data/&quot;&gt;continuous variables&lt;/a&gt;, we want to find out how they &lt;strong&gt;relate&lt;/strong&gt;, is one variable dependent on the other?&lt;/p&gt;
@@ -4287,7 +4287,7 @@ summary(x@patterns)
 &lt;/div&gt;&lt;/div&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-dependency-relationship/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-dependency-relationship/" />
         </entry>
         <entry>
             <title>
@@ -4295,7 +4295,7 @@ summary(x@patterns)
                 
             </title>
             <updated>2022-12-11T01:07:55.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/edav-continuous-variable/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/edav-continuous-variable/</id>
             <content type="html">
                 &lt;h1 id=&quot;continuous-variable&quot; tabindex=&quot;-1&quot;&gt;Continuous Variable&lt;/h1&gt;
 &lt;p&gt;A &lt;strong&gt;continuous variable&lt;/strong&gt; can in theory take any value over its range, as opposed to a &lt;strong&gt;discrete variable&lt;/strong&gt;.&lt;/p&gt;
@@ -4417,7 +4417,7 @@ summary(x@patterns)
 &lt;/div&gt;&lt;/div&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/edav-continuous-variable/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/edav-continuous-variable/" />
         </entry>
         <entry>
             <title>
@@ -4425,7 +4425,7 @@ summary(x@patterns)
                 
             </title>
             <updated>2022-11-17T18:25:34.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/developer-tools/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/developer-tools/</id>
             <content type="html">
                 &lt;h1 id=&quot;developer-tools&quot; tabindex=&quot;-1&quot;&gt;Developer Tools&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20210829135902.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -4580,7 +4580,7 @@ For the complete reference see &lt;a href=&quot;https://developer.chrome.com/doc
 &lt;/blockquote&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/developer-tools/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/developer-tools/" />
         </entry>
         <entry>
             <title>
@@ -4588,7 +4588,7 @@ For the complete reference see &lt;a href=&quot;https://developer.chrome.com/doc
                 
             </title>
             <updated>2022-12-10T19:54:25.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/density-curve/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/density-curve/</id>
             <content type="html">
                 &lt;h1 id=&quot;density-curve&quot; tabindex=&quot;-1&quot;&gt;Density Curve&lt;/h1&gt;
 &lt;p&gt;In &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/probability-theory&quot;&gt;Probability Theory&lt;/a&gt;, a density curve is a function that describes how a random variable is distributed. It is a smooth curve that shows how often each value of the random variable occurs.&lt;/p&gt;
@@ -4605,7 +4605,7 @@ A common technique is to give each point a &lt;a class=&quot;internal-link is-un
 &lt;p&gt;Sometimes due to the x-axis limits, the density curve doesn&#39;t go to zero at two ends (see the last graph above). We can expand the x-axis limits in such cases.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/density-curve/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/density-curve/" />
         </entry>
         <entry>
             <title>
@@ -4613,7 +4613,7 @@ A common technique is to give each point a &lt;a class=&quot;internal-link is-un
                 
             </title>
             <updated>2022-10-13T01:02:34.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/density-contour-plot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/density-contour-plot/</id>
             <content type="html">
                 &lt;h1 id=&quot;density-contour-plot&quot; tabindex=&quot;-1&quot;&gt;Density Contour Plot&lt;/h1&gt;
 &lt;p&gt;Density contour lines are two-dimensional &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/density-curve/&quot;&gt;Density Curve&lt;/a&gt;s. So the relationship between density contour lines and &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/heatmap/&quot;&gt;Heatmap&lt;/a&gt;s is like that between &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/density-curve/&quot;&gt;Density Curve&lt;/a&gt;s and &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/histogram/&quot;&gt;Histogram&lt;/a&gt;s.&lt;/p&gt;
@@ -4655,7 +4655,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/density-contour-plot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/density-contour-plot/" />
         </entry>
         <entry>
             <title>
@@ -4663,7 +4663,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
                 
             </title>
             <updated>2023-01-30T21:11:50.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/database/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/database/</id>
             <content type="html">
                 &lt;h1 id=&quot;database&quot; tabindex=&quot;-1&quot;&gt;Database&lt;/h1&gt;
 &lt;ul&gt;
@@ -4742,7 +4742,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/database/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/database/" />
         </entry>
         <entry>
             <title>
@@ -4750,7 +4750,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
                 
             </title>
             <updated>2022-11-17T18:13:44.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/dom/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/dom/</id>
             <content type="html">
                 &lt;h1 id=&quot;dom&quot; tabindex=&quot;-1&quot;&gt;DOM&lt;/h1&gt;
 &lt;p&gt;The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/xml&quot;&gt;XML&lt;/a&gt; or &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/html&quot;&gt;HTML&lt;/a&gt; document as a &lt;strong&gt;tree structure&lt;/strong&gt; wherein each node is an object representing a part of the document.&lt;/p&gt;
@@ -4797,7 +4797,7 @@ document.body.appendChild(p);
 &lt;p&gt;See &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Introduction to the DOM&lt;/a&gt; to learn more.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/dom/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/dom/" />
         </entry>
         <entry>
             <title>
@@ -4805,7 +4805,7 @@ document.body.appendChild(p);
                 
             </title>
             <updated>2022-12-12T12:47:58.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-transition/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-transition/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-transition&quot; tabindex=&quot;-1&quot;&gt;D3 Transition&lt;/h1&gt;
 &lt;ul&gt;
@@ -4866,7 +4866,7 @@ document.body.appendChild(p);
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-transition/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-transition/" />
         </entry>
         <entry>
             <title>
@@ -4874,7 +4874,7 @@ document.body.appendChild(p);
                 
             </title>
             <updated>2022-12-12T13:11:22.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-scale/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-scale/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-scale&quot; tabindex=&quot;-1&quot;&gt;D3 Scale&lt;/h1&gt;
 &lt;p&gt;Cartesian coordinates are different from the coordinates in an &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/svg&quot;&gt;SVG&lt;/a&gt;.&lt;br /&gt;
@@ -4968,7 +4968,7 @@ svg.selectAll(&amp;quot;text&amp;quot;)
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221201011728.png&quot; alt=&quot;|500&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-scale/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-scale/" />
         </entry>
         <entry>
             <title>
@@ -4976,7 +4976,7 @@ svg.selectAll(&amp;quot;text&amp;quot;)
                 
             </title>
             <updated>2022-12-01T20:53:33.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-margin/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-margin/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-margin&quot; tabindex=&quot;-1&quot;&gt;D3 Margin&lt;/h1&gt;
 &lt;p&gt;To create margins for a plot, we need to &lt;em&gt;manually&lt;/em&gt; set the inner height and width, and then translate the graph.&lt;/p&gt;
@@ -5007,7 +5007,7 @@ const bars = svg.append(&amp;quot;g&amp;quot;)
 &lt;p&gt;Note that here we use &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/js-types-string#literal&quot;&gt;ES6 template literals&lt;/a&gt;.&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-margin/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-margin/" />
         </entry>
         <entry>
             <title>
@@ -5015,7 +5015,7 @@ const bars = svg.append(&amp;quot;g&amp;quot;)
                 
             </title>
             <updated>2022-12-02T10:54:18.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-interactivity/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-interactivity/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-interactivity&quot; tabindex=&quot;-1&quot;&gt;D3 Interactivity&lt;/h1&gt;
 &lt;p&gt;Interaction contains two parts&lt;/p&gt;
@@ -5108,7 +5108,7 @@ d3.select(&amp;quot;svg&amp;quot;).on(&amp;quot;click&amp;quot;, function(event)
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-interactivity/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-interactivity/" />
         </entry>
         <entry>
             <title>
@@ -5116,7 +5116,7 @@ d3.select(&amp;quot;svg&amp;quot;).on(&amp;quot;click&amp;quot;, function(event)
                 
             </title>
             <updated>2022-12-01T17:36:54.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-functions/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-functions/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-functions&quot; tabindex=&quot;-1&quot;&gt;D3 Functions&lt;/h1&gt;
 &lt;ul&gt;
@@ -5133,7 +5133,7 @@ d3.select(&amp;quot;svg&amp;quot;).on(&amp;quot;click&amp;quot;, function(event)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-functions/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-functions/" />
         </entry>
         <entry>
             <title>
@@ -5141,7 +5141,7 @@ d3.select(&amp;quot;svg&amp;quot;).on(&amp;quot;click&amp;quot;, function(event)
                 
             </title>
             <updated>2022-12-12T15:17:15.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-bind-data/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-bind-data/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-bind-data&quot; tabindex=&quot;-1&quot;&gt;D3 Bind Data&lt;/h1&gt;
 &lt;ul&gt;
@@ -5290,7 +5290,7 @@ const bars =
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-bind-data/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-bind-data/" />
         </entry>
         <entry>
             <title>
@@ -5298,7 +5298,7 @@ const bars =
                 
             </title>
             <updated>2022-12-01T20:13:33.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/d3-axes/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/d3-axes/</id>
             <content type="html">
                 &lt;h1 id=&quot;d3-axes&quot; tabindex=&quot;-1&quot;&gt;D3 Axes&lt;/h1&gt;
 &lt;p&gt;To render axes in &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/d3&quot;&gt;D3&lt;/a&gt;, we need to first generate them, and then plot them.&lt;br /&gt;
@@ -5351,7 +5351,7 @@ svg.append(&amp;quot;g&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/d3-axes/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/d3-axes/" />
         </entry>
         <entry>
             <title>
@@ -5359,7 +5359,7 @@ svg.append(&amp;quot;g&amp;quot;)
                 
             </title>
             <updated>2022-10-12T21:34:35.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/cleveland-dot-plot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/cleveland-dot-plot/</id>
             <content type="html">
                 &lt;h1 id=&quot;cleveland-dot-plot&quot; tabindex=&quot;-1&quot;&gt;Cleveland Dot Plot&lt;/h1&gt;
 &lt;p&gt;The Cleveland dot plot is an alternative to &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/bar-chart/&quot;&gt;Bar Chart&lt;/a&gt;, replacing a bar with a single dot.&lt;/p&gt;
@@ -5380,7 +5380,7 @@ svg.append(&amp;quot;g&amp;quot;)
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221012213125.png&quot; alt=&quot;|500&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/cleveland-dot-plot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/cleveland-dot-plot/" />
         </entry>
         <entry>
             <title>
@@ -5388,7 +5388,7 @@ svg.append(&amp;quot;g&amp;quot;)
                 
             </title>
             <updated>2022-11-10T20:34:11.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/choropleth/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/choropleth/</id>
             <content type="html">
                 &lt;h1 id=&quot;choropleth&quot; tabindex=&quot;-1&quot;&gt;Choropleth&lt;/h1&gt;
 &lt;p&gt;A choropleth map is a type of &lt;a class=&quot;internal-link &quot; data-note-icon=&quot;&quot; href=&quot;https://me.zcysxy.space/heatmap/&quot;&gt;Heatmap&lt;/a&gt; with units using &lt;strong&gt;political boundaries&lt;/strong&gt;.&lt;br /&gt;
@@ -5485,7 +5485,7 @@ plot(p)
 &lt;/div&gt;&lt;/div&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/choropleth/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/choropleth/" />
         </entry>
         <entry>
             <title>
@@ -5493,7 +5493,7 @@ plot(p)
                 
             </title>
             <updated>2023-05-22T15:28:48.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/boxplot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/boxplot/</id>
             <content type="html">
                 &lt;h1 id=&quot;boxplot&quot; tabindex=&quot;-1&quot;&gt;Boxplot&lt;/h1&gt;
 &lt;p&gt;Boxplots display individual outliers and robust statistics for the data, useful for identifying outliers and for &lt;strong&gt;comparisons of distributions&lt;/strong&gt; across subgroups.&lt;/p&gt;
@@ -5569,7 +5569,7 @@ plot(p)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/boxplot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/boxplot/" />
         </entry>
         <entry>
             <title>
@@ -5577,7 +5577,7 @@ plot(p)
                 
             </title>
             <updated>2022-12-11T23:27:22.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/biplot/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/biplot/</id>
             <content type="html">
                 &lt;h1 id=&quot;biplot&quot; tabindex=&quot;-1&quot;&gt;Biplot&lt;/h1&gt;
 &lt;ul&gt;
@@ -5644,7 +5644,7 @@ plot(p)
 &lt;/ul&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/biplot/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/biplot/" />
         </entry>
         <entry>
             <title>
@@ -5652,7 +5652,7 @@ plot(p)
                 
             </title>
             <updated>2022-12-11T19:14:39.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/bar-chart/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/bar-chart/</id>
             <content type="html">
                 &lt;h1 id=&quot;bar-chart&quot; tabindex=&quot;-1&quot;&gt;Bar Chart&lt;/h1&gt;
 &lt;p&gt;A bar chart is a chart or graph that presents &lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://me.zcysxy.space/notes/edav-categorical-data&quot;&gt;EDAV - Categorical Data&lt;/a&gt; with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a &lt;strong&gt;column chart&lt;/strong&gt;.&lt;br /&gt;
@@ -5718,7 +5718,7 @@ To bin the data by hand, we can use &lt;a class=&quot;internal-link &quot; data-
 &lt;/div&gt;&lt;/div&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/bar-chart/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/bar-chart/" />
         </entry>
         <entry>
             <title>
@@ -5726,7 +5726,7 @@ To bin the data by hand, we can use &lt;a class=&quot;internal-link &quot; data-
                 
             </title>
             <updated>2022-12-11T23:19:16.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/alluvial-diagram/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/alluvial-diagram/</id>
             <content type="html">
                 &lt;h1 id=&quot;alluvial-diagram&quot; tabindex=&quot;-1&quot;&gt;Alluvial Diagram&lt;/h1&gt;
 &lt;p&gt;Alluvial diagrams take inspiration from alluvial fans.&lt;br /&gt;
@@ -5790,7 +5790,7 @@ While we can use &lt;code&gt;geom_flow&lt;/code&gt; to create similar diagrams, 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018162557.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/alluvial-diagram/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/alluvial-diagram/" />
         </entry>
         <entry>
             <title>
@@ -5798,7 +5798,7 @@ While we can use &lt;code&gt;geom_flow&lt;/code&gt; to create similar diagrams, 
                 
             </title>
             <updated>2023-07-31T16:06:40.000Z</updated>
-            <id>https://me.zcysxy.space/edav-garen/area/</id>
+            <id>https://me.zcysxy.space/edav-garen/edav-garden/area/</id>
             <content type="html">
                 &lt;h1 id=&quot;areas&quot; tabindex=&quot;-1&quot;&gt;🌐 Areas&lt;/h1&gt;
 &lt;table class=&quot;block-language-dataview&quot;&gt;
@@ -5933,6 +5933,6 @@ where banner
 &lt;/code&gt;&lt;/pre&gt;
 
             </content>
-            <link href="https://me.zcysxy.space/edav-garen/area/" />
+            <link href="https://me.zcysxy.space/edav-garen/edav-garden/area/" />
         </entry>
 </feed>
