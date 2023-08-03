@@ -1,7 +1,4 @@
----
-{"title":"Boxplot","alias":null,"type":"note","created":"2022-09-13T16:24:30","modified":"2023-05-22T15:28:48","dg-publish":true,"sup":[{}],"state":"done","permalink":"/boxplot/","dgPassFrontmatter":true,"updated":"2023-05-22T15:28:48"}
----
-
+[object Promise]
 
 # Boxplot
 
