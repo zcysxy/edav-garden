@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>R Operator</title>
+    <title>R Statement</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -551,7 +551,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Control Statement </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-control-statement/">R Statement </a>
                 </div>
             
         </div>
@@ -560,7 +560,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Data Structure </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-data-structure/">R Data Structure </a>
                 </div>
             
         </div>
@@ -569,7 +569,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Function List </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-function-list/">R Function List </a>
                 </div>
             
         </div>
@@ -578,7 +578,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Function </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-function/">R Function </a>
                 </div>
             
         </div>
@@ -587,7 +587,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Operator - Pipe </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-operator-pipe/">R Operator - Pipe </a>
                 </div>
             
         </div>
@@ -596,7 +596,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Operator </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-operator/">R Operator </a>
                 </div>
             
         </div>
@@ -605,7 +605,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Package </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-package/">R Package </a>
                 </div>
             
         </div>
@@ -614,7 +614,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Type - Date </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-type-date/">R Type - Date </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-09-08T19:07:28"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-09-08T19:07:33"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,97 +969,35 @@
       </header>
       
       
-      <p>[object Promise]</p>
-<h1 id="operator" tabindex="-1">Operator</h1>
-<h2 id="arithmetic" tabindex="-1">Arithmetic</h2>
-<pre><code class="language-r">10L + 66L # integer
-2.0 * 2L # numeric
-1 / 2
-c(1,2,3)^2
-
-# Remainder
-3 %% 2 # 1 (numeric)
-3L %% 2L # 1 (integer)
-
-# Integer Division
-5 %/% 2
-5 == 2 * (5 %/% 2) + (5 %% 2) # TRUE
-
-# Element-wise product
-c(1,2,3) * c(3,2,1)
-</code></pre>
-<p>Note that</p>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r-basics/#1e9b8c" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
-<p>$</p><div class="markdown-embed-title">
-<h1 id="inline-n-link" tabindex="-1">inline n-link</h1>
-</div>
-<ul>
-<li>The default arithmetics in <a class="internal-link " data-note-icon="" href="/r/">R</a> are <strong>element-wise</strong>, unlike <a class="internal-link is-unresolved"  href="/notes/matlab">MATLAB</a></li>
-</ul>
-</div></div>
-. There are special operators for matrix arithmetics.
-<pre><code class="language-r">A %*% B
-</code></pre>
-<h2 id="comparison" tabindex="-1">Comparison</h2>
-<pre><code class="language-r">1 &gt; 2
-2 &lt;= 3
-TRUE == TRUE
-FALSE != FALSE
-
-# Element-wise comparison
-c(1,2,3) == c(1,2,4) # TRUE  TRUE FALSE
-c(1,2,3) == 1 # TRUE FALSE FALSE
-
-# Identify if an element belongs to a vector.
-1 %in% c(1,2,3)
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-tip">Use <code>near(x,y)</code> to compare two floating point numbers.</span></li>
-</ul>
-<h2 id="logic" tabindex="-1">Logic</h2>
-<pre><code class="language-r">TRUE | FALSE # or
-TRUE || FALSE # or
-TRUE &amp; FALSE # and
-TRUE &amp;&amp; FALSE # and
-!TRUE # not
-
-# Element-wise logic operations
-c(TRUE, FALSE, FALSE) | c(FALSE, TRUE, FALSE) # TRUE TRUE FALSE
-</code></pre>
-<h2 id="assignment" tabindex="-1">Assignment</h2>
-<pre><code class="language-r">x &lt;- 1
-y = 1
-z &lt;&lt;- 1
-1 -&gt; u
-1 -&gt;&gt; w
-cat(x, y, z, u, w)
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-tip">It's a convention to use <code>&lt;-</code> rather than <code>=</code> for assignment, and leave <code>=</code> only for function arguments. The reasons are compatibility and precedence (<code>&lt;-</code> is slightly higher, and <code>=</code> is used for function arguments before the assignment)</span></li>
-</ul>
-<p>The special assignment operators <code>&lt;&lt;-</code> and <code>-&gt;&gt;</code> are <strong>looking up</strong> operators, and can maintain states. They can assign value to the variables in the parent scopes. See the example</p>
-<pre><code class="language-r">new_counter &lt;- function() {
-  i &lt;- 0
-  function() {
-    i &lt;&lt;- i + 1 # see if you change &lt;&lt;- to &lt;-
-    i
-  }
+      <h1 id="control-statement" tabindex="-1">Control Statement</h1>
+<h2 id="for" tabindex="-1">for</h2>
+<pre><code class="language-r">for (i in 1:4) {
+    print(i)
 }
-
-counter_one &lt;- new_counter() # outer function, with i = 0
-counter_two &lt;- new_counter()
-
-counter_one() # call ther inner function, i is changed to 1
-counter_one() # i is changed to 2, the state is maintained
-counter_two()
 </code></pre>
-<h2 id="other" tabindex="-1">Other</h2>
-<pre><code class="language-r"># Colon for sequence generating
-all(1:4 == seq(1,4,1))
+<h2 id="while" tabindex="-1">while</h2>
+<pre><code class="language-r">a &lt;- 10
+while (a &gt; 4) {
+    cat(a, &quot;...&quot;, sep = &quot; &quot;)
+    a &lt;- a - 1
+}
 </code></pre>
-<ul>
-<li><a class="internal-link " data-note-icon="" href="/notes/r-operator-pipe">R Operator - Pipe</a></li>
-</ul>
+<div class="callout " data-callout="warning"><div class="callout-title"><div class="callout-title-inner">Warning</div></div>
+<div class="callout-content">
+<p>
+Keep in mind that for and while loops run slowly in <a class="internal-link " data-note-icon="" href="/r/">R</a>.<br>
+Operations on entire vectors (i.e. a whole row, a whole column)<br>
+or <code>apply()</code>-type functions are preferred</p>
+</div></div>
+<h2 id="if-else" tabindex="-1">if/else</h2>
+<pre><code class="language-r">if (4 &gt; 3) {
+    print(&quot;4 is greater than 3&quot;)
+} else if (4 == 3) {
+    print(&quot;4 is equal to 3&quot;)
+} else {
+    print(&quot;4 is less than 3&quot;)
+}
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1302,29 +1242,17 @@ all(1:4 == seq(1,4,1))
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#operator">Operator</a>
+                    <li><a href="#control-statement">Control Statement</a>
             
                 <ol>
                     
-                    <li><a href="#arithmetic">Arithmetic</a>
-            		</li>
-                </ol>
+                    <li><a href="#for">for</a>
             		</li>
 
-                    <li><a href="#inline-n-link">inline n-link</a>
-            
-                <ol>
-                    
-                    <li><a href="#comparison">Comparison</a>
+                    <li><a href="#while">while</a>
             		</li>
 
-                    <li><a href="#logic">Logic</a>
-            		</li>
-
-                    <li><a href="#assignment">Assignment</a>
-            		</li>
-
-                    <li><a href="#other">Other</a>
+                    <li><a href="#if-else">if/else</a>
             		</li>
                 </ol>
             		</li>
