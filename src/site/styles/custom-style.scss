@@ -73,8 +73,10 @@ body {
         font-size: calc(0.8 * var(--content-font-size));
         .callout-title, .callout-icon { 
             font-size: calc(0.8 * var(--callout-title-size)); 
-            //font-size: 1.5rem; 
-            font-weight: 800;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
     
