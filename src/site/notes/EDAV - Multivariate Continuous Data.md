@@ -1,7 +1,4 @@
----
-{"title":"EDAV - Multivariate Continuous Data","alias":"Multivariate Continuous Data","type":"note","created":"2022-10-13T02:31:53","modified":"2022-10-21T15:31:17","dg-publish":true,"sup":[{}],"state":"done","permalink":"/edav-multivariate-continuous-data/","dgPassFrontmatter":true,"updated":"2022-10-21T15:31:17"}
----
-
+[object Promise]
 
 # Multivariate Continuous Data
 
