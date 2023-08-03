@@ -1,4 +1,7 @@
-[object Promise]
+---
+{"title":"Areas","alias":null,"type":"index","created":"2021-08-17T21:58:15","modified":"2023-07-31T16:06:40","dg-publish":true,"cssclass":["cards","cards-cover","cards-2-1","cards-cols-3","note-gallery"],"sup":["[[@]]"],"state":"done","permalink":"/area/","contentClasses":"cards cards-cover cards-2-1 cards-cols-3 note-gallery","dgPassFrontmatter":true,"updated":"2023-07-31T16:06:40"}
+---
+
 
 # 🌐 Areas
 
