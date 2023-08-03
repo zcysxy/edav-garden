@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/edav-missing-data/","title":"EDAV - Missing Data","created":"2022-11-03T16:45:22","updated":"2022-12-12T00:51:11"}
+{"title":"EDAV - Missing Data","alias":null,"type":"note","created":"2022-11-03T16:45:22","modified":"2022-12-12T00:51:11","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/edav-missing-data/","dgPassFrontmatter":true,"updated":"2022-12-12T00:51:11"}
 ---
 
 
