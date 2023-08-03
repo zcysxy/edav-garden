@@ -1,7 +1,4 @@
----
-{"title":"EDAV - Time Series","alias":null,"type":"note","created":"2022-11-01T16:53:01","modified":"2022-11-03T15:56:36","dg-publish":true,"sup":[{}],"state":"done","permalink":"/edav-time-series/","dgPassFrontmatter":true,"updated":"2022-11-03T15:56:36"}
----
-
+[object Promise]
 
 # Time Series
 
