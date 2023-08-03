@@ -1,5 +1,5 @@
 ---
-{"type":"index","title":"Exploratory Data Analysis and Visualization","created":"2022-08-10T03:52:20","modified":"2023-07-27T16:33:48","dg-publish":true,"date":"2022-10-18","allDay":false,"startTime":"13:30","endTime":"16:00","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/C923056B-F009-441B-B0F4-AEA4099A941B.jpeg","banner_y":0.28326,"banner_icon":"📊","state":"done","sup":{},"sub":{},"permalink":"/edav/","dgPassFrontmatter":true,"updated":"2023-07-27T16:33:48"}
+{"type":"index","title":"Exploratory Data Analysis and Visualization","created":"2022-08-10T03:52:20","modified":"2023-07-27T16:33:48","dg-publish":true,"date":"2022-10-18","allDay":false,"startTime":"13:30","endTime":"16:00","banner":"https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/C923056B-F009-441B-B0F4-AEA4099A941B.jpeg","banner_y":0.28326,"banner_icon":"📊","state":"done","sup":[{},{}],"sub":{},"permalink":"/edav/","dgPassFrontmatter":true,"updated":"2023-07-27T16:33:48"}
 ---
 
 
