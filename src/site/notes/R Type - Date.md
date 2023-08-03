@@ -1,5 +1,5 @@
 ---
-{}
+{"title":"R Type - Date","alias":null,"type":"note","created":"2022-11-03T16:19:58","modified":"2022-11-03T22:34:28","dg-publish":true,"sup":{},"state":"done","permalink":"/r-type-date/","dgPassFrontmatter":true,"updated":"2022-11-03T22:34:28"}
 ---
 
 
