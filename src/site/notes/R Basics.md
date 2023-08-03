@@ -1,5 +1,5 @@
 ---
-{}
+{"title":"R Basics","alias":null,"type":"note","created":"2022-09-06T16:38:48","modified":"2022-12-12T14:24:08","dg-publish":true,"sup":{},"state":"done","permalink":"/r-basics/","dgPassFrontmatter":true,"updated":"2022-12-12T14:24:08"}
 ---
 
 
