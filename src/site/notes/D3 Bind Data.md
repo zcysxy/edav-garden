@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Bind Data","alias":null,"type":"note","created":"2022-12-01T20:45:08","modified":"2022-12-12T15:17:15","dg-publish":true,"sup":["[[D3]]"],"state":"done","permalink":"/d3-bind-data/","dgPassFrontmatter":true,"updated":"2022-12-12T15:17:15"}
+{}
 ---
 
 
