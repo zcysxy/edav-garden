@@ -1,5 +1,5 @@
 ---
-{"title":"R Data Structure","alias":null,"type":"note","created":"2022-09-08T19:22:59","modified":"2022-12-12T14:11:39","dg-publish":true,"sup":{},"state":"done","permalink":"/r-data-structure/","dgPassFrontmatter":true,"updated":"2022-12-12T14:11:39"}
+{"title":"R Data Structure","alias":null,"type":"note","created":"2022-09-08T19:22:59","modified":"2022-12-12T14:11:39","dg-publish":true,"sup":[{}],"state":"done","permalink":"/r-data-structure/","dgPassFrontmatter":true,"updated":"2022-12-12T14:11:39"}
 ---
 
 
