@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Interactivity","alias":null,"type":"note","created":"2022-12-01T21:43:56","modified":"2022-12-02T10:54:18","dg-publish":true,"sup":["[[D3]]"],"state":"done","permalink":"/d3-interactivity/","dgPassFrontmatter":true,"updated":"2022-12-02T10:54:18"}
+{"title":"D3 Interactivity","alias":null,"type":"note","created":"2022-12-01T21:43:56","modified":"2022-12-02T10:54:18","dg-publish":true,"sup":["[[D3\\|D3]]"],"state":"done","permalink":"/d3-interactivity/","dgPassFrontmatter":true,"updated":"2022-12-02T10:54:18"}
 ---
 
 
