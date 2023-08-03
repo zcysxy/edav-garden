@@ -1,4 +1,7 @@
-[object Promise]
+---
+{"type":"note","title":"JS Functions","created":"2021-08-25T23:18:27","modified":"2022-11-18T02:32:01","dg-publish":true,"sup":["[[JavaScript]]"],"state":"done","permalink":"/js-function/","dgPassFrontmatter":true,"updated":"2022-11-18T02:32:01"}
+---
+
 
 # JS Functions
 
