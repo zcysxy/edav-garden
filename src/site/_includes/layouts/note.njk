@@ -52,10 +52,10 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
             <div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="{{updated}}"></span></div>
             {%- endif -%}
             {% if sup %}
-            <div><i icon-name="up-arrow"></i> <a href="/{{sup}}">{{sup}}</a></div>
+            <div><i icon-name="up-arrow"></i> <a href="/{{sup}}/">{{sup}}</a></div>
             {% endif %}
             {% if related %}
-            <div><i icon-name="up-arrow"></i> <a href="/{{related}}">{{related}}</a></div>
+            <div><i icon-name="up-arrow"></i> <a href="/{{related}}/">{{related}}</a></div>
             {% endif %}
           </div>
           {%- endif -%}
