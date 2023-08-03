@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Scale","alias":null,"type":"note","created":"2022-12-01T00:27:42","modified":"2022-12-12T13:11:22","dg-publish":true,"sup":["d3"],"state":"done","permalink":"/d3-scale/","dgPassFrontmatter":true,"updated":"2022-12-12T13:11:22"}
+{"title":"D3 Scale","alias":null,"type":"note","created":"2022-12-01T00:27:42","modified":"2022-12-12T13:11:22","dg-publish":true,"sup":[["D3","d3"]],"state":"done","permalink":"/d3-scale/","dgPassFrontmatter":true,"updated":"2022-12-12T13:11:22"}
 ---
 
 
