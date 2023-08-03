@@ -1,5 +1,5 @@
 ---
-{"title":"R Operator - Pipe","alias":null,"type":"note","created":"2022-09-24T17:51:22","modified":"2022-09-25T01:23:45","dg-publish":true,"sup":["[[R Operator]]"],"state":"done","related":["[[dplyr\|dplyr]]"],"permalink":"/r-operator-pipe/","dgPassFrontmatter":true,"updated":"2022-09-25T01:23:45"}
+{}
 ---
 
 
@@ -12,7 +12,7 @@ A pipe operator passes the output of the last command to the next command, like 
 2. Pass the variable to a command/function
     - When piping into a function, its first argument can be omitted
 
-**`%>%`**, a famous pipe operator in [[R\|R]] introduced by `magrittr`[^1] package, is widely used by many [[R Package\|R Package]]s, like [[dplyr]].
+**`%>%`**, a famous pipe operator in [[R\|R]] introduced by `magrittr`[^1] package, is widely used by many [[R Package\|R Package]]s, like [[dplyr\|dplyr]].
 
 [^1]: Rene Magritte has a famous painting that says "This is not a pipe."
 
