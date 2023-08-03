@@ -1,5 +1,5 @@
 ---
-{"title":"Git Commands","alias":null,"type":"note","created":"2021-09-08T20:50:01","modified":"2023-04-13T13:53:42","dg-publish":true,"sup":["[[Git\\|Git]]"],"state":"done","permalink":"/git-commands/","dgPassFrontmatter":true,"updated":"2023-04-13T13:53:42"}
+{"title":"Git Commands","alias":null,"type":"note","created":"2021-09-08T20:50:01","modified":"2023-04-13T13:53:42","dg-publish":true,"sup":["Git Commands.md/git"],"state":"done","permalink":"/git-commands/","dgPassFrontmatter":true,"updated":"2023-04-13T13:53:42"}
 ---
 
 
