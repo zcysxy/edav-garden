@@ -1,4 +1,7 @@
-[object Promise]
+---
+{"type":"output","title":"EDAV Garden","dg-publish":true,"dg-home":true,"created":"2022-10-14T23:53:34","modified":"2022-11-18T02:35:10","state":"done","sup":["[[EDAV]]"],"permalink":"/edav-garden/","tags":["gardenEntry"],"dgPassFrontmatter":true,"updated":"2022-11-18T02:35:10"}
+---
+
 
 # EDAV Garden
 
