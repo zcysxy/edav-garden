@@ -1,5 +1,5 @@
 ---
-{"title":"Histogram","type":"note","created":"2022-09-08T16:45:14","modified":"2022-09-08T16:57:04","dg-publish":true,"sup":["[[EDAV\\|EDAV]]"],"state":"done","permalink":"/histogram/","dgPassFrontmatter":true,"updated":"2022-09-08T16:57:04"}
+{"title":"Histogram","type":"note","created":"2022-09-08T16:45:14","modified":"2022-09-08T16:57:04","dg-publish":true,"sup":["Histogram.md/edav"],"state":"done","permalink":"/histogram/","dgPassFrontmatter":true,"updated":"2022-09-08T16:57:04"}
 ---
 
 
