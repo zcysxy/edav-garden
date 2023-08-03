@@ -1,5 +1,5 @@
 ---
-{"title":"Biplot","alias":null,"type":"note","created":"2022-10-25T16:20:42","modified":"2022-12-11T23:27:22","dg-publish":true,"sup":{},"state":"done","related":{},"permalink":"/biplot/","dgPassFrontmatter":true,"updated":"2022-12-11T23:27:22"}
+{"title":"Biplot","alias":null,"type":"note","created":"2022-10-25T16:20:42","modified":"2022-12-11T23:27:22","dg-publish":true,"sup":[{}],"state":"done","related":{},"permalink":"/biplot/","dgPassFrontmatter":true,"updated":"2022-12-11T23:27:22"}
 ---
 
 
