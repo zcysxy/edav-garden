@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Git Commands</title>
+    <title>EDAV - Time Series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -353,7 +353,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV - Multivariate Categorical Data </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-multivariate-categorical-data/">EDAV - Multivariate Categorical Data </a>
                 </div>
             
         </div>
@@ -362,7 +362,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV - Multivariate Continuous Data </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-multivariate-continuous-data/">EDAV - Multivariate Continuous Data </a>
                 </div>
             
         </div>
@@ -371,7 +371,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV - Time Series </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-time-series/">EDAV - Time Series </a>
                 </div>
             
         </div>
@@ -389,7 +389,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav/">Exploratory Data Analysis and Visualization </a>
                 </div>
             
         </div>
@@ -407,7 +407,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Geographic Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/geographic-coordinate/">Geographic Coordinate </a>
                 </div>
             
         </div>
@@ -416,7 +416,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git Commands </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
                 </div>
             
         </div>
@@ -425,7 +425,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git/">Git </a>
                 </div>
             
         </div>
@@ -434,7 +434,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Graph Color </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/graph-color/">Graph Color </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-11-01T16:53:01"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-11-03T15:56:36"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,185 +969,49 @@
       </header>
       
       
-      <h1 id="git-commands" tabindex="-1">Git Commands</h1>
-<h2 id="add" tabindex="-1">Add</h2>
+      <h1 id="time-series" tabindex="-1">Time Series</h1>
+<p>A time series is a sequence of data points, typically consisting of successive measurements made over a time interval. Visualizing time series data helps extract meaningful statistics and other characteristics of the data.</p>
 <ul>
-<li><code>git add -A</code> stages <strong>all changes</strong>
+<li>When presenting time series data, use <strong>lines</strong> with time on the x-axis</li>
+<li>Use <code>Date</code> and <code>Date-Time</code> <a class="internal-link " data-note-icon="" href="/notes/r-type">R classes</a> for time series</li>
+</ul>
+<h2 id="long-term-trend" tabindex="-1">Long-Term Trend</h2>
+<p>Time series graphs are good for exploring <strong>overall long-term trends (secular)</strong>.<br>
+Time series are essentially discrete data and have <strong>short-term noise</strong>. We can add a <strong>loess smoother</strong> to fit the data.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221101170338.png" alt=""></p>
+<p>In the above example, the blue curve is a global non-parametric smoother, while the red segments are linear smoothers constrained to specific time windows (groups). We can see that the smoothers eliminate the short-term noise (e.g. intra-weekly oscillations) and present the long-term trend.</p>
+<p>Add a smoother using <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>: <code>geom_smooth(method = &quot;loess&quot;, span = .75, se = FALSE)</code></p>
 <ul>
-<li>= <code>git add .</code> + <code>git add -u</code></li>
+<li><span class="alt-check alt-check-tip">Choose the right parameters for smoothers to avoid <a class="internal-link is-unresolved"  href="/notes/overfitting-and-underfitting">Overfitting and Underfitting</a>. Small <code>span</code> tends to overfit; while large <code>span</code> tends to underfit.<br>
+{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#4j85jk">#4j85jk</a>}<br>
+</span></li>
 </ul>
-</li>
-<li><code>git add .</code> stages new files and modifications, <s>without deletions</s> (on the current directory and its subdirectories)
-<ul>
-<li><span class="alt-check alt-check-rmk">For Git &gt;= 2.0, <code>git add .</code> will add deletions! Use flag <code>--ignore-removal</code> to ignore deletion</span></li>
-<li><span class="alt-check alt-check-rmk">Therefore, <code>git add -A</code> is redundant for Git &gt;= 2.0</span></li>
-</ul>
-</li>
-<li><code>git add -u</code> stages modifications and deletions, <strong>without new files</strong></li>
-</ul>
-<h2 id="combine-add-and-commit" tabindex="-1">Combine add and commit</h2>
-<pre><code class="language-bash">git commit -am &quot;commit message&quot;
-</code></pre>
-<p>is equal to</p>
-<pre><code class="language-bash">git add -u
-git commit -m &quot;commit message&quot;
-</code></pre>
-<h2 id="alias" tabindex="-1">Alias</h2>
-<pre><code class="language-bash">git config --global alias.ac &quot;commit -am&quot;
-git ac &quot;commit message&quot;
-</code></pre>
-<p>is equal to</p>
-<pre><code class="language-bash">git commit -am &quot;commit message&quot;
-</code></pre>
-<h2 id="branch" tabindex="-1">Branch</h2>
-<pre><code class="language-bash"># Create a branch
-git branch -M main
-# Rename a branch
-git branch -M master main
-</code></pre>
-<h2 id="log-in-terminal" tabindex="-1">Log in Terminal</h2>
-<p>To get better log info like in the GUI</p>
-<pre><code class="language-bash">git log --graph --oneline --decorate
-</code></pre>
-<h2 id="stash" tabindex="-1">Stash</h2>
-<p><code>stash</code> store your changes without commit, remove them now, and pop out when you need them again</p>
-<pre><code class="language-bash"># Store all your changes without commit, and hide them
-git stash
-# Pop out your hidden changes
-git stash pop
-# Stash your changes with a given name
-git stash save &quot;your stash name&quot;
-# Show all your stashes
-git stash list
-# Apply a certain stash in the list
-git stash apply index
-</code></pre>
-<h2 id="ignore" tabindex="-1">Ignore</h2>
-<p>To ignore some files or directories, add them to the <code>.gitignore</code> file. However, this will not work for files/dirs that have already been tracking. To remove those files/dirs from <strong>git tracking</strong> (not delete them), use</p>
-<pre><code class="language-bash">git rm -r --cached path_to_file_or_dir
-</code></pre>
-<h2 id="new-branch" tabindex="-1">New Branch</h2>
-<pre><code class="language-sh"># Create a new branch called new_branch
-git branch new_branch
-# Checkout (switch) to the new branch
-git checkout new_branch
-</code></pre>
-<p>These two commands have a shorthand:</p>
-<pre><code class="language-sh">git checkout -b new_branch
-</code></pre>
-<h2 id="discard-branch" tabindex="-1">Discard Branch</h2>
-<p>When a branch is pulled/merged into main, it is no longer needed.</p>
-<pre><code class="language-sh">git branch -d patch # delete branch
-git fetch -p        # stop tracking obsolete remote branches (prune)
-</code></pre>
-<h2 id="remotes" tabindex="-1">Remotes</h2>
-<pre><code class="language-sh"># View the remotes
-git remote -v
-# Add a remote called origin
-git remote add origin git@github.com:zcysxy/repo.git
-# Change the url of the remote origin
-git remote set-url origin https://github.com/zcysxy/repo.git
-</code></pre>
-<p>When forking an other's repo, remember to add the other's repo as an <strong>upstream repo</strong>.</p>
-<pre><code class="language-sh">git remote add upstream git@github.com:yiyi/repo.git
-</code></pre>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Forking and Making Pull Requests Best Practice</div></div>
+<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Rolling Average vs Smoother<br></div></div>
 <div class="callout-content">
 <p>
-<ol>
-<li>Set the original repo as the upstream repo.</li>
-<li>Switch to a new branch before making any changes.</li>
-<li>Make a pull request from a new branch other than <code>main</code>/<code>master</code>.</li>
-<li>After the pull request is merged into the original repo, pull it into your own <code>main</code>/<code>master</code> branch.</li>
-<li>Delete the obsolete branch. <code>git branch -D obsolete-branch</code></li>
-</ol>
-</p></div></div>
-<h2 id="discard-changes" tabindex="-1">Discard Changes</h2>
-<pre><code class="language-bash"># Restore several files
-git restore file1 file2 file3
-
-# Restore all
-git restore .
-</code></pre>
-<h2 id="get-files-from-other-branches" tabindex="-1">Get Files from Other Branches</h2>
-<p>To get files from other branches, you can either use <code>checkout</code> command or <code>restore</code> command.</p>
-<pre><code class="language-bash"># main branch
-git checkout other_branch -- file1 file2
-# or
-git restore --source other_branch -- file1 file2
-</code></pre>
-<h2 id="show-tracked-files" tabindex="-1">Show Tracked Files</h2>
-<p>List all the files currently being tracked under the branch <code>master</code></p>
-<pre><code class="language-sh">git ls-tree -r master --name-only
-</code></pre>
-<h2 id="remote-status" tabindex="-1">Remote Status</h2>
-<p>To show what's going on in the remote branches, you need to fetch/update them first, then compare the differences.</p>
-<pre><code class="language-sh"># Method 1
-git fetch origin
-git diff origin/master
-git merge origin/master
-
-# Method2
-git remote update
-git status
-</code></pre>
-<h2 id="list-files" tabindex="-1">List Files</h2>
-<h3 id="ls-files" tabindex="-1">ls-files</h3>
-<pre><code class="language-shell">git ls-files # Show information about files in the index and the working tree
-    [-c|--cached] [-d|--deleted] [-o|--others] [-i|--|ignored]
-    [-s|--stage] [-u|--unmerged] [-k|--|killed] [-m|--modified]
-    [--directory [--no-empty-directory]] [--eol]
-    [--deduplicate]
-    [-x &lt;pattern&gt;|--exclude=&lt;pattern&gt;]
-    [-X &lt;file&gt;|--exclude-from=&lt;file&gt;]
-    [--exclude-per-directory=&lt;file&gt;]
-    [--exclude-standard]
-    [--error-unmatch] [--with-tree=&lt;tree-ish&gt;]
-    [--full-name] [--recurse-submodules]
-    [--abbrev[=&lt;n&gt;]] [--] [&lt;file&gt;…​]
-</code></pre>
-<h3 id="ls-tree" tabindex="-1">ls-tree</h3>
-<pre><code class="language-shell">git ls-tree -r main --name-only
-</code></pre>
-<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> <code>ls-tree</code> &gt; <code>ls-files</code><br></div></div>
-<div class="callout-content">
-<p>
-<code>ls-tree</code> is better than <code>ls-files</code> because <code>ls-files</code> may differ from the <code>--work-tree</code>.</p>
+A rolling average and a smoother are alike, but they are not the same thing. A rolling average is fitting a <strong>constant</strong> instead of a line. Therefore, there are more <em>jumps</em> in a rolling average. Rolling averages only aggregate the previous information and do not capture future information.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103152814.png" alt=""></p>
 </div></div>
-<h2 id="garbage-collection" tabindex="-1">Garbage Collection</h2>
-<p>To &quot;collect the garbage&quot; in the <code>.git</code> folder and reduce its size, use</p>
-<pre><code class="language-shell">git gc
-# or spend more time optimizing using
-git gc --aggressive
-</code></pre>
-<p>This command actually executes a bundle of other internal subcommands like <code>git prune</code>, <code>git repack</code>, <code>git pack</code> and <code>git rerere</code>. These subcommands identify any Git objects that are outside the threshold levels set from the <code>git gc</code> configuration, and then compress, or prune them accordingly.</p>
-<h2 id="global-code-gitignore-code" tabindex="-1">Global <code>.gitignore</code></h2>
-<p>You can create a global <code>.gitignore</code> file to ignore files for all git repositories. When you created that file, run the following command</p>
-<pre><code class="language-shell">git config --global core.excludesfile &lt;path_to_your_gitignore_global&gt;
-</code></pre>
-<h2 id="separate-git-directory" tabindex="-1">Separate Git Directory</h2>
-<p>Sometimes, you don't want the <code>.git</code> directory to be in the same directory as the working tree (for example, to prevent sync issues).</p>
-<pre><code class="language-shell">cd ~/work/dir # working dir
-git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
-</code></pre>
-<h2 id="merge-changes-from-another-branch" tabindex="-1">Merge Changes from Another Branch</h2>
-<pre><code class="language-shell"># In branch main
-git merge patch_branch
-# or merge from a specific commit
-git cherry-pick commit-hash
-</code></pre>
-<h2 id="compare-current-and-last-version" tabindex="-1">Compare Current and Last Version</h2>
-<pre><code class="language-shell"># HEAD~n is the nth generation ancestor of the named commit object (HEAD here)
-git diff HEAD~1 HEAD
-# Shortcuts
-git diff HEAD~ HEAD
-git diff HEAD~
-git diff @~ # @ is an alias for HEAD
-git show # doesn't work for merge commit
-</code></pre>
-<h2 id="see-commit-log-between-tags" tabindex="-1">See Commit Log Between Tags</h2>
-<pre><code class="language-shell">git log [tag_num]..HEAD &gt; changelog.md
-</code></pre>
+<h3 id="remove-cyclical-trends" tabindex="-1">Remove Cyclical Trends</h3>
+<p>In addition to smoothers, there are some other methods to eliminate the noise of short-term cyclical trends. The key idea is to extract a certain point in the cycle, and show the trend of this point among all cycles. For example, when there is a weekly cyclical trend, we can focus on the trend of Monday data. To achieve this, we can</p>
+<ul>
+<li>Highlight/label Monday data points</li>
+<li>Facet by weekdays</li>
+<li>Use special functions like <code>monthplot</code></li>
+</ul>
+<h3 id="abnormalities" tabindex="-1">Abnormalities</h3>
+<p>Abnormalities and outliers may violate the trend. To find the abnormalities, we can</p>
+<ul>
+<li>Use another feature/variable, which may be the cause of abnormalities, to label the data</li>
+<li>Highlight the abnormality</li>
+</ul>
+<h3 id="compare-multiple-lines" tabindex="-1">Compare Multiple Lines</h3>
+<p>When using raw data to plot a multi-line plot, some lines will dominate others. To only compare the trends instead of values, we can scale the data using</p>
+<mjx-container class="MathJax" jax="SVG" display="true" style="direction: ltr; display: block; text-align: center; margin: 1em 0; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -2.016ex;" xmlns="http://www.w3.org/2000/svg" width="13.614ex" height="4.545ex" role="img" focusable="false" viewBox="0 -1118 6017.5 2009" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msubsup"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(523,413) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(523,-247) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g><g data-mml-node="mo" transform="translate(1094.7,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(2150.5,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)" style="stroke-width: 3;"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1000,0)" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(3872.7,0)"><path data-c="22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z" style="stroke-width: 3;"></path></g><g data-mml-node="mfrac" transform="translate(4373,0)"><g data-mml-node="msub" transform="translate(274.8,676)"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(523,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g><g data-mml-node="msub" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="TeXAtom" transform="translate(523,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"></path></g></g></g><rect width="1126.6" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(5739.5,0)"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; overflow: hidden; width: 100%;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msubsup><mi>y</mi><mi>i</mi><mo data-mjx-alternate="1">′</mo></msubsup><mo>=</mo><mn>100</mn><mo>⋅</mo><mfrac><msub><mi>y</mi><mi>i</mi></msub><msub><mi>y</mi><mrow data-mjx-texclass="ORD"><mn>1</mn></mrow></msub></mfrac><mo>.</mo></math></mjx-assistive-mml></mjx-container><h2 id="gaps" tabindex="-1">Gaps</h2>
+<p>Line plots do not show the frequency of the data, and may hide <strong>gaps</strong>. We can add additional points to show the frequency.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103155133.png" alt=""></p>
+<p>To explicitly show the gap, we can set missing values to NA (do not remove them).<br>
+Another option is to use facets.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1390,80 +1256,26 @@ git show # doesn't work for merge commit
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#git-commands">Git Commands</a>
+                    <li><a href="#time-series">Time Series</a>
             
                 <ol>
                     
-                    <li><a href="#add">Add</a>
-            		</li>
-
-                    <li><a href="#combine-add-and-commit">Combine add and commit</a>
-            		</li>
-
-                    <li><a href="#alias">Alias</a>
-            		</li>
-
-                    <li><a href="#branch">Branch</a>
-            		</li>
-
-                    <li><a href="#log-in-terminal">Log in Terminal</a>
-            		</li>
-
-                    <li><a href="#stash">Stash</a>
-            		</li>
-
-                    <li><a href="#ignore">Ignore</a>
-            		</li>
-
-                    <li><a href="#new-branch">New Branch</a>
-            		</li>
-
-                    <li><a href="#discard-branch">Discard Branch</a>
-            		</li>
-
-                    <li><a href="#remotes">Remotes</a>
-            		</li>
-
-                    <li><a href="#discard-changes">Discard Changes</a>
-            		</li>
-
-                    <li><a href="#get-files-from-other-branches">Get Files from Other Branches</a>
-            		</li>
-
-                    <li><a href="#show-tracked-files">Show Tracked Files</a>
-            		</li>
-
-                    <li><a href="#remote-status">Remote Status</a>
-            		</li>
-
-                    <li><a href="#list-files">List Files</a>
+                    <li><a href="#long-term-trend">Long-Term Trend</a>
             
                 <ol>
                     
-                    <li><a href="#ls-files">ls-files</a>
+                    <li><a href="#remove-cyclical-trends">Remove Cyclical Trends</a>
             		</li>
 
-                    <li><a href="#ls-tree">ls-tree</a>
+                    <li><a href="#abnormalities">Abnormalities</a>
+            		</li>
+
+                    <li><a href="#compare-multiple-lines">Compare Multiple Lines</a>
             		</li>
                 </ol>
             		</li>
 
-                    <li><a href="#garbage-collection">Garbage Collection</a>
-            		</li>
-
-                    <li><a href="#global-code-gitignore-code">Global .gitignore</a>
-            		</li>
-
-                    <li><a href="#separate-git-directory">Separate Git Directory</a>
-            		</li>
-
-                    <li><a href="#merge-changes-from-another-branch">Merge Changes from Another Branch</a>
-            		</li>
-
-                    <li><a href="#compare-current-and-last-version">Compare Current and Last Version</a>
-            		</li>
-
-                    <li><a href="#see-commit-log-between-tags">See Commit Log Between Tags</a>
+                    <li><a href="#gaps">Gaps</a>
             		</li>
                 </ol>
             		</li>
@@ -1479,7 +1291,8 @@ git show # doesn't work for merge commit
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/choropleth/" data-note-icon="" class="backlink">Choropleth</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         
