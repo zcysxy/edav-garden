@@ -1,7 +1,4 @@
----
-{"title":"forcats","alias":null,"type":"note","created":"2022-10-12T21:59:31","modified":"2022-12-11T19:07:19","dg-publish":true,"sup":[{}],"state":"done","permalink":"/forcats/","dgPassFrontmatter":true,"updated":"2022-12-11T19:07:19"}
----
-
+[object Promise]
 
 # forcats
 
