@@ -1,5 +1,5 @@
 ---
-{"title":"R Function","alias":null,"type":"note","created":"2022-09-08T19:18:55","modified":null,"dg-publish":true,"sup":["[[R]]"],"state":"done","permalink":"/r-function/","dgPassFrontmatter":true,"updated":""}
+{}
 ---
 
 
