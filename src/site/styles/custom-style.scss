@@ -69,6 +69,14 @@ body {
             font-weight: 800;
         }
     }
+    #tooltip-content div.callout {
+        font-size: calc(0.8 * var(--content-font-size));
+        .callout-title, .callout-icon { 
+            font-size: calc(0.8 * var(--callout-title-size)); 
+            //font-size: 1.5rem; 
+            font-weight: 800;
+        }
+    }
     
     div.callout[data-callout="garden"] {
         --callout-icon: sprout;
