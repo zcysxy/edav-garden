@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/boxplot/","title":"Boxplot","created":"2022-09-13T16:24:30","updated":"2023-05-22T15:28:48"}
+{"title":"Boxplot","alias":null,"type":"note","created":"2022-09-13T16:24:30","modified":"2023-05-22T15:28:48","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/boxplot/","dgPassFrontmatter":true,"updated":"2023-05-22T15:28:48"}
 ---
 
 
