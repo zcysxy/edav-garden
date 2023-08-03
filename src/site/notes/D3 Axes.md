@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Axes","alias":null,"type":"note","created":"2022-12-01T16:35:19","modified":"2022-12-01T20:13:33","dg-publish":true,"sup":["[[D3\\|D3]]"],"state":"done","permalink":"/d3-axes/","dgPassFrontmatter":true,"updated":"2022-12-01T20:13:33"}
+{"title":"D3 Axes","alias":null,"type":"note","created":"2022-12-01T16:35:19","modified":"2022-12-01T20:13:33","dg-publish":true,"sup":["D3 Axes.md/d3"],"state":"done","permalink":"/d3-axes/","dgPassFrontmatter":true,"updated":"2022-12-01T20:13:33"}
 ---
 
 
