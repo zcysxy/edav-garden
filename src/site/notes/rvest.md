@@ -1,5 +1,5 @@
 ---
-{"title":"rvest","alias":null,"type":"note","created":"2022-10-13T21:54:22","modified":"2022-10-13T22:20:21","dg-publish":true,"sup":["[[R Package\\|R Package]]"],"state":"done","permalink":"/rvest/","dgPassFrontmatter":true,"updated":"2022-10-13T22:20:21"}
+{"title":"rvest","alias":null,"type":"note","created":"2022-10-13T21:54:22","modified":"2022-10-13T22:20:21","dg-publish":true,"sup":["rvest.md/r-package"],"state":"done","permalink":"/rvest/","dgPassFrontmatter":true,"updated":"2022-10-13T22:20:21"}
 ---
 
 
