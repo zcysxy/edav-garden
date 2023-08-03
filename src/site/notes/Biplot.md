@@ -1,5 +1,5 @@
 ---
-{"title":"Biplot","alias":null,"type":"note","created":"2022-10-25T16:20:42","modified":"2022-12-11T23:27:22","dg-publish":true,"sup":["[[EDAV\\|EDAV]]"],"state":"done","related":["[[Principal Components Analysis\\|Principal Components Analysis]]"],"permalink":"/biplot/","dgPassFrontmatter":true,"updated":"2022-12-11T23:27:22"}
+{"title":"Biplot","alias":null,"type":"note","created":"2022-10-25T16:20:42","modified":"2022-12-11T23:27:22","dg-publish":true,"sup":["Biplot.md/edav"],"state":"done","related":["[[Principal Components Analysis\\|Principal Components Analysis]]"],"permalink":"/biplot/","dgPassFrontmatter":true,"updated":"2022-12-11T23:27:22"}
 ---
 
 
