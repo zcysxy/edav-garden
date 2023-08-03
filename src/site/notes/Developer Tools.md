@@ -1,5 +1,5 @@
 ---
-{"type":"note","title":"Developer Tools","alias":"DevTools","dg-publish":true,"created":"2021-08-29T13:53:12","modified":"2022-11-17T18:25:34","sup":["[[Computer Science]]"],"related":["[[CSS\|CSS]]","[[JavaScript\|JavaScript]]","[[HTML\|HTML]]","[[Front-End, Back-End, and Full Stack]]"],"state":"done","permalink":"/developer-tools/","dgPassFrontmatter":true,"updated":"2022-11-17T18:25:34"}
+{}
 ---
 
 
@@ -36,7 +36,7 @@ This panel is related to [[JavaScript\|JavaScript]]
 
 ## Source
 
-The Source panel is like a lightweight IDE where you can debug [[JavaScript]]. It consists of three panes
+The Source panel is like a lightweight IDE where you can debug [[JavaScript\|JavaScript]]. It consists of three panes
 
 1. File Navigator
 2. Code Editor
@@ -52,13 +52,13 @@ The Source panel is like a lightweight IDE where you can debug [[JavaScript]]. I
 * This panel is related to [[HTML\|HTML]] and [[CSS\|CSS]]
 * On the left top corner, there is a **inspect** button for you to select any [[HTML Element\|HTML Element]] in the page **~~①~~**
 * The main pane shows the DOM of the page **~~②~~**
-    * You can directly edit its [[HTML]] source code there
+    * You can directly edit its [[HTML\|HTML]] source code there
         * You can also drag the nodes to reorder them
     * You can use the keyboard to navigate in the DOM
     * You can right click on a node and click `Scroll into view` to sync it with the viewport
     * You can **find** any node by `Ctrl + F`
     * You can hide a node by selecting it and pressing `H`
-* Choose an [[HTML Element\|HTML Element]], all its [[CSS]] styles appear in the `Styles` side pane
+* Choose an [[HTML Element\|HTML Element]], all its [[CSS\|CSS]] styles appear in the `Styles` side pane
     * All styles including inline CSS
     * The source of every set of rules will appear in the right top corner **~~③~~**
     * You can insert, edit, enable, and disable any rules
