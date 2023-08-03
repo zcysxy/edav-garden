@@ -1,7 +1,4 @@
----
-{"title":"R Types","alias":null,"type":"note","created":"2022-09-06T17:38:35","modified":"2022-12-11T18:40:45","dg-publish":true,"sup":[{}],"state":"done","permalink":"/r-type/","dgPassFrontmatter":true,"updated":"2022-12-11T18:40:45"}
----
-
+[object Promise]
 
 # R Types
 
