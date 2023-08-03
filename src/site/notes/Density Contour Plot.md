@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/density-contour-plot/","title":"Density Contour Plot","created":"2022-10-13T00:39:21","updated":"2022-10-13T01:02:34"}
+{"title":"Density Contour Plot","alias":"Density Contour Line","type":"note","created":"2022-10-13T00:39:21","modified":"2022-10-13T01:02:34","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/density-contour-plot/","dgPassFrontmatter":true,"updated":"2022-10-13T01:02:34"}
 ---
 
 
