@@ -1,5 +1,5 @@
 ---
-{"title":"R Data Structure","alias":null,"type":"note","created":"2022-09-08T19:22:59","modified":"2022-12-12T14:11:39","dg-publish":true,"sup":["[[R\|R]]"],"state":"done","permalink":"/r-data-structure/","dgPassFrontmatter":true,"updated":"2022-12-12T14:11:39"}
+{}
 ---
 
 
@@ -83,7 +83,7 @@ M[]
 
 ## Data Frame
 
-Data frames are used to store **tabular data** (2d) in [[R]]. They are represented as a special type of [list](#list) where every element of the list has to have the same length.
+Data frames are used to store **tabular data** (2d) in [[R\|R]]. They are represented as a special type of [list](#list) where every element of the list has to have the same length.
 
 Data frames are usually created by reading in a dataset using the `read.table()` or `read.csv()`. However, data frames can also be created explicitly with the `data.frame()`function or they can be coerced from other types of objects like lists.
 
