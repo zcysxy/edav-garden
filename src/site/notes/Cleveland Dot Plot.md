@@ -1,7 +1,4 @@
----
-{"title":"Cleveland Dot Plot","alias":null,"type":"note","created":"2022-10-12T21:20:51","modified":"2022-10-12T21:34:35","dg-publish":true,"sup":[{}],"state":"done","related":{},"permalink":"/cleveland-dot-plot/","dgPassFrontmatter":true,"updated":"2022-10-12T21:34:35"}
----
-
+[object Promise]
 
 # Cleveland Dot Plot
 
