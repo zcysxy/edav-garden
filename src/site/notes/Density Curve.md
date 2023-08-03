@@ -1,5 +1,5 @@
 ---
-{"title":"Density Curve","alias":"Density Estimate","type":"note","created":"2022-12-10T17:51:41","modified":"2022-12-10T19:54:25","dg-publish":true,"sup":["[[EDAV\\|EDAV]]"],"state":"done","permalink":"/density-curve/","dgPassFrontmatter":true,"updated":"2022-12-10T19:54:25"}
+{"title":"Density Curve","alias":"Density Estimate","type":"note","created":"2022-12-10T17:51:41","modified":"2022-12-10T19:54:25","dg-publish":true,"sup":["Density Curve.md/edav"],"state":"done","permalink":"/density-curve/","dgPassFrontmatter":true,"updated":"2022-12-10T19:54:25"}
 ---
 
 
