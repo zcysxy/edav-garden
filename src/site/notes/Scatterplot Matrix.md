@@ -1,5 +1,5 @@
 ---
-{"title":"Scatterplot Matrix","alias":null,"type":"note","created":"2022-10-13T01:12:05","modified":"2022-10-13T01:37:30","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","related":["[[Scatterplot\|Scatterplot]]"],"permalink":"/scatterplot-matrix/","dgPassFrontmatter":true,"updated":"2022-10-13T01:37:30"}
+{"title":"Scatterplot Matrix","alias":null,"type":"note","created":"2022-10-13T01:12:05","modified":"2022-10-13T01:37:30","dg-publish":true,"sup":["[[EDAV\\|EDAV]]"],"state":"done","related":["[[Scatterplot\|Scatterplot]]"],"permalink":"/scatterplot-matrix/","dgPassFrontmatter":true,"updated":"2022-10-13T01:37:30"}
 ---
 
 
