@@ -1,5 +1,5 @@
 ---
-{"title":"Biplot","alias":null,"type":"note","created":"2022-10-25T16:20:42","modified":"2022-12-11T23:27:22","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","related":["[[Principal Components Analysis\|Principal Components Analysis]]"],"permalink":"/biplot/","dgPassFrontmatter":true,"updated":"2022-12-11T23:27:22"}
+{}
 ---
 
 
@@ -23,7 +23,7 @@
 
 We can use dimension-reduction methods to select or form two main variables, then *project* other selected/formed variables to the plane (make them linear combinations of the two main variables).
 
-For example, using [[Principal Components Analysis]], we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.
+For example, using [[Principal Components Analysis\|Principal Components Analysis]], we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.
 
 ![](https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165028.png)
 
