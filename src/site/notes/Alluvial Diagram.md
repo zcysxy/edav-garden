@@ -1,5 +1,5 @@
 ---
-{"title":"Alluvial Diagram","alias":null,"type":"note","created":"2022-10-13T16:58:30","modified":"2022-12-11T23:19:16","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/alluvial-diagram/","dgPassFrontmatter":true,"updated":"2022-12-11T23:19:16"}
+{"title":"Alluvial Diagram","alias":null,"type":"note","created":"2022-10-13T16:58:30","modified":"2022-12-11T23:19:16","dg-publish":true,"sup":["[[EDAV\\|EDAV]]"],"state":"done","permalink":"/alluvial-diagram/","dgPassFrontmatter":true,"updated":"2022-12-11T23:19:16"}
 ---
 
 
