@@ -5,13 +5,13 @@
 {% endif %}
 </div>
 {% if related %}<div class="timestamps">
-<i icon-name="arrow-left-right"></i>{% for link in sup %}
+<i icon-name="arrow-left-right"></i>{% for link in related %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}|{% endif %}
 {% endfor %}</div>
 {% endif %}
-{% if related %}
+{% if sub %}
 <div class="timestamps">
-<i icon-name="corner-left-down"></i>{% for link in sup %}
+<i icon-name="corner-left-down"></i>{% for link in sub %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>{% if not loop.last %}|{% endif %}
 {% endfor %}</div>
 {% endif %}
