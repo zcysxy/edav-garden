@@ -1,5 +1,5 @@
 ---
-{}
+{"title":"R Operator","type":"note","created":"2022-09-08T18:33:13","modified":"2022-09-22T17:33:42","dg-publish":true,"sup":{},"state":"done","permalink":"/r-operator/","dgPassFrontmatter":true,"updated":"2022-09-22T17:33:42"}
 ---
 
 
