@@ -1,5 +1,5 @@
 ---
-{"title":"EDAV - Multivariate Categorical Data","alias":"Multivariate Categorical Data","type":"note","created":"2022-10-13T12:40:21","modified":"2022-12-11T21:49:19","dg-publish":true,"sup":["edav"],"state":"done","permalink":"/edav-multivariate-categorical-data/","dgPassFrontmatter":true,"updated":"2022-12-11T21:49:19"}
+{"title":"EDAV - Multivariate Categorical Data","alias":"Multivariate Categorical Data","type":"note","created":"2022-10-13T12:40:21","modified":"2022-12-11T21:49:19","dg-publish":true,"sup":[["EDAV","edav"]],"state":"done","permalink":"/edav-multivariate-categorical-data/","dgPassFrontmatter":true,"updated":"2022-12-11T21:49:19"}
 ---
 
 
