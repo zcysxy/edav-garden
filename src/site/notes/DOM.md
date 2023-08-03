@@ -1,5 +1,5 @@
 ---
-{"type":"note","title":"DOM","alias":"Document Object Model","dg-publish":true,"created":"2021-08-30T13:51:14","modified":"2022-11-17T18:13:44","sup":["[[Language\\|Language]]"],"state":"done","related":["[[XML\\|XML]]","[[HTML\\|HTML]]"],"permalink":"/dom/","dgPassFrontmatter":true,"updated":"2022-11-17T18:13:44"}
+{"type":"note","title":"DOM","alias":"Document Object Model","dg-publish":true,"created":"2021-08-30T13:51:14","modified":"2022-11-17T18:13:44","sup":["DOM.md/language"],"state":"done","related":["[[XML\\|XML]]","[[HTML\\|HTML]]"],"permalink":"/dom/","dgPassFrontmatter":true,"updated":"2022-11-17T18:13:44"}
 ---
 
 
