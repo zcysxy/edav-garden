@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-operator/","title":"R Operator","created":"2022-09-08T18:33:13","updated":"2022-09-22T17:33:42"}
+{"title":"R Operator","type":"note","created":"2022-09-08T18:33:13","modified":"2022-09-22T17:33:42","dg-publish":true,"sup":["[[R\|R]]"],"state":"done","permalink":"/r-operator/","dgPassFrontmatter":true,"updated":"2022-09-22T17:33:42"}
 ---
 
 
@@ -35,7 +35,7 @@ $<div class="markdown-embed-title">
 </div>
 
 
-- The default arithmetics in [[R\|R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] 
+- The default arithmetics in [[R]] are **element-wise**, unlike [[MATLAB\|MATLAB]] 
 
 </div></div>
 . There are special operators for matrix arithmetics.
