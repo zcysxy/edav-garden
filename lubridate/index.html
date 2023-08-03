@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>forcats</title>
+    <title>lubridate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -317,7 +317,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">dplyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/dplyr/">dplyr </a>
                 </div>
             
         </div>
@@ -380,7 +380,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">edav-garden </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV Garden </a>
                 </div>
             
         </div>
@@ -398,7 +398,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">forcats </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/forcats/">forcats </a>
                 </div>
             
         </div>
@@ -488,7 +488,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">lubridate </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/lubridate/">lubridate </a>
                 </div>
             
         </div>
@@ -650,7 +650,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -686,7 +686,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">tidyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/tidyr/">tidyr </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-11-03T22:36:27"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-11-03T22:48:34"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,78 +969,35 @@
       </header>
       
       
-      <h1 id="forcats" tabindex="-1">forcats</h1>
-<p>Package <code>forcats</code> contain tools for working with <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">EDAV - Categorical Data</a> (<a class="internal-link " data-note-icon="" href="/r-type/#factors">R Type#Factors</a>)</p>
-<h2 id="recode-factor-levels" tabindex="-1">Recode Factor Levels</h2>
-<p>To recode the levels, do not use <code>levels(x) &lt;- c(&quot;A&quot;, &quot;B&quot;)</code>; use <code>fct_recode()</code> in <a class="internal-link " data-note-icon="" href="/notes/forcats">forcats</a> instead.</p>
-<pre><code class="language-r">library(forcats)
-x &lt;- factor(c(&quot;G234&quot;, &quot;G452&quot;, &quot;G136&quot;))  
-y &lt;- fct_recode(x, Physics = &quot;G234&quot;, Math = &quot;G452&quot;, Chemistry = &quot;G136&quot;)  
-y
-</code></pre>
-<h2 id="reorder-factor-levels" tabindex="-1">Reorder Factor Levels</h2>
+      <h1 id="lubridate" tabindex="-1">lubridate</h1>
+<blockquote>
+<p>Lubridate provides tools that make it easier to parse and manipulate dates. These tools are grouped below by common purpose. More information about each function can be found in its help documentation.</p>
+</blockquote>
+<p>Lubridate comes with useful functions to</p>
 <ul>
-<li>
-<p><code>fct_inorder()</code>: by the order in which they first appear</p>
-</li>
-<li>
-<p><code>fct_infreq()</code>: by number of observations with each level (largest first)</p>
+<li>Convert data to <a class="internal-link " data-note-icon="" href="/r-type-date/">Date class</a>
 <ul>
-<li>useful for unbinned data</li>
+<li><code>ymd()</code>, <code>ydm()</code>, <code>mdy()</code>, <code>myd()</code>, <code>dmy()</code> transform string with the right order to Date class
+<ul>
+<li><span class="alt-check alt-check-ex"><code>mdy(&quot;April 13, 1907&quot;)</code> returns <code>&quot;1907-04-13&quot;</code></span></li>
 </ul>
 </li>
-<li>
-<p><code>fct_inseq()</code>: by numeric value of level.</p>
-</li>
-<li>
-<p><code>fct_relevel(x, level1, level2, after = 4)</code>: by hand</p>
-<ul>
-<li>without <code>after</code>, you are putting levels to the beginning</li>
-<li>with <code>after = Inf</code>, you are putting levels to the last</li>
 </ul>
 </li>
-<li>
-<p><code>fct_rev()</code>: reverse the current order</p>
-</li>
-<li>
-<p><code>fct_reorder(x,y)</code>: by sorting along another variable</p>
+<li>Extract information from data of <a class="internal-link " data-note-icon="" href="/r-type-date/">Date class</a>
 <ul>
-<li>works with <code>.desc = False</code></li>
+<li><code>year()</code></li>
+<li><code>month()</code>
+<ul>
+<li><code>month(date, label = TRUE)</code> returns a <a class="internal-link " data-note-icon="" href="/r-type/#factors">factor</a> with levels being twelve months</li>
 </ul>
 </li>
-<li>
-<p><code>fct_reorder2(x,y,z)</code>: by sorting along another 2 variables</p>
-</li>
-<li>
-<p><span class="alt-check alt-check-rmk">All the above functions return <strong>new factors</strong>.</span></p>
-</li>
-</ul>
-<h2 id="include-na" tabindex="-1">Include NA</h2>
-<p>When a factor contains NAs, NAs will not form a level. And when plotting, NA always orders first (in the top-down graph, and last in the left-right graphs). We can use <code>fct_explicit_na(x, &quot;NA&quot;)</code> to make NA a real level with the name <code>&quot;NA&quot;</code>. Then we can reorder the levels including <code>&quot;NA&quot;</code></p>
-<pre><code class="language-r">df &lt;- data.frame(temperature = factor(c(&quot;cold&quot;, &quot;warm&quot;, &quot;hot&quot;, NA)),
-                 count = c(15, 5, 22, 12))
-
-df %&gt;%
-  mutate(temperature = fct_explicit_na(temperature, &quot;NA&quot;) %&gt;% # try comment this and the following lines
-      fct_relevel(&quot;NA&quot;, &quot;hot&quot;, &quot;warm&quot;, &quot;cold&quot;)) %&gt;%
-  ggplot(aes(x = temperature, y = count)) +
-  geom_col() +
-  coord_flip()
-</code></pre>
-<h2 id="lumping" tabindex="-1">Lumping</h2>
+<li><code>yday()</code> returns the day of the year of a date
 <ul>
-<li><code>fct_lump_*</code>: lump together factor levels into &quot;other&quot;
-<ul>
-<li><code>fct_lump_min()</code>: lumps levels that appear fewer than <code>min</code><br>
-times
-<ul>
-<li><span class="alt-check alt-check-ex"><code>cc |&gt; mutate(continent_new = fct_lump_min(continent, 30))</code> puts all continents with less than 30 countries (items) into the &quot;Other&quot; category (level)</span></li>
+<li><span class="alt-check alt-check-ex"><code>yday(Sys.Date())</code> returns <code>298</code></span></li>
 </ul>
 </li>
-<li><code>fct_lump_prop()</code>: lumps levels that appear in fewer <code>prop * n</code> times, where <code>n</code> is the size of the data</li>
-<li><code>fct_lump_n()</code>: lumps all levels except for the <code>n</code> most frequent (or least frequent if <code>n &lt; 0</code>)</li>
-<li><code>fct_lump_lowfreq()</code>: lumps together the least frequent<br>
-levels, ensuring that &quot;other&quot; is still the smallest level</li>
+<li><code>week()</code> returns the week of the year of a date</li>
 </ul>
 </li>
 </ul>
@@ -1286,22 +1245,7 @@ levels, ensuring that &quot;other&quot; is still the smallest level</li>
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#forcats">forcats</a>
-            
-                <ol>
-                    
-                    <li><a href="#recode-factor-levels">Recode Factor Levels</a>
-            		</li>
-
-                    <li><a href="#reorder-factor-levels">Reorder Factor Levels</a>
-            		</li>
-
-                    <li><a href="#include-na">Include NA</a>
-            		</li>
-
-                    <li><a href="#lumping">Lumping</a>
-            		</li>
-                </ol>
+                    <li><a href="#lubridate">lubridate</a>
             		</li>
                 </ol>
             </nav>
@@ -1315,10 +1259,9 @@ levels, ensuring that &quot;other&quot; is still the smallest level</li>
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/cleveland-dot-plot/" data-note-icon="" class="backlink">Cleveland Dot Plot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/r-type/" data-note-icon="" class="backlink">R Types</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/r-type-date/" data-note-icon="" class="backlink">R Type - Date</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/r/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
                         

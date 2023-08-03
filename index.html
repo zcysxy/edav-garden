@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>tidyr</title>
+    <title>EDAV Garden</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -83,7 +83,6 @@
     
   </head>
   <body class="theme-light markdown-preview-view markdown-rendered markdown-preview-section css-settings-manager">
-    
     
     
       
@@ -317,7 +316,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">dplyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/dplyr/">dplyr </a>
                 </div>
             
         </div>
@@ -380,7 +379,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">edav-garden </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">EDAV Garden </a>
                 </div>
             
         </div>
@@ -398,7 +397,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">forcats </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/forcats/">forcats </a>
                 </div>
             
         </div>
@@ -488,7 +487,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">lubridate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/lubridate/">lubridate </a>
                 </div>
             
         </div>
@@ -650,7 +649,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">rvest </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/rvest/">rvest </a>
                 </div>
             
         </div>
@@ -686,7 +685,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">tidyr </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/tidyr/">tidyr </a>
                 </div>
             
         </div>
@@ -696,7 +695,6 @@
     </div>
 
     
-
     
       <div class="search-container" id="globalsearch" onclick="toggleSearch()">
     <div class="search-box">
@@ -954,45 +952,235 @@
 </script>
 
     
-
     <main class="content cm-s-obsidian ">
       <header>
+      
+
+      <div class="header-meta">
         
-        <div class="header-meta">
-          <div class="timestamps">
-            
-          </div></div>
+      </div>
       
       
       </header>
       
       
-      <h1 id="tidyr" tabindex="-1">tidyr</h1>
-<p>Principles of tidy data:</p>
-<ul>
-<li>Every column is a variable</li>
-<li>Every row is an observation</li>
-<li>Every cell is a single value</li>
-</ul>
-<p>An example:</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013014825.png" alt=""></p>
-<p>The code for this example using package <code>tidyr</code> is</p>
-<pre><code class="language-r">tidydata &lt;- messydata %&gt;%
-    pivot_longer(cols = !id, names_to = &quot;roadtype&quot;, values_to = &quot;mpg&quot;)
-</code></pre>
-<blockquote>
-<p><code>pivot_longer()</code> &quot;lengthens&quot; data, increasing the number of rows and decreasing the number of columns. The inverse transformation  is <code>pivot_wider()</code></p>
+      <h1 id="edav-garden" tabindex="-1">EDAV Garden</h1>
+<center>
+<input type="checkbox" id="logo" checked>
+<label for="logo">
+    <div class="logo-wrapper">
+        <div class="logo"></div>
+    </div>
+</label>
+<blockquote> "Visualization is a fundamentally human activity."
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/tidyr-pivoting.gif" alt=""></p>
-<p>As we can see, the <code>id</code> column is essential. Sometimes data have row names, but don't have a column name for them. Then we can create one manually</p>
-<pre><code class="language-r">library(tidyverse)
-mtcars %&gt;%
-    rownames_to_column(&quot;carname&quot;) %&gt;%
-    head()
-</code></pre>
+</center>
+<div class="callout " data-callout="garden"><div class="callout-title"><div class="callout-title-inner"> This site is a <a href="https://github.com/MaggieAppleton/digital-gardeners" target="_blank" class="external-link"><strong>digital garden</strong></a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> for <a href="https://edav.info" target="_blank" class="external-link"><strong>E</strong>xploratory <strong>D</strong>ata <strong>A</strong>nalysis and <strong>V</strong>isualization</a></div></div>
+<div class="callout-content">
+<p>
 <ul>
-<li><span class="alt-check alt-check-tip">&quot;Tidy&quot; or &quot;messy&quot; depends on the use case. Sometimes, &quot;tidy&quot; data can be &quot;messy&quot; in other scenarios.</span></li>
+<li>made by <a href="https://github.com/zcysxy" target="_blank" class="external-link">me</a></li>
+<li>on materials from GR5702 Exploratory Data Analysis and Visualization course with <a href="https://github.com/jtr13" target="_blank" class="external-link">Joyce Robbins</a> at Columbia University</li>
+<li>with <a href="https://obsidian.md" target="_blank" class="external-link">Obsidian</a> and <a href="https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0" target="_blank" class="external-link">Obsidian Digital Garden</a></li>
+<li>source code: <a href="https://github.com/zcysxy/edav-garden" target="_blank" class="external-link">zcysxy/edav-garden</a></li>
+<li>Interested in the logos/favicon? Get them <a href="https://www.figma.com/community/file/1174213011958814978" target="_blank" class="external-link">here</a></li>
 </ul>
+</p></div></div>
+<div class="callout " data-callout="success"><div class="callout-title"><div class="callout-title-inner"> Promotion<br></div></div>
+<div class="callout-content">
+<p>
+Are you interested in the relationship between the reviews and streams of music? Please have a look at our EDAV project: <a href="https://edav-42.github.io/review-vs-stream" target="_blank" class="external-link">Review vs. Stream</a>.</p>
+</div></div>
+<h2 id="what-is-edav" tabindex="-1">What is EDAV</h2>
+<ul>
+<li><strong>Exploratory data analysis and visualization (EDAV)</strong> is an <strong>interdisciplinary</strong> field combining
+<ul>
+<li>Statistics</li>
+<li>Computer Science</li>
+<li>Graphic Design</li>
+<li>Journalism</li>
+<li>Subject Expertise</li>
+<li>Psychology</li>
+</ul>
+</li>
+<li>The <strong>task</strong> of EDAV is to
+<ul>
+<li>Look for patterns</li>
+<li>Identify outliers</li>
+<li>Make comparisons</li>
+<li>Discover clusters</li>
+</ul>
+</li>
+<li>The fundamental <strong>problem</strong> of EDAV is
+<ul>
+<li>Exploration vs. Visualization</li>
+<li>or, Exploratory vs. Explanatory</li>
+<li>Explorations reveal information hidden in the data, which is deep and precise but can be convoluted</li>
+<li>Visualizations offer insight into the data, which can be easily shared but may be misleading and biased</li>
+<li>These two aspects are not mutually exclusive</li>
+</ul>
+</li>
+</ul>
+<h2 id="plots-gallery" tabindex="-1">Plots Gallery</h2>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/histogram/">Histogram</a></li>
+<li><a class="internal-link " data-note-icon="" href="/boxplot/">Boxplot</a></li>
+<li><a class="internal-link " data-note-icon="" href="/q-q-plot/">Q-Q Plot</a></li>
+<li><a class="internal-link " data-note-icon="" href="/density-curve/">Density Curve</a></li>
+<li><a class="internal-link " data-note-icon="" href="/ridgeline/">Ridgeline</a></li>
+</ul>
+</li>
+<li><a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">Categorical Data</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a></li>
+<li><a class="internal-link " data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/edav-dependency-relationship/">Dependency Relationship</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
+<li><a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/edav-multivariate-continuous-data/">Multivariate Continuous Data</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a></li>
+<li><a class="internal-link " data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a></li>
+<li><a class="internal-link " data-note-icon="" href="/biplot/">Biplot</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
+<li><a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link " data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/edav-time-series/">Time Series</a></li>
+<li><a class="internal-link " data-note-icon="" href="/spatial-data/">Spatial Data</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/choropleth/">Choropleth</a></li>
+<li><a class="internal-link " data-note-icon="" href="/geographic-coordinate/">Geographic Coordinate</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/edav-missing-data/">Missing Data</a></li>
+<li>Other
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/graph-color/">Graph Color</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="r-garden" tabindex="-1">R Garden</h2>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/r/">R</a></li>
+</ul>
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r/#references" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<h2 id="references" tabindex="-1">References</h2>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/r-basics/">R Basics</a></li>
+<li><a class="internal-link " data-note-icon="" href="/r-type/">R Type</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
+<li><a class="internal-link " data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
+<li><a class="internal-link " data-note-icon="" href="/r-function/">R Function</a></li>
+<li><a class="internal-link " data-note-icon="" href="/r-function-list/">R Function List</a></li>
+<li><a class="internal-link " data-note-icon="" href="/r-operator/">R Operator</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
+</ul>
+</li>
+<li><a class="internal-link " data-note-icon="" href="/r-package/">R Package</a>
+<ul>
+<li>tidyverse
+<ul>
+<li><a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></li>
+<li><a class="internal-link " data-note-icon="" href="/dplyr/">dplyr</a></li>
+<li><a class="internal-link " data-note-icon="" href="/forcats/">forcats</a></li>
+<li><a class="internal-link " data-note-icon="" href="/tidyr/">tidyr</a></li>
+<li><a class="internal-link " data-note-icon="" href="/lubridate/">lubridate</a></li>
+</ul>
+</li>
+<li><a class="internal-link is-unresolved"  href="/notes/r-package-plotly">Plotly</a></li>
+<li><a class="internal-link " data-note-icon="" href="/rvest/">rvest</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+<h2 id="git-garden" tabindex="-1">Git Garden</h2>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/git/">Git</a></li>
+<li><a class="internal-link " data-note-icon="" href="/git-commands/">Git Commands</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/git-tagging">Git Tagging</a></li>
+</ul>
+<h2 id="web-dev-garden" tabindex="-1">WebDev Garden</h2>
+<ul>
+<li>Basics
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/dom/">DOM</a></li>
+<li><a class="internal-link " data-note-icon="" href="/developer-tools/">Developer Tools</a></li>
+</ul>
+</li>
+<li><a class="internal-link is-unresolved"  href="/notes/html">HTML</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/css">CSS</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/js-function/">JS Function</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a></li>
+<li><a class="internal-link is-unresolved"  href="/notes/js-function-map">JS Function - map</a></li>
+</ul>
+</li>
+<li>⭐️ <a class="internal-link is-unresolved"  href="/notes/d3">D3</a>
+<ul>
+<li><a class="internal-link " data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-scale/">D3 Scale</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-margin/">D3 Margin</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-axes/">D3 Axes</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-functions/">D3 Functions</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-interactivity/">D3 Interactivity</a></li>
+<li><a class="internal-link " data-note-icon="" href="/d3-transition/">D3 Transition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="references-1" tabindex="-1">References</h2>
+<ul>
+<li>For <a class="internal-link " data-note-icon="" href="/#plots-gallery">Plots Gallery</a>:
+<ul>
+<li>Robbins, Joyce. <em><a href="https://edav.info" target="_blank" class="external-link">https://edav.info</a></em>. 2022.</li>
+<li>Unwin, Antony. <em>Graphical data analysis with R</em>. Chapman and Hall/CRC, 2018.</li>
+</ul>
+</li>
+<li>For <a class="internal-link " data-note-icon="" href="/#r-garden">R Garden</a>:
+<ul>
+<li>Wickham, Hadley, and Garrett Grolemund. <em><a href="https://r4ds.had.co.nz" target="_blank" class="external-link">R for data science: import, tidy, transform, visualize, and model data</a></em>. O'Reilly Media, Inc., 2017.</li>
+</ul>
+</li>
+<li>For <a class="internal-link " data-note-icon="" href="/#git-garden">Git Garden</a>:
+<ul>
+<li>Chacon, Scott, and Ben Straub. <em><a href="https://git-scm.com/book/en/v2" target="_blank" class="external-link">Pro Git</a></em>. Springer Nature, 2014.</li>
+</ul>
+</li>
+<li>For <a class="internal-link " data-note-icon="" href="/#web-dev-garden">WebDev Garden</a>
+<ul>
+<li>Robbins, Joyce. <em><a href="https://jtr13.github.io/d3book/" target="_blank" class="external-link">D3 for R Users</a></em>. 2022.</li>
+</ul>
+</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>In plain English: A collection of <em>notes</em>. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1237,7 +1425,31 @@ mtcars %&gt;%
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#tidyr">tidyr</a>
+                    <li><a href="#edav-garden">EDAV Garden</a>
+            
+                <ol>
+                    
+                    <li><a href="#what-is-edav">What is EDAV</a>
+            		</li>
+
+                    <li><a href="#plots-gallery">Plots Gallery</a>
+            		</li>
+
+                    <li><a href="#r-garden">R Garden</a>
+            		</li>
+
+                    <li><a href="#references">References</a>
+            		</li>
+
+                    <li><a href="#git-garden">Git Garden</a>
+            		</li>
+
+                    <li><a href="#web-dev-garden">WebDev Garden</a>
+            		</li>
+
+                    <li><a href="#references-1">References</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1251,12 +1463,7 @@ mtcars %&gt;%
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/alluvial-diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/edav-missing-data/" data-note-icon="" class="backlink">EDAV - Missing Data</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/parallel-coordinate/" data-note-icon="" class="backlink">Parallel Coordinate</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/r/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
-                                                </div></div>
+                                          <div class="backlink-list"></div>
                               </div>
                         
                   
@@ -1425,39 +1632,6 @@ mtcars %&gt;%
 </script>
 
     
-        <script>
-      if (window.location.hash) {
-        document.getElementById(window.location.hash.slice(1)).classList.add('referred');
-      }
-      window.addEventListener('hashchange', (evt) => {
-        const oldParts = evt.oldURL.split("#");
-        if (oldParts[1]) {
-          document.getElementById(oldParts[1]).classList.remove('referred');
-        }
-        const newParts = evt.newURL.split("#");
-        if (newParts[1]) {
-          document.getElementById(newParts[1]).classList.add('referred');
-        }
-      }, false);
-      const url_parts = window.location.href.split("#")
-      const url = url_parts[0];
-      const referrence = url_parts[1];
-      document.querySelectorAll(".cm-s-obsidian > *[id]").forEach(function (el) {
-        el.ondblclick = function(evt) {
-          const ref_url = url + '#' + evt.target.id
-          navigator.clipboard.writeText(ref_url);
-      }
-      });
-
-      
-    </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
-<script defer>
-    TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
-    document.querySelectorAll('.human-date').forEach(function (el) {
-        el.innerHTML = luxon.DateTime.fromISO(el.getAttribute('data-date') || el.innerText).toFormat(TIMESTAMP_FORMAT);
-      });
-</script>
     
     
     <script>
@@ -1467,5 +1641,5 @@ lucide.createIcons({
             }
         });
 </script>
-  </body>
-</html>
+    </body>
+  </html>
