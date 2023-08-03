@@ -1,5 +1,5 @@
 ---
-{}
+{"title":"Density Curve","alias":"Density Estimate","type":"note","created":"2022-12-10T17:51:41","modified":"2022-12-10T19:54:25","dg-publish":true,"sup":{},"state":"done","permalink":"/density-curve/","dgPassFrontmatter":true,"updated":"2022-12-10T19:54:25"}
 ---
 
 
