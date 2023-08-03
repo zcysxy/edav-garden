@@ -1,13 +1,13 @@
 ---
-{"type":"note","title":"DOM","alias":"Document Object Model","dg-publish":true,"created":"2021-08-30T13:51:14","modified":"2022-11-17T18:13:44","sup":["[[Language]]"],"state":"done","related":["[[XML\|XML]]","[[HTML\|HTML]]"],"permalink":"/dom/","dgPassFrontmatter":true,"updated":"2022-11-17T18:13:44"}
+{}
 ---
 
 
 # DOM
 
-The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an [[XML]] or [[HTML\|HTML]] document as a **tree structure** wherein each node is an object representing a part of the document.
+The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an [[XML\|XML]] or [[HTML\|HTML]] document as a **tree structure** wherein each node is an object representing a part of the document.
 
-## DOM and [[HTML]]
+## DOM and [[HTML\|HTML]]
 
 When you use a web browser to request a page like `https://example.com` the server returns HTML like this:
 
