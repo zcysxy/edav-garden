@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Scatterplot</title>
+    <title>R Operator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -596,7 +596,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Operator </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-operator/">R Operator </a>
                 </div>
             
         </div>
@@ -605,7 +605,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Package </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-package/">R Package </a>
                 </div>
             
         </div>
@@ -614,7 +614,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Type - Date </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-type-date/">R Type - Date </a>
                 </div>
             
         </div>
@@ -623,7 +623,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Type </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-type/">R Types </a>
                 </div>
             
         </div>
@@ -632,7 +632,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r/">R </a>
                 </div>
             
         </div>
@@ -641,7 +641,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Ridgeline </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/ridgeline/">Ridgeline </a>
                 </div>
             
         </div>
@@ -659,7 +659,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Scatterplot Matrix </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/scatterplot-matrix/">Scatterplot Matrix </a>
                 </div>
             
         </div>
@@ -668,7 +668,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Scatterplot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/scatterplot/">Scatterplot </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-09-08T18:33:13"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-09-22T17:33:42"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,98 +969,96 @@
       </header>
       
       
-      <h1 id="scatterplot" tabindex="-1">Scatterplot</h1>
-<p>A scatter plot uses Cartesian coordinates to display values for typically <strong>two variables</strong> for a set of data. The data are displayed as a collection of points, each having the value of two variables determining the position.</p>
-<p>The major role of scatterplots lies in <strong>revealing associations</strong> (<a class="internal-link " data-note-icon="" href="/edav-dependency-relationship/">EDAV - Dependency Relationship</a>) between variables, not just linear associations, but any kind of association.</p>
-<h2 id="features" tabindex="-1">Features</h2>
+      <h1 id="operator" tabindex="-1">Operator</h1>
+<h2 id="arithmetic" tabindex="-1">Arithmetic</h2>
+<pre><code class="language-r">10L + 66L # integer
+2.0 * 2L # numeric
+1 / 2
+c(1,2,3)^2
+
+# Remainder
+3 %% 2 # 1 (numeric)
+3L %% 2L # 1 (integer)
+
+# Integer Division
+5 %/% 2
+5 == 2 * (5 %/% 2) + (5 %% 2) # TRUE
+
+# Element-wise product
+c(1,2,3) * c(3,2,1)
+</code></pre>
+<p>Note that</p>
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r-basics/#1e9b8c" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<p>$</p><div class="markdown-embed-title">
+<h1 id="inline-n-link" tabindex="-1">inline n-link</h1>
+</div>
 <ul>
-<li>Causal relationships
+<li>The default arithmetics in <a class="internal-link " data-note-icon="" href="/r/">R</a> are <strong>element-wise</strong>, unlike <a class="internal-link is-unresolved"  href="/notes/matlab">MATLAB</a></li>
+</ul>
+</div></div>
+. There are special operators for matrix arithmetics.
+<pre><code class="language-r">A %*% B
+</code></pre>
+<h2 id="comparison" tabindex="-1">Comparison</h2>
+<pre><code class="language-r">1 &gt; 2
+2 &lt;= 3
+TRUE == TRUE
+FALSE != FALSE
+
+# Element-wise comparison
+c(1,2,3) == c(1,2,4) # TRUE  TRUE FALSE
+c(1,2,3) == 1 # TRUE FALSE FALSE
+
+# Identify if an element belongs to a vector.
+1 %in% c(1,2,3)
+</code></pre>
 <ul>
-<li>correlation ≠ causation, but we still use the y-axis for what appears to be the dependent variable</li>
+<li><span class="alt-check alt-check-tip">Use <code>near(x,y)</code> to compare two floating point numbers.</span></li>
 </ul>
-</li>
-<li>Associations
+<h2 id="logic" tabindex="-1">Logic</h2>
+<pre><code class="language-r">TRUE | FALSE # or
+TRUE || FALSE # or
+TRUE &amp; FALSE # and
+TRUE &amp;&amp; FALSE # and
+!TRUE # not
+
+# Element-wise logic operations
+c(TRUE, FALSE, FALSE) | c(FALSE, TRUE, FALSE) # TRUE TRUE FALSE
+</code></pre>
+<h2 id="assignment" tabindex="-1">Assignment</h2>
+<pre><code class="language-r">x &lt;- 1
+y = 1
+z &lt;&lt;- 1
+1 -&gt; u
+1 -&gt;&gt; w
+cat(x, y, z, u, w)
+</code></pre>
 <ul>
-<li>describe what you see</li>
+<li><span class="alt-check alt-check-tip">It's a convention to use <code>&lt;-</code> rather than <code>=</code> for assignment, and leave <code>=</code> only for function arguments. The reasons are compatibility and precedence (<code>&lt;-</code> is slightly higher, and <code>=</code> is used for function arguments before the assignment)</span></li>
 </ul>
-</li>
-<li>Outliers</li>
-<li>Clusters</li>
-<li>Gaps</li>
-<li>Barriers (boundaries)</li>
-<li>Conditional relationships
+<p>The special assignment operators <code>&lt;&lt;-</code> and <code>-&gt;&gt;</code> are <strong>looking up</strong> operators, and can maintain states. They can assign value to the variables in the parent scopes. See the example</p>
+<pre><code class="language-r">new_counter &lt;- function() {
+  i &lt;- 0
+  function() {
+    i &lt;&lt;- i + 1 # see if you change &lt;&lt;- to &lt;-
+    i
+  }
+}
+
+counter_one &lt;- new_counter() # outer function, with i = 0
+counter_two &lt;- new_counter()
+
+counter_one() # call ther inner function, i is changed to 1
+counter_one() # i is changed to 2, the state is maintained
+counter_two()
+</code></pre>
+<h2 id="other" tabindex="-1">Other</h2>
+<pre><code class="language-r"># Colon for sequence generating
+all(1:4 == seq(1,4,1))
+</code></pre>
 <ul>
-<li>different relationships for different intervals of x</li>
+<li><a class="internal-link " data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
 </ul>
-</li>
-</ul>
-<h2 id="an-example" tabindex="-1">An Example</h2>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221012233459.png" alt="ggplot2movies: rating vs. votes (y ~ x)"></p>
-<p>We can observe that</p>
-<ul>
-<li>Boundaries
-<ul>
-<li>No films have high votes and low ratings</li>
-<li>No films have high votes and an average rating close to the maximum possible</li>
-</ul>
-</li>
-<li>For films with more than a few votes, the average rating increases w/ # of votes</li>
-<li>Outliers: some films appear to have lower-than-expected ratings</li>
-<li>Films with low votes may have any average rating (full range)
-<ul>
-<li>The only films with very high ratings are those with relatively few votes</li>
-</ul>
-</li>
-</ul>
-<h2 id="overplotting" tabindex="-1">Overplotting</h2>
-<p>As we can see in the above example, scatterplots may <strong>overplot</strong>, making dots stacked together. There are some strategies for this problem</p>
-<ul>
-<li>Change the points in some way
-<ul>
-<li>open circles</li>
-<li>alpha blending
-<ul>
-<li><code>geom_point(alpha = .3, stroke = 0)</code></li>
-</ul>
-</li>
-<li>smaller dots
-<ul>
-<li>Default value in <code>geom_point</code> is <code>size = 1.5</code>
-<ul>
-<li><span class="alt-check alt-check-tip">We can use <code>ggplot2:::check_subclass(&quot;point&quot;, &quot;Geom&quot;)$default_aes</code> to see the default values in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></span></li>
-</ul>
-</li>
-<li>Make <code>shape = &quot;.&quot;</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Don't plot all points
-<ul>
-<li>randomly sample data
-<ul>
-<li><code>|&gt; slice_sample(n = 1000)</code></li>
-</ul>
-</li>
-<li>subset data
-<ul>
-<li>static: by percentiles</li>
-<li>interactive: <a class="internal-link is-unresolved"  href="/notes/r-package-plotly">ggplotly(), plot_ly()</a></li>
-</ul>
-</li>
-<li>remove outliers</li>
-</ul>
-</li>
-<li>Transform to log scale
-<ul>
-<li><code>+ scale_x_log10()</code></li>
-<li><code>+ scale_x_log10(breaks = c(1, 10, 100, 1000, 10000))</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="smooth-scatterplot" tabindex="-1">Smooth Scatterplot</h2>
-<p>A smooth scatterplot is a combination of a scatterplot, a <a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a>, and a <a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>. It plots the points and uses colors and shapes to show the magnitude of clusters. Use the <a class="internal-link " data-note-icon="" href="/notes/r">R</a> built-in function <code>smoothScatter(x,y)</code> to create a smooth scatterplot.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013010542.png" alt=""></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1303,20 +1303,29 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#scatterplot">Scatterplot</a>
+                    <li><a href="#operator">Operator</a>
             
                 <ol>
                     
-                    <li><a href="#features">Features</a>
+                    <li><a href="#arithmetic">Arithmetic</a>
+            		</li>
+                </ol>
             		</li>
 
-                    <li><a href="#an-example">An Example</a>
+                    <li><a href="#inline-n-link">inline n-link</a>
+            
+                <ol>
+                    
+                    <li><a href="#comparison">Comparison</a>
             		</li>
 
-                    <li><a href="#overplotting">Overplotting</a>
+                    <li><a href="#logic">Logic</a>
             		</li>
 
-                    <li><a href="#smooth-scatterplot">Smooth Scatterplot</a>
+                    <li><a href="#assignment">Assignment</a>
+            		</li>
+
+                    <li><a href="#other">Other</a>
             		</li>
                 </ol>
             		</li>
@@ -1332,12 +1341,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/biplot/" data-note-icon="" class="backlink">Biplot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/density-contour-plot/" data-note-icon="" class="backlink">Density Contour Plot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/edav-dependency-relationship/" data-note-icon="" class="backlink">Dependency Relationship</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/edav-multivariate-continuous-data/" data-note-icon="" class="backlink">EDAV - Multivariate Continuous Data</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/geographic-coordinate/" data-note-icon="" class="backlink">Geographic Coordinate</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Scatterplot Matrix/" data-note-icon="" class="backlink">Scatterplot Matrix</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/r/" data-note-icon="" class="backlink">R</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
