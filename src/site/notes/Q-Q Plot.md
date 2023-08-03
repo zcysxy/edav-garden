@@ -1,5 +1,5 @@
 ---
-{"title":"Q-Q Plot","alias":"quantile-quantile plot,QQ Plot","type":"note","created":"2022-09-15T19:09:00","modified":"2022-12-11T01:05:27","dg-publish":true,"sup":{},"state":"done","permalink":"/q-q-plot/","dgPassFrontmatter":true,"updated":"2022-12-11T01:05:27"}
+{"title":"Q-Q Plot","alias":"quantile-quantile plot,QQ Plot","type":"note","created":"2022-09-15T19:09:00","modified":"2022-12-11T01:05:27","dg-publish":true,"sup":[{}],"state":"done","permalink":"/q-q-plot/","dgPassFrontmatter":true,"updated":"2022-12-11T01:05:27"}
 ---
 
 
