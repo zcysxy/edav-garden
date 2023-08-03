@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/graph-color/","title":"Graph Color","created":"2022-10-27T16:25:37","updated":"2022-12-11T23:46:22"}
+{"title":"Graph Color","alias":null,"type":"note","created":"2022-10-27T16:25:37","modified":"2022-12-11T23:46:22","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/graph-color/","dgPassFrontmatter":true,"updated":"2022-12-11T23:46:22"}
 ---
 
 
