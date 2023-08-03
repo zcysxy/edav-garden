@@ -1,5 +1,5 @@
 ---
-{"type":"note","created":"2022-10-06T16:42:45","modified":"2022-12-11T22:35:07","dg-publish":true,"sup":["edav"],"state":"done","permalink":"/mosaic-plot/","dgPassFrontmatter":true,"updated":"2022-12-11T22:35:07"}
+{"type":"note","created":"2022-10-06T16:42:45","modified":"2022-12-11T22:35:07","dg-publish":true,"sup":[["EDAV","edav"]],"state":"done","permalink":"/mosaic-plot/","dgPassFrontmatter":true,"updated":"2022-12-11T22:35:07"}
 ---
 
 
