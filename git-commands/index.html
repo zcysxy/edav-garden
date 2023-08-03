@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Git</title>
+    <title>Git Commands</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -407,7 +407,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Geographic Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/geographic-coordinate/">Geographic Coordinate </a>
                 </div>
             
         </div>
@@ -416,7 +416,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git Commands </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
                 </div>
             
         </div>
@@ -425,7 +425,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git/">Git </a>
                 </div>
             
         </div>
@@ -434,7 +434,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Graph Color </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/graph-color/">Graph Color </a>
                 </div>
             
         </div>
@@ -443,7 +443,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Heatmap </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/heatmap/">Heatmap </a>
                 </div>
             
         </div>
@@ -452,7 +452,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Histogram </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/histogram/">Histogram </a>
                 </div>
             
         </div>
@@ -461,7 +461,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Human Rights and Law </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/human-rights-and-law/">Human Rights and Law </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2021-09-08T20:50:01"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2023-04-13T13:53:42"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,192 +969,185 @@
       </header>
       
       
-      <h1 id="git" tabindex="-1">Git</h1>
+      <h1 id="git-commands" tabindex="-1">Git Commands</h1>
+<h2 id="add" tabindex="-1">Add</h2>
 <ul>
-<li>Git is an implementation of <strong>version control</strong> (remember that it's not Git that invented the concept of version control)</li>
-<li>Git focuses on <strong>plain text</strong> files</li>
-<li>Git allows you to
+<li><code>git add -A</code> stages <strong>all changes</strong>
 <ul>
-<li>revert selected files back to a previous state</li>
-<li>revert the entire project back to a previous state</li>
-<li>compare changes over time</li>
-<li>see who last modified something that might be causing a problem</li>
+<li>= <code>git add .</code> + <code>git add -u</code></li>
 </ul>
 </li>
-</ul>
-<h2 id="version-control" tabindex="-1">Version Control</h2>
+<li><code>git add .</code> stages new files and modifications, <s>without deletions</s> (on the current directory and its subdirectories)
 <ul>
-<li><strong>VCS (Version Control System)</strong> is <em>any</em> system that records <strong>changes (the history)</strong> of a file/ set of file that helps you understand how it has progressed
-<ul>
-<li><strong>saving a file</strong> is a simplified version control system, which only allows you to move forward</li>
+<li><span class="alt-check alt-check-rmk">For Git &gt;= 2.0, <code>git add .</code> will add deletions! Use flag <code>--ignore-removal</code> to ignore deletion</span></li>
+<li><span class="alt-check alt-check-rmk">Therefore, <code>git add -A</code> is redundant for Git &gt;= 2.0</span></li>
 </ul>
 </li>
-<li>History
-<ul>
-<li>Local VCS
-<ul>
-<li>keep <strong>patch sets</strong> (differences) in a local database</li>
+<li><code>git add -u</code> stages modifications and deletions, <strong>without new files</strong></li>
 </ul>
-</li>
-<li>Centralized VCS
-<ul>
-<li>keep versioned files in a single center <strong>server</strong></li>
-</ul>
-</li>
-<li>Distributed VCS
-<ul>
-<li>All <strong>clients</strong> don't just check out the latest snapshot of the files; rather, they <strong>fully mirror</strong> the repository, including its full history</li>
-<li>Every <strong>clone</strong> is really a full backup of all the data</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="git-vs-other-vcs" tabindex="-1">Git vs Other VCS</h3>
-<ul>
-<li>Snapshots vs Delta-Based VC
-<ul>
-<li>Delta(difference)-based:<br>
-<img src="https://git-scm.com/book/en/v2/images/deltas.png" alt=""></li>
-<li>Snapshots:<br>
-<img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt=""></li>
-</ul>
-</li>
-<li>Nearly Every Operation In Git In <strong>Local</strong>
-<ul>
-<li>Hence Git is super fast</li>
-</ul>
-</li>
-<li>Integrity by Hash
-<ul>
-<li>Git stores everything in its database not by file name but by the <strong>hash</strong> value of its contents</li>
-<li>Git uses checksum to guarantee integrity</li>
-</ul>
-</li>
-<li>Git Generally Only <strong>Adds</strong> Data
-<ul>
-<li>We can experiment without the danger of severely screwing things up</li>
-</ul>
-</li>
-</ul>
-<h2 id="concepts" tabindex="-1">Concepts</h2>
-<h3 id="three-states" tabindex="-1">Three States</h3>
-<ol>
-<li><strong>Modified</strong>: changed the file but have not committed it to your database yet</li>
-<li><strong>Staged</strong>: marked a modified file in its current version to go into your next commit snapshot<br>
-*</li>
-</ol>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/git/#d876a5" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
-<ul>
-<li><code>add</code> take changes into the control of git</li>
-</ul>
-</div></div>
-<ol start="3">
-<li><strong>Committed</strong>: the data is safely stored in your local database</li>
-</ol>
-<p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""></p>
-<h3 id="commit" tabindex="-1">Commit</h3>
-<p>Someone make some changes, then they <strong>commit</strong> to <strong>annotate the history of changes</strong>. Once committed, a &quot;snapshot&quot; was taken of the differences made to the system at a given point in time.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-227.jpg" alt=""></p>
-<h3 id="push-and-amp-pull" tabindex="-1">Push &amp; Pull</h3>
-<p>When collaborating (even with yourself), you may want to host a <strong>remote repository</strong> (repository is just a <em>folder</em> of your project) that can accessed by anyone. <strong>Push</strong> is just submitting your commits (changes with annotations) to the remote; while <strong>pull</strong> is the opposite.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-274.jpg" alt=""></p>
-<h3 id="branches" tabindex="-1">Branches</h3>
-<p>In a large collaborating project, you may have different <strong>lines of work</strong> that have different focus and progress. Then you create <strong>branches</strong>, which leave the <strong>main</strong> (<em>used</em> to called <strong>master</strong> 😆) branch at some point and will eventually <strong>merge</strong> to the main branch.</p>
-<p>In essence, when a branch gets merged into master, its commits get added to the top of the master history.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-257.jpg" alt=""></p>
-<h3 id="other" tabindex="-1">Other</h3>
-<ul id="d876a5">
-<li>
-<p><code>clone</code> fully copy a repository, including all the history</p>
-</li>
-<li>
-<p><code>add</code> take changes into the control of git</p>
-</li>
-<li>
-<p><code>fetch</code> get the changes from other repo but without automatically merging them</p>
-</li>
-<li>
-<p><code>merge</code> accept the fetched changes</p>
-</li>
-<li>
-<p><code>pull request</code> a GitHub tool that allows users to easily see the changes (the difference or &quot;diff&quot;) that a <strong>feature branch</strong> is proposing as well as discuss any tweaks that said branch might require before it is merged into master</p>
-</li>
-<li>
-<p><code>stash</code> temporarily commit</p>
-</li>
-</ul>
-<h2 id="usage" tabindex="-1">Usage</h2>
-<h3 id="update" tabindex="-1">Update</h3>
-<blockquote>
-<p>On <a class="internal-link is-unresolved"  href="/notes/linux">Linux</a></p>
-</blockquote>
-<pre><code class="language-bash">sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
+<h2 id="combine-add-and-commit" tabindex="-1">Combine add and commit</h2>
+<pre><code class="language-bash">git commit -am &quot;commit message&quot;
 </code></pre>
-<h3 id="configuration" tabindex="-1">Configuration</h3>
-<ul>
-<li>User name and email</li>
-</ul>
-<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
-git config --global user.email &quot;yourname@example.com&quot;
-</code></pre>
-<ul>
-<li>Set the default branch to match the default branch name of GitHub (<code>main</code>)</li>
-</ul>
-<pre><code class="language-bash">git config --global init.defaultBranch main
-</code></pre>
-<h3 id="ssh-management" tabindex="-1">SSH Management</h3>
-<ul>
-<li>Generate an SSH key for the first time</li>
-</ul>
-<pre><code class="language-bash">ssh-keygen -C &quot;hello@gmail.com&quot;
-</code></pre>
-<ul>
-<li>Read and read the SSH key</li>
-</ul>
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | clip.exe
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk"><code>clip.exe</code> is only available on WSL, use <code>xclip</code> on other Linux systems, use <code>pbcopy</code> on <a class="internal-link is-unresolved"  href="/notes/mac-os">macOS</a></span></li>
-</ul>
-<ul>
-<li>Go to GitHub to add the SSH key</li>
-<li>Test the key (for GitHub)</li>
-</ul>
-<pre><code class="language-bash">ssh -T git@github.com
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk">When first run, it will ask you to add a host to known hosts, type <code>yes</code></span></li>
-</ul>
-<h3 id="workflow" tabindex="-1">Workflow</h3>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018165408.png" alt=""></p>
-<pre><code class="language-bash"># Initialize a repo
-git init
-# Clone a repo
-git clone &lt;repo_url&gt;
-# Stage all changes in the **directory**
-git add .
-# Stage all changes in the **repository**
-git add -A
-# Commit
+<p>is equal to</p>
+<pre><code class="language-bash">git add -u
 git commit -m &quot;commit message&quot;
-# Check status
-git status
-# Push
-git push [-u origin main]
-# See history
-git log
 </code></pre>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner">Rmk</div></div>
+<h2 id="alias" tabindex="-1">Alias</h2>
+<pre><code class="language-bash">git config --global alias.ac &quot;commit -am&quot;
+git ac &quot;commit message&quot;
+</code></pre>
+<p>is equal to</p>
+<pre><code class="language-bash">git commit -am &quot;commit message&quot;
+</code></pre>
+<h2 id="branch" tabindex="-1">Branch</h2>
+<pre><code class="language-bash"># Create a branch
+git branch -M main
+# Rename a branch
+git branch -M master main
+</code></pre>
+<h2 id="log-in-terminal" tabindex="-1">Log in Terminal</h2>
+<p>To get better log info like in the GUI</p>
+<pre><code class="language-bash">git log --graph --oneline --decorate
+</code></pre>
+<h2 id="stash" tabindex="-1">Stash</h2>
+<p><code>stash</code> store your changes without commit, remove them now, and pop out when you need them again</p>
+<pre><code class="language-bash"># Store all your changes without commit, and hide them
+git stash
+# Pop out your hidden changes
+git stash pop
+# Stash your changes with a given name
+git stash save &quot;your stash name&quot;
+# Show all your stashes
+git stash list
+# Apply a certain stash in the list
+git stash apply index
+</code></pre>
+<h2 id="ignore" tabindex="-1">Ignore</h2>
+<p>To ignore some files or directories, add them to the <code>.gitignore</code> file. However, this will not work for files/dirs that have already been tracking. To remove those files/dirs from <strong>git tracking</strong> (not delete them), use</p>
+<pre><code class="language-bash">git rm -r --cached path_to_file_or_dir
+</code></pre>
+<h2 id="new-branch" tabindex="-1">New Branch</h2>
+<pre><code class="language-sh"># Create a new branch called new_branch
+git branch new_branch
+# Checkout (switch) to the new branch
+git checkout new_branch
+</code></pre>
+<p>These two commands have a shorthand:</p>
+<pre><code class="language-sh">git checkout -b new_branch
+</code></pre>
+<h2 id="discard-branch" tabindex="-1">Discard Branch</h2>
+<p>When a branch is pulled/merged into main, it is no longer needed.</p>
+<pre><code class="language-sh">git branch -d patch # delete branch
+git fetch -p        # stop tracking obsolete remote branches (prune)
+</code></pre>
+<h2 id="remotes" tabindex="-1">Remotes</h2>
+<pre><code class="language-sh"># View the remotes
+git remote -v
+# Add a remote called origin
+git remote add origin git@github.com:zcysxy/repo.git
+# Change the url of the remote origin
+git remote set-url origin https://github.com/zcysxy/repo.git
+</code></pre>
+<p>When forking an other's repo, remember to add the other's repo as an <strong>upstream repo</strong>.</p>
+<pre><code class="language-sh">git remote add upstream git@github.com:yiyi/repo.git
+</code></pre>
+<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Forking and Making Pull Requests Best Practice</div></div>
 <div class="callout-content">
 <p>
-<ul>
-<li><code>origin</code> is the remote name</li>
-<li><code>main</code> is the brach name</li>
-</ul>
+<ol>
+<li>Set the original repo as the upstream repo.</li>
+<li>Switch to a new branch before making any changes.</li>
+<li>Make a pull request from a new branch other than <code>main</code>/<code>master</code>.</li>
+<li>After the pull request is merged into the original repo, pull it into your own <code>main</code>/<code>master</code> branch.</li>
+<li>Delete the obsolete branch. <code>git branch -D obsolete-branch</code></li>
+</ol>
 </p></div></div>
+<h2 id="discard-changes" tabindex="-1">Discard Changes</h2>
+<pre><code class="language-bash"># Restore several files
+git restore file1 file2 file3
+
+# Restore all
+git restore .
+</code></pre>
+<h2 id="get-files-from-other-branches" tabindex="-1">Get Files from Other Branches</h2>
+<p>To get files from other branches, you can either use <code>checkout</code> command or <code>restore</code> command.</p>
+<pre><code class="language-bash"># main branch
+git checkout other_branch -- file1 file2
+# or
+git restore --source other_branch -- file1 file2
+</code></pre>
+<h2 id="show-tracked-files" tabindex="-1">Show Tracked Files</h2>
+<p>List all the files currently being tracked under the branch <code>master</code></p>
+<pre><code class="language-sh">git ls-tree -r master --name-only
+</code></pre>
+<h2 id="remote-status" tabindex="-1">Remote Status</h2>
+<p>To show what's going on in the remote branches, you need to fetch/update them first, then compare the differences.</p>
+<pre><code class="language-sh"># Method 1
+git fetch origin
+git diff origin/master
+git merge origin/master
+
+# Method2
+git remote update
+git status
+</code></pre>
+<h2 id="list-files" tabindex="-1">List Files</h2>
+<h3 id="ls-files" tabindex="-1">ls-files</h3>
+<pre><code class="language-shell">git ls-files # Show information about files in the index and the working tree
+    [-c|--cached] [-d|--deleted] [-o|--others] [-i|--|ignored]
+    [-s|--stage] [-u|--unmerged] [-k|--|killed] [-m|--modified]
+    [--directory [--no-empty-directory]] [--eol]
+    [--deduplicate]
+    [-x &lt;pattern&gt;|--exclude=&lt;pattern&gt;]
+    [-X &lt;file&gt;|--exclude-from=&lt;file&gt;]
+    [--exclude-per-directory=&lt;file&gt;]
+    [--exclude-standard]
+    [--error-unmatch] [--with-tree=&lt;tree-ish&gt;]
+    [--full-name] [--recurse-submodules]
+    [--abbrev[=&lt;n&gt;]] [--] [&lt;file&gt;…​]
+</code></pre>
+<h3 id="ls-tree" tabindex="-1">ls-tree</h3>
+<pre><code class="language-shell">git ls-tree -r main --name-only
+</code></pre>
+<div class="callout " data-callout="tip"><div class="callout-title"><div class="callout-title-inner"> <code>ls-tree</code> &gt; <code>ls-files</code><br></div></div>
+<div class="callout-content">
+<p>
+<code>ls-tree</code> is better than <code>ls-files</code> because <code>ls-files</code> may differ from the <code>--work-tree</code>.</p>
+</div></div>
+<h2 id="garbage-collection" tabindex="-1">Garbage Collection</h2>
+<p>To &quot;collect the garbage&quot; in the <code>.git</code> folder and reduce its size, use</p>
+<pre><code class="language-shell">git gc
+# or spend more time optimizing using
+git gc --aggressive
+</code></pre>
+<p>This command actually executes a bundle of other internal subcommands like <code>git prune</code>, <code>git repack</code>, <code>git pack</code> and <code>git rerere</code>. These subcommands identify any Git objects that are outside the threshold levels set from the <code>git gc</code> configuration, and then compress, or prune them accordingly.</p>
+<h2 id="global-code-gitignore-code" tabindex="-1">Global <code>.gitignore</code></h2>
+<p>You can create a global <code>.gitignore</code> file to ignore files for all git repositories. When you created that file, run the following command</p>
+<pre><code class="language-shell">git config --global core.excludesfile &lt;path_to_your_gitignore_global&gt;
+</code></pre>
+<h2 id="separate-git-directory" tabindex="-1">Separate Git Directory</h2>
+<p>Sometimes, you don't want the <code>.git</code> directory to be in the same directory as the working tree (for example, to prevent sync issues).</p>
+<pre><code class="language-shell">cd ~/work/dir # working dir
+git init –separate-git-dir ~/work/dir.git # git dir in the parent dir
+</code></pre>
+<h2 id="merge-changes-from-another-branch" tabindex="-1">Merge Changes from Another Branch</h2>
+<pre><code class="language-shell"># In branch main
+git merge patch_branch
+# or merge from a specific commit
+git cherry-pick commit-hash
+</code></pre>
+<h2 id="compare-current-and-last-version" tabindex="-1">Compare Current and Last Version</h2>
+<pre><code class="language-shell"># HEAD~n is the nth generation ancestor of the named commit object (HEAD here)
+git diff HEAD~1 HEAD
+# Shortcuts
+git diff HEAD~ HEAD
+git diff HEAD~
+git diff @~ # @ is an alias for HEAD
+git show # doesn't work for merge commit
+</code></pre>
+<h2 id="see-commit-log-between-tags" tabindex="-1">See Commit Log Between Tags</h2>
+<pre><code class="language-shell">git log [tag_num]..HEAD &gt; changelog.md
+</code></pre>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1397,56 +1392,80 @@ git log
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#git">Git</a>
+                    <li><a href="#git-commands">Git Commands</a>
             
                 <ol>
                     
-                    <li><a href="#version-control">Version Control</a>
+                    <li><a href="#add">Add</a>
+            		</li>
+
+                    <li><a href="#combine-add-and-commit">Combine add and commit</a>
+            		</li>
+
+                    <li><a href="#alias">Alias</a>
+            		</li>
+
+                    <li><a href="#branch">Branch</a>
+            		</li>
+
+                    <li><a href="#log-in-terminal">Log in Terminal</a>
+            		</li>
+
+                    <li><a href="#stash">Stash</a>
+            		</li>
+
+                    <li><a href="#ignore">Ignore</a>
+            		</li>
+
+                    <li><a href="#new-branch">New Branch</a>
+            		</li>
+
+                    <li><a href="#discard-branch">Discard Branch</a>
+            		</li>
+
+                    <li><a href="#remotes">Remotes</a>
+            		</li>
+
+                    <li><a href="#discard-changes">Discard Changes</a>
+            		</li>
+
+                    <li><a href="#get-files-from-other-branches">Get Files from Other Branches</a>
+            		</li>
+
+                    <li><a href="#show-tracked-files">Show Tracked Files</a>
+            		</li>
+
+                    <li><a href="#remote-status">Remote Status</a>
+            		</li>
+
+                    <li><a href="#list-files">List Files</a>
             
                 <ol>
                     
-                    <li><a href="#git-vs-other-vcs">Git vs Other VCS</a>
+                    <li><a href="#ls-files">ls-files</a>
+            		</li>
+
+                    <li><a href="#ls-tree">ls-tree</a>
             		</li>
                 </ol>
             		</li>
 
-                    <li><a href="#concepts">Concepts</a>
-            
-                <ol>
-                    
-                    <li><a href="#three-states">Three States</a>
+                    <li><a href="#garbage-collection">Garbage Collection</a>
             		</li>
 
-                    <li><a href="#commit">Commit</a>
+                    <li><a href="#global-code-gitignore-code">Global .gitignore</a>
             		</li>
 
-                    <li><a href="#push-and-amp-pull">Push & Pull</a>
+                    <li><a href="#separate-git-directory">Separate Git Directory</a>
             		</li>
 
-                    <li><a href="#branches">Branches</a>
+                    <li><a href="#merge-changes-from-another-branch">Merge Changes from Another Branch</a>
             		</li>
 
-                    <li><a href="#other">Other</a>
-            		</li>
-                </ol>
+                    <li><a href="#compare-current-and-last-version">Compare Current and Last Version</a>
             		</li>
 
-                    <li><a href="#usage">Usage</a>
-            
-                <ol>
-                    
-                    <li><a href="#update">Update</a>
-            		</li>
-
-                    <li><a href="#configuration">Configuration</a>
-            		</li>
-
-                    <li><a href="#ssh-management">SSH Management</a>
-            		</li>
-
-                    <li><a href="#workflow">Workflow</a>
-            		</li>
-                </ol>
+                    <li><a href="#see-commit-log-between-tags">See Commit Log Between Tags</a>
             		</li>
                 </ol>
             		</li>
