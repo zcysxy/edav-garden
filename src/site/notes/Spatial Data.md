@@ -1,5 +1,5 @@
 ---
-{"title":"Spatial Data","alias":null,"type":"note","created":"2022-11-10T16:21:11","modified":"2022-11-10T20:13:28","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","permalink":"/spatial-data/","dgPassFrontmatter":true,"updated":"2022-11-10T20:13:28"}
+{}
 ---
 
 
