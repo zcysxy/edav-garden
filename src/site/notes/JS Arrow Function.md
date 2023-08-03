@@ -1,7 +1,4 @@
----
-{"title":"JS Array Function","alias":null,"type":"note","dg-publish":true,"created":"2022-11-17T17:22:24","modified":"2022-11-17T21:44:33","sup":[{}],"state":"done","permalink":"/js-arrow-function/","dgPassFrontmatter":true,"updated":"2022-11-17T21:44:33"}
----
-
+[object Promise]
 
 # JS Array Function
 
