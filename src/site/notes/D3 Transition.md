@@ -1,5 +1,5 @@
 ---
-{"title":"D3 Transition","alias":null,"type":"note","created":"2022-12-01T22:17:14","modified":"2022-12-12T12:47:58","dg-publish":true,"sup":["D3 Transition.md/d3"],"state":"done","permalink":"/d3-transition/","dgPassFrontmatter":true,"updated":"2022-12-12T12:47:58"}
+{"title":"D3 Transition","alias":null,"type":"note","created":"2022-12-01T22:17:14","modified":"2022-12-12T12:47:58","dg-publish":true,"sup":["d3"],"state":"done","permalink":"/d3-transition/","dgPassFrontmatter":true,"updated":"2022-12-12T12:47:58"}
 ---
 
 
