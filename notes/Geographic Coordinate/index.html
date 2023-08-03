@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Git</title>
+    <title>Geographic Coordinate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -407,7 +407,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/geographic-coordinate/">Geographic Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Geographic Coordinate </a>
                 </div>
             
         </div>
@@ -416,7 +416,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git Commands </a>
                 </div>
             
         </div>
@@ -425,7 +425,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git/">Git </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2021-08-25T17:28:13"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-18T16:54:12"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,192 +967,46 @@
       </header>
       
       
-      <h1 id="git" tabindex="-1">Git</h1>
+      <h1 id="geographic-coordinate" tabindex="-1">Geographic Coordinate</h1>
+<p>Geographic coordinate uses <strong>latitude and longitude</strong> to locate a position.<br>
+Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like <a class="internal-link " data-note-icon="" href="/notes/scatterplot">Scatterplot</a> and <a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>.</p>
 <ul>
-<li>Git is an implementation of <strong>version control</strong> (remember that it's not Git that invented the concept of version control)</li>
-<li>Git focuses on <strong>plain text</strong> files</li>
-<li>Git allows you to
+<li><span class="alt-check alt-check-rmk">In a geographic coordinate, <strong>latitude</strong> comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates.<br>
+{ <a class="tag" onclick="toggleTagSearch(this)" data-content="#5kd68p">#5kd68p</a>}<br>
+</span></li>
+</ul>
+<p>There are also some special graphs for geographic coordinate system, but with controversial performance, like</p>
 <ul>
-<li>revert selected files back to a previous state</li>
-<li>revert the entire project back to a previous state</li>
-<li>compare changes over time</li>
-<li>see who last modified something that might be causing a problem</li>
+<li>[-] Radius Map: use a circle with a radius dependent on an additional variable to represent a dot</li>
+<li>[-] Push Pin Map: use a push pin icon to represent a dot</li>
+</ul>
+<h2 id="implementation" tabindex="-1">Implementation</h2>
+<h3 id="ggmap" tabindex="-1">ggmap</h3>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">Package</a> <code>ggmap</code> can generate real-world maps. It is compatible with <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>, so you can easily add layers on top of the base map. Related functions:</p>
+<ul>
+<li><code>get_stamenmap</code>: get a US map
+<ul>
+<li>can be zoomed using option <code>bbox</code>, <code>zoom</code>, and the latitude-longitude range of the area</li>
 </ul>
 </li>
+<li><code>get_googlemap</code>: get the map of the specified latitude-longitude range from Google map</li>
+<li><code>ggmap</code>: render the map</li>
 </ul>
-<h2 id="version-control" tabindex="-1">Version Control</h2>
-<ul>
-<li><strong>VCS (Version Control System)</strong> is <em>any</em> system that records <strong>changes (the history)</strong> of a file/ set of file that helps you understand how it has progressed
-<ul>
-<li><strong>saving a file</strong> is a simplified version control system, which only allows you to move forward</li>
-</ul>
-</li>
-<li>History
-<ul>
-<li>Local VCS
-<ul>
-<li>keep <strong>patch sets</strong> (differences) in a local database</li>
-</ul>
-</li>
-<li>Centralized VCS
-<ul>
-<li>keep versioned files in a single center <strong>server</strong></li>
-</ul>
-</li>
-<li>Distributed VCS
-<ul>
-<li>All <strong>clients</strong> don't just check out the latest snapshot of the files; rather, they <strong>fully mirror</strong> the repository, including its full history</li>
-<li>Every <strong>clone</strong> is really a full backup of all the data</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="git-vs-other-vcs" tabindex="-1">Git vs Other VCS</h3>
-<ul>
-<li>Snapshots vs Delta-Based VC
-<ul>
-<li>Delta(difference)-based:<br>
-<img src="https://git-scm.com/book/en/v2/images/deltas.png" alt=""></li>
-<li>Snapshots:<br>
-<img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt=""></li>
-</ul>
-</li>
-<li>Nearly Every Operation In Git In <strong>Local</strong>
-<ul>
-<li>Hence Git is super fast</li>
-</ul>
-</li>
-<li>Integrity by Hash
-<ul>
-<li>Git stores everything in its database not by file name but by the <strong>hash</strong> value of its contents</li>
-<li>Git uses checksum to guarantee integrity</li>
-</ul>
-</li>
-<li>Git Generally Only <strong>Adds</strong> Data
-<ul>
-<li>We can experiment without the danger of severely screwing things up</li>
-</ul>
-</li>
-</ul>
-<h2 id="concepts" tabindex="-1">Concepts</h2>
-<h3 id="three-states" tabindex="-1">Three States</h3>
+<h3 id="sf-and-tmap" tabindex="-1">sf and tmap</h3>
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<h2 id="sf-and-tmap-1" tabindex="-1">sf and tmap</h2>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
+<p><a class="internal-link " data-note-icon="" href="/notes/r-package">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
 <ol>
-<li><strong>Modified</strong>: changed the file but have not committed it to your database yet</li>
-<li><strong>Staged</strong>: marked a modified file in its current version to go into your next commit snapshot<br>
-*</li>
-</ol>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/git/#d876a5" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+<li>Get the spatial data by reading the shape file using <code>sf</code></li>
+<li>Combine spatial data and other data
 <ul>
-<li><code>add</code> take changes into the control of git</li>
+<li>e.g. use <code>left_join()</code></li>
 </ul>
+</li>
+<li>plot the combined data using <code>tmap</code></li>
+</ol>
 </div></div>
-<ol start="3">
-<li><strong>Committed</strong>: the data is safely stored in your local database</li>
-</ol>
-<p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""></p>
-<h3 id="commit" tabindex="-1">Commit</h3>
-<p>Someone make some changes, then they <strong>commit</strong> to <strong>annotate the history of changes</strong>. Once committed, a &quot;snapshot&quot; was taken of the differences made to the system at a given point in time.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-227.jpg" alt=""></p>
-<h3 id="push-and-amp-pull" tabindex="-1">Push &amp; Pull</h3>
-<p>When collaborating (even with yourself), you may want to host a <strong>remote repository</strong> (repository is just a <em>folder</em> of your project) that can accessed by anyone. <strong>Push</strong> is just submitting your commits (changes with annotations) to the remote; while <strong>pull</strong> is the opposite.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-274.jpg" alt=""></p>
-<h3 id="branches" tabindex="-1">Branches</h3>
-<p>In a large collaborating project, you may have different <strong>lines of work</strong> that have different focus and progress. Then you create <strong>branches</strong>, which leave the <strong>main</strong> (<em>used</em> to called <strong>master</strong> 😆) branch at some point and will eventually <strong>merge</strong> to the main branch.</p>
-<p>In essence, when a branch gets merged into master, its commits get added to the top of the master history.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-257.jpg" alt=""></p>
-<h3 id="other" tabindex="-1">Other</h3>
-<ul id="d876a5">
-<li>
-<p><code>clone</code> fully copy a repository, including all the history</p>
-</li>
-<li>
-<p><code>add</code> take changes into the control of git</p>
-</li>
-<li>
-<p><code>fetch</code> get the changes from other repo but without automatically merging them</p>
-</li>
-<li>
-<p><code>merge</code> accept the fetched changes</p>
-</li>
-<li>
-<p><code>pull request</code> a GitHub tool that allows users to easily see the changes (the difference or &quot;diff&quot;) that a <strong>feature branch</strong> is proposing as well as discuss any tweaks that said branch might require before it is merged into master</p>
-</li>
-<li>
-<p><code>stash</code> temporarily commit</p>
-</li>
-</ul>
-<h2 id="usage" tabindex="-1">Usage</h2>
-<h3 id="update" tabindex="-1">Update</h3>
-<blockquote>
-<p>On <a class="internal-link is-unresolved"  href="/notes/linux">Linux</a></p>
-</blockquote>
-<pre><code class="language-bash">sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
-</code></pre>
-<h3 id="configuration" tabindex="-1">Configuration</h3>
-<ul>
-<li>User name and email</li>
-</ul>
-<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
-git config --global user.email &quot;yourname@example.com&quot;
-</code></pre>
-<ul>
-<li>Set the default branch to match the default branch name of GitHub (<code>main</code>)</li>
-</ul>
-<pre><code class="language-bash">git config --global init.defaultBranch main
-</code></pre>
-<h3 id="ssh-management" tabindex="-1">SSH Management</h3>
-<ul>
-<li>Generate an SSH key for the first time</li>
-</ul>
-<pre><code class="language-bash">ssh-keygen -C &quot;hello@gmail.com&quot;
-</code></pre>
-<ul>
-<li>Read and read the SSH key</li>
-</ul>
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | clip.exe
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk"><code>clip.exe</code> is only available on WSL, use <code>xclip</code> on other Linux systems, use <code>pbcopy</code> on <a class="internal-link is-unresolved"  href="/notes/mac-os">macOS</a></span></li>
-</ul>
-<ul>
-<li>Go to GitHub to add the SSH key</li>
-<li>Test the key (for GitHub)</li>
-</ul>
-<pre><code class="language-bash">ssh -T git@github.com
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk">When first run, it will ask you to add a host to known hosts, type <code>yes</code></span></li>
-</ul>
-<h3 id="workflow" tabindex="-1">Workflow</h3>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018165408.png" alt=""></p>
-<pre><code class="language-bash"># Initialize a repo
-git init
-# Clone a repo
-git clone &lt;repo_url&gt;
-# Stage all changes in the **directory**
-git add .
-# Stage all changes in the **repository**
-git add -A
-# Commit
-git commit -m &quot;commit message&quot;
-# Check status
-git status
-# Push
-git push [-u origin main]
-# See history
-git log
-</code></pre>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner">Rmk</div></div>
-<div class="callout-content">
-<p>
-<ul>
-<li><code>origin</code> is the remote name</li>
-<li><code>main</code> is the brach name</li>
-</ul>
-</p></div></div>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1399,56 +1251,23 @@ git log
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#git">Git</a>
+                    <li><a href="#geographic-coordinate">Geographic Coordinate</a>
             
                 <ol>
                     
-                    <li><a href="#version-control">Version Control</a>
+                    <li><a href="#implementation">Implementation</a>
             
                 <ol>
                     
-                    <li><a href="#git-vs-other-vcs">Git vs Other VCS</a>
+                    <li><a href="#ggmap">ggmap</a>
+            		</li>
+
+                    <li><a href="#sf-and-tmap">sf and tmap</a>
             		</li>
                 </ol>
             		</li>
 
-                    <li><a href="#concepts">Concepts</a>
-            
-                <ol>
-                    
-                    <li><a href="#three-states">Three States</a>
-            		</li>
-
-                    <li><a href="#commit">Commit</a>
-            		</li>
-
-                    <li><a href="#push-and-amp-pull">Push & Pull</a>
-            		</li>
-
-                    <li><a href="#branches">Branches</a>
-            		</li>
-
-                    <li><a href="#other">Other</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#usage">Usage</a>
-            
-                <ol>
-                    
-                    <li><a href="#update">Update</a>
-            		</li>
-
-                    <li><a href="#configuration">Configuration</a>
-            		</li>
-
-                    <li><a href="#ssh-management">SSH Management</a>
-            		</li>
-
-                    <li><a href="#workflow">Workflow</a>
-            		</li>
-                </ol>
+                    <li><a href="#sf-and-tmap-1">sf and tmap</a>
             		</li>
                 </ol>
             		</li>
@@ -1464,7 +1283,8 @@ git log
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Spatial Data/" data-note-icon="" class="backlink">Spatial Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
                         
