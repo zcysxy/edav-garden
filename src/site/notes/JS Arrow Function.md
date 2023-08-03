@@ -1,5 +1,5 @@
 ---
-{"title":"JS Array Function","alias":null,"type":"note","dg-publish":true,"created":"2022-11-17T17:22:24","modified":"2022-11-17T21:44:33","sup":["[[JS Function\\|JS Function]]"],"state":"done","permalink":"/js-arrow-function/","dgPassFrontmatter":true,"updated":"2022-11-17T21:44:33"}
+{"title":"JS Array Function","alias":null,"type":"note","dg-publish":true,"created":"2022-11-17T17:22:24","modified":"2022-11-17T21:44:33","sup":["JS Arrow Function.md/js-function"],"state":"done","permalink":"/js-arrow-function/","dgPassFrontmatter":true,"updated":"2022-11-17T21:44:33"}
 ---
 
 
