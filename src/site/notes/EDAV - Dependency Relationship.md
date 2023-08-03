@@ -1,7 +1,4 @@
----
-{"title":"Dependency Relationship","alias":"Dependency Relationship","type":"note","created":"2022-10-12T23:21:40","modified":"2022-10-21T15:27:02","dg-publish":true,"sup":[{}],"state":"done","permalink":"/edav-dependency-relationship/","dgPassFrontmatter":true,"updated":"2022-10-21T15:27:02"}
----
-
+[object Promise]
 
 # Dependency Relationship
 
