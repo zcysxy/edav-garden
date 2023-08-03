@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Parallel Coordinate</title>
+    <title>Mosaic Plot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -479,7 +479,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">JS Function </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/js-function/">JS Functions </a>
                 </div>
             
         </div>
@@ -497,7 +497,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Machine Learning </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/machine-learning/">Machine Learning </a>
                 </div>
             
         </div>
@@ -506,7 +506,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Mosaic Plot </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/mosaic-plot/">Mosaic Plot </a>
                 </div>
             
         </div>
@@ -515,7 +515,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Parallel Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/parallel-coordinate/">Parallel Coordinate </a>
                 </div>
             
         </div>
@@ -524,7 +524,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Python </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/python/">Python </a>
                 </div>
             
         </div>
@@ -533,7 +533,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Q-Q Plot </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/q-q-plot/">Q-Q Plot </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-10-06T16:42:45"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-12-11T22:35:07"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,64 +969,105 @@
       </header>
       
       
-      <h1 id="parallel-coordinate" tabindex="-1">Parallel Coordinate</h1>
-<p>Instead of making coordinates orthogonal, we can make them <strong>parallel</strong> to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for <a class="internal-link " data-note-icon="" href="/edav-multivariate-continuous-data/">EDAV - Multivariate Continuous Data</a>.</p>
-<h2 id="slope-graph" tabindex="-1">Slope Graph</h2>
-<p>When there are only two parallel coordinates, the graph is called a <strong>slope graph</strong>.</p>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013024024.png" alt=""></p>
-<p>To make the patterns in a slope graph more obvious, we can apply some data transformation</p>
+      <h1 id="mosaic-plot" tabindex="-1">Mosaic Plot</h1>
+<p>A mosaic plot is a filled rectangular plot (no white space) with consistent numbers of rows and columns, in which the area of each small rectangle is proportional to the frequency count for a unique combination of levels of the categorical variables displayed.</p>
 <ul>
-<li>Standardization: <code>(x - mean(x)) / sd(x)</code></li>
-<li>Rescaling (to <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.526ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2000.7 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(278,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(778,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z" style="stroke-width: 3;"></path></g><g data-mml-node="mn" transform="translate(1222.7,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(1722.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>): <code>scales::rescale()</code></li>
+<li>Mosaic plots are like stacked <a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a>s, except that the width and height of the bars are proportional to the amount of data.</li>
+<li>Mosaic plots are not <strong>treemaps</strong>, which are another type of filled rectangular plots representing <strong>hierarchical data</strong> (fill color does not necessarily represent frequency count)</li>
+<li>Mosaic plots with only one horizontal cut (variable) are called <mark>spine plots</mark>, where vertical cuts are called <mark>spines</mark></li>
+<li>Mosaic plots with the same bin width are relative frequency stacked <a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a>s
+<ul>
+<li>All bars sum up to 100%, thus have the same height</li>
 </ul>
-<p>A drawback of these transformations is that we lose the actual units. A remedy is to label the units on each axis.</p>
+</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Mosaic-big.png" alt="|400" width="400px"></p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013150806.png" alt="U.S. adults who closely follow local news|500" width="500px"></p>
+<p>You can not read the actual values in a mosaic plot, but you can inspect the <strong>association</strong>. As we can see from the above example, we can relatively confident in concluding that the older one is, the higher probability of them being a follower.<br>
+The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 <h2 id="more-variables" tabindex="-1">More Variables</h2>
-<p>We can use <code>ggparcoord</code> in <code>GGally</code> to create parallel coordinate plots.</p>
+<p>Mosaic plots are powerful for presenting <a class="internal-link " data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>. We can put multiple variables on the x-axis and y-axis. The most important problem is <strong>cutting</strong> the variables.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013185846.png" alt=""></p>
+<p>As in the above example, we put variables</p>
 <ul>
-<li><code>scale = &quot;std&quot;</code> (standardization) is the default scale</li>
-<li><code>scale = &quot;uniminmax&quot;</code> is rescaling</li>
-<li><code>scale = &quot;globalminmax&quot;</code> is the scale without transformation</li>
+<li><code>Infl</code> and <code>Type</code> on the x-axis
+<ul>
+<li>We first cut on <code>Type</code>, and in each <code>Type</code>, we cut on <code>Infl</code></li>
 </ul>
-<p>Other methods to reveal the patterns:</p>
+</li>
+<li><code>Cont</code> and <code>Sat</code> on the y-axis
 <ul>
+<li>We first cut on <code>Cont</code>, and in each <code>Cont</code>, we cut on <code>Sat</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="mosaic-pairs-plot" tabindex="-1">Mosaic Pairs Plot</h2>
+<p>Just like <a class="internal-link " data-note-icon="" href="/notes/scatterplot-matrix">Scatterplot Matrix</a>, we can make mosaic plot matrix, with each element being a spine plot with two variables. Then for <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> variables, we need an <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="5.481ex" height="1.136ex" role="img" focusable="false" viewBox="0 -491 2422.4 502" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1822.4,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>n</mi></math></mjx-assistive-mml></mjx-container> matrix. A diagonal elements is a vertical proportion cut of one variable.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211221648.png" alt=""></p>
+<h2 id="best-practices" tabindex="-1">Best Practices</h2>
+<ul>
+<li>The order of cuts
+<ul>
+<li>Split dependent variables last</li>
+</ul>
+</li>
+<li>Direction of cuts
+<ul>
+<li>Split dependent variables horizontally</li>
+<li>3 vars: VVH</li>
+<li>4 vars: VVVH</li>
+<li>5 vars: VHVVH</li>
+</ul>
+</li>
+<li>Color fill is set to a dependent variable
+<ul>
+<li>Use color to stress the relationship
+<ul>
+<li><span class="alt-check alt-check-ex"><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192907.png" alt="|100x100" width="100x100px"> vs. <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013192932.png" alt="|100x100" width="100x100px"></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The most important level of the dependent variable is the closest to the x-axis and with the most noticeable shade</li>
+</ul>
+<h2 id="implementation" tabindex="-1">Implementation</h2>
+<ul>
+<li><code>geom_mosaic</code> in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></li>
+<li><code>mosaic()</code> in package <code>vcd</code>
+<ul id="hv0kpp">
 <li>
-<p>Reorder the variables</p>
-<ul id="o9j70v">
-<li>Making lines cross may be better than making them parallel</li>
+<p><span class="alt-check alt-check-ex"><code>mosaic(Music ~ Age, data = counts3, direction = c(&quot;v&quot;, &quot;h&quot;))</code></span></p>
+</li>
+<li>
+<p><span class="alt-check alt-check-ex"><code>mosaic(Music ~ Age + Favorite, data = counts3, direction = c(&quot;v&quot;, &quot;v&quot;, &quot;h&quot;))</code></span></p>
+</li>
+<li>
+<p>Here <a class="internal-link is-unresolved"  href="/notes/r-type-formula">R Type - Formula</a> can be read as &quot;on&quot;, especially for dependent variables</p>
+</li>
+<li>
+<p>There should be a <code>Freq</code> column in the date, which is a standard column in a dataframe</p>
+</li>
+<li>
+<p>use <code>vcd::labelings</code> functions to</p>
+<ul>
+<li>abbreviate labels using option <code>abbreviate_labs = c(FALSE, 3, 6)</code></li>
+<li>rotate labels using option <code>rot_labels = c(0,0,0,0)</code></li>
+<li>adjust variable names using option <code>set_varnames = c('name1', 'name2')</code></li>
 </ul>
 </li>
 <li>
-<p>Make lines transparent (change alpha)</p>
+<p>use <code>vcd::spacings</code> functions to adjust the spacing between factor levels</p>
 </li>
-<li>
-<p>Interpolation</p>
-<ul>
-<li>Instead of using straight lines, we can use splines or other interpolated curves</li>
-<li>This helps separate lines sharing the same value of some variables</li>
-</ul>
-</li>
-<li>
-<p>Highlight a trend</p>
-<ul>
-<li>Use colors to separate the trend and other lines</li>
 </ul>
 </li>
 </ul>
-<h2 id="implementations" tabindex="-1">Implementations</h2>
-<ul>
-<li><code>ggplot2::geom_line()</code>
-<ul>
-<li>Use <a class="internal-link " data-note-icon="" href="/notes/tidyr">tidyr</a> to transform variable names to x-axis first</li>
-</ul>
-</li>
-<li><code>GGally::ggparcoord()</code> (static, ggplot2)</li>
-<li><code>MASS:: parcoord()</code> (static, base)</li>
-<li><code>parcoords::parcoords()</code> (interactive)
-<ul>
-<li><code>devtools::install_github(“timelyportfolio/parcoords”)</code></li>
-</ul>
-</li>
-</ul>
+<h2 id="simpson-s-paradox" tabindex="-1">Simpson's Paradox</h2>
+<p>Simpson's paradox is a phenomenon in <a class="internal-link is-unresolved"  href="/notes/probability-theory">Probability Theory</a> and <a class="internal-link is-unresolved"  href="/notes/statistics">Statistics</a> in which a trend appears in several groups of data but disappears or reverses when the groups are combined.<br>
+An example of Simpson's paradox is <a class="internal-link is-unresolved"  href="/notes/a-plausible-treatment-test">A Plausible Treatment Test</a>.<br>
+A visual example of Simpson's paradox:</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222838.png" alt="200x200"> ==&gt; <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222903.png" alt="200x200"></p>
+<p>Mosaic plots can help eliminate Simpson's paradox:</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013223143.png" alt=""></p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1269,17 +1312,23 @@
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#parallel-coordinate">Parallel Coordinate</a>
+                    <li><a href="#mosaic-plot">Mosaic Plot</a>
             
                 <ol>
                     
-                    <li><a href="#slope-graph">Slope Graph</a>
-            		</li>
-
                     <li><a href="#more-variables">More Variables</a>
             		</li>
 
-                    <li><a href="#implementations">Implementations</a>
+                    <li><a href="#mosaic-pairs-plot">Mosaic Pairs Plot</a>
+            		</li>
+
+                    <li><a href="#best-practices">Best Practices</a>
+            		</li>
+
+                    <li><a href="#implementation">Implementation</a>
+            		</li>
+
+                    <li><a href="#simpson-s-paradox">Simpson's Paradox</a>
             		</li>
                 </ol>
             		</li>
@@ -1295,9 +1344,7 @@
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/alluvial-diagram/" data-note-icon="" class="backlink">Alluvial Diagram</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/biplot/" data-note-icon="" class="backlink">Biplot</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/edav-multivariate-continuous-data/" data-note-icon="" class="backlink">EDAV - Multivariate Continuous Data</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/edav-multivariate-categorical-data/" data-note-icon="" class="backlink">EDAV - Multivariate Categorical Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/edav-garden/" data-note-icon="" class="backlink">edav-garden</a>
                                                 </div></div>
                               </div>
