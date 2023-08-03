@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/r-function-list/","title":"R Function List","created":"2022-09-10T18:13:18","updated":"2022-12-12T14:25:06"}
+{"title":"R Function List","alias":null,"type":"note","created":"2022-09-10T18:13:18","modified":"2022-12-12T14:25:06","dg-publish":true,"sup":["[[R]]"],"state":"[[%watch]]","related":["[[R Function]]"],"permalink":"/r-function-list/","dgPassFrontmatter":true,"updated":"2022-12-12T14:25:06"}
 ---
 
 
