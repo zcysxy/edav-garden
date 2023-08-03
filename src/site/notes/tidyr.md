@@ -1,5 +1,5 @@
 ---
-{"title":"tidyr","alias":"Tidy Data","type":"note","created":"2022-10-13T01:40:00","modified":"2022-12-11T20:34:00","dg-publish":true,"sup":["r-package"],"state":"done","permalink":"/tidyr/","dgPassFrontmatter":true,"updated":"2022-12-11T20:34:00"}
+{"title":"tidyr","alias":"Tidy Data","type":"note","created":"2022-10-13T01:40:00","modified":"2022-12-11T20:34:00","dg-publish":true,"sup":[["R Package","r-package"]],"state":"done","permalink":"/tidyr/","dgPassFrontmatter":true,"updated":"2022-12-11T20:34:00"}
 ---
 
 
