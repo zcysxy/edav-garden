@@ -1,4 +1,7 @@
-[object Promise]
+---
+{"title":"D3 Margin","alias":null,"type":"note","created":"2022-12-01T01:22:50","modified":"2022-12-01T20:53:33","dg-publish":true,"sup":["[[D3]]"],"state":"done","permalink":"/d3-margin/","dgPassFrontmatter":true,"updated":"2022-12-01T20:53:33"}
+---
+
 
 # D3 Margin
 
