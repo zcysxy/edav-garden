@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>R Package</title>
+    <title>R Type - Date</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -596,7 +596,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Operator </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-operator/">R Operator </a>
                 </div>
             
         </div>
@@ -605,7 +605,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Package </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-package/">R Package </a>
                 </div>
             
         </div>
@@ -614,7 +614,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Type - Date </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-type-date/">R Type - Date </a>
                 </div>
             
         </div>
@@ -623,7 +623,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">R Type </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/r-type/">R Types </a>
                 </div>
             
         </div>
@@ -959,7 +959,9 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps">
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-11-03T16:19:58"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-11-03T22:34:28"></span></div>
+            <div><i icon-name="up-arrow"></i> <a href="/[object Object]">[object Object]</a></div>
+            
             
           </div></div>
       
@@ -967,18 +969,166 @@
       </header>
       
       
-      <p>[object Promise]</p>
-<h1 id="r-package" tabindex="-1">R Package</h1>
-<pre><code class="language-r"># Install a package
-install.packages(&quot;tidyverse&quot;)
-# Load a package
-library(&quot;tidyverse&quot;)
+      <h1 id="date" tabindex="-1">Date</h1>
+<p><code>&quot;Date&quot;</code> is a special data <strong>class</strong> for date values in <a class="internal-link " data-note-icon="" href="/r/">R</a>. Strictly saying, <code>Date</code> is not an <a class="internal-link " data-note-icon="" href="/r-type/">R Type</a>, but a class. A class is an <strong>attribute</strong> assigned to an object regardless of its internal storage structure. To see this, execute the following code</p>
+<pre><code class="language-r">x &lt;- as.Date(&quot;2022-11-03&quot;)
+class(x)  # &quot;Date&quot;
+typeof(x) # &quot;double&quot;
 </code></pre>
-<p>If we need to be explicit about where a function (or dataset) comes from, we’ll use the special form <code>package::function()</code>. For example, <code>ggplot2::ggplot()</code> tells you explicitly that we’re using the <code>ggplot()</code> function from the <code>ggplot2</code> package</p>
-<p>To install from GitHub:</p>
-<pre><code class="language-R">library(devtools)
-devtools::install_github(&quot;metalyrics/rmetacritic&quot;)
+<ul>
+<li><span class="alt-check alt-check-rmk">The only <em>correct</em> date format: <code>YYYY-MM-DD</code></span></li>
+</ul>
+<h2 id="conversion-to-date" tabindex="-1">Conversion to Date</h2>
+<ul>
+<li>Use <code>as.Date(x)</code> to convert to Date class
+<ul>
+<li>You need to specify the format of <code>x</code> if it is not in <code>YYYY-MM-DD</code>
+<ul>
+<li><span class="alt-check alt-check-ex"><code>as.Date(&quot;1/12/2019&quot;, format=&quot;%m/%d/%Y&quot;)</code></span></li>
+<li>Pay attention to the format: wrong format may give the wrong date
+<ul>
+<li><span class="alt-check alt-check-ex"><code>as.Date(&quot;1/12/2019&quot;, format=&quot;%m/%d/%y&quot;)</code> gives <code>&quot;2020-01-12&quot;</code> because <code>%y</code> is for a two-digit year, and is replaced by <code>20</code> here</span></li>
+</ul>
+</li>
+<li>See <a class="internal-link " data-note-icon="" href="/r-type-date/#conversion-specification"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Conversion">#Conversion</a> Specification</a> for the conversion specification reference</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A similar function: <code>reader::parse_date</code>
+<ul>
+<li><code>parse_date</code> will return <code>NA</code> for <code>parse_date(&quot;1/12/2019&quot;, format=&quot;%m/%d/%y&quot;)</code></li>
+</ul>
+</li>
+<li>Use package <a class="internal-link " data-note-icon="" href="/lubridate/">lubridate</a></li>
+</ul>
+<h3 id="conversion-specification" tabindex="-1">Conversion Specification</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Conversion specification</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%A</td>
+<td>Full weekday</td>
+<td>Sunday, Thursday</td>
+</tr>
+<tr>
+<td>%b or %h</td>
+<td>Abbreviated month</td>
+<td>May, Jul</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>Full month</td>
+<td>May, July</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>Day of the month (01-31)</td>
+<td>27, 07</td>
+</tr>
+<tr>
+<td>%j</td>
+<td>Day of the year (001-366)</td>
+<td>148, 188</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>Month (01-12)</td>
+<td>05, 07</td>
+</tr>
+<tr>
+<td>%U</td>
+<td>Week (01-53) with Sunday as the first day of the week</td>
+<td>22, 27</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>Weekday (0-6) with Sunday as 0</td>
+<td>0, 4</td>
+</tr>
+<tr>
+<td>%W</td>
+<td>Week (00-53) with Monday as the first day of the week</td>
+<td>21, 27</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>Date, locale-specific</td>
+<td></td>
+</tr>
+<tr>
+<td>%y</td>
+<td>Year without century (00-99)</td>
+<td>84, 05</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>Year with century</td>
+<td>1984, 2005</td>
+</tr>
+<tr>
+<td>%C</td>
+<td>Century</td>
+<td>19, 20</td>
+</tr>
+<tr>
+<td>%D</td>
+<td>Date formatted %m/%d/%y</td>
+<td>05/27/84, 07/07/05</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>Weekday (1-7) Monday is 1</td>
+<td>7, 4</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>Newline on output or arbitrary whitespace on input</td>
+<td></td>
+</tr>
+<tr>
+<td>%t</td>
+<td>Tab on output or arbitrary whitespace on input</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><span class="alt-check alt-check-tip">See <code>?strptime</code> for the reference inside <a class="internal-link " data-note-icon="" href="/r/">R</a>.</span></li>
+</ul>
+<h2 id="date-operation" tabindex="-1">Date Operation</h2>
+<p>Date class supports the following operations</p>
+<pre><code class="language-R"># Subtraction
+as.Date(&quot;2022-11-01&quot;) - as.Date(&quot;2020-11-01&quot;)
+# Time difference of 730 days 
+
+# Addition
+as.Date(&quot;2022-11-01&quot;) + 7
+# &quot;2022-11-08&quot;
+
+# Comparison
+as.Date(&quot;2022-11-01&quot;) &lt; as.Date(&quot;2020-11-01&quot;)
+# False
 </code></pre>
+<h3 id="scale-x-date" tabindex="-1">scale_x_date</h3>
+<p>Since dates can be calculated and compared, it is easy to specify the limits and breaks in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>.</p>
+<ul>
+<li><code>base + sacle_x_date(limits = c(ymd(&quot;2022-01-01&quot;), ymd(&quot;2022-11-03&quot;)))</code></li>
+<li><code>base + sacle_x_date(limits = c(Sys.Date() - 19, NA))</code></li>
+<li><code>base + sacle_x_date(breaks = &quot;1 week&quot;))</code></li>
+<li><code>base + scale_x_date(date_labels = &quot;%b %d&quot;)</code></li>
+</ul>
+<h2 id="other-functions" tabindex="-1">Other Functions</h2>
+<ul>
+<li><code>Sys.date()</code> returns today's date</li>
+<li><code>weekdays()</code>, <code>months()</code>, and <code>quarters()</code> return the weekday, month, and quarter of the date respectively</li>
+</ul>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1223,7 +1373,31 @@ devtools::install_github(&quot;metalyrics/rmetacritic&quot;)
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#r-package">R Package</a>
+                    <li><a href="#date">Date</a>
+            
+                <ol>
+                    
+                    <li><a href="#conversion-to-date">Conversion to Date</a>
+            
+                <ol>
+                    
+                    <li><a href="#conversion-specification">Conversion Specification</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#date-operation">Date Operation</a>
+            
+                <ol>
+                    
+                    <li><a href="#scale-x-date">scale_x_date</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#other-functions">Other Functions</a>
+            		</li>
+                </ol>
             		</li>
                 </ol>
             </nav>
@@ -1237,13 +1411,10 @@ devtools::install_github(&quot;metalyrics/rmetacritic&quot;)
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Choropleth/" data-note-icon="" class="backlink">Choropleth</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Missing Data/" data-note-icon="" class="backlink">EDAV - Missing Data</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Geographic Coordinate/" data-note-icon="" class="backlink">Geographic Coordinate</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/R Operator - Pipe/" data-note-icon="" class="backlink">R Operator - Pipe</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/r-type/" data-note-icon="" class="backlink">R Types</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/r/" data-note-icon="" class="backlink">R</a>
-                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/spatial-data/" data-note-icon="" class="backlink">Spatial Data</a>
                                                 </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/lubridate/" data-note-icon="" class="backlink">lubridate</a>
                                                 </div></div>
                               </div>
                         
