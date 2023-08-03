@@ -1,5 +1,5 @@
 ---
-{"type":"index","alias":"数据库","created":"2022-05-28T03:34:23","modified":"2023-01-30T21:11:50","banner_icon":"🗃️","banner":"https://images.rawpixel.com/image_1300/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzOC1wZGZhbW91c3BhaW50aW5nMTAxMDAwMS1pbWFnZV8zLmpwZw.jpg","dg-publish":true,"sup":{},"state":"[[%wip]]","permalink":"/database/","dgPassFrontmatter":true,"updated":"2023-01-30T21:11:50"}
+{"type":"index","alias":"数据库","created":"2022-05-28T03:34:23","modified":"2023-01-30T21:11:50","banner_icon":"🗃️","banner":"https://images.rawpixel.com/image_1300/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzOC1wZGZhbW91c3BhaW50aW5nMTAxMDAwMS1pbWFnZV8zLmpwZw.jpg","dg-publish":true,"sup":[{}],"state":"[[%wip]]","permalink":"/database/","dgPassFrontmatter":true,"updated":"2023-01-30T21:11:50"}
 ---
 
 
