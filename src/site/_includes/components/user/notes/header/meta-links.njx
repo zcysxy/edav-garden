@@ -1,5 +1,5 @@
 {% if sup %}
-<div><i icon-name="corner-left-ip"></i>{% for link in sup %}
+<div><i icon-name="corner-left-up"></i>{% for link in sup %}
 <a href="/{{link[1]}}/">{{link[0]}}</a>
 {% endfor %}</div>
 {% endif %}
