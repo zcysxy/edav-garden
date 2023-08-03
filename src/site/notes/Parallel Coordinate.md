@@ -1,8 +1,11 @@
-[object Promise]
+---
+{"title":"Parallel Coordinate","alias":null,"type":"note","created":"2022-10-13T02:36:23","modified":"2022-12-11T21:44:09","dg-publish":true,"sup":["[[EDAV]]"],"state":"done","related":["[[EDAV - Multivariate Continuous Data\|EDAV - Multivariate Continuous Data]]"],"permalink":"/parallel-coordinate/","dgPassFrontmatter":true,"updated":"2022-12-11T21:44:09"}
+---
+
 
 # Parallel Coordinate
 
-Instead of making coordinates orthogonal, we can make them **parallel** to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for [[EDAV - Multivariate Continuous Data\|EDAV - Multivariate Continuous Data]].
+Instead of making coordinates orthogonal, we can make them **parallel** to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for [[EDAV - Multivariate Continuous Data]].
 
 ## Slope Graph
 
