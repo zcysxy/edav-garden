@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Git</title>
+    <title>Heatmap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -407,7 +407,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/geographic-coordinate/">Geographic Coordinate </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Geographic Coordinate </a>
                 </div>
             
         </div>
@@ -416,7 +416,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git-commands/">Git Commands </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git Commands </a>
                 </div>
             
         </div>
@@ -425,7 +425,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/git/">Git </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Git </a>
                 </div>
             
         </div>
@@ -434,7 +434,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/graph-color/">Graph Color </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Graph Color </a>
                 </div>
             
         </div>
@@ -443,7 +443,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/heatmap/">Heatmap </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Heatmap </a>
                 </div>
             
         </div>
@@ -959,9 +959,7 @@
       <header>
         
         <div class="header-meta">
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2021-08-25T17:28:13"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2022-10-18T16:54:12"></span></div>
-            <div><i icon-name="up-arrow"></i> <a href="/[object Object],[object Object]">[object Object],[object Object]</a></div>
-            
+          <div class="timestamps">
             
           </div></div>
       
@@ -969,192 +967,37 @@
       </header>
       
       
-      <h1 id="git" tabindex="-1">Git</h1>
+      <p>[object Promise]</p>
+<h1 id="heatmap" tabindex="-1">Heatmap</h1>
+<p>How does a heatmap work:</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220922170714.png" alt="Square heatmap of bin counts (binwidth = 5)"></p>
+<p>Heatmaps can be seen as two-dimensional <a class="internal-link " data-note-icon="" href="/histogram/">Histogram</a>s. Therefore, <a class="internal-link " data-note-icon="" href="/histogram/#e0e0f4">bin width</a> is also an important element for heatmaps.</p>
+<p>In <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>, use <code>geom_bin2d()</code> to create a heatmap.</p>
+<h2 id="hex-heatmap" tabindex="-1">Hex Heatmap</h2>
+<p>Rather than using squares, hex heatmaps use hexagons. Hexagons are more compact, provide more accurate information, and make more natural transitions. In <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>, use <code>geom_hex</code> to create hex heatmaps.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013000420.png" alt=""></p>
+<h2 id="unfixed-shapes" tabindex="-1">Unfixed Shapes</h2>
+<p>When using unfixed shapes, we can think of heatmaps as colored <a class="internal-link " data-note-icon="" href="/notes/density-contour-plot">Density Contour Plot</a>s. This kind of heatmaps is widely used for geographic patterns and thermal patterns.</p>
+<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013164229.png" alt="|500" width="500px"></p>
+<h2 id="changing-colors" tabindex="-1">Changing Colors</h2>
+<p>Colors in heatmaps show the magnitudes of the phenomenon (cluster). An example to change the color: <code>scale_fill_continuous(low = &quot;grey&quot;, high = &quot;purple&quot;)</code></p>
+<h2 id="three-variables" tabindex="-1">Three Variables</h2>
+<p>The color can not only represent the magnitude of the cluster, but it can also represent a <strong>third</strong> variable. By doing this, heatmaps are no longer restricted to <a class="internal-link " data-note-icon="" href="/notes/edav-continuous-variable">Continuous Variable</a>s, but can also be for <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">categorical</a>.</p>
+<p>For three variables, we cannot use <code>geom_bin2d</code> anymore. Some choices in <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a> are</p>
 <ul>
-<li>Git is an implementation of <strong>version control</strong> (remember that it's not Git that invented the concept of version control)</li>
-<li>Git focuses on <strong>plain text</strong> files</li>
-<li>Git allows you to
+<li><code>geom_tile</code>: plots a dot as a tile, with specified width and height
 <ul>
-<li>revert selected files back to a previous state</li>
-<li>revert the entire project back to a previous state</li>
-<li>compare changes over time</li>
-<li>see who last modified something that might be causing a problem</li>
+<li>use <code>color = white</code> to add white borders to the tiles</li>
 </ul>
 </li>
-</ul>
-<h2 id="version-control" tabindex="-1">Version Control</h2>
+<li><code>geom_rect</code>: plots a dot as a rectangle, with specified <code>xmin,xmax,ymin,ymax</code>
 <ul>
-<li><strong>VCS (Version Control System)</strong> is <em>any</em> system that records <strong>changes (the history)</strong> of a file/ set of file that helps you understand how it has progressed
-<ul>
-<li><strong>saving a file</strong> is a simplified version control system, which only allows you to move forward</li>
+<li>Rectangles can be squares with <code>coord_fixed()</code></li>
 </ul>
 </li>
-<li>History
-<ul>
-<li>Local VCS
-<ul>
-<li>keep <strong>patch sets</strong> (differences) in a local database</li>
+<li><code>geom_raster</code>: same as <code>geom_tile</code> w/ uniform width and height, and is faster</li>
 </ul>
-</li>
-<li>Centralized VCS
-<ul>
-<li>keep versioned files in a single center <strong>server</strong></li>
-</ul>
-</li>
-<li>Distributed VCS
-<ul>
-<li>All <strong>clients</strong> don't just check out the latest snapshot of the files; rather, they <strong>fully mirror</strong> the repository, including its full history</li>
-<li>Every <strong>clone</strong> is really a full backup of all the data</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="git-vs-other-vcs" tabindex="-1">Git vs Other VCS</h3>
-<ul>
-<li>Snapshots vs Delta-Based VC
-<ul>
-<li>Delta(difference)-based:<br>
-<img src="https://git-scm.com/book/en/v2/images/deltas.png" alt=""></li>
-<li>Snapshots:<br>
-<img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt=""></li>
-</ul>
-</li>
-<li>Nearly Every Operation In Git In <strong>Local</strong>
-<ul>
-<li>Hence Git is super fast</li>
-</ul>
-</li>
-<li>Integrity by Hash
-<ul>
-<li>Git stores everything in its database not by file name but by the <strong>hash</strong> value of its contents</li>
-<li>Git uses checksum to guarantee integrity</li>
-</ul>
-</li>
-<li>Git Generally Only <strong>Adds</strong> Data
-<ul>
-<li>We can experiment without the danger of severely screwing things up</li>
-</ul>
-</li>
-</ul>
-<h2 id="concepts" tabindex="-1">Concepts</h2>
-<h3 id="three-states" tabindex="-1">Three States</h3>
-<ol>
-<li><strong>Modified</strong>: changed the file but have not committed it to your database yet</li>
-<li><strong>Staged</strong>: marked a modified file in its current version to go into your next commit snapshot<br>
-*</li>
-</ol>
-<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/git/#d876a5" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
-<ul>
-<li><code>add</code> take changes into the control of git</li>
-</ul>
-</div></div>
-<ol start="3">
-<li><strong>Committed</strong>: the data is safely stored in your local database</li>
-</ol>
-<p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""></p>
-<h3 id="commit" tabindex="-1">Commit</h3>
-<p>Someone make some changes, then they <strong>commit</strong> to <strong>annotate the history of changes</strong>. Once committed, a &quot;snapshot&quot; was taken of the differences made to the system at a given point in time.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-227.jpg" alt=""></p>
-<h3 id="push-and-amp-pull" tabindex="-1">Push &amp; Pull</h3>
-<p>When collaborating (even with yourself), you may want to host a <strong>remote repository</strong> (repository is just a <em>folder</em> of your project) that can accessed by anyone. <strong>Push</strong> is just submitting your commits (changes with annotations) to the remote; while <strong>pull</strong> is the opposite.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-274.jpg" alt=""></p>
-<h3 id="branches" tabindex="-1">Branches</h3>
-<p>In a large collaborating project, you may have different <strong>lines of work</strong> that have different focus and progress. Then you create <strong>branches</strong>, which leave the <strong>main</strong> (<em>used</em> to called <strong>master</strong> 😆) branch at some point and will eventually <strong>merge</strong> to the main branch.</p>
-<p>In essence, when a branch gets merged into master, its commits get added to the top of the master history.</p>
-<p><img src="https://blog.red-badger.com/hubfs/Imported_Blog_Media/img-257.jpg" alt=""></p>
-<h3 id="other" tabindex="-1">Other</h3>
-<ul id="d876a5">
-<li>
-<p><code>clone</code> fully copy a repository, including all the history</p>
-</li>
-<li>
-<p><code>add</code> take changes into the control of git</p>
-</li>
-<li>
-<p><code>fetch</code> get the changes from other repo but without automatically merging them</p>
-</li>
-<li>
-<p><code>merge</code> accept the fetched changes</p>
-</li>
-<li>
-<p><code>pull request</code> a GitHub tool that allows users to easily see the changes (the difference or &quot;diff&quot;) that a <strong>feature branch</strong> is proposing as well as discuss any tweaks that said branch might require before it is merged into master</p>
-</li>
-<li>
-<p><code>stash</code> temporarily commit</p>
-</li>
-</ul>
-<h2 id="usage" tabindex="-1">Usage</h2>
-<h3 id="update" tabindex="-1">Update</h3>
-<blockquote>
-<p>On <a class="internal-link is-unresolved"  href="/notes/linux">Linux</a></p>
-</blockquote>
-<pre><code class="language-bash">sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
-</code></pre>
-<h3 id="configuration" tabindex="-1">Configuration</h3>
-<ul>
-<li>User name and email</li>
-</ul>
-<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
-git config --global user.email &quot;yourname@example.com&quot;
-</code></pre>
-<ul>
-<li>Set the default branch to match the default branch name of GitHub (<code>main</code>)</li>
-</ul>
-<pre><code class="language-bash">git config --global init.defaultBranch main
-</code></pre>
-<h3 id="ssh-management" tabindex="-1">SSH Management</h3>
-<ul>
-<li>Generate an SSH key for the first time</li>
-</ul>
-<pre><code class="language-bash">ssh-keygen -C &quot;hello@gmail.com&quot;
-</code></pre>
-<ul>
-<li>Read and read the SSH key</li>
-</ul>
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | clip.exe
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk"><code>clip.exe</code> is only available on WSL, use <code>xclip</code> on other Linux systems, use <code>pbcopy</code> on <a class="internal-link is-unresolved"  href="/notes/mac-os">macOS</a></span></li>
-</ul>
-<ul>
-<li>Go to GitHub to add the SSH key</li>
-<li>Test the key (for GitHub)</li>
-</ul>
-<pre><code class="language-bash">ssh -T git@github.com
-</code></pre>
-<ul>
-<li><span class="alt-check alt-check-rmk">When first run, it will ask you to add a host to known hosts, type <code>yes</code></span></li>
-</ul>
-<h3 id="workflow" tabindex="-1">Workflow</h3>
-<p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018165408.png" alt=""></p>
-<pre><code class="language-bash"># Initialize a repo
-git init
-# Clone a repo
-git clone &lt;repo_url&gt;
-# Stage all changes in the **directory**
-git add .
-# Stage all changes in the **repository**
-git add -A
-# Commit
-git commit -m &quot;commit message&quot;
-# Check status
-git status
-# Push
-git push [-u origin main]
-# See history
-git log
-</code></pre>
-<div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner">Rmk</div></div>
-<div class="callout-content">
-<p>
-<ul>
-<li><code>origin</code> is the remote name</li>
-<li><code>main</code> is the brach name</li>
-</ul>
-</p></div></div>
+<p>The above functions only plot the tiles without colors. Use <code>aes(fill = z)</code> to fill the colors according to variable <code>z</code>.</p>
 
       
         <center style="margin-top:5em"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a></center>
@@ -1399,56 +1242,20 @@ git log
                                           <nav class="toc">
                 <ol>
                     
-                    <li><a href="#git">Git</a>
+                    <li><a href="#heatmap">Heatmap</a>
             
                 <ol>
                     
-                    <li><a href="#version-control">Version Control</a>
-            
-                <ol>
-                    
-                    <li><a href="#git-vs-other-vcs">Git vs Other VCS</a>
-            		</li>
-                </ol>
+                    <li><a href="#hex-heatmap">Hex Heatmap</a>
             		</li>
 
-                    <li><a href="#concepts">Concepts</a>
-            
-                <ol>
-                    
-                    <li><a href="#three-states">Three States</a>
+                    <li><a href="#unfixed-shapes">Unfixed Shapes</a>
             		</li>
 
-                    <li><a href="#commit">Commit</a>
+                    <li><a href="#changing-colors">Changing Colors</a>
             		</li>
 
-                    <li><a href="#push-and-amp-pull">Push & Pull</a>
-            		</li>
-
-                    <li><a href="#branches">Branches</a>
-            		</li>
-
-                    <li><a href="#other">Other</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#usage">Usage</a>
-            
-                <ol>
-                    
-                    <li><a href="#update">Update</a>
-            		</li>
-
-                    <li><a href="#configuration">Configuration</a>
-            		</li>
-
-                    <li><a href="#ssh-management">SSH Management</a>
-            		</li>
-
-                    <li><a href="#workflow">Workflow</a>
-            		</li>
-                </ol>
+                    <li><a href="#three-variables">Three Variables</a>
             		</li>
                 </ol>
             		</li>
@@ -1464,7 +1271,14 @@ git log
                               
                               <div class="backlinks">
                                     <div class="backlink-title" style="margin: 4px 0 !important;">Pages mentioning this page</div>
-                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
+                                          <div class="backlink-list"><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Choropleth/" data-note-icon="" class="backlink">Choropleth</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Density Contour Plot/" data-note-icon="" class="backlink">Density Contour Plot</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Dependency Relationship/" data-note-icon="" class="backlink">EDAV - Dependency Relationship</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Missing Data/" data-note-icon="" class="backlink">EDAV - Missing Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/EDAV - Multivariate Continuous Data/" data-note-icon="" class="backlink">EDAV - Multivariate Continuous Data</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/notes/Graph Color/" data-note-icon="" class="backlink">Graph Color</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/scatterplot/" data-note-icon="" class="backlink">Scatterplot</a>
+                                                </div><div class="backlink-card"><i  icon-name="link"></i><a href="/" data-note-icon="" class="backlink">EDAV Garden</a>
                                                 </div></div>
                               </div>
                         
