@@ -1,5 +1,5 @@
 ---
-{}
+{"type":"note","title":"Developer Tools","alias":"DevTools","dg-publish":true,"created":"2021-08-29T13:53:12","modified":"2022-11-17T18:25:34","sup":{},"related":{},"state":"done","permalink":"/developer-tools/","dgPassFrontmatter":true,"updated":"2022-11-17T18:25:34"}
 ---
 
 
