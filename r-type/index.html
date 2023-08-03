@@ -335,6 +335,15 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-categorical-data/">Categorical Data </a>
+                </div>
+            
+        </div>
+        
+    
+    
+        <div x-show="isOpen" style="display:none" class="">
+            
                 <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/edav-continuous-variable/">EDAV - Continuous Variable </a>
                 </div>
             
@@ -1064,7 +1073,7 @@ FALSE == FALSE # TRUE
 <li><span class="alt-check alt-check-tip"><code>T</code> and <code>F</code> are shorthands for <code>TRUE</code> and <code>FALSE</code>.</span></li>
 </ul>
 <h2 id="factors" tabindex="-1">Factors</h2>
-<p>Factors are used to represent <a class="internal-link is-unresolved"  href="/notes/edav-categorical-data">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
+<p>Factors are used to represent <a class="internal-link " data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
 <pre><code class="language-r">x &lt;- factor(c(&quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;no&quot;)) 
 x
 # [1] yes yes no  yes no 
