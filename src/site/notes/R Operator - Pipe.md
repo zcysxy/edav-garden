@@ -1,5 +1,5 @@
 ---
-{"title":"R Operator - Pipe","alias":null,"type":"note","created":"2022-09-24T17:51:22","modified":"2022-09-25T01:23:45","dg-publish":true,"sup":["R Operator - Pipe.md/r-operator"],"state":"done","related":["[[dplyr\\|dplyr]]"],"permalink":"/r-operator-pipe/","dgPassFrontmatter":true,"updated":"2022-09-25T01:23:45"}
+{"title":"R Operator - Pipe","alias":null,"type":"note","created":"2022-09-24T17:51:22","modified":"2022-09-25T01:23:45","dg-publish":true,"sup":["r-operator"],"state":"done","related":["dplyr"],"permalink":"/r-operator-pipe/","dgPassFrontmatter":true,"updated":"2022-09-25T01:23:45"}
 ---
 
 
