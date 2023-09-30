@@ -1,5 +1,5 @@
 ---
-{"type":"output","title":"EDAV Garden","dg-publish":true,"dg-home":true,"created":"2022-10-14T23:53:34","modified":"2022-11-18T02:35:10","state":"done","sup":[["EDAV","edav"]],"permalink":"/edav-garden/","tags":["gardenEntry"],"dgPassFrontmatter":true,"updated":"2022-11-18T02:35:10"}
+{"type":"output","title":"EDAV Garden","dg-publish":true,"dg-home":true,"created":"2022-10-14T23:53:34","modified":"2022-11-18T02:35:10","state":"done","sup":["[[EDAV]]"],"permalink":"/edav-garden/","tags":["gardenEntry"],"dgPassFrontmatter":true,"updated":"2022-11-18T02:35:10"}
 ---
 
 
@@ -17,7 +17,7 @@
 </center>
 
 > [!garden] This site is a [**digital garden**](https://github.com/MaggieAppleton/digital-gardeners)[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
-> - made by [me](https://github.com/zcysxy)
+> - made by [me](https://me.zcysxy.com)
 > - on materials from GR5702 Exploratory Data Analysis and Visualization course with [Joyce Robbins](https://github.com/jtr13) at Columbia University
 > - with [Obsidian](https://obsidian.md) and [Obsidian Digital Garden](https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0)
 > - source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
