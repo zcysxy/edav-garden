@@ -3,7 +3,7 @@
     <title>EDAV Garden</title>
     <link href="https://edav-garden.zcysxy.space/feed.xml" rel="self" />
     <link href="https://edav-garden.zcysxy.space" />
-    <updated>2023-09-30T05:43:22Z</updated>
+    <updated>2023-09-30T05:44:34Z</updated>
     <id>https://edav-garden.zcysxy.space</id>
         <entry>
             <title>
@@ -244,7 +244,7 @@ levels, ensuring that &amp;quot;other&amp;quot; is still the smallest level&lt;/
 &lt;blockquote&gt;
 &lt;p&gt;[!garden] This site is a &lt;a href=&quot;https://github.com/MaggieAppleton/digital-gardeners&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;&lt;strong&gt;digital garden&lt;/strong&gt;&lt;/a&gt;&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://edav-garden.zcysxy.space/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; for &lt;a href=&quot;https://edav.info/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;&lt;strong&gt;E&lt;/strong&gt;xploratory &lt;strong&gt;D&lt;/strong&gt;ata &lt;strong&gt;A&lt;/strong&gt;nalysis and &lt;strong&gt;V&lt;/strong&gt;isualization&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;made by &lt;a href=&quot;https://me.zcysxy.com/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;made by &lt;a href=&quot;https://me.zcysxy.space/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;me&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;on materials from GR5702 Exploratory Data Analysis and Visualization course with &lt;a href=&quot;https://github.com/jtr13&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Joyce Robbins&lt;/a&gt; at Columbia University&lt;/li&gt;
 &lt;li&gt;with &lt;a href=&quot;https://obsidian.md/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Obsidian&lt;/a&gt; and &lt;a href=&quot;https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Obsidian Digital Garden&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;source code: &lt;a href=&quot;https://github.com/zcysxy/edav-garden&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;zcysxy/edav-garden&lt;/a&gt;&lt;/li&gt;
@@ -1263,7 +1263,7 @@ all(1:4 == seq(1,4,1))
                 R Function
                 
             </title>
-            <updated>2023-09-30T05:43:04Z</updated>
+            <updated>2023-09-30T05:44:15Z</updated>
             <id>https://edav-garden.zcysxy.space/edav-garden/r-function/</id>
             <content type="html">
                 &lt;h1 id=&quot;r-function&quot; tabindex=&quot;-1&quot;&gt;R Function&lt;/h1&gt;
