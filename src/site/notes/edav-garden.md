@@ -17,7 +17,7 @@
 </center>
 
 > [!garden] This site is a [**digital garden**](https://github.com/MaggieAppleton/digital-gardeners)[^1] for [**E**xploratory **D**ata **A**nalysis and **V**isualization](https://edav.info)
-> - made by [me](https://me.zcysxy.com)
+> - made by [me](https://me.zcysxy.space)
 > - on materials from GR5702 Exploratory Data Analysis and Visualization course with [Joyce Robbins](https://github.com/jtr13) at Columbia University
 > - with [Obsidian](https://obsidian.md) and [Obsidian Digital Garden](https://github.com/oleeskild/obsidian-digital-garden/tree/2.17.0)
 > - source code: [zcysxy/edav-garden](https://github.com/zcysxy/edav-garden)
