@@ -3,7 +3,7 @@
   <head>
     <title>Python</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -738,24 +739,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -806,26 +819,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -834,7 +904,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -843,54 +916,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -898,7 +987,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -927,13 +1018,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -969,8 +1062,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
 
     <main class="content cm-s-obsidian ">
@@ -998,34 +1146,34 @@
 <li><span class="alt-check alt-check-impt"><a href="https://docs.python.org/3.9/library/index.html" target="_blank" class="external-link">Official Library</a></span></li>
 <li><span class="alt-check alt-check-impt">[My Code Library](file:///D:/OneDrive1/6-UT/62-CB/62.01-python)</span></li>
 </ul>
-<h2 id="python-basics-python-basics" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-basics">Python Basics</a></h2>
+<h2 id="python-basics-python-basics" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Basics</a></h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-everything">Python Everything</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-coding-conventions">Coding Conventions</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-input-and-output">Input and Ouput</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Everything</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Coding Conventions</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Input and Ouput</a></li>
 </ul>
-<h2 id="python-types-python-types" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-types">Python Types</a></h2>
+<h2 id="python-types-python-types" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Types</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="types" tabindex="-1">Types</h1>
 </div>
 <h2 id="built-in-types" tabindex="-1">Built-in Types</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-number">Number</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-sequence">Python Sequence</a>
+<li><a class="internal-link is-unresolved" href="/404">Number</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Sequence</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-string">String</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-list">List</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-tuple">Tuple</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-dictionary">Dictionary</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-set">Set</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-range">range</a></li>
+<li><a class="internal-link is-unresolved" href="/404">String</a></li>
+<li><a class="internal-link is-unresolved" href="/404">List</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Tuple</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Dictionary</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Set</a></li>
+<li><a class="internal-link is-unresolved" href="/404">range</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-none-type">NoneTyoe</a></li>
+<li><a class="internal-link is-unresolved" href="/404">NoneTyoe</a></li>
 </ul>
 </div></div>
-<h2 id="python-functions-python-functions" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-functions">Python Functions</a></h2>
+<h2 id="python-functions-python-functions" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Functions</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="functions" tabindex="-1">Functions</h1>
@@ -1035,174 +1183,174 @@
 <li>
 <p>Most common</p>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-print">print</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-input">input</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-del">del</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-open">open</a></li>
+<li><a class="internal-link is-unresolved" href="/404">print</a></li>
+<li><a class="internal-link is-unresolved" href="/404">input</a></li>
+<li><a class="internal-link is-unresolved" href="/404">del</a></li>
+<li><a class="internal-link is-unresolved" href="/404">open</a></li>
 </ul>
 </li>
 <li>
-<p><a class="internal-link is-unresolved"  href="/notes/python-types">Types</a> related</p>
+<p><a class="internal-link is-unresolved" href="/404">Types</a> related</p>
 <ul>
 <li>Distinguish types
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-isinstance">isinstance</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-type">type</a></li>
+<li><a class="internal-link is-unresolved" href="/404">isinstance</a></li>
+<li><a class="internal-link is-unresolved" href="/404">type</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-number">Number</a>
+<li><a class="internal-link is-unresolved" href="/404">Number</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-int">int</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-chr-and-ord">chr &amp; ord</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-abs">abs</a></li>
+<li><a class="internal-link is-unresolved" href="/404">int</a></li>
+<li><a class="internal-link is-unresolved" href="/404">chr &amp; ord</a></li>
+<li><a class="internal-link is-unresolved" href="/404">abs</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-sequence">Sequence</a>
+<li><a class="internal-link is-unresolved" href="/404">Sequence</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-list">List</a>
+<li><a class="internal-link is-unresolved" href="/404">List</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-list">list</a></li>
+<li><a class="internal-link is-unresolved" href="/404">list</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-string">String</a>
+<li><a class="internal-link is-unresolved" href="/404">String</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-str">str</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-eval">eval</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-chr-and-ord">chr &amp; ord</a></li>
+<li><a class="internal-link is-unresolved" href="/404">str</a></li>
+<li><a class="internal-link is-unresolved" href="/404">eval</a></li>
+<li><a class="internal-link is-unresolved" href="/404">chr &amp; ord</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-tuple">Tuple</a>
+<li><a class="internal-link is-unresolved" href="/404">Tuple</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-fucntions-tuple">tuple</a></li>
+<li><a class="internal-link is-unresolved" href="/404">tuple</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-dictionary">Dictionary</a>
+<li><a class="internal-link is-unresolved" href="/404">Dictionary</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-dict">dict</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-globals">globals</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-locals">locals</a></li>
+<li><a class="internal-link is-unresolved" href="/404">dict</a></li>
+<li><a class="internal-link is-unresolved" href="/404">globals</a></li>
+<li><a class="internal-link is-unresolved" href="/404">locals</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-set">Set</a>
+<li><a class="internal-link is-unresolved" href="/404">Set</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-set">set</a></li>
+<li><a class="internal-link is-unresolved" href="/404">set</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-range">range</a></li>
+<li><a class="internal-link is-unresolved" href="/404">range</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-types-bool">bool</a>
+<li><a class="internal-link is-unresolved" href="/404">bool</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-bool">bool</a></li>
+<li><a class="internal-link is-unresolved" href="/404">bool</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><a class="internal-link is-unresolved"  href="/notes/python-types-iterable">Iterable</a> related</p>
+<p><a class="internal-link is-unresolved" href="/404">Iterable</a> related</p>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-len">len</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-min-max">min, max</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-sum">sum</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-iter">iter</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-next">next</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-sorted">sorted</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-reversed">reversed</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-enumerate">enumerate</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-zip">zip</a></li>
+<li><a class="internal-link is-unresolved" href="/404">len</a></li>
+<li><a class="internal-link is-unresolved" href="/404">min, max</a></li>
+<li><a class="internal-link is-unresolved" href="/404">sum</a></li>
+<li><a class="internal-link is-unresolved" href="/404">iter</a></li>
+<li><a class="internal-link is-unresolved" href="/404">next</a></li>
+<li><a class="internal-link is-unresolved" href="/404">sorted</a></li>
+<li><a class="internal-link is-unresolved" href="/404">reversed</a></li>
+<li><a class="internal-link is-unresolved" href="/404">enumerate</a></li>
+<li><a class="internal-link is-unresolved" href="/404">zip</a></li>
 </ul>
 </li>
 <li>
 <p>Functions related</p>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-map">map</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions-filter">filter</a></li>
+<li><a class="internal-link is-unresolved" href="/404">map</a></li>
+<li><a class="internal-link is-unresolved" href="/404">filter</a></li>
 </ul>
 <p>^fun-rel-fun</p>
 </li>
 </ul>
 </div></div>
-<h2 id="python-module-python-module" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-module">Python Module</a></h2>
+<h2 id="python-module-python-module" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Module</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="modules" tabindex="-1">Modules</h1>
 </div>
 <h2 id="basic-modules" tabindex="-1">Basic Modules</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-re">re</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-os">os</a>
+<li><a class="internal-link is-unresolved" href="/404">re</a></li>
+<li><a class="internal-link is-unresolved" href="/404">os</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-os-path">os.path</a></li>
+<li><a class="internal-link is-unresolved" href="/404">os.path</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/num-py">NumPy</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/matplotlib">Matplotlib</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/tkinter">Tkinter</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-turtle">turtle</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-time">time</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-sys">sys</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-functools">functools</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-tkinter-filedialog">tkinter.filedialog</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-math">math</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-random">random</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-operator">operator</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-modules-string">Python Modules - string</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/network-x">NetworkX</a></li>
+<li><a class="internal-link is-unresolved" href="/404">NumPy</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Matplotlib</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Tkinter</a></li>
+<li><a class="internal-link is-unresolved" href="/404">turtle</a></li>
+<li><a class="internal-link is-unresolved" href="/404">time</a></li>
+<li><a class="internal-link is-unresolved" href="/404">sys</a></li>
+<li><a class="internal-link is-unresolved" href="/404">functools</a></li>
+<li><a class="internal-link is-unresolved" href="/404">tkinter.filedialog</a></li>
+<li><a class="internal-link is-unresolved" href="/404">math</a></li>
+<li><a class="internal-link is-unresolved" href="/404">random</a></li>
+<li><a class="internal-link is-unresolved" href="/404">operator</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Modules - string</a></li>
+<li><a class="internal-link is-unresolved" href="/404">NetworkX</a></li>
 </ul>
 </div></div>
-<h2 id="python-statements-python-statements" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-statements">Python Statements</a></h2>
+<h2 id="python-statements-python-statements" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Statements</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <h2 id="所有程序控制结构" tabindex="-1">所有程序控制结构</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-loops">Python Loops</a>
+<li><a class="internal-link is-unresolved" href="/404">Python Loops</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-for">for</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-while">while</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-continue">continue</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-break">break</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-pass">pass</a></li>
+<li><a class="internal-link is-unresolved" href="/404">for</a></li>
+<li><a class="internal-link is-unresolved" href="/404">while</a></li>
+<li><a class="internal-link is-unresolved" href="/404">continue</a></li>
+<li><a class="internal-link is-unresolved" href="/404">break</a></li>
+<li><a class="internal-link is-unresolved" href="/404">pass</a></li>
 </ul>
 </li>
 <li>Python condition
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-if">if</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-elif">elif</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-else">else</a></li>
+<li><a class="internal-link is-unresolved" href="/404">if</a></li>
+<li><a class="internal-link is-unresolved" href="/404">elif</a></li>
+<li><a class="internal-link is-unresolved" href="/404">else</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-functions">Python Functions</a> definitions
+<li><a class="internal-link is-unresolved" href="/404">Python Functions</a> definitions
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-def">def</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-return">return</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-yield">yield</a></li>
+<li><a class="internal-link is-unresolved" href="/404">def</a></li>
+<li><a class="internal-link is-unresolved" href="/404">return</a></li>
+<li><a class="internal-link is-unresolved" href="/404">yield</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-scope">Python Scope</a>
+<li><a class="internal-link is-unresolved" href="/404">Python Scope</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-global">global</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-nonlocal">nonlocal</a></li>
+<li><a class="internal-link is-unresolved" href="/404">global</a></li>
+<li><a class="internal-link is-unresolved" href="/404">nonlocal</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-exception-handling">Python Exception Handling</a>
+<li><a class="internal-link is-unresolved" href="/404">Python Exception Handling</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-try">try</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-except">except</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-finally">finally</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-raise">raise</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-assert">assert</a></li>
+<li><a class="internal-link is-unresolved" href="/404">try</a></li>
+<li><a class="internal-link is-unresolved" href="/404">except</a></li>
+<li><a class="internal-link is-unresolved" href="/404">finally</a></li>
+<li><a class="internal-link is-unresolved" href="/404">raise</a></li>
+<li><a class="internal-link is-unresolved" href="/404">assert</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-class">Python Class</a>
+<li><a class="internal-link is-unresolved" href="/404">Python Class</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-class">class</a></li>
+<li><a class="internal-link is-unresolved" href="/404">class</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-import">import</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-with">with</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-statements-del">del</a></li>
+<li><a class="internal-link is-unresolved" href="/404">import</a></li>
+<li><a class="internal-link is-unresolved" href="/404">with</a></li>
+<li><a class="internal-link is-unresolved" href="/404">del</a></li>
 </ul>
 </div></div>
-<h2 id="python-keywords-python-keywords" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-keywords">Python Keywords</a></h2>
+<h2 id="python-keywords-python-keywords" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Keywords</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="keywords" tabindex="-1">Keywords</h1>
@@ -1218,15 +1366,15 @@
 <tbody>
 <tr>
 <td>and</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-logical-operators">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>as</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-keywords-as">Python Keywords - as</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Keywords - as</a></td>
 </tr>
 <tr>
 <td>assert</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-assert">Python Statements - assert</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - assert</a></td>
 </tr>
 <tr>
 <td>async</td>
@@ -1238,130 +1386,130 @@
 </tr>
 <tr>
 <td>break</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-break">Python Statements - break</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - break</a></td>
 </tr>
 <tr>
 <td>class</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-class">Python Statements - class</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - class</a></td>
 </tr>
 <tr>
 <td>continue</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-continue">Python Statements - continue</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - continue</a></td>
 </tr>
 <tr>
 <td>def</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-def">Python Statements - def</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - def</a></td>
 </tr>
 <tr>
 <td>del</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-del">Python Statements - del</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - del</a></td>
 </tr>
 <tr>
 <td>elif</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-elif">Python Statements - elif</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - elif</a></td>
 </tr>
 <tr>
 <td>else</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-else">Python Statements - else</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - else</a></td>
 </tr>
 <tr>
 <td>except</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-except">Python Statements - except</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - except</a></td>
 </tr>
 <tr>
 <td>False</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-types-bool">Python Types - bool</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Types - bool</a></td>
 </tr>
 <tr>
 <td>finally</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-finally">Python Statements - finally</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - finally</a></td>
 </tr>
 <tr>
 <td>for</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-for">Python Statements - for</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - for</a></td>
 </tr>
 <tr>
 <td>from</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-keywords-from">Python Keywords - from</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Keywords - from</a></td>
 </tr>
 <tr>
 <td>global</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-global">Python Statements - global</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - global</a></td>
 </tr>
 <tr>
 <td>if</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-if">Python Statements - if</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - if</a></td>
 </tr>
 <tr>
 <td>import</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-import">Python Statements - import</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - import</a></td>
 </tr>
 <tr>
 <td>in</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-membership-operators">Python Operators - Membership Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Operators - Membership Operators</a></td>
 </tr>
 <tr>
 <td>is</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-identity-operators">Python Operators - Identity Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Operators - Identity Operators</a></td>
 </tr>
 <tr>
 <td>lambda</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-lambda-function">Python Lambda Function</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Lambda Function</a></td>
 </tr>
 <tr>
 <td>None</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-types-none-type">Python Types - NoneType</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Types - NoneType</a></td>
 </tr>
 <tr>
 <td>nonlocal</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-nonlocal">Python Statements - nonlocal</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - nonlocal</a></td>
 </tr>
 <tr>
 <td>not</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-logical-operators">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>or</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-logical-operators">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>pass</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-pass">Python Statements - pass</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - pass</a></td>
 </tr>
 <tr>
 <td>raise</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-raise">Python Statements - raise</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - raise</a></td>
 </tr>
 <tr>
 <td>return</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-return">Python Statements - return</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - return</a></td>
 </tr>
 <tr>
 <td>True</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-types-bool">Python Types - bool</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Types - bool</a></td>
 </tr>
 <tr>
 <td>try</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-try">Python Statements - try</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - try</a></td>
 </tr>
 <tr>
 <td>while</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-while">Python Statements - while</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - while</a></td>
 </tr>
 <tr>
 <td>with</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-with">Python Statements - with</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - with</a></td>
 </tr>
 <tr>
 <td>yield</td>
-<td><a class="internal-link is-unresolved"  href="/notes/python-statements-yield">Python Statements - yield</a></td>
+<td><a class="internal-link is-unresolved" href="/404">Python Statements - yield</a></td>
 </tr>
 </tbody>
 </table>
 </div></div>
-<h2 id="python-methods-python-methods" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-methods">Python Methods</a></h2>
-<h2 id="python-class-python-class" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-class">Python Class</a></h2>
-<h2 id="python-expressions-python-expressions" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-expressions">Python Expressions</a></h2>
+<h2 id="python-methods-python-methods" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Methods</a></h2>
+<h2 id="python-class-python-class" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Class</a></h2>
+<h2 id="python-expressions-python-expressions" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Expressions</a></h2>
 <ul>
 <li></li>
 </ul>
@@ -1376,57 +1524,57 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-arithmetic-operators">算术运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">算术运算符</a></td>
 <td>+, -, *, /, //, %, **</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-comparison-operators">关系运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">关系运算符</a></td>
 <td>&gt;, &lt;, ==, &lt;=, &gt;=, !=</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-membership-operators">成员运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">成员运算符</a></td>
 <td>in, not in</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-identity-operators">身份运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">身份运算符</a></td>
 <td>is, is not</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-logical-operators">逻辑运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">逻辑运算符</a></td>
 <td>and, or, not</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-bitwise-operators">位运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">位运算符</a></td>
 <td>~, &amp;, |,  ^,  &lt;&lt;, &gt;&gt;</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved"  href="/notes/python-operators-assignment-operators">赋值运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404">赋值运算符</a></td>
 <td>=, +=, -=, *=, /=, //=, %=</td>
 </tr>
 </tbody>
 </table>
 </div></div>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-conditional-expressions">Python Conditional Expressions</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Conditional Expressions</a></li>
 </ul>
-<h2 id="python-sequence-python-sequence" tabindex="-1"><a class="internal-link is-unresolved"  href="/notes/python-sequence">Python Sequence</a></h2>
+<h2 id="python-sequence-python-sequence" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Sequence</a></h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-sequence-unpacking">Sequence Unpacking</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-slice">Slice</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Sequence Unpacking</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Slice</a></li>
 </ul>
 <h2 id="other" tabindex="-1">Other</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/python-file-handling">Python File Handling</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-exception-handling">Python Exception Handling</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-scope">Python Scope</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-keywords-expressions-and-statements">Python Keywords, Expressions and Statements</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-vs-code">Python VS Code</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/rounding-to-integer">Rounding to Integer</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/python-one-liner">Python One-liner</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python File Handling</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Exception Handling</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Scope</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python Keywords, Expressions and Statements</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python VS Code</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Rounding to Integer</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Python One-liner</a></li>
 </ul>
 <h2 id="projects" tabindex="-1">Projects</h2>
-<p><a class="internal-link is-unresolved"  href="/notes/laura-chess">Laura Chess</a><br>
-<a class="internal-link is-unresolved"  href="/notes/cellular-automata">Cellular Automata</a></p>
+<p><a class="internal-link is-unresolved" href="/404">Laura Chess</a><br>
+<a class="internal-link is-unresolved" href="/404">Cellular Automata</a></p>
 
       
         <center style="margin-top:5em;display:flex;justify-content:center;align-items:center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a><span style="font-size:.8em;color:var(--text-muted);margin:5px;margin-bottom:9px"> by <a  rel="homepage" href="https://me.zcysxy.space">zcysxy</a></span></center>
@@ -1652,7 +1800,7 @@
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>
@@ -1964,7 +2112,7 @@
 
       
     </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
 <script defer>
     TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
     document.querySelectorAll('.human-date').forEach(function (el) {

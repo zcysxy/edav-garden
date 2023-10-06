@@ -3,7 +3,7 @@
   <head>
     <title>Geographic Coordinate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -738,24 +739,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -806,26 +819,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -834,7 +904,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -843,54 +916,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -898,7 +987,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -927,13 +1018,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -969,8 +1062,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
 
     <main class="content cm-s-obsidian ">
@@ -995,7 +1143,7 @@
       
       <h1 id="geographic-coordinate" tabindex="-1">Geographic Coordinate</h1>
 <p>Geographic coordinate uses <strong>latitude and longitude</strong> to locate a position.<br>
-Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like <a class="internal-link " data-note-icon="" href="/scatterplot/">Scatterplot</a> and <a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>.</p>
+Latitude and longitude are just like x-y axes, so you can build all kinds of graphs with them, like <a class="internal-link" data-note-icon="" href="/scatterplot/">Scatterplot</a> and <a class="internal-link" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>.</p>
 <ul>
 <li><span class="alt-check alt-check-rmk">In a geographic coordinate, <strong>latitude</strong> comes first. But it is the north-south direction. Therefore, there is a cross between lat-long and x-y coordinates.<br>
 { <a class="tag" onclick="toggleTagSearch(this)" data-content="#5kd68p">#5kd68p</a>}<br>
@@ -1008,7 +1156,7 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
 </ul>
 <h2 id="implementation" tabindex="-1">Implementation</h2>
 <h3 id="ggmap" tabindex="-1">ggmap</h3>
-<p><a class="internal-link " data-note-icon="" href="/r-package/">Package</a> <code>ggmap</code> can generate real-world maps. It is compatible with <a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a>, so you can easily add layers on top of the base map. Related functions:</p>
+<p><a class="internal-link" data-note-icon="" href="/r-package/">Package</a> <code>ggmap</code> can generate real-world maps. It is compatible with <a class="internal-link is-unresolved" href="/404">ggplot2</a>, so you can easily add layers on top of the base map. Related functions:</p>
 <ul>
 <li><code>get_stamenmap</code>: get a US map
 <ul>
@@ -1021,8 +1169,8 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
 <h3 id="sf-and-tmap" tabindex="-1">sf and tmap</h3>
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 <h2 id="sf-and-tmap-1" tabindex="-1">sf and tmap</h2>
-<p><a class="internal-link " data-note-icon="" href="/r-package/">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
-<p><a class="internal-link " data-note-icon="" href="/r-package/">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
+<p><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
+<p><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
 <ol>
 <li>Get the spatial data by reading the shape file using <code>sf</code></li>
 <li>Combine spatial data and other data
@@ -1258,7 +1406,7 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>
@@ -1506,7 +1654,7 @@ Latitude and longitude are just like x-y axes, so you can build all kinds of gra
 
       
     </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
 <script defer>
     TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
     document.querySelectorAll('.human-date').forEach(function (el) {

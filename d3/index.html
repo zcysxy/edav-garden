@@ -3,7 +3,7 @@
   <head>
     <title>D3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -738,24 +739,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -806,26 +819,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -834,7 +904,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -843,54 +916,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -898,7 +987,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -927,13 +1018,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -969,8 +1062,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
 
     <main class="content cm-s-obsidian ">
@@ -998,8 +1146,8 @@
       
       
       <h1 id="d3" tabindex="-1">D3</h1>
-<p><strong>D3.js</strong>, short for Data-Driven Documents, is a <a class="internal-link is-unresolved"  href="/notes/js-package">JS Package</a> for manipulating documents based on <strong>data</strong> and is well suited to interactive graphics.</p>
-<p>In an <a class="internal-link is-unresolved"  href="/notes/html">HTML</a> file, we should add the link to D3 in the <code>&lt;head&gt;</code> element. And then write <a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a> in the <code>&lt;body&gt;</code>.</p>
+<p><strong>D3.js</strong>, short for Data-Driven Documents, is a <a class="internal-link is-unresolved" href="/404">JS Package</a> for manipulating documents based on <strong>data</strong> and is well suited to interactive graphics.</p>
+<p>In an <a class="internal-link is-unresolved" href="/404">HTML</a> file, we should add the link to D3 in the <code>&lt;head&gt;</code> element. And then write <a class="internal-link is-unresolved" href="/404">JavaScript</a> in the <code>&lt;body&gt;</code>.</p>
 <pre><code class="language-html">&lt;head&gt;
     &lt;script src=&quot;https://d3js.org/d3.v7.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
@@ -1017,7 +1165,7 @@
     &lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
-<p>D3 helps us conveniently interact with the <a class="internal-link " data-note-icon="" href="/dom/">DOM</a>. Some basic commands (try them in the console of <a class="internal-link " data-note-icon="" href="/developer-tools/">Developer Tools</a>):</p>
+<p>D3 helps us conveniently interact with the <a class="internal-link" data-note-icon="" href="/dom/">DOM</a>. Some basic commands (try them in the console of <a class="internal-link" data-note-icon="" href="/developer-tools/">Developer Tools</a>):</p>
 <pre><code class="language-js">d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, &quot;200&quot;);
 d3.select(&quot;circle&quot;).attr(&quot;r&quot;, &quot;30&quot;);
 d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
@@ -1030,12 +1178,12 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 </code></pre>
 <p>What the above example does is</p>
 <ol>
-<li>select the first element targeted by <a class="internal-link is-unresolved"  href="/notes/css-selector">CSS Selector</a> <code>svg circle</code></li>
+<li>select the first element targeted by <a class="internal-link is-unresolved" href="/404">CSS Selector</a> <code>svg circle</code></li>
 <li>change the value of attribute <code>r</code> of the selected element to <code>&quot;50&quot;</code></li>
 <li>add a transition of 2000ms to the change</li>
 </ol>
 <h2 id="select-elements" tabindex="-1">Select Elements</h2>
-<p>Selecting elements in <a class="internal-link " data-note-icon="" href="/dom/">DOM</a> is the same as targeting elements using <a class="internal-link is-unresolved"  href="/notes/css-selector">CSS Selector</a>.</p>
+<p>Selecting elements in <a class="internal-link" data-note-icon="" href="/dom/">DOM</a> is the same as targeting elements using <a class="internal-link is-unresolved" href="/404">CSS Selector</a>.</p>
 <ul>
 <li><code>.select(selector)</code> selects the <strong>first</strong> element targeted by <code>selector</code></li>
 <li><code>.selectAll(selector)</code> selects <strong>all</strong> elements targeted by <code>selector</code></li>
@@ -1050,7 +1198,7 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 <pre><code class="language-js">const selection = d3.selectAll(&quot;circle&quot;)
 </code></pre>
 <ul>
-<li><span class="alt-check alt-check-rmk">Note that once a selection is stored to a variable, even if the elements in the selection are removed from the <a class="internal-link " data-note-icon="" href="/dom/">DOM</a>, the selection contains those elements.<br>
+<li><span class="alt-check alt-check-rmk">Note that once a selection is stored to a variable, even if the elements in the selection are removed from the <a class="internal-link" data-note-icon="" href="/dom/">DOM</a>, the selection contains those elements.<br>
 { <a class="tag" onclick="toggleTagSearch(this)" data-content="#qahtei">#qahtei</a>}<br>
 </span></li>
 </ul>
@@ -1073,16 +1221,16 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 <p><span class="alt-check alt-check-tip">to see the value of an attribute/style rule/text content, just leave the argument empty</span></p>
 </li>
 </ul>
-<p>With <a class="internal-link " data-note-icon="" href="/js-function/">JS Function</a>s, <s>especially <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s</s>, we can easily modify the values of attributes/styles/content based on the original values.</p>
+<p>With <a class="internal-link" data-note-icon="" href="/js-function/">JS Function</a>s, <s>especially <a class="internal-link" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s</s>, we can easily modify the values of attributes/styles/content based on the original values.</p>
 <ul>
-<li><span class="alt-check alt-check-rmk">It is actually not easy to get original values! One way is to use <code>this.getAttribute()</code>. However, <code>this</code> is different in a <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a> and a normal function. To make this work, we should use a <strong>normal function</strong>.</span></li>
+<li><span class="alt-check alt-check-rmk">It is actually not easy to get original values! One way is to use <code>this.getAttribute()</code>. However, <code>this</code> is different in a <a class="internal-link" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a> and a normal function. To make this work, we should use a <strong>normal function</strong>.</span></li>
 </ul>
 <h2 id="add-and-remove-elements" tabindex="-1">Add and Remove Elements</h2>
 <ul id="w6u5ai">
 <li>
 <p><code>.append(element)</code> adds an element <strong>inside</strong> the selected element, as the <strong>last child</strong></p>
 <ul>
-<li>We can directly give the newly added element attributes, styles, and content using methods in <a class="internal-link " data-note-icon="" href="/d3/#change-attributes-style-and-content"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Change">#Change</a> Attributes, Style, and Content</a>
+<li>We can directly give the newly added element attributes, styles, and content using methods in <a class="internal-link" data-note-icon="" href="/d3/#change-attributes-style-and-content"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Change">#Change</a> Attributes, Style, and Content</a>
 <ul>
 <li><span class="alt-check alt-check-ex"><code>d3.select('svg').append('circle').attr('cx', '100').attr('r','30')</code></span></li>
 </ul>
@@ -1093,7 +1241,7 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 <p><code>.insert(type[, before])</code> adds an element inside the selected element, <strong>before</strong> the child <code>before</code></p>
 <ul>
 <li>If <code>before</code> is not specified, <code>.insert()</code> = <code>.append()</code></li>
-<li>Use <a class="internal-link is-unresolved"  href="/notes/css-selector#adjacent-sibling-selector">CSS Selector#Adjacent Sibling Selector</a> <code>before + *</code>, the element is inserted <strong>after</strong> the child <code>before</code></li>
+<li>Use <a class="internal-link is-unresolved" href="/404">CSS Selector#Adjacent Sibling Selector</a> <code>before + *</code>, the element is inserted <strong>after</strong> the child <code>before</code></li>
 </ul>
 </li>
 <li>
@@ -1107,7 +1255,7 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 </ul>
 </li>
 </ul>
-<h2 id="d3-bind-data-d3-bind-data" tabindex="-1"><a class="internal-link " data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></h2>
+<h2 id="d3-bind-data-d3-bind-data" tabindex="-1"><a class="internal-link" data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></h2>
 <h2 id="data-function" tabindex="-1">Data Function</h2>
 <p>D3 is powerful for manipulating documents based on <strong>data</strong>. Now we've learned how to bind data to elements; then we can manipulate these elements based on their data.</p>
 <p>All the <strong>DOM manipulation</strong> methods introduced in previous sections, such as <code>.attr()</code>, <code>.style()</code>, <code>.text()</code>, <code>.append()</code>, etc., not only can take in a constant value, but also accepts <strong>a function</strong> as a parameter. This function is a <strong>function of data</strong>. The method will call the function using the bound data. To be exact, these parameters will be passed to the function</p>
@@ -1118,7 +1266,7 @@ d3.select(&quot;circle&quot;).attr(&quot;fill&quot;, &quot;red&quot;);
 <ul>
 <li>Note that the selection will also be passed to the function as <code>this</code></li>
 </ul>
-<p>Then we can easily manipulate the elements based on their data using <a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s as the functions of data. For example, to set the x-position of a circle to its data value:</p>
+<p>Then we can easily manipulate the elements based on their data using <a class="internal-link" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a>s as the functions of data. For example, to set the x-position of a circle to its data value:</p>
 <pre><code class="language-js">d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, d =&gt; d)
 // This is short for
 d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, function(d) {return d})
@@ -1348,7 +1496,7 @@ d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, function(d) {return d})
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>
@@ -1597,7 +1745,7 @@ d3.select(&quot;circle&quot;).attr(&quot;cx&quot;, function(d) {return d})
 
       
     </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
 <script defer>
     TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
     document.querySelectorAll('.human-date').forEach(function (el) {

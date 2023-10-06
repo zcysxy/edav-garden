@@ -3,7 +3,7 @@
   <head>
     <title>EDAV Garden</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -736,24 +737,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -804,26 +817,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -832,7 +902,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -841,54 +914,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -896,7 +985,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -925,13 +1016,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -967,8 +1060,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
     <main class="content cm-s-obsidian ">
       <header>
@@ -993,7 +1141,7 @@
 <blockquote> "Visualization is a fundamentally human activity."
 </blockquote>
 </center>
-<div class="callout " data-callout="garden"><div class="callout-title"><div class="callout-title-inner"> This site is a <a href="https://github.com/MaggieAppleton/digital-gardeners" target="_blank" class="external-link"><strong>digital garden</strong></a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> for <a href="https://edav.info" target="_blank" class="external-link"><strong>E</strong>xploratory <strong>D</strong>ata <strong>A</strong>nalysis and <strong>V</strong>isualization</a></div></div>
+<div class="callout " data-callout="garden" data-callout-metadata="] This site is a <a href=&quot;https://github.com/MaggieAppleton/digital-gardeners&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;><strong>digital garden</strong></a><sup class=&quot;footnote-ref&quot;><a href=&quot;#fn1&quot; id=&quot;fnref1&quot;>[1"><div class="callout-title"><div class="callout-title-inner"> for <a href="https://edav.info" target="_blank" class="external-link"><strong>E</strong>xploratory <strong>D</strong>ata <strong>A</strong>nalysis and <strong>V</strong>isualization</a></div></div>
 <div class="callout-content">
 <p>
 <ul>
@@ -1041,128 +1189,128 @@ Are you interested in the relationship between the reviews and streams of music?
 </ul>
 <h2 id="plots-gallery" tabindex="-1">Plots Gallery</h2>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/histogram/">Histogram</a></li>
-<li><a class="internal-link " data-note-icon="" href="/boxplot/">Boxplot</a></li>
-<li><a class="internal-link " data-note-icon="" href="/q-q-plot/">Q-Q Plot</a></li>
-<li><a class="internal-link " data-note-icon="" href="/density-curve/">Density Curve</a></li>
-<li><a class="internal-link " data-note-icon="" href="/ridgeline/">Ridgeline</a></li>
+<li><a class="internal-link" data-note-icon="" href="/histogram/">Histogram</a></li>
+<li><a class="internal-link" data-note-icon="" href="/boxplot/">Boxplot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/q-q-plot/">Q-Q Plot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/density-curve/">Density Curve</a></li>
+<li><a class="internal-link" data-note-icon="" href="/ridgeline/">Ridgeline</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/bar-chart/">Bar Chart</a></li>
-<li><a class="internal-link " data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a></li>
+<li><a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-dependency-relationship/">Dependency Relationship</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-dependency-relationship/">Dependency Relationship</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
-<li><a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a></li>
-<li><a class="internal-link " data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-multivariate-continuous-data/">Multivariate Continuous Data</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-multivariate-continuous-data/">Multivariate Continuous Data</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a></li>
-<li><a class="internal-link " data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a></li>
-<li><a class="internal-link " data-note-icon="" href="/biplot/">Biplot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a></li>
+<li><a class="internal-link" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a></li>
+<li><a class="internal-link" data-note-icon="" href="/biplot/">Biplot</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
-<li><a class="internal-link " data-note-icon="" href="/heatmap/">Heatmap</a></li>
-<li><a class="internal-link " data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
+<li><a class="internal-link" data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
+<li><a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link" data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-time-series/">Time Series</a></li>
-<li><a class="internal-link " data-note-icon="" href="/spatial-data/">Spatial Data</a>
+<li><a class="internal-link" data-note-icon="" href="/edav-time-series/">Time Series</a></li>
+<li><a class="internal-link" data-note-icon="" href="/spatial-data/">Spatial Data</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/choropleth/">Choropleth</a></li>
-<li><a class="internal-link " data-note-icon="" href="/geographic-coordinate/">Geographic Coordinate</a></li>
+<li><a class="internal-link" data-note-icon="" href="/choropleth/">Choropleth</a></li>
+<li><a class="internal-link" data-note-icon="" href="/geographic-coordinate/">Geographic Coordinate</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/edav-missing-data/">Missing Data</a></li>
+<li><a class="internal-link" data-note-icon="" href="/edav-missing-data/">Missing Data</a></li>
 <li>Other
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/graph-color/">Graph Color</a></li>
+<li><a class="internal-link" data-note-icon="" href="/graph-color/">Graph Color</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="r-garden" tabindex="-1">R Garden</h2>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/r/">R</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r/">R</a></li>
 </ul>
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r/#references" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 <h2 id="references" tabindex="-1">References</h2>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/r-basics/">R Basics</a></li>
-<li><a class="internal-link " data-note-icon="" href="/r-type/">R Type</a>
+<li><a class="internal-link" data-note-icon="" href="/r-basics/">R Basics</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-type/">R Type</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
-<li><a class="internal-link " data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
-<li><a class="internal-link " data-note-icon="" href="/r-function/">R Function</a></li>
-<li><a class="internal-link " data-note-icon="" href="/r-function-list/">R Function List</a></li>
-<li><a class="internal-link " data-note-icon="" href="/r-operator/">R Operator</a>
+<li><a class="internal-link" data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-function/">R Function</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-function-list/">R Function List</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-operator/">R Operator</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
+<li><a class="internal-link" data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
 </ul>
 </li>
-<li><a class="internal-link " data-note-icon="" href="/r-package/">R Package</a>
+<li><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a>
 <ul>
 <li>tidyverse
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/ggplot2">ggplot2</a></li>
-<li><a class="internal-link " data-note-icon="" href="/dplyr/">dplyr</a></li>
-<li><a class="internal-link " data-note-icon="" href="/forcats/">forcats</a></li>
-<li><a class="internal-link " data-note-icon="" href="/tidyr/">tidyr</a></li>
-<li><a class="internal-link " data-note-icon="" href="/lubridate/">lubridate</a></li>
+<li><a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
+<li><a class="internal-link" data-note-icon="" href="/dplyr/">dplyr</a></li>
+<li><a class="internal-link" data-note-icon="" href="/forcats/">forcats</a></li>
+<li><a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a></li>
+<li><a class="internal-link" data-note-icon="" href="/lubridate/">lubridate</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/r-package-plotly">Plotly</a></li>
-<li><a class="internal-link " data-note-icon="" href="/rvest/">rvest</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Plotly</a></li>
+<li><a class="internal-link" data-note-icon="" href="/rvest/">rvest</a></li>
 </ul>
 </li>
 </ul>
 </div></div>
 <h2 id="git-garden" tabindex="-1">Git Garden</h2>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/git/">Git</a></li>
-<li><a class="internal-link " data-note-icon="" href="/git-commands/">Git Commands</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/git-tagging">Git Tagging</a></li>
+<li><a class="internal-link" data-note-icon="" href="/git/">Git</a></li>
+<li><a class="internal-link" data-note-icon="" href="/git-commands/">Git Commands</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Git Tagging</a></li>
 </ul>
 <h2 id="web-dev-garden" tabindex="-1">WebDev Garden</h2>
 <ul>
 <li>Basics
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/dom/">DOM</a></li>
-<li><a class="internal-link " data-note-icon="" href="/developer-tools/">Developer Tools</a></li>
+<li><a class="internal-link" data-note-icon="" href="/dom/">DOM</a></li>
+<li><a class="internal-link" data-note-icon="" href="/developer-tools/">Developer Tools</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/html">HTML</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/css">CSS</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/java-script">JavaScript</a>
+<li><a class="internal-link is-unresolved" href="/404">HTML</a></li>
+<li><a class="internal-link is-unresolved" href="/404">CSS</a></li>
+<li><a class="internal-link is-unresolved" href="/404">JavaScript</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/js-function/">JS Function</a>
+<li><a class="internal-link" data-note-icon="" href="/js-function/">JS Function</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/js-function-map">JS Function - map</a></li>
+<li><a class="internal-link" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a></li>
+<li><a class="internal-link is-unresolved" href="/404">JS Function - map</a></li>
 </ul>
 </li>
-<li>⭐️ <a class="internal-link " data-note-icon="" href="/d3/">D3</a>
+<li>⭐️ <a class="internal-link" data-note-icon="" href="/d3/">D3</a>
 <ul>
-<li><a class="internal-link " data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-scale/">D3 Scale</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-margin/">D3 Margin</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-axes/">D3 Axes</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-functions/">D3 Functions</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-interactivity/">D3 Interactivity</a></li>
-<li><a class="internal-link " data-note-icon="" href="/d3-transition/">D3 Transition</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-scale/">D3 Scale</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-margin/">D3 Margin</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-axes/">D3 Axes</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-functions/">D3 Functions</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-interactivity/">D3 Interactivity</a></li>
+<li><a class="internal-link" data-note-icon="" href="/d3-transition/">D3 Transition</a></li>
 </ul>
 </li>
 </ul>
@@ -1170,23 +1318,23 @@ Are you interested in the relationship between the reviews and streams of music?
 </ul>
 <h2 id="references-1" tabindex="-1">References</h2>
 <ul>
-<li>For <a class="internal-link " data-note-icon="" href="/#plots-gallery">Plots Gallery</a>:
+<li>For <a class="internal-link" data-note-icon="" href="/#plots-gallery">Plots Gallery</a>:
 <ul>
 <li>Robbins, Joyce. <em><a href="https://edav.info" target="_blank" class="external-link">https://edav.info</a></em>. 2022.</li>
 <li>Unwin, Antony. <em>Graphical data analysis with R</em>. Chapman and Hall/CRC, 2018.</li>
 </ul>
 </li>
-<li>For <a class="internal-link " data-note-icon="" href="/#r-garden">R Garden</a>:
+<li>For <a class="internal-link" data-note-icon="" href="/#r-garden">R Garden</a>:
 <ul>
 <li>Wickham, Hadley, and Garrett Grolemund. <em><a href="https://r4ds.had.co.nz" target="_blank" class="external-link">R for data science: import, tidy, transform, visualize, and model data</a></em>. O'Reilly Media, Inc., 2017.</li>
 </ul>
 </li>
-<li>For <a class="internal-link " data-note-icon="" href="/#git-garden">Git Garden</a>:
+<li>For <a class="internal-link" data-note-icon="" href="/#git-garden">Git Garden</a>:
 <ul>
 <li>Chacon, Scott, and Ben Straub. <em><a href="https://git-scm.com/book/en/v2" target="_blank" class="external-link">Pro Git</a></em>. Springer Nature, 2014.</li>
 </ul>
 </li>
-<li>For <a class="internal-link " data-note-icon="" href="/#web-dev-garden">WebDev Garden</a>
+<li>For <a class="internal-link" data-note-icon="" href="/#web-dev-garden">WebDev Garden</a>
 <ul>
 <li>Robbins, Joyce. <em><a href="https://jtr13.github.io/d3book/" target="_blank" class="external-link">D3 for R Users</a></em>. 2022.</li>
 </ul>
@@ -1424,7 +1572,7 @@ Are you interested in the relationship between the reviews and streams of music?
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>

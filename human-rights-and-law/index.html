@@ -3,7 +3,7 @@
   <head>
     <title>Human Rights and Law</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -738,24 +739,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -806,26 +819,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -834,7 +904,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -843,54 +916,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -898,7 +987,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -927,13 +1018,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -969,8 +1062,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
 
     <main class="content cm-s-obsidian ">
@@ -995,91 +1143,91 @@
       
       <h1 id="human-rights-and-laws" tabindex="-1">Human Rights and Laws</h1>
 <h2 id="书" tabindex="-1">书</h2>
-<p><a class="internal-link is-unresolved"  href="/notes/">《政府论》下篇</a><br>
-<a class="internal-link is-unresolved"  href="/notes/leviathan">Leviathan</a></p>
+<p><a class="internal-link is-unresolved" href="/404">《政府论》下篇</a><br>
+<a class="internal-link is-unresolved" href="/404">Leviathan</a></p>
 <h2 id="作业" tabindex="-1">作业</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权保障的意义</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">扳道工的故事</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">自由的困境</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">平等的难题</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">权利与义务思考</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">《政府论》下篇 读书报告</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权保障的意义</a></li>
+<li><a class="internal-link is-unresolved" href="/404">扳道工的故事</a></li>
+<li><a class="internal-link is-unresolved" href="/404">自由的困境</a></li>
+<li><a class="internal-link is-unresolved" href="/404">平等的难题</a></li>
+<li><a class="internal-link is-unresolved" href="/404">权利与义务思考</a></li>
+<li><a class="internal-link is-unresolved" href="/404">《政府论》下篇 读书报告</a></li>
 <li>Forum
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">权利的实质</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权与人性需求</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">化悲痛为法律</a></li>
+<li><a class="internal-link is-unresolved" href="/404">权利的实质</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权与人性需求</a></li>
+<li><a class="internal-link is-unresolved" href="/404">化悲痛为法律</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="笔记" tabindex="-1">笔记</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">《政府论》导读</a></li>
-<li>第一讲 <a class="internal-link is-unresolved"  href="/notes/">人权与法导论</a></li>
-<li>第二讲 <a class="internal-link is-unresolved"  href="/notes/">人权的概念</a></li>
-<li>第三讲 <a class="internal-link is-unresolved"  href="/notes/">人权的思想史</a></li>
-<li>四至六讲 <a class="internal-link is-unresolved"  href="/notes/">人权的本原问题</a>
+<li><a class="internal-link is-unresolved" href="/404">《政府论》导读</a></li>
+<li>第一讲 <a class="internal-link is-unresolved" href="/404">人权与法导论</a></li>
+<li>第二讲 <a class="internal-link is-unresolved" href="/404">人权的概念</a></li>
+<li>第三讲 <a class="internal-link is-unresolved" href="/404">人权的思想史</a></li>
+<li>四至六讲 <a class="internal-link is-unresolved" href="/404">人权的本原问题</a>
 <ul>
-<li>第四讲 <a class="internal-link is-unresolved"  href="/notes/">人权内容的来源</a></li>
-<li>第五讲 <a class="internal-link is-unresolved"  href="/notes/">人权的逻辑</a></li>
-<li>第六讲 <a class="internal-link is-unresolved"  href="/notes/">人权的根据</a></li>
+<li>第四讲 <a class="internal-link is-unresolved" href="/404">人权内容的来源</a></li>
+<li>第五讲 <a class="internal-link is-unresolved" href="/404">人权的逻辑</a></li>
+<li>第六讲 <a class="internal-link is-unresolved" href="/404">人权的根据</a></li>
 </ul>
 </li>
-<li>第七讲 <a class="internal-link is-unresolved"  href="/notes/">人权是普遍价值吗？</a></li>
-<li>第八讲 <a class="internal-link is-unresolved"  href="/notes/">人权中的自由</a></li>
-<li>第九讲 <a class="internal-link is-unresolved"  href="/notes/">人权中的平等</a></li>
-<li>第十讲 <a class="internal-link is-unresolved"  href="/notes/">人权中的正义</a></li>
+<li>第七讲 <a class="internal-link is-unresolved" href="/404">人权是普遍价值吗？</a></li>
+<li>第八讲 <a class="internal-link is-unresolved" href="/404">人权中的自由</a></li>
+<li>第九讲 <a class="internal-link is-unresolved" href="/404">人权中的平等</a></li>
+<li>第十讲 <a class="internal-link is-unresolved" href="/404">人权中的正义</a></li>
 <li>第十一至十三讲 与人权理论对立的理论
 <ul>
-<li>第十一讲 <a class="internal-link is-unresolved"  href="/notes/">人权与主权</a></li>
-<li>第十二讲 <a class="internal-link is-unresolved"  href="/notes/">权利与功利</a></li>
-<li>第十三讲 <a class="internal-link is-unresolved"  href="/notes/">权利与义务</a></li>
+<li>第十一讲 <a class="internal-link is-unresolved" href="/404">人权与主权</a></li>
+<li>第十二讲 <a class="internal-link is-unresolved" href="/404">权利与功利</a></li>
+<li>第十三讲 <a class="internal-link is-unresolved" href="/404">权利与义务</a></li>
 </ul>
 </li>
-<li>第十四讲 <a class="internal-link is-unresolved"  href="/notes/">人权的限制与协调发展</a></li>
-<li>第十五讲 <a class="internal-link is-unresolved"  href="/notes/">人权保障的条件和方式</a></li>
-<li>结语 <a class="internal-link is-unresolved"  href="/notes/">人权与法课程结语</a></li>
+<li>第十四讲 <a class="internal-link is-unresolved" href="/404">人权的限制与协调发展</a></li>
+<li>第十五讲 <a class="internal-link is-unresolved" href="/404">人权保障的条件和方式</a></li>
+<li>结语 <a class="internal-link is-unresolved" href="/404">人权与法课程结语</a></li>
 </ul>
 <h2 id="讨论课" tabindex="-1">讨论课</h2>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/hr-and-l-2020-10-31">HR&amp;L课堂讨论2020-10-31</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/hr-and-l-2020-11-11">HR&amp;L小组讨论2020-11-11</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/hr-and-l-2020-12-5">HR&amp;L课堂讨论2020-12-5</a></li>
+<li><a class="internal-link is-unresolved" href="/404">HR&amp;L课堂讨论2020-10-31</a></li>
+<li><a class="internal-link is-unresolved" href="/404">HR&amp;L小组讨论2020-11-11</a></li>
+<li><a class="internal-link is-unresolved" href="/404">HR&amp;L课堂讨论2020-12-5</a></li>
 </ul>
 <h2 id="文献笔记" tabindex="-1">文献笔记</h2>
 <h3 id="第一讲 导论" tabindex="-1">第一讲 导论</h3>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/international-human-rights-law">International Human Rights Law</a>
+<li><a class="internal-link is-unresolved" href="/404">International Human Rights Law</a>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/universal-declaration-of-human-rights">Universal Declaration of Human Rights</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/international-covenant-on-civil-and-political-rights">International Covenant on Civil and Political Rights</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/international-covenant-on-economic-social-and-cultural-rights">International Covenant on Economic, Social and Cultural Rights</a></li>
+<li><a class="internal-link is-unresolved" href="/404">Universal Declaration of Human Rights</a></li>
+<li><a class="internal-link is-unresolved" href="/404">International Covenant on Civil and Political Rights</a></li>
+<li><a class="internal-link is-unresolved" href="/404">International Covenant on Economic, Social and Cultural Rights</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved"  href="/notes/">中华人民共和国宪法第二章</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">作为历史文献的《世界人权宣言》</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权概念在联合国的发展</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">张彭春和世界人权宣言</a></li>
+<li><a class="internal-link is-unresolved" href="/404">中华人民共和国宪法第二章</a></li>
+<li><a class="internal-link is-unresolved" href="/404">作为历史文献的《世界人权宣言》</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权概念在联合国的发展</a></li>
+<li><a class="internal-link is-unresolved" href="/404">张彭春和世界人权宣言</a></li>
 </ul>
 <h3 id="第二讲 人权的概念" tabindex="-1">第二讲 人权的概念</h3>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权概念反思</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权是什么意义上的权利</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权概念的普遍性</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权主体之争引出的几个理论问题</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权主体界说</a> <a class="internal-link is-unresolved"  href="/notes/todo#a">!todo#A</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权概念反思</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权是什么意义上的权利</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权概念的普遍性</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权主体之争引出的几个理论问题</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权主体界说</a> <a class="internal-link is-unresolved" href="/404">!todo#A</a></li>
 </ul>
 <h3 id="第四讲至第六讲 人权的本原问题" tabindex="-1">第四讲至第六讲 人权的本原问题</h3>
 <ul>
 <li>康德.法的形而上学原理——权利的科学</li>
-<li><a class="internal-link is-unresolved"  href="/notes/">当代伦理学前沿探索中的人权边界</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权如何得到确证</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">重构人权的道德基础</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">现代人权理论的宗教哲学渊源</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">权利的法律与道德根基</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">人权的本性与价值位阶</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">论人权的人性基础</a></li>
+<li><a class="internal-link is-unresolved" href="/404">当代伦理学前沿探索中的人权边界</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权如何得到确证</a></li>
+<li><a class="internal-link is-unresolved" href="/404">重构人权的道德基础</a></li>
+<li><a class="internal-link is-unresolved" href="/404">现代人权理论的宗教哲学渊源</a></li>
+<li><a class="internal-link is-unresolved" href="/404">权利的法律与道德根基</a></li>
+<li><a class="internal-link is-unresolved" href="/404">人权的本性与价值位阶</a></li>
+<li><a class="internal-link is-unresolved" href="/404">论人权的人性基础</a></li>
 </ul>
 <h3 id="第八讲 人权中的自由" tabindex="-1">第八讲 人权中的自由</h3>
 <ul>
@@ -1089,12 +1237,12 @@
 <h3 id="第九讲至第十讲 平等与正义" tabindex="-1">第九讲至第十讲 平等与正义</h3>
 <ul>
 <li>A Theory of Justice</li>
-<li><a class="internal-link is-unresolved"  href="/notes/john-rawls">John Rawls</a> 的生平与思想（唐丰鹤整理）</li>
-<li><a class="internal-link is-unresolved"  href="/notes/">一个精致的正义论体系——罗尔斯《正义论》中译版序言</a> <a class="internal-link is-unresolved"  href="/notes/todo#a">!todo#A</a></li>
+<li><a class="internal-link is-unresolved" href="/404">John Rawls</a> 的生平与思想（唐丰鹤整理）</li>
+<li><a class="internal-link is-unresolved" href="/404">一个精致的正义论体系——罗尔斯《正义论》中译版序言</a> <a class="internal-link is-unresolved" href="/404">!todo#A</a></li>
 </ul>
 <h3 id="第十一讲 人权与主权" tabindex="-1">第十一讲 人权与主权</h3>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">全球主义与国家主义</a></li>
+<li><a class="internal-link is-unresolved" href="/404">全球主义与国家主义</a></li>
 </ul>
 <h3 id="第十二讲 功利与权利" tabindex="-1">第十二讲 功利与权利</h3>
 <ul>
@@ -1102,9 +1250,9 @@
 </ul>
 <h3 id="第十三讲 权利与义务" tabindex="-1">第十三讲 权利与义务</h3>
 <ul>
-<li><a class="internal-link is-unresolved"  href="/notes/">评社群主义对自由主义的理论挑战</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">认真对待社群主义式的人权论证</a></li>
-<li><a class="internal-link is-unresolved"  href="/notes/">正义还是德性</a></li>
+<li><a class="internal-link is-unresolved" href="/404">评社群主义对自由主义的理论挑战</a></li>
+<li><a class="internal-link is-unresolved" href="/404">认真对待社群主义式的人权论证</a></li>
+<li><a class="internal-link is-unresolved" href="/404">正义还是德性</a></li>
 </ul>
 
       
@@ -1331,7 +1479,7 @@
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>
@@ -1605,7 +1753,7 @@
 
       
     </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
 <script defer>
     TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
     document.querySelectorAll('.human-date').forEach(function (el) {

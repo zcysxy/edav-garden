@@ -3,7 +3,7 @@
   <head>
     <title>R Types</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
         startOnLoad: true,
@@ -51,13 +51,13 @@
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
+<script defer src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" defer></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
@@ -66,10 +66,11 @@
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
+<link rel="manifest" href="/manifest.webmanifest">
+
 
 
 
@@ -738,24 +739,36 @@
         </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', init, false);
     document.addEventListener('DOMContentLoaded', setCorrectShortcut, false);
 
-    window.toggleSearch=function(){
-        if(document.getElementById('globalsearch').classList.contains('active')){
-            document.getElementById('globalsearch').classList.remove('active');
-        }else{
-            document.getElementById('globalsearch').classList.add('active');
-            document.getElementById('term').focus();
+    window.toggleSearch = function () {
+        if (document.getElementById('globalsearch').classList.contains('active')) {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .remove('active');
+        } else {
+            document
+                .getElementById('globalsearch')
+                .classList
+                .add('active');
+            document
+                .getElementById('term')
+                .focus();
         }
     }
 
-    window.toggleTagSearch=function(evt) {
+    window.toggleTagSearch = function (evt) {
         console.log(evt.textContent);
         const term = evt.textContent;
-        if(term){
-            window.document.getElementById('term').value = term.trim();
+        if (term) {
+            window
+                .document
+                .getElementById('term')
+                .value = term.trim();
             window.toggleSearch();
             window.search();
         }
@@ -806,26 +819,83 @@
 
     function debounce(func, wait, immediate) {
         var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function () {
                 timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
+                if (!immediate) 
+                    func.apply(context, args);
+                };
             var callNow = immediate && !timeout;
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
+            if (callNow) 
+                func.apply(context, args);
+            };
     };
 
-    function setCorrectShortcut(){
-        if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-            document.querySelectorAll(".search-keys").forEach(x=>x.innerHTML = "⌘ + K");
+    function setCorrectShortcut() {
+        if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
+            document
+                .querySelectorAll(".search-keys")
+                .forEach(x => x.innerHTML = "⌘ + K");
         }
     }
 
+    function createIndex(posts) {
+        const encoder = (str) => str
+            .toLowerCase()
+            .split(/([^a-z]|[^\x00-\x7F])/)
+        const contentIndex = new FlexSearch.Document({
+            cache: true,
+            charset: "latin:extra",
+            optimize: true,
+            index: [
+                {
+                    field: "content",
+                    tokenize: "reverse",
+                    encode: encoder
+                }, {
+                    field: "title",
+                    tokenize: "forward",
+                    encode: encoder
+                }, {
+                    field: "tags",
+                    tokenize: "forward",
+                    encode: encoder
+                }
+            ]
+        })
+        posts.forEach((p, idx) => {
+            contentIndex.add({
+                id: idx, title: p.title, content: p.content, tags: p.tags //Change to removeHTML
+            })
+        });
+        return contentIndex;
+    }
+
     async function init() {
+        //init offline search index
+
+        const searchIndexDate = '2023-10-06T01:00:21.092Z';
+        let shouldFetch = true;
+        if(localStorage.getItem("searchIndex")) {
+            let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
+            if(date === searchIndexDate){
+                shouldFetch = false;
+                let index = createIndex(docs);
+                window.docs = docs
+                window.index = index;
+            }        
+        }
+        if(shouldFetch){
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:00:21.092Z')).json();
+            let index = createIndex(docs);
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:00:21.092Z', docs}));
+            window.docs = docs
+            window.index = index;
+        }
 
         //open searchmodal when ctrl + k is pressed, cmd + k on mac
         document.addEventListener('keydown', (e) => {
@@ -834,7 +904,10 @@
                 toggleSearch();
             }
             if (e.key === 'Escape') {
-                document.getElementById('globalsearch').classList.remove('active');
+                document
+                    .getElementById('globalsearch')
+                    .classList
+                    .remove('active');
             }
 
             //navigate search results with arrow keys
@@ -843,54 +916,70 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.nextElementSibling) {
-                            active.nextElementSibling.classList.add('active');
+                            active
+                                .nextElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelector('.searchresult').classList.add('active');
+                            document
+                                .querySelector('.searchresult')
+                                .classList
+                                .add('active');
                         }
                     } else {
-                        document.querySelector('.searchresult').classList.add('active');
+                        document
+                            .querySelector('.searchresult')
+                            .classList
+                            .add('active');
                     }
-                    
+
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
                 }
                 if (e.key === 'ArrowUp') {
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        active.classList.remove('active');
+                        active
+                            .classList
+                            .remove('active');
                         if (active.previousElementSibling) {
-                            active.previousElementSibling.classList.add('active');
+                            active
+                                .previousElementSibling
+                                .classList
+                                .add('active');
                         } else {
-                            document.querySelectorAll('.searchresult').forEach((el) => {
-                                if (!el.nextElementSibling) {
-                                    el.classList.add('active');
-                                }
-                            });
+                            document
+                                .querySelectorAll('.searchresult')
+                                .forEach((el) => {
+                                    if (!el.nextElementSibling) {
+                                        el
+                                            .classList
+                                            .add('active');
+                                    }
+                                });
                         }
                     } else {
-                        document.querySelectorAll('.searchresult').forEach((el) => {
-                            if (el.nextElementSibling) {
-                                el.classList.add('active');
-                            }
-                        });
+                        document
+                            .querySelectorAll('.searchresult')
+                            .forEach((el) => {
+                                if (el.nextElementSibling) {
+                                    el
+                                        .classList
+                                        .add('active');
+                                }
+                            });
                     }
 
                     let currentActive = document.querySelector('.searchresult.active');
                     if (currentActive) {
-                        currentActive .scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'start',
-                        });
+                        currentActive.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
                     }
 
                 }
@@ -898,7 +987,9 @@
                     e.preventDefault();
                     let active = document.querySelector('.searchresult.active');
                     if (active) {
-                        window.location.href = active.querySelector("a").href;
+                        window.location.href = active
+                            .querySelector("a")
+                            .href;
                     }
                 }
             }
@@ -927,13 +1018,15 @@
             .trim();
         if (!search) 
             return;
-        if(search == lastSearch) return;
+        if (search == lastSearch) 
+            return;
         console.log(`search for ${search}`);
         window.lastSearch = search;
 
         resultsDiv.innerHTML = loadingSvg;
-        let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
-        let results = await searchRequest.json();
+        //let searchRequest = await fetch(`/api/search?term=${encodeURIComponent(search)}`);
+        //let results = await searchRequest.json();
+        let results = offlineSearch(search);
         let resultsHTML = '';
         if (!results.length) {
             let resultParagraph = document.createElement("p");
@@ -969,8 +1062,63 @@
         resultsHTML += '</div>';
         resultsDiv.innerHTML = resultsHTML;
     }
-</script>
 
+    function truncate(str, size) {
+        //first, remove HTML
+        str = str.replaceAll(/<[^>]*>/g, '');
+        if (str.length < size) 
+            return str;
+        return str.substring(0, size - 3) + '...';
+    }
+
+    function offlineSearch(searchQuery) {
+        let data = window.docs;
+
+        let isTagSearch = searchQuery[0] === "#" && searchQuery.length > 1;
+
+        let searchResults = isTagSearch
+            ? index.search(searchQuery.substring(1), [
+                {
+                    field: "tags"
+                }
+            ])
+            : index.search(searchQuery, [
+                {
+                    field: "title",
+                    limit: 5
+                }, {
+                    field: "content",
+                    weight: 10
+                }
+            ]);
+
+        const getByField = (field) => {
+            const results = searchResults.filter((x) => x.field === field)
+            if (results.length === 0) {
+                return []
+            } else {
+                return [...results[0].result]
+            }
+        }
+        const allIds = new Set([
+            ...getByField("title"),
+            ...getByField("content"),
+            ...getByField("tags")
+        ])
+        const dataIds = [...allIds];
+        const finalResults = dataIds.map((id) => {
+            let result = data[id];
+            result.content = truncate(result.content, 400);
+            result.tags = result
+                .tags
+                .filter((x) => x != "gardenEntry" && x != "note"); //Note is automatically added by 11ty. GardenEntry is used internally to mark the home page
+
+            return result;
+        })
+        return finalResults;
+
+    }
+</script>
     
 
     <main class="content cm-s-obsidian ">
@@ -999,7 +1147,7 @@
 <p><span class="alt-check alt-check-rmk">Here we just introduce some basic &quot;atomic&quot; data types. There are many more, like <s>dates and</s> time series.</span></p>
 </li>
 <li>
-<p><span class="alt-check alt-check-tip">Use function <code>is.x()</code>, such as <code>is.na()</code> and <code>is.complex()</code>, to test the type of an <a class="internal-link " data-note-icon="" href="/r/">R</a> object.</span></p>
+<p><span class="alt-check alt-check-tip">Use function <code>is.x()</code>, such as <code>is.na()</code> and <code>is.complex()</code>, to test the type of an <a class="internal-link" data-note-icon="" href="/r/">R</a> object.</span></p>
 </li>
 </ul>
 <div class="table-wrapper"><table>
@@ -1011,27 +1159,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type/#integer">Integer</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type/#integer">Integer</a></td>
 <td><code>int</code></td>
 </tr>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type/#numeric">Numeric</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type/#numeric">Numeric</a></td>
 <td><code>dbl</code></td>
 </tr>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type/#characters">Characters</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type/#characters">Characters</a></td>
 <td><code>chr</code></td>
 </tr>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type/#logical">Logical</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type/#logical">Logical</a></td>
 <td><code>lgl</code></td>
 </tr>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type/#factors">Factors</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type/#factors">Factors</a></td>
 <td><code>fctr</code></td>
 </tr>
 <tr>
-<td><a class="internal-link " data-note-icon="" href="/r-type-date/">Date</a></td>
+<td><a class="internal-link" data-note-icon="" href="/r-type-date/">Date</a></td>
 <td><code>date</code></td>
 </tr>
 <tr>
@@ -1054,21 +1202,21 @@ class(-Inf)
 class(NaN)
 </code></pre>
 <h2 id="complex" tabindex="-1">Complex</h2>
-<p>The imaginary part of a complex is appended with an <code>i</code> in <a class="internal-link " data-note-icon="" href="/r/">R</a>.</p>
+<p>The imaginary part of a complex is appended with an <code>i</code> in <a class="internal-link" data-note-icon="" href="/r/">R</a>.</p>
 <pre><code class="language-r">x &lt;- 1 + 1i
 y &lt;- -1i + 1
 x * y
 class(x - 1i) # complex
 </code></pre>
 <h2 id="characters" tabindex="-1">Characters</h2>
-<p id="55dclb">There is no difference between strings and characters in <a class="internal-link " data-note-icon="" href="/r/">R</a>, unlike <a class="internal-link is-unresolved"  href="/notes/matlab">MATLAB</a>.<br>
+<p id="55dclb">There is no difference between strings and characters in <a class="internal-link" data-note-icon="" href="/r/">R</a>, unlike <a class="internal-link is-unresolved" href="/404">MATLAB</a>.<br>
 And a string and a character are both char vectors of length 1.<br>
 Characters are surrounded by double quotes <code>&quot;</code> (or single quotes <code>'</code>).</p>
 <pre><code class="language-r">length(&quot;Hello&quot;)
 length(c(&quot;Hello&quot;,&quot;World&quot;))
 </code></pre>
 <h2 id="logical" tabindex="-1">Logical</h2>
-<p>Capital <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> are three logicals in <a class="internal-link " data-note-icon="" href="/r/">R</a></p>
+<p>Capital <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> are three logicals in <a class="internal-link" data-note-icon="" href="/r/">R</a></p>
 <pre><code class="language-r">TRUE # not true or True
 class(NA)
 FALSE == FALSE # TRUE
@@ -1077,7 +1225,7 @@ FALSE == FALSE # TRUE
 <li><span class="alt-check alt-check-tip"><code>T</code> and <code>F</code> are shorthands for <code>TRUE</code> and <code>FALSE</code>.</span></li>
 </ul>
 <h2 id="factors" tabindex="-1">Factors</h2>
-<p>Factors are used to represent <a class="internal-link " data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
+<p>Factors are used to represent <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
 <pre><code class="language-r">x &lt;- factor(c(&quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;no&quot;)) 
 x
 # [1] yes yes no  yes no 
@@ -1098,14 +1246,14 @@ unclass(x)
 <ul>
 <li>Factor levels have an <strong>order</strong>
 <ul>
-<li>Not like <a class="internal-link " data-note-icon="" href="/r-type/#characters"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Characters">#Characters</a></a>, which obey alphabetical order</li>
+<li>Not like <a class="internal-link" data-note-icon="" href="/r-type/#characters"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Characters">#Characters</a></a>, which obey alphabetical order</li>
 </ul>
 </li>
 <li>Factor levels serve as <strong>labels</strong> for data</li>
-<li><a class="internal-link " data-note-icon="" href="/forcats/">forcats</a> is a useful package for manipulating factors</li>
+<li><a class="internal-link" data-note-icon="" href="/forcats/">forcats</a> is a useful package for manipulating factors</li>
 </ul>
 <h2 id="null" tabindex="-1">NULL</h2>
-<p>Capital <code>NULL</code> is a special empty object in <a class="internal-link " data-note-icon="" href="/r/">R</a>.</p>
+<p>Capital <code>NULL</code> is a special empty object in <a class="internal-link" data-note-icon="" href="/r/">R</a>.</p>
 
       
         <center style="margin-top:5em;display:flex;justify-content:center;align-items:center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a><span style="font-size:.8em;color:var(--text-muted);margin:5px;margin-bottom:9px"> by <a  rel="homepage" href="https://me.zcysxy.space">zcysxy</a></span></center>
@@ -1331,7 +1479,7 @@ unclass(x)
         </div>
     </div>
     <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
-    <div x-show="showFullGraph" id="full-graph" class="show">
+    <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
 </div>
@@ -1590,7 +1738,7 @@ unclass(x)
 
       
     </script>
-    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
 <script defer>
     TIMESTAMP_FORMAT = "MMM dd, yyyy h:mm a";
     document.querySelectorAll('.human-date').forEach(function (el) {
