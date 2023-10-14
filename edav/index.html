@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1170,8 +1170,8 @@ G --> H[Communicate]</pre><ul>
 <li>
 <p>Interdisciplinary</p>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Statistics</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Computer Science</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Statistics</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Computer Science</a></li>
 <li>Graphic Design</li>
 <li>Journalism</li>
 <li>Subject Expertise</li>
@@ -1207,7 +1207,7 @@ G --> H[Communicate]</pre><ul>
 - Tools
     - [[R]]
     - [[JavaScript]]
-    - <a class="internal-link is-unresolved" href="/404">JS</a>)
+    - <a class="internal-link is-unresolved" href="/404" target="">JS</a>)
 - Grade
     - 35% Final Project
     - 25% Problem Sets
@@ -1386,7 +1386,7 @@ G --> H[Communicate]</pre><ul>
 - Share D3 Online
     - &lt;span class=&quot;alt-check alt-check-tip&quot;&gt;there are advantages to an online setup, for example, not having to set up a local server as described in the chapter on reading files.&lt;/span&gt;
     - [VizHub](https://vizhub.com/): host [[D3]] visualizations online
-    - <a class="internal-link is-unresolved" href="/404">Bookdown</a>: include D3 code directly in a bookdown book hosted online
+    - <a class="internal-link is-unresolved" href="/404" target="">Bookdown</a>: include D3 code directly in a bookdown book hosted online
         - [+] everyone is in one document
         - [-] the book must be knit to view the HTML which happens quickly without R code but is still an extra step
         - Workflows

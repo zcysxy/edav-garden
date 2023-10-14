@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,9 +1142,9 @@
       
       
       <h1 id="ridgeline" tabindex="-1">Ridgeline</h1>
-<p>A ridgeline plot is a way of visualizing multiple <a class="internal-link" data-note-icon="" href="/density-curve/">densities</a> in a single plot. This plot type is useful for visualizing data that has many different levels of density, such as data that has been binned. Ridgeline plots are similar to area charts, but they emphasize the shape of the data more than the area.</p>
+<p>A ridgeline plot is a way of visualizing multiple <a class="internal-link" target="" data-note-icon="" href="/density-curve/">densities</a> in a single plot. This plot type is useful for visualizing data that has many different levels of density, such as data that has been binned. Ridgeline plots are similar to area charts, but they emphasize the shape of the data more than the area.</p>
 <p>Ridgelines show <strong>modes</strong> and <strong>movement</strong> better.<br>
-But generally, ridgelines won't provide more insight than other graphs. It even loses information since it is a smooth approximation of the data and doesn't provide exact statistics like <a class="internal-link" data-note-icon="" href="/boxplot/">Boxplot</a>.</p>
+But generally, ridgelines won't provide more insight than other graphs. It even loses information since it is a smooth approximation of the data and doesn't provide exact statistics like <a class="internal-link" target="" data-note-icon="" href="/boxplot/">Boxplot</a>.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210200107.png" alt=""></p>
 <p><code>ggridges</code> is an implementation for ridgelines.</p>
 

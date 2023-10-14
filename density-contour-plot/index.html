@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,7 +1142,7 @@
       
       
       <h1 id="density-contour-plot" tabindex="-1">Density Contour Plot</h1>
-<p>Density contour lines are two-dimensional <a class="internal-link" data-note-icon="" href="/density-curve/">Density Curve</a>s. So the relationship between density contour lines and <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a>s is like that between <a class="internal-link" data-note-icon="" href="/density-curve/">Density Curve</a>s and <a class="internal-link" data-note-icon="" href="/histogram/">Histogram</a>s.</p>
+<p>Density contour lines are two-dimensional <a class="internal-link" target="" data-note-icon="" href="/density-curve/">Density Curve</a>s. So the relationship between density contour lines and <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a>s is like that between <a class="internal-link" target="" data-note-icon="" href="/density-curve/">Density Curve</a>s and <a class="internal-link" target="" data-note-icon="" href="/histogram/">Histogram</a>s.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013004634.png" alt=""></p>
 <p>Density contour plots use <strong>kernel density estimates</strong> to calculate the curves.</p>
 <ul>
@@ -1164,7 +1164,7 @@ image(f1)
 contour(f1, add = T)
 </code></pre>
 <ul>
-<li><code>geom_density_2d()</code>  and <code>geom_density_2d_filled()</code> in <a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
+<li><code>geom_density_2d()</code>  and <code>geom_density_2d_filled()</code> in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
 </ul>
 <pre><code class="language-r">library(GDAdata)
 ggplot(SpeedSki, aes(Year, Speed)) +
@@ -1172,12 +1172,12 @@ ggplot(SpeedSki, aes(Year, Speed)) +
     geom_density_2d_filled(alpha = 0.7)
 </code></pre>
 <ul>
-<li>Calculate using <code>kde2d</code>, plot with <code>geom_contour</code> in <a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
+<li>Calculate using <code>kde2d</code>, plot with <code>geom_contour</code> in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
 </ul>
 <pre><code class="language-r">ggplot(con2tr(f1, aes(x, y)) + geom_contour(aes(z = z))
 </code></pre>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/scatterplot/#smooth-scatterplot">Scatterplot#Smooth Scatterplot</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Scatterplot#Smooth Scatterplot</a></li>
 </ul>
 
       

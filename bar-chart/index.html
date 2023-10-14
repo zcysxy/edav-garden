@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1146,24 +1146,24 @@
       
       
       <h1 id="bar-chart" tabindex="-1">Bar Chart</h1>
-<p>A bar chart is a chart or graph that presents <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a <strong>column chart</strong>.<br>
+<p>A bar chart is a chart or graph that presents <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a <strong>column chart</strong>.<br>
 One axis of the chart shows the specific categories being compared, and the other axis represents a measured value.<br>
 Some bar graphs present bars clustered in groups of more than one, showing the values of more than one measured variable.</p>
 <ul>
-<li>For unbinned data, use <code>geom_bar</code> in <a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
-<li>For binned data, use <code>geom_col</code> in <a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
+<li>For unbinned data, use <code>geom_bar</code> in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
+<li>For binned data, use <code>geom_col</code> in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
 <li>We can use <code>geom_text</code> to put labels directly in/on bars</li>
-<li><span class="alt-check alt-check-rmk">Do not color bars when it is not necessary. Colors are needed <a class="internal-link" data-note-icon="" href="/bar-chart/#for-multivariate-categorical-data"><a class="tag" onclick="toggleTagSearch(this)" data-content="#For">#For</a> Multivariate Categorical Data</a>.</span></li>
+<li><span class="alt-check alt-check-rmk">Do not color bars when it is not necessary. Colors are needed <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#For">#For</a> Multivariate Categorical Data</a>.</span></li>
 </ul>
 <h2 id="ordering" tabindex="-1">Ordering</h2>
-<p id="ok2cg8">There are <a class="internal-link" data-note-icon="" href="/edav-categorical-data/#ordinal-vs-nominal">two typical scales</a> of a categorical variable.<br>
+<p id="ok2cg8">There are <a class="internal-link is-unresolved" href="/404" target="">two typical scales</a> of a categorical variable.<br>
 For ordinal data, sort bars in the logical order of the categories. For example, novice -&gt; advanced -&gt; expert.<br>
 You can sort in either direction top &lt;-&gt; bottom, or left -&gt; right).<br>
 For nomial data, sort bars from <strong>highest to lowest</strong> (top -&gt; bottom, left -&gt; right).</p>
 <h2 id="rebinning" tabindex="-1">Rebinning</h2>
 <p>When plotting bar plots, rows <s>of different categories</s> in the same category are automatically stacked up.<br>
 However, when coloring, stacked bars are colored separately.<br>
-To bin the data by hand, we can use <a class="internal-link" data-note-icon="" href="/dplyr/#summarise">dplyr#summarise()</a> with <code>group_by(category)</code>.</p>
+To bin the data by hand, we can use <a class="internal-link is-unresolved" href="/404" target="">dplyr#summarise()</a> with <code>group_by(category)</code>.</p>
 <pre><code class="language-r">df %&gt;%
   group_by(Class) %&gt;%
   summarize(Freq = sum(Freq)) %&gt;%
@@ -1172,7 +1172,7 @@ To bin the data by hand, we can use <a class="internal-link" data-note-icon="" h
   xlab(&quot;&quot;)
 </code></pre>
 <h2 id="for-multivariate-categorical-data" tabindex="-1">For Multivariate Categorical Data</h2>
-<p>For <a class="internal-link" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>, instead of drawing multiple bar charts (possible with facets), we can put bars for different categories <em>together</em> by</p>
+<p>For <a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>, instead of drawing multiple bar charts (possible with facets), we can put bars for different categories <em>together</em> by</p>
 <ul>
 <li>Stacked Bar Chart
 <ul>
@@ -1200,10 +1200,10 @@ To bin the data by hand, we can use <a class="internal-link" data-note-icon="" h
 <li>disagree</li>
 <li>strongly disagree</li>
 </ul>
-<p>Relative frequency stacked <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>s are used to present this kind of data.</p>
+<p>Relative frequency stacked <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>s are used to present this kind of data.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png" alt=""></p>
 <p>Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.</p>
-<p>Another type of <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>, <strong>diverging stacked bar chart</strong>s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33</p>
+<p>Another type of <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>, <strong>diverging stacked bar chart</strong>s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out. ^99cd33</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225854.png" alt=""></p>
 <p>Furthermore, we can separate and even remove the neutral category.</p>
 </div></div>

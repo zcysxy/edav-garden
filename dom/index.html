@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1148,8 +1148,8 @@
       
       
       <h1 id="dom" tabindex="-1">DOM</h1>
-<p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an <a class="internal-link is-unresolved" href="/404">XML</a> or <a class="internal-link is-unresolved" href="/404">HTML</a> document as a <strong>tree structure</strong> wherein each node is an object representing a part of the document.</p>
-<h2 id="dom-and-html-html" tabindex="-1">DOM and <a class="internal-link is-unresolved" href="/404">HTML</a></h2>
+<p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an <a class="internal-link is-unresolved" href="/404" target="">XML</a> or <a class="internal-link is-unresolved" href="/404" target="">HTML</a> document as a <strong>tree structure</strong> wherein each node is an object representing a part of the document.</p>
+<h2 id="dom-and-html-html" tabindex="-1">DOM and <a class="internal-link is-unresolved" href="/404" target="">HTML</a></h2>
 <p>When you use a web browser to request a page like <code>https://example.com</code> the server returns HTML like this:</p>
 <pre><code class="language-html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -1188,7 +1188,7 @@ document.body.appendChild(p);
     script
     p
 </code></pre>
-<p>The page's HTML is now different from its DOM. In other words, HTML represents <strong>initial</strong> page content, and the DOM represents <strong>current</strong> page content. When <a class="internal-link is-unresolved" href="/404">JavaScript</a> adds, removes, or edits nodes, the DOM becomes different than the HTML.</p>
+<p>The page's HTML is now different from its DOM. In other words, HTML represents <strong>initial</strong> page content, and the DOM represents <strong>current</strong> page content. When <a class="internal-link is-unresolved" href="/404" target="">JavaScript</a> adds, removes, or edits nodes, the DOM becomes different than the HTML.</p>
 <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="external-link">Introduction to the DOM</a> to learn more.</p>
 
       

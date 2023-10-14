@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1143,35 +1143,35 @@
       
       <h1 id="database" tabindex="-1">Database</h1>
 <ul>
-<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404">Database Cheatsheet</a></span></li>
-<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404">Database Last Minute</a></span></li>
-<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404">Database Database</a></span></li>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404" target="">Database Cheatsheet</a></span></li>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404" target="">Database Last Minute</a></span></li>
+<li><span class="alt-check alt-check-impt"><a class="internal-link is-unresolved" href="/404" target="">Database Database</a></span></li>
 </ul>
-<h2 id="database-intro-database-intro" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Database Intro</a></h2>
-<h2 id="relational-database-relational-database" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Relational Database</a></h2>
-<h3 id="e-r-model-e-r-model" tabindex="-1"><a class="internal-link is-unresolved" href="/404">E-R Model</a></h3>
-<h3 id="relational-database-design-relational-database-design" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Relational Database Design</a></h3>
-<h2 id="sql-sql" tabindex="-1"><a class="internal-link is-unresolved" href="/404">SQL</a></h2>
-<h2 id="formal-relational-query-language-formal-relational-query-language" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Formal Relational Query Language</a></h2>
+<h2 id="database-intro-database-intro" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Database Intro</a></h2>
+<h2 id="relational-database-relational-database" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Relational Database</a></h2>
+<h3 id="e-r-model-e-r-model" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">E-R Model</a></h3>
+<h3 id="relational-database-design-relational-database-design" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Relational Database Design</a></h3>
+<h2 id="sql-sql" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">SQL</a></h2>
+<h2 id="formal-relational-query-language-formal-relational-query-language" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Formal Relational Query Language</a></h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Relational Algebra</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Tuple Relational Calculus</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Domain Relational Calculus</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Relational Algebra</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Tuple Relational Calculus</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Domain Relational Calculus</a></li>
 </ul>
-<h2 id="physical-storage-systems-physical-storage-systems" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Physical Storage Systems</a></h2>
-<h2 id="file-organization-file-organization" tabindex="-1"><a class="internal-link is-unresolved" href="/404">File Organization</a></h2>
-<h2 id="database-indexing-database-indexing" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Database Indexing</a></h2>
-<h2 id="query-processing-query-processing" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Query Processing</a></h2>
-<h2 id="transaction-transaction" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Transaction</a></h2>
-<h3 id="concurrency-control-concurrency-control" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Concurrency Control</a></h3>
+<h2 id="physical-storage-systems-physical-storage-systems" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Physical Storage Systems</a></h2>
+<h2 id="file-organization-file-organization" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">File Organization</a></h2>
+<h2 id="database-indexing-database-indexing" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Database Indexing</a></h2>
+<h2 id="query-processing-query-processing" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Query Processing</a></h2>
+<h2 id="transaction-transaction" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Transaction</a></h2>
+<h3 id="concurrency-control-concurrency-control" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Concurrency Control</a></h3>
 <h2 id="relational-database-management-system" tabindex="-1">Relational Database Management System</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">PostgreSQL</a></li>
-<li><a class="internal-link is-unresolved" href="/404">SQL Server</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">PostgreSQL</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">SQL Server</a></li>
 </ul>
 <h2 id="project" tabindex="-1">Project</h2>
 <blockquote>
-<p><s><strong>Design a book sales management system</strong></s> Designed the <a class="internal-link is-unresolved" href="/404">Salt Library</a></p>
+<p><s><strong>Design a book sales management system</strong></s> Designed the <a class="internal-link is-unresolved" href="/404" target="">Salt Library</a></p>
 </blockquote>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> To add</label></li>

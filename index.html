@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -876,7 +876,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -888,9 +888,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1189,128 +1189,128 @@ Are you interested in the relationship between the reviews and streams of music?
 </ul>
 <h2 id="plots-gallery" tabindex="-1">Plots Gallery</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/histogram/">Histogram</a></li>
-<li><a class="internal-link" data-note-icon="" href="/boxplot/">Boxplot</a></li>
-<li><a class="internal-link" data-note-icon="" href="/q-q-plot/">Q-Q Plot</a></li>
-<li><a class="internal-link" data-note-icon="" href="/density-curve/">Density Curve</a></li>
-<li><a class="internal-link" data-note-icon="" href="/ridgeline/">Ridgeline</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/histogram/">Histogram</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/boxplot/">Boxplot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/q-q-plot/">Q-Q Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/density-curve/">Density Curve</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/ridgeline/">Ridgeline</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a></li>
-<li><a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-dependency-relationship/">Dependency Relationship</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-dependency-relationship/">Dependency Relationship</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
-<li><a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a></li>
-<li><a class="internal-link" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-multivariate-continuous-data/">Multivariate Continuous Data</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-continuous-data/">Multivariate Continuous Data</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a></li>
-<li><a class="internal-link" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a></li>
-<li><a class="internal-link" data-note-icon="" href="/biplot/">Biplot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/biplot/">Biplot</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
-<li><a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a></li>
-<li><a class="internal-link" data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-time-series/">Time Series</a></li>
-<li><a class="internal-link" data-note-icon="" href="/spatial-data/">Spatial Data</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-time-series/">Time Series</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/spatial-data/">Spatial Data</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/choropleth/">Choropleth</a></li>
-<li><a class="internal-link" data-note-icon="" href="/geographic-coordinate/">Geographic Coordinate</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/choropleth/">Choropleth</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/geographic-coordinate/">Geographic Coordinate</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/edav-missing-data/">Missing Data</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/edav-missing-data/">Missing Data</a></li>
 <li>Other
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/graph-color/">Graph Color</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/graph-color/">Graph Color</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="r-garden" tabindex="-1">R Garden</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r/">R</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r/">R</a></li>
 </ul>
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/r/#references" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 <h2 id="references" tabindex="-1">References</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-basics/">R Basics</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-type/">R Type</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-basics/">R Basics</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-type/">R Type</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-function/">R Function</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-function-list/">R Function List</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-operator/">R Operator</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-function/">R Function</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-function-list/">R Function List</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-operator/">R Operator</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a>
 <ul>
 <li>tidyverse
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
-<li><a class="internal-link" data-note-icon="" href="/dplyr/">dplyr</a></li>
-<li><a class="internal-link" data-note-icon="" href="/forcats/">forcats</a></li>
-<li><a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a></li>
-<li><a class="internal-link" data-note-icon="" href="/lubridate/">lubridate</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/dplyr/">dplyr</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/forcats/">forcats</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/tidyr/">tidyr</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/lubridate/">lubridate</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Plotly</a></li>
-<li><a class="internal-link" data-note-icon="" href="/rvest/">rvest</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Plotly</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/rvest/">rvest</a></li>
 </ul>
 </li>
 </ul>
 </div></div>
 <h2 id="git-garden" tabindex="-1">Git Garden</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/git/">Git</a></li>
-<li><a class="internal-link" data-note-icon="" href="/git-commands/">Git Commands</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Git Tagging</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/git/">Git</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/git-commands/">Git Commands</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Git Tagging</a></li>
 </ul>
 <h2 id="web-dev-garden" tabindex="-1">WebDev Garden</h2>
 <ul>
 <li>Basics
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/dom/">DOM</a></li>
-<li><a class="internal-link" data-note-icon="" href="/developer-tools/">Developer Tools</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/dom/">DOM</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/developer-tools/">Developer Tools</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">HTML</a></li>
-<li><a class="internal-link is-unresolved" href="/404">CSS</a></li>
-<li><a class="internal-link is-unresolved" href="/404">JavaScript</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">HTML</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">CSS</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">JavaScript</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/js-function/">JS Function</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/js-function/">JS Function</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a></li>
-<li><a class="internal-link is-unresolved" href="/404">JS Function - map</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/js-arrow-function/">JS Arrow Function</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">JS Function - map</a></li>
 </ul>
 </li>
-<li>⭐️ <a class="internal-link" data-note-icon="" href="/d3/">D3</a>
+<li>⭐️ <a class="internal-link" target="" data-note-icon="" href="/d3/">D3</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-scale/">D3 Scale</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-margin/">D3 Margin</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-axes/">D3 Axes</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-functions/">D3 Functions</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-interactivity/">D3 Interactivity</a></li>
-<li><a class="internal-link" data-note-icon="" href="/d3-transition/">D3 Transition</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-bind-data/">D3 Bind Data</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-scale/">D3 Scale</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-margin/">D3 Margin</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-axes/">D3 Axes</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-functions/">D3 Functions</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-interactivity/">D3 Interactivity</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/d3-transition/">D3 Transition</a></li>
 </ul>
 </li>
 </ul>
@@ -1318,23 +1318,23 @@ Are you interested in the relationship between the reviews and streams of music?
 </ul>
 <h2 id="references-1" tabindex="-1">References</h2>
 <ul>
-<li>For <a class="internal-link" data-note-icon="" href="/#plots-gallery">Plots Gallery</a>:
+<li>For <a class="internal-link is-unresolved" href="/404" target="">Plots Gallery</a>:
 <ul>
 <li>Robbins, Joyce. <em><a href="https://edav.info" target="_blank" class="external-link">https://edav.info</a></em>. 2022.</li>
 <li>Unwin, Antony. <em>Graphical data analysis with R</em>. Chapman and Hall/CRC, 2018.</li>
 </ul>
 </li>
-<li>For <a class="internal-link" data-note-icon="" href="/#r-garden">R Garden</a>:
+<li>For <a class="internal-link is-unresolved" href="/404" target="">R Garden</a>:
 <ul>
 <li>Wickham, Hadley, and Garrett Grolemund. <em><a href="https://r4ds.had.co.nz" target="_blank" class="external-link">R for data science: import, tidy, transform, visualize, and model data</a></em>. O'Reilly Media, Inc., 2017.</li>
 </ul>
 </li>
-<li>For <a class="internal-link" data-note-icon="" href="/#git-garden">Git Garden</a>:
+<li>For <a class="internal-link is-unresolved" href="/404" target="">Git Garden</a>:
 <ul>
 <li>Chacon, Scott, and Ben Straub. <em><a href="https://git-scm.com/book/en/v2" target="_blank" class="external-link">Pro Git</a></em>. Springer Nature, 2014.</li>
 </ul>
 </li>
-<li>For <a class="internal-link" data-note-icon="" href="/#web-dev-garden">WebDev Garden</a>
+<li>For <a class="internal-link is-unresolved" href="/404" target="">WebDev Garden</a>
 <ul>
 <li>Robbins, Joyce. <em><a href="https://jtr13.github.io/d3book/" target="_blank" class="external-link">D3 for R Users</a></em>. 2022.</li>
 </ul>

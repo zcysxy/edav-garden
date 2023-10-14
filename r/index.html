@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,40 +1142,40 @@
       
       
       <h1 id="r" tabindex="-1">R</h1>
-<p>R is a <a class="internal-link is-unresolved" href="/404">Scripting Language</a> for <a class="internal-link is-unresolved" href="/404">statistical computing</a> and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.</p>
-<p>R has mature integrations with <a class="internal-link is-unresolved" href="/404">Markdown</a> and <a class="internal-link is-unresolved" href="/404">LaTeX</a>.<br>
-You can run R commands within a <a class="internal-link is-unresolved" href="/404">LaTeX</a> document.<br>
-Also, R is supported by <a class="internal-link is-unresolved" href="/404">Jupyter</a> by default.</p>
+<p>R is a <a class="internal-link is-unresolved" href="/404" target="">Scripting Language</a> for <a class="internal-link is-unresolved" href="/404" target="">statistical computing</a> and graphics. It is an open-source implementation of the S programming language, and has stronger object-oriented programming facilities.</p>
+<p>R has mature integrations with <a class="internal-link is-unresolved" href="/404" target="">Markdown</a> and <a class="internal-link is-unresolved" href="/404" target="">LaTeX</a>.<br>
+You can run R commands within a <a class="internal-link is-unresolved" href="/404" target="">LaTeX</a> document.<br>
+Also, R is supported by <a class="internal-link is-unresolved" href="/404" target="">Jupyter</a> by default.</p>
 <h2 id="references" tabindex="-1">References</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-basics/">R Basics</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-type/">R Type</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-basics/">R Basics</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-type/">R Type</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-type-date/">R Type - Date</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-function/">R Function</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-function-list/">R Function List</a></li>
-<li><a class="internal-link" data-note-icon="" href="/r-operator/">R Operator</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-data-structure/">R Data Structure</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-control-statement/">R Control Statement</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-function/">R Function</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-function-list/">R Function List</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-operator/">R Operator</a>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-operator-pipe/">R Operator - Pipe</a></li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a>
 <ul>
 <li>tidyverse
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
-<li><a class="internal-link" data-note-icon="" href="/dplyr/">dplyr</a></li>
-<li><a class="internal-link" data-note-icon="" href="/forcats/">forcats</a></li>
-<li><a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a></li>
-<li><a class="internal-link" data-note-icon="" href="/lubridate/">lubridate</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/dplyr/">dplyr</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/forcats/">forcats</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/tidyr/">tidyr</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/lubridate/">lubridate</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Plotly</a></li>
-<li><a class="internal-link" data-note-icon="" href="/rvest/">rvest</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Plotly</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/rvest/">rvest</a></li>
 </ul>
 </li>
 </ul>

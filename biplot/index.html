@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1147,7 +1147,7 @@
       
       <h1 id="biplot" tabindex="-1">Biplot</h1>
 <ul>
-<li>A biplot is a generalization of the simple two-variable <a class="internal-link" data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
+<li>A biplot is a generalization of the simple two-variable <a class="internal-link" target="" data-note-icon="" href="/scatterplot/">Scatterplot</a></li>
 <li>A biplot overlays a <strong>score plot</strong> with a <strong>loading plot</strong>
 <ul>
 <li>This allows displaying information on both samples and variables</li>
@@ -1166,16 +1166,16 @@
 <div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Axis Positions<br></div></div>
 <div class="callout-content">
 <p>
-<a class="internal-link" data-note-icon="" href="/scatterplot/">Scatterplot</a>, <a class="internal-link" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a>, and biplot represent three different axis positions.<br>
+<a class="internal-link" target="" data-note-icon="" href="/scatterplot/">Scatterplot</a>, <a class="internal-link" target="" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a>, and biplot represent three different axis positions.<br>
 <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211232720.png" alt=""></p>
 </div></div>
 <h2 id="loading-plot" tabindex="-1">Loading Plot</h2>
 <p>We can use dimension-reduction methods to select or form two main variables, then <em>project</em> other selected/formed variables to the plane (make them linear combinations of the two main variables).</p>
-<p>For example, using <a class="internal-link is-unresolved" href="/404">Principal Components Analysis</a>, we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.</p>
+<p>For example, using <a class="internal-link is-unresolved" href="/404" target="">Principal Components Analysis</a>, we can choose PC1 and PC2 as the two axes, and project original variables to the plane as vectors.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165028.png" alt=""></p>
-<p>As <a class="internal-link is-unresolved" href="/404">PCA</a> theory suggests, the first PCs should have wider angles, meaning they have higher variance. Therefore, two vectors with a small angle (or near 180 degrees) have a high correlation; and two vectors that are near perpendicular have a small correlation. We can also compare a loading plot with a <a class="internal-link" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a> to verify this property.</p>
+<p>As <a class="internal-link is-unresolved" href="/404" target="">PCA</a> theory suggests, the first PCs should have wider angles, meaning they have higher variance. Therefore, two vectors with a small angle (or near 180 degrees) have a high correlation; and two vectors that are near perpendicular have a small correlation. We can also compare a loading plot with a <a class="internal-link" target="" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a> to verify this property.</p>
 <h2 id="score-plot" tabindex="-1">Score Plot</h2>
-<p>In <a class="internal-link is-unresolved" href="/404">PCA</a>, transformed data is called PC scores. Similarly, score plots present transformed samples. A biplot combines a loading plot and a score plot.</p>
+<p>In <a class="internal-link is-unresolved" href="/404" target="">PCA</a>, transformed data is called PC scores. Similarly, score plots present transformed samples. A biplot combines a loading plot and a score plot.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221025165628.png" alt=""></p>
 <h2 id="elements" tabindex="-1">Elements</h2>
 <ul>

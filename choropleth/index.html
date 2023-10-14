@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,11 +1142,11 @@
       
       
       <h1 id="choropleth" tabindex="-1">Choropleth</h1>
-<p>A choropleth map is a type of <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a> with units using <strong>political boundaries</strong>.<br>
+<p>A choropleth map is a type of <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a> with units using <strong>political boundaries</strong>.<br>
 In a choropleth, colors usually correspond with an aggregate summary of a geographic characteristic within spatial enumeration units, such as population density or per-capita income.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg/2560px-Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg.png" alt=""></p>
-<p>Compared to <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a>, choropleths have an additional variable for each unit, that is <strong>area (and shape)</strong>.</p>
-<p>Also, we can think of the choice of the political boundary as a meta-variable; just like in heatmaps, we can use <a class="internal-link" data-note-icon="" href="/heatmap/#hex-heatmap">hexagons</a> or squares.<br>
+<p>Compared to <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a>, choropleths have an additional variable for each unit, that is <strong>area (and shape)</strong>.</p>
+<p>Also, we can think of the choice of the political boundary as a meta-variable; just like in heatmaps, we can use <a class="internal-link is-unresolved" href="/404" target="">hexagons</a> or squares.<br>
 But for choropleths, choosing an appropriate political boundary is more important; it should be determined by the nature of the data.</p>
 <h2 id="land-area-problem" tabindex="-1">Land Area Problem</h2>
 <p>A serious problem with choropleths is that if the data has an &quot;absolute&quot; value (not relative to the area), the choropleth can be misleading. For example, the election results always show a larger red area than blue, even though more people voted for Democrats.</p>
@@ -1164,12 +1164,12 @@ For example, we can use color to present the election result, and distort the ca
 </ul>
 <p>Both methods keep a reference to the unchanged map, with which we can compare the distorted map.</p>
 <h3 id="uniform-area" tabindex="-1">Uniform Area</h3>
-<p>Another approach is to give each region the same area and shape. This eliminates the area and shape variable unique to choropleths, thus reducing them to general <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a>s.</p>
+<p>Another approach is to give each region the same area and shape. This eliminates the area and shape variable unique to choropleths, thus reducing them to general <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a>s.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110182733.png" alt=""></p>
-<p>Also, this approach doesn't convey additional information of an alternate variable like <a class="internal-link" data-note-icon="" href="/choropleth/#cartogram"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Cartogram">#Cartogram</a></a>s. Therefore, this approach &quot;hides&quot; the problem rather than addresses it.</p>
+<p>Also, this approach doesn't convey additional information of an alternate variable like <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#Cartogram">#Cartogram</a></a>s. Therefore, this approach &quot;hides&quot; the problem rather than addresses it.</p>
 <h2 id="combination-with-other-graphs" tabindex="-1">Combination with Other Graphs</h2>
 <h3 id="spatial-and-temporal" tabindex="-1">Spatial and Temporal</h3>
-<p>It is common that we need to combine spatial and <a class="internal-link" data-note-icon="" href="/edav-time-series/">temporal data</a>. To this end, we can use facets. We can either</p>
+<p>It is common that we need to combine spatial and <a class="internal-link" target="" data-note-icon="" href="/edav-time-series/">temporal data</a>. To this end, we can use facets. We can either</p>
 <ul>
 <li>
 <p>facet on time</p>
@@ -1189,11 +1189,11 @@ For example, we can use color to present the election result, and distort the ca
 </li>
 </ul>
 <h3 id="linked-micromaps" tabindex="-1">Linked Micromaps</h3>
-<p>We can also use choropleths as a <em>legend</em> for other plots to tell where places are. These graphs are called linked micromaps. The following example is for a <a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></p>
+<p>We can also use choropleths as a <em>legend</em> for other plots to tell where places are. These graphs are called linked micromaps. The following example is for a <a class="internal-link" target="" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221110190509.png" alt=""></p>
 <h2 id="implementation" tabindex="-1">Implementation</h2>
 <h3 id="choroplethr" tabindex="-1">choroplethr</h3>
-<p><a class="internal-link" data-note-icon="" href="/r-package/">Package</a> <code>choroplethr</code> is capable of drawing state and county level maps without using shape files. The data frame must contain <code>region</code> and <code>value</code> columns, and the values of <code>region</code> should be recognizable by <code>choroplethr</code> (for example, they should be lowercase). Related functions:</p>
+<p><a class="internal-link" target="" data-note-icon="" href="/r-package/">Package</a> <code>choroplethr</code> is capable of drawing state and county level maps without using shape files. The data frame must contain <code>region</code> and <code>value</code> columns, and the values of <code>region</code> should be recognizable by <code>choroplethr</code> (for example, they should be lowercase). Related functions:</p>
 <ul>
 <li><code>state_choropleth()</code></li>
 <li><code>county_choropleth()</code>
@@ -1222,8 +1222,8 @@ plot(p)
 <h3 id="sf-and-tmap" tabindex="-1">sf and tmap</h3>
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/spatial-data/#sf-and-tmap" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 <h2 id="sf-and-tmap-1" tabindex="-1">sf and tmap</h2>
-<p><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
-<p><a class="internal-link" data-note-icon="" href="/r-package/">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
+<p><a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a> <code>sf</code> is for reading shape files (<code>.shp</code>). To see the read map, use function <code>st_geometry()</code> and plot the returned object.</p>
+<p><a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a> <code>tamp</code> is for plotting maps (generated by <code>sf</code>) together with other data. The general workflow is</p>
 <ol>
 <li>Get the spatial data by reading the shape file using <code>sf</code></li>
 <li>Combine spatial data and other data

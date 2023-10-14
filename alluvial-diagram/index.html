@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1143,7 +1143,7 @@
       
       <h1 id="alluvial-diagram" tabindex="-1">Alluvial Diagram</h1>
 <p>Alluvial diagrams take inspiration from alluvial fans.<br>
-They use <a class="internal-link" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a>s for <a class="internal-link" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>.<br>
+They use <a class="internal-link" target="" data-note-icon="" href="/parallel-coordinate/">Parallel Coordinate</a>s for <a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>.<br>
 They show how data move from one category to some other categories.<br>
 Alluvial diagrams work well for data with <em>flows</em> in it. Observations with the same movement are drawn together to show the flow.<br>
 Some examples of data types that are suitable for alluvial diagrams are</p>
@@ -1153,7 +1153,7 @@ Some examples of data types that are suitable for alluvial diagrams are</p>
 </ul>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013170436.png" alt="500"> <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221018161618.png" alt="500"></p>
 <p>Other than axes, we can use colors for one variable to better visualize the patterns. The variable we choose to color should be our most interested one.</p>
-<p>Different categories in axes are called <mark>strata</mark>. Without alluviums, these strata form a relative stacked <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>.<br>
+<p>Different categories in axes are called <mark>strata</mark>. Without alluviums, these strata form a relative stacked <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>.<br>
 The height of the strata and flows represent the size of the clusters.</p>
 <h2 id="implementation" tabindex="-1">Implementation</h2>
 <p>We can use <code>geom_alluvium</code> in package <code>ggalluvial</code> to draw alluvial diagrams.</p>
@@ -1182,7 +1182,7 @@ While we can use <code>geom_flow</code> to create similar diagrams, where flows 
 <li>Able to present <em>ghosted</em> data, which doesn't have all categorical variables</li>
 <li>Need not specify the axes</li>
 </ul>
-<p>To transform a dataframe to a lodes form, use <code>to_lodes_form(df, axes = 1:2)</code>. It works like <code>pivot_longer</code> in <a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a>, making one row per lode.</p>
+<p>To transform a dataframe to a lodes form, use <code>to_lodes_form(df, axes = 1:2)</code>. It works like <code>pivot_longer</code> in <a class="internal-link" target="" data-note-icon="" href="/tidyr/">tidyr</a>, making one row per lode.</p>
 <p>An example lodes form (corresponding to the graph below):</p>
 <pre><code class="language-txt">##   Freq alluvium      x stratum
 ## 1   30        1 Class1   Stats

@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1146,34 +1146,34 @@
 <li><span class="alt-check alt-check-impt"><a href="https://docs.python.org/3.9/library/index.html" target="_blank" class="external-link">Official Library</a></span></li>
 <li><span class="alt-check alt-check-impt">[My Code Library](file:///D:/OneDrive1/6-UT/62-CB/62.01-python)</span></li>
 </ul>
-<h2 id="python-basics-python-basics" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Basics</a></h2>
+<h2 id="python-basics-python-basics" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Basics</a></h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Python Everything</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Coding Conventions</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Input and Ouput</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Everything</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Coding Conventions</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Input and Ouput</a></li>
 </ul>
-<h2 id="python-types-python-types" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Types</a></h2>
+<h2 id="python-types-python-types" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Types</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="types" tabindex="-1">Types</h1>
 </div>
 <h2 id="built-in-types" tabindex="-1">Built-in Types</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Number</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python Sequence</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Number</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Sequence</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">String</a></li>
-<li><a class="internal-link is-unresolved" href="/404">List</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Tuple</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Dictionary</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Set</a></li>
-<li><a class="internal-link is-unresolved" href="/404">range</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">String</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">List</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Tuple</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Dictionary</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Set</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">range</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">NoneTyoe</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">NoneTyoe</a></li>
 </ul>
 </div></div>
-<h2 id="python-functions-python-functions" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Functions</a></h2>
+<h2 id="python-functions-python-functions" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Functions</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="functions" tabindex="-1">Functions</h1>
@@ -1183,174 +1183,174 @@
 <li>
 <p>Most common</p>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">print</a></li>
-<li><a class="internal-link is-unresolved" href="/404">input</a></li>
-<li><a class="internal-link is-unresolved" href="/404">del</a></li>
-<li><a class="internal-link is-unresolved" href="/404">open</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">print</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">input</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">del</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">open</a></li>
 </ul>
 </li>
 <li>
-<p><a class="internal-link is-unresolved" href="/404">Types</a> related</p>
+<p><a class="internal-link is-unresolved" href="/404" target="">Types</a> related</p>
 <ul>
 <li>Distinguish types
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">isinstance</a></li>
-<li><a class="internal-link is-unresolved" href="/404">type</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">isinstance</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">type</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Number</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Number</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">int</a></li>
-<li><a class="internal-link is-unresolved" href="/404">chr &amp; ord</a></li>
-<li><a class="internal-link is-unresolved" href="/404">abs</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">int</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">chr &amp; ord</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">abs</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Sequence</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Sequence</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">List</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">List</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">list</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">list</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">String</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">String</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">str</a></li>
-<li><a class="internal-link is-unresolved" href="/404">eval</a></li>
-<li><a class="internal-link is-unresolved" href="/404">chr &amp; ord</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">str</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">eval</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">chr &amp; ord</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Tuple</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Tuple</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">tuple</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">tuple</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Dictionary</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Dictionary</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">dict</a></li>
-<li><a class="internal-link is-unresolved" href="/404">globals</a></li>
-<li><a class="internal-link is-unresolved" href="/404">locals</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">dict</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">globals</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">locals</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Set</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Set</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">set</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">set</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">range</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">range</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">bool</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">bool</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">bool</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">bool</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><a class="internal-link is-unresolved" href="/404">Iterable</a> related</p>
+<p><a class="internal-link is-unresolved" href="/404" target="">Iterable</a> related</p>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">len</a></li>
-<li><a class="internal-link is-unresolved" href="/404">min, max</a></li>
-<li><a class="internal-link is-unresolved" href="/404">sum</a></li>
-<li><a class="internal-link is-unresolved" href="/404">iter</a></li>
-<li><a class="internal-link is-unresolved" href="/404">next</a></li>
-<li><a class="internal-link is-unresolved" href="/404">sorted</a></li>
-<li><a class="internal-link is-unresolved" href="/404">reversed</a></li>
-<li><a class="internal-link is-unresolved" href="/404">enumerate</a></li>
-<li><a class="internal-link is-unresolved" href="/404">zip</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">len</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">min, max</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">sum</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">iter</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">next</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">sorted</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">reversed</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">enumerate</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">zip</a></li>
 </ul>
 </li>
 <li>
 <p>Functions related</p>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">map</a></li>
-<li><a class="internal-link is-unresolved" href="/404">filter</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">map</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">filter</a></li>
 </ul>
 <p>^fun-rel-fun</p>
 </li>
 </ul>
 </div></div>
-<h2 id="python-module-python-module" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Module</a></h2>
+<h2 id="python-module-python-module" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Module</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="modules" tabindex="-1">Modules</h1>
 </div>
 <h2 id="basic-modules" tabindex="-1">Basic Modules</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">re</a></li>
-<li><a class="internal-link is-unresolved" href="/404">os</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">re</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">os</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">os.path</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">os.path</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">NumPy</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Matplotlib</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Tkinter</a></li>
-<li><a class="internal-link is-unresolved" href="/404">turtle</a></li>
-<li><a class="internal-link is-unresolved" href="/404">time</a></li>
-<li><a class="internal-link is-unresolved" href="/404">sys</a></li>
-<li><a class="internal-link is-unresolved" href="/404">functools</a></li>
-<li><a class="internal-link is-unresolved" href="/404">tkinter.filedialog</a></li>
-<li><a class="internal-link is-unresolved" href="/404">math</a></li>
-<li><a class="internal-link is-unresolved" href="/404">random</a></li>
-<li><a class="internal-link is-unresolved" href="/404">operator</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python Modules - string</a></li>
-<li><a class="internal-link is-unresolved" href="/404">NetworkX</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">NumPy</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Matplotlib</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Tkinter</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">turtle</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">time</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">sys</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">functools</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">tkinter.filedialog</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">math</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">random</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">operator</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Modules - string</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">NetworkX</a></li>
 </ul>
 </div></div>
-<h2 id="python-statements-python-statements" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Statements</a></h2>
+<h2 id="python-statements-python-statements" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Statements</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <h2 id="所有程序控制结构" tabindex="-1">所有程序控制结构</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Python Loops</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Loops</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">for</a></li>
-<li><a class="internal-link is-unresolved" href="/404">while</a></li>
-<li><a class="internal-link is-unresolved" href="/404">continue</a></li>
-<li><a class="internal-link is-unresolved" href="/404">break</a></li>
-<li><a class="internal-link is-unresolved" href="/404">pass</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">for</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">while</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">continue</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">break</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">pass</a></li>
 </ul>
 </li>
 <li>Python condition
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">if</a></li>
-<li><a class="internal-link is-unresolved" href="/404">elif</a></li>
-<li><a class="internal-link is-unresolved" href="/404">else</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">if</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">elif</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">else</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Python Functions</a> definitions
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Functions</a> definitions
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">def</a></li>
-<li><a class="internal-link is-unresolved" href="/404">return</a></li>
-<li><a class="internal-link is-unresolved" href="/404">yield</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">def</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">return</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">yield</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Python Scope</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Scope</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">global</a></li>
-<li><a class="internal-link is-unresolved" href="/404">nonlocal</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">global</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">nonlocal</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Python Exception Handling</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Exception Handling</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">try</a></li>
-<li><a class="internal-link is-unresolved" href="/404">except</a></li>
-<li><a class="internal-link is-unresolved" href="/404">finally</a></li>
-<li><a class="internal-link is-unresolved" href="/404">raise</a></li>
-<li><a class="internal-link is-unresolved" href="/404">assert</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">try</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">except</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">finally</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">raise</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">assert</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Python Class</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Class</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">class</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">class</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">import</a></li>
-<li><a class="internal-link is-unresolved" href="/404">with</a></li>
-<li><a class="internal-link is-unresolved" href="/404">del</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">import</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">with</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">del</a></li>
 </ul>
 </div></div>
-<h2 id="python-keywords-python-keywords" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Keywords</a></h2>
+<h2 id="python-keywords-python-keywords" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Keywords</a></h2>
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 <p>$</p><div class="markdown-embed-title">
 <h1 id="keywords" tabindex="-1">Keywords</h1>
@@ -1366,15 +1366,15 @@
 <tbody>
 <tr>
 <td>and</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>as</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Keywords - as</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Keywords - as</a></td>
 </tr>
 <tr>
 <td>assert</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - assert</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - assert</a></td>
 </tr>
 <tr>
 <td>async</td>
@@ -1386,130 +1386,130 @@
 </tr>
 <tr>
 <td>break</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - break</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - break</a></td>
 </tr>
 <tr>
 <td>class</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - class</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - class</a></td>
 </tr>
 <tr>
 <td>continue</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - continue</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - continue</a></td>
 </tr>
 <tr>
 <td>def</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - def</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - def</a></td>
 </tr>
 <tr>
 <td>del</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - del</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - del</a></td>
 </tr>
 <tr>
 <td>elif</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - elif</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - elif</a></td>
 </tr>
 <tr>
 <td>else</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - else</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - else</a></td>
 </tr>
 <tr>
 <td>except</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - except</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - except</a></td>
 </tr>
 <tr>
 <td>False</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Types - bool</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Types - bool</a></td>
 </tr>
 <tr>
 <td>finally</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - finally</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - finally</a></td>
 </tr>
 <tr>
 <td>for</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - for</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - for</a></td>
 </tr>
 <tr>
 <td>from</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Keywords - from</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Keywords - from</a></td>
 </tr>
 <tr>
 <td>global</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - global</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - global</a></td>
 </tr>
 <tr>
 <td>if</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - if</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - if</a></td>
 </tr>
 <tr>
 <td>import</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - import</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - import</a></td>
 </tr>
 <tr>
 <td>in</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Operators - Membership Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Operators - Membership Operators</a></td>
 </tr>
 <tr>
 <td>is</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Operators - Identity Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Operators - Identity Operators</a></td>
 </tr>
 <tr>
 <td>lambda</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Lambda Function</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Lambda Function</a></td>
 </tr>
 <tr>
 <td>None</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Types - NoneType</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Types - NoneType</a></td>
 </tr>
 <tr>
 <td>nonlocal</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - nonlocal</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - nonlocal</a></td>
 </tr>
 <tr>
 <td>not</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>or</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Operators - Logical Operators</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Operators - Logical Operators</a></td>
 </tr>
 <tr>
 <td>pass</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - pass</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - pass</a></td>
 </tr>
 <tr>
 <td>raise</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - raise</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - raise</a></td>
 </tr>
 <tr>
 <td>return</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - return</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - return</a></td>
 </tr>
 <tr>
 <td>True</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Types - bool</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Types - bool</a></td>
 </tr>
 <tr>
 <td>try</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - try</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - try</a></td>
 </tr>
 <tr>
 <td>while</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - while</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - while</a></td>
 </tr>
 <tr>
 <td>with</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - with</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - with</a></td>
 </tr>
 <tr>
 <td>yield</td>
-<td><a class="internal-link is-unresolved" href="/404">Python Statements - yield</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Python Statements - yield</a></td>
 </tr>
 </tbody>
 </table>
 </div></div>
-<h2 id="python-methods-python-methods" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Methods</a></h2>
-<h2 id="python-class-python-class" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Class</a></h2>
-<h2 id="python-expressions-python-expressions" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Expressions</a></h2>
+<h2 id="python-methods-python-methods" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Methods</a></h2>
+<h2 id="python-class-python-class" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Class</a></h2>
+<h2 id="python-expressions-python-expressions" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Expressions</a></h2>
 <ul>
 <li></li>
 </ul>
@@ -1524,57 +1524,57 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">算术运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">算术运算符</a></td>
 <td>+, -, *, /, //, %, **</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">关系运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">关系运算符</a></td>
 <td>&gt;, &lt;, ==, &lt;=, &gt;=, !=</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">成员运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">成员运算符</a></td>
 <td>in, not in</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">身份运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">身份运算符</a></td>
 <td>is, is not</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">逻辑运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">逻辑运算符</a></td>
 <td>and, or, not</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">位运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">位运算符</a></td>
 <td>~, &amp;, |,  ^,  &lt;&lt;, &gt;&gt;</td>
 </tr>
 <tr>
-<td><a class="internal-link is-unresolved" href="/404">赋值运算符</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">赋值运算符</a></td>
 <td>=, +=, -=, *=, /=, //=, %=</td>
 </tr>
 </tbody>
 </table>
 </div></div>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Python Conditional Expressions</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Conditional Expressions</a></li>
 </ul>
-<h2 id="python-sequence-python-sequence" tabindex="-1"><a class="internal-link is-unresolved" href="/404">Python Sequence</a></h2>
+<h2 id="python-sequence-python-sequence" tabindex="-1"><a class="internal-link is-unresolved" href="/404" target="">Python Sequence</a></h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Sequence Unpacking</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Slice</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Sequence Unpacking</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Slice</a></li>
 </ul>
 <h2 id="other" tabindex="-1">Other</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Python File Handling</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python Exception Handling</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python Scope</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python Keywords, Expressions and Statements</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python VS Code</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Rounding to Integer</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Python One-liner</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python File Handling</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Exception Handling</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Scope</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python Keywords, Expressions and Statements</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python VS Code</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Rounding to Integer</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Python One-liner</a></li>
 </ul>
 <h2 id="projects" tabindex="-1">Projects</h2>
-<p><a class="internal-link is-unresolved" href="/404">Laura Chess</a><br>
-<a class="internal-link is-unresolved" href="/404">Cellular Automata</a></p>
+<p><a class="internal-link is-unresolved" href="/404" target="">Laura Chess</a><br>
+<a class="internal-link is-unresolved" href="/404" target="">Cellular Automata</a></p>
 
       
         <center style="margin-top:5em;display:flex;justify-content:center;align-items:center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a><span style="font-size:.8em;color:var(--text-muted);margin:5px;margin-bottom:9px"> by <a  rel="homepage" href="https://me.zcysxy.space">zcysxy</a></span></center>

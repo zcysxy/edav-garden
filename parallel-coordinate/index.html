@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1146,7 +1146,7 @@
       
       
       <h1 id="parallel-coordinate" tabindex="-1">Parallel Coordinate</h1>
-<p>Instead of making coordinates orthogonal, we can make them <strong>parallel</strong> to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for <a class="internal-link" data-note-icon="" href="/edav-multivariate-continuous-data/">EDAV - Multivariate Continuous Data</a>.</p>
+<p>Instead of making coordinates orthogonal, we can make them <strong>parallel</strong> to adapt more than 3 coordinates/variables. Just like line charts, parallel coordinate plots are for <a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-continuous-data/">EDAV - Multivariate Continuous Data</a>.</p>
 <h2 id="slope-graph" tabindex="-1">Slope Graph</h2>
 <p>When there are only two parallel coordinates, the graph is called a <strong>slope graph</strong>.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013024024.png" alt=""></p>
@@ -1192,7 +1192,7 @@
 <ul>
 <li><code>ggplot2::geom_line()</code>
 <ul>
-<li>Use <a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a> to transform variable names to x-axis first</li>
+<li>Use <a class="internal-link" target="" data-note-icon="" href="/tidyr/">tidyr</a> to transform variable names to x-axis first</li>
 </ul>
 </li>
 <li><code>GGally::ggparcoord()</code> (static, ggplot2)</li>

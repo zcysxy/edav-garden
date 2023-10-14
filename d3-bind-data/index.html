@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1158,16 +1158,16 @@
 </ul>
 </li>
 </ul>
-<p>Binding data to elements using d3 will not make explicit changes to the element: the data will not show up in the <a class="internal-link" data-note-icon="" href="/dom/">DOM</a>.</p>
+<p>Binding data to elements using d3 will not make explicit changes to the element: the data will not show up in the <a class="internal-link" target="" data-note-icon="" href="/dom/">DOM</a>.</p>
 <h2 id="update-enter-exit" tabindex="-1">Update, Enter, Exit</h2>
 <p><code>.data()</code> will return an <strong>update</strong>, an <strong>enter</strong>, and an <strong>exit</strong> selection</p>
 <ul>
-<li>update selection contains the <a class="internal-link" data-note-icon="" href="/dom/">DOM</a> elements that match the data
+<li>update selection contains the <a class="internal-link" target="" data-note-icon="" href="/dom/">DOM</a> elements that match the data
 <ul>
 <li>update selection is stored in the <code>_groups</code> attribute of the return, which is the <strong>default object</strong> on which further actions will apply</li>
 </ul>
 </li>
-<li>exit selection contains the <a class="internal-link" data-note-icon="" href="/dom/">DOM</a> elements that don't find data matches
+<li>exit selection contains the <a class="internal-link" target="" data-note-icon="" href="/dom/">DOM</a> elements that don't find data matches
 <ul>
 <li>exit selection is stored in the <code>_exit</code> attribute of the return; you can get it using method <code>.exit()</code>
 <ul>
@@ -1208,7 +1208,7 @@ d3.select(&quot;svg&quot;)
     .attr(&quot;fill&quot;, &quot;pink&quot;);
 </code></pre>
 </div></div>
-<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Create a <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a></div></div>
+<div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Create a <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a></div></div>
 <div class="callout-content">
 <p>
 <pre><code class="language-js">let bardata = [300, 100, 150, 225, 75, 275];

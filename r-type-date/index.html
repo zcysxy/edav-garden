@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,7 +1142,7 @@
       
       
       <h1 id="date" tabindex="-1">Date</h1>
-<p><code>&quot;Date&quot;</code> is a special data <strong>class</strong> for date values in <a class="internal-link" data-note-icon="" href="/r/">R</a>. Strictly saying, <code>Date</code> is not an <a class="internal-link" data-note-icon="" href="/r-type/">R Type</a>, but a class. A class is an <strong>attribute</strong> assigned to an object regardless of its internal storage structure. To see this, execute the following code</p>
+<p><code>&quot;Date&quot;</code> is a special data <strong>class</strong> for date values in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a>. Strictly saying, <code>Date</code> is not an <a class="internal-link" target="" data-note-icon="" href="/r-type/">R Type</a>, but a class. A class is an <strong>attribute</strong> assigned to an object regardless of its internal storage structure. To see this, execute the following code</p>
 <pre><code class="language-r">x &lt;- as.Date(&quot;2022-11-03&quot;)
 class(x)  # &quot;Date&quot;
 typeof(x) # &quot;double&quot;
@@ -1162,7 +1162,7 @@ typeof(x) # &quot;double&quot;
 <li><span class="alt-check alt-check-ex"><code>as.Date(&quot;1/12/2019&quot;, format=&quot;%m/%d/%y&quot;)</code> gives <code>&quot;2020-01-12&quot;</code> because <code>%y</code> is for a two-digit year, and is replaced by <code>20</code> here</span></li>
 </ul>
 </li>
-<li>See <a class="internal-link" data-note-icon="" href="/r-type-date/#conversion-specification"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Conversion">#Conversion</a> Specification</a> for the conversion specification reference</li>
+<li>See <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#Conversion">#Conversion</a> Specification</a> for the conversion specification reference</li>
 </ul>
 </li>
 </ul>
@@ -1172,7 +1172,7 @@ typeof(x) # &quot;double&quot;
 <li><code>parse_date</code> will return <code>NA</code> for <code>parse_date(&quot;1/12/2019&quot;, format=&quot;%m/%d/%y&quot;)</code></li>
 </ul>
 </li>
-<li>Use package <a class="internal-link" data-note-icon="" href="/lubridate/">lubridate</a></li>
+<li>Use package <a class="internal-link" target="" data-note-icon="" href="/lubridate/">lubridate</a></li>
 </ul>
 <h3 id="conversion-specification" tabindex="-1">Conversion Specification</h3>
 <div class="table-wrapper"><table>
@@ -1272,7 +1272,7 @@ typeof(x) # &quot;double&quot;
 </tbody>
 </table></div>
 <ul>
-<li><span class="alt-check alt-check-tip">See <code>?strptime</code> for the reference inside <a class="internal-link" data-note-icon="" href="/r/">R</a>.</span></li>
+<li><span class="alt-check alt-check-tip">See <code>?strptime</code> for the reference inside <a class="internal-link" target="" data-note-icon="" href="/r/">R</a>.</span></li>
 </ul>
 <h2 id="date-operation" tabindex="-1">Date Operation</h2>
 <p>Date class supports the following operations</p>
@@ -1289,7 +1289,7 @@ as.Date(&quot;2022-11-01&quot;) &lt; as.Date(&quot;2020-11-01&quot;)
 # False
 </code></pre>
 <h3 id="scale-x-date" tabindex="-1">scale_x_date</h3>
-<p>Since dates can be calculated and compared, it is easy to specify the limits and breaks in <a class="internal-link is-unresolved" href="/404">ggplot2</a>.</p>
+<p>Since dates can be calculated and compared, it is easy to specify the limits and breaks in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a>.</p>
 <ul>
 <li><code>base + sacle_x_date(limits = c(ymd(&quot;2022-01-01&quot;), ymd(&quot;2022-11-03&quot;)))</code></li>
 <li><code>base + sacle_x_date(limits = c(Sys.Date() - 19, NA))</code></li>

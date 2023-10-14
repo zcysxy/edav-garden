@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1149,13 +1149,13 @@
 <ul>
 <li>Frequency
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>
 <ul>
 <li>Stacked bars</li>
 <li>Grouped bars</li>
 </ul>
 </li>
-<li><a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a>
 <ul>
 <li>multiple dots</li>
 <li>facets</li>
@@ -1165,12 +1165,12 @@
 </li>
 <li>Proportion / Association
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/mosaic-plot/">Mosaic Plot</a></li>
 </ul>
 </li>
 <li>Change of State
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/alluvial-diagram/">Alluvial Diagram</a></li>
 </ul>
 </li>
 </ul>

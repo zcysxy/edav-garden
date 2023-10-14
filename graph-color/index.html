@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1150,20 +1150,20 @@
 <ul>
 <li>suitable for <strong>ordinal</strong> variables</li>
 <li>easy to tell the level of a color</li>
-<li>e.g. <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a></li>
+<li>e.g. <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a></li>
 </ul>
 </li>
 <li>
 <p>Diverging <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF0000"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF7F00"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FFFF00"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#7FFF00"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#00FF00"></rect></svg></p>
 <ul>
-<li>suitable for <a class="internal-link" data-note-icon="" href="/edav-categorical-data/#likert-data">Likert Data</a></li>
+<li>suitable for <a class="internal-link is-unresolved" href="/404" target="">Likert Data</a></li>
 <li>able to divide colors into groups</li>
 </ul>
 </li>
 <li>
 <p>Qualitative <svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#FF0000"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#007FFF"></rect></svg><svg width="20" height="20" style="vertical-align: -4px; border:2px solid black "><rect width="20" height="20" style="fill:#00FF00"></rect></svg></p>
 <ul>
-<li>suitable for <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a></li>
+<li>suitable for <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a></li>
 <li>There should not be some colors that stand out more than other colors
 <ul>
 <li>Unless you are stressing certain values</li>
@@ -1248,10 +1248,10 @@ barplot(1:4,  col = colors)
 <ul>
 <li>If your legend is on the right, it better matches the right ends of the graph</li>
 <li>try label instead of legend</li>
-<li>for some plots, like <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Plot</a>, legends at the bottom may be better</li>
+<li>for some plots, like <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Plot</a>, legends at the bottom may be better</li>
 </ul>
 </li>
-<li>Sequential scheme for <a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Data</a>; qualitative scheme for <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a></li>
+<li>Sequential scheme for <a class="internal-link" target="" data-note-icon="" href="/edav-continuous-variable/">Continuous Data</a>; qualitative scheme for <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a></li>
 <li>Do not use diverging scheme for non-likert data</li>
 <li>Colors should be a separate dimension
 <ul>

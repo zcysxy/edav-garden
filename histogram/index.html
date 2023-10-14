@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1185,7 +1185,7 @@
 </li>
 </ul>
 <h2 id="types" tabindex="-1">Types</h2>
-<p>In a histogram, the x-axis is the <a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a> to be inspected. And Different <strong>y-scales</strong> give types of histograms.</p>
+<p>In a histogram, the x-axis is the <a class="internal-link" target="" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a> to be inspected. And Different <strong>y-scales</strong> give types of histograms.</p>
 <ul>
 <li>Frequency histogram</li>
 <li>Density histogram
@@ -1200,10 +1200,10 @@
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20220908170007.png" alt=""></p>
 </li>
 <li>
-<p>In <a class="internal-link is-unresolved" href="/404">ggplot2</a>, use <code>y = ..density..</code> to specify this scale</p>
+<p>In <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a>, use <code>y = ..density..</code> to specify this scale</p>
 </li>
 <li>
-<p>It is also very useful to overlay a <a class="internal-link" data-note-icon="" href="/density-curve/">Density Curve</a> (<code>geom_density()</code>)</p>
+<p>It is also very useful to overlay a <a class="internal-link" target="" data-note-icon="" href="/density-curve/">Density Curve</a> (<code>geom_density()</code>)</p>
 </li>
 </ul>
 </li>

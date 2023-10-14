@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1146,7 +1146,7 @@
       
       
       <h1 id="r-operator-pipe" tabindex="-1">R Operator - Pipe</h1>
-<p>A pipe operator passes the output of the last command to the next command, like <code>|</code> in <a class="internal-link is-unresolved" href="/404">Shell</a>. A pipe operator simplifies two steps</p>
+<p>A pipe operator passes the output of the last command to the next command, like <code>|</code> in <a class="internal-link is-unresolved" href="/404" target="">Shell</a>. A pipe operator simplifies two steps</p>
 <ol>
 <li>Assign the result to a variable
 <ul>
@@ -1159,7 +1159,7 @@
 </ul>
 </li>
 </ol>
-<p><strong><code>%&gt;%</code></strong>, a famous pipe operator in <a class="internal-link" data-note-icon="" href="/r/">R</a> introduced by <code>magrittr</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> package, is widely used by many <a class="internal-link" data-note-icon="" href="/r-package/">R Package</a>s, like <a class="internal-link" data-note-icon="" href="/dplyr/">dplyr</a>.</p>
+<p><strong><code>%&gt;%</code></strong>, a famous pipe operator in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a> introduced by <code>magrittr</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> package, is widely used by many <a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a>s, like <a class="internal-link" target="" data-note-icon="" href="/dplyr/">dplyr</a>.</p>
 <div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> An Example</div></div>
 <div class="callout-content">
 <p>
@@ -1171,8 +1171,8 @@
 </code></pre>
 </p></div></div>
 <p>Behind the scenes, <code>x %&gt;% f(y)</code> turns into <code>f(x, y)</code>, and <code>x %&gt;% f(y) %&gt;% g(z)</code>turns into <code>g(f(x, y), z)</code> and so on.</p>
-<p>The pipe operator enable us to focus on the <a class="internal-link" data-note-icon="" href="/dplyr/">transformations</a>, not what’s being transformed. It also makes the code easier to read: replace <code>%&gt;%</code> with &quot;then&quot; when reading code.</p>
-<p>In <a class="internal-link" data-note-icon="" href="/r/">R</a> 4.1, a built-in pipe operator is introduced: <code>|&gt;</code>. This operator doesn't rely on third-party packages and may be faster. But it lacks two important features that <code>%&gt;%</code> has</p>
+<p>The pipe operator enable us to focus on the <a class="internal-link" target="" data-note-icon="" href="/dplyr/">transformations</a>, not what’s being transformed. It also makes the code easier to read: replace <code>%&gt;%</code> with &quot;then&quot; when reading code.</p>
+<p>In <a class="internal-link" target="" data-note-icon="" href="/r/">R</a> 4.1, a built-in pipe operator is introduced: <code>|&gt;</code>. This operator doesn't rely on third-party packages and may be faster. But it lacks two important features that <code>%&gt;%</code> has</p>
 <ul>
 <li>represent the value being piped in by <code>.</code>, as in the above example</li>
 <li>when you pipe into a function with no other arguments, you can omit the parentheses <code>()</code></li>

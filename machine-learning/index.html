@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1190,26 +1190,26 @@
 <p>Most common performance measures:</p>
 <ul>
 <li><strong>Accuracy</strong> or <strong>error rate</strong>: classification, structured output</li>
-<li><strong>average log-probability</strong> (i.e. <a class="internal-link is-unresolved" href="/404">Cross-Entropy</a>) the model assigns to some examples: density estimation</li>
+<li><strong>average log-probability</strong> (i.e. <a class="internal-link is-unresolved" href="/404" target="">Cross-Entropy</a>) the model assigns to some examples: density estimation</li>
 </ul>
 <p>Usually we are interested in how well the machine learning algorithm performs on data that it has not seen before. We therefore evaluate these performance measures using a <strong><mark>test set</mark></strong> of data that is separate from the data used for training the machine learning system.</p>
 <h3 id="experience-em-e-em" tabindex="-1">Experience <em>E</em></h3>
 <p>The experience of most ML algorithms is the <strong><mark>dataset</mark></strong>, a collection of many examples/data points, and an example is a collection of features.</p>
-<p>ML algorithms can be broadly categorized as <a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a> or <a class="internal-link is-unresolved" href="/404">Supervised Learning</a> by what kind of experience they are allowed to have during the learning process.</p>
+<p>ML algorithms can be broadly categorized as <a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a> or <a class="internal-link is-unresolved" href="/404" target="">Supervised Learning</a> by what kind of experience they are allowed to have during the learning process.</p>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a>
 <ul>
 <li>learn useful properties of the structure of this dataset</li>
 <li>Examples: density estimation, synthesis, denoising, clustering</li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Supervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Supervised Learning</a>
 <ul>
 <li>each example is also associated with a <strong>label</strong>/<strong>target</strong></li>
 <li>Example: classification, regression, structured output</li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Semi-Supervised Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Semi-Supervised Learning</a></li>
 </ul>
 <div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Blurry line between UL and SL</div></div>
 <div class="callout-content">
@@ -1230,72 +1230,72 @@
 </ul>
 <h2 id="methods" tabindex="-1">Methods</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Supervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Supervised Learning</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Regression</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Regression</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Linear Regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Logistic Regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">ridge regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">LASSO</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Linear Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Logistic Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">ridge regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">LASSO</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Classification</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Classification</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Linear Classifier</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Nearest Neighbor</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Support Vector Machine</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Linear Classifier</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Nearest Neighbor</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Support Vector Machine</a></li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Deep Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Decision Tree</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Deep Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Decision Tree</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Random Forest</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Random Forest</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Ensemble Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Meta-Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Semi-Supervised Learning</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Reinforcement Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Ensemble Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Meta-Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Semi-Supervised Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Reinforcement Learning</a></li>
 </ul>
 <h2 id="general-concepts-and-amp-techniques" tabindex="-1">General Concepts &amp; Techniques</h2>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Mercer Kernel</a> &amp; <a class="internal-link is-unresolved" href="/404">Reproducing Kernel Hilbert Space</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Dimensionality Deduction</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Overfitting and Underfitting</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Hyperparameter</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Cross-Validation</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Mercer Kernel</a> &amp; <a class="internal-link is-unresolved" href="/404" target="">Reproducing Kernel Hilbert Space</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Dimensionality Deduction</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Overfitting and Underfitting</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Hyperparameter</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Cross-Validation</a></li>
 <li>Estimation
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Estimation &amp; Bias</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Maximum Likelihood Estimation</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Bayesian Statistics</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Estimation &amp; Bias</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Maximum Likelihood Estimation</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Bayesian Statistics</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="course-log" tabindex="-1">Course Log</h2>
 <h3 id="2023-01-17" tabindex="-1">2023-01-17</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Supervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Supervised Learning</a>
 <ul>
 <li>Two tasks
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Regression</a>: Using a set of inputs, predict real-valued output</li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Regression</a>: Using a set of inputs, predict real-valued output</li>
 <li>Classification: Using a set of inputs, predict a discrete label (aka class)</li>
 </ul>
 </li>
 <li>Tools
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Deep Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Deep Learning</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a>
 <ul>
 <li>Task: uncover the structure in the data
 <ul>
@@ -1322,7 +1322,7 @@ B[0. Build Model] --> C[2. Infer hidden variables]
 A[1. Data] --Optimization--> C
 C --> D[3. Predict & Explore]
 A --Supervise--> D</pre><ul>
-<li>Differences between <a class="internal-link is-unresolved" href="/404">Supervised Learning</a> and <a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a> mainly lie in blocks 1 and 3</li>
+<li>Differences between <a class="internal-link is-unresolved" href="/404" target="">Supervised Learning</a> and <a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a> mainly lie in blocks 1 and 3</li>
 <li>Differences between probabilistic and non-probabilistic approaches mainly lie in blocks 0 and 2</li>
 </ul>
 <div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Gaussian Distribution<br></div></div>
@@ -1338,33 +1338,33 @@ We want to estimate the distribution of some data.</p>
 </div></div>
 <h3 id="2023-01-19" tabindex="-1">2023-01-19</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Linear Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Linear Regression</a></li>
 </ul>
 <h3 id="2023-01-24" tabindex="-1">2023-01-24</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Ridge Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Ridge Regression</a></li>
 </ul>
 <h3 id="2023-01-26" tabindex="-1">2023-01-26</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Bias-Variance Trade-Off in Regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Cross-Validation</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Bias-Variance Trade-Off in Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Cross-Validation</a></li>
 </ul>
 <h3 id="2023-01-31" tabindex="-1">2023-01-31</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Maximum a Posteriori</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Bayesian Linear Regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Active Learning</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Maximum a Posteriori</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Bayesian Linear Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Active Learning</a></li>
 </ul>
 <h3 id="2023-02-02" tabindex="-1">2023-02-02</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Underdetermined Linear System</a></li>
-<li><a class="internal-link is-unresolved" href="/404">LASSO</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Underdetermined Linear System</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">LASSO</a></li>
 </ul>
 <h3 id="2023-02-07" tabindex="-1">2023-02-07</h3>
 <ul class="task-list">
-<li><a class="internal-link is-unresolved" href="/404">Classification</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Classification</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Nearest Neighbor</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Nearest Neighbor</a></li>
 </ul>
 </li>
 <li>Statistical Learning
@@ -1373,51 +1373,51 @@ We want to estimate the distribution of some data.</p>
 <li>Key assumption: data (feature and label) are <strong>i.i.d.</strong> from a distribution, then the <strong>past</strong> should look like the <strong>future</strong></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> <a class="internal-link is-unresolved" href="/404">Generative vs Discriminative Model</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> <a class="internal-link is-unresolved" href="/404" target="">Generative vs Discriminative Model</a></label></li>
 </ul>
 <h3 id="2023-02-09" tabindex="-1">2023-02-09</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Linear Classifier</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Linear Classifier</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Perceptron Algorithm</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Perceptron Algorithm</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="2023-02-14" tabindex="-1">2023-02-14</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Logistic Regression</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Bayesian Logistic Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Logistic Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Bayesian Logistic Regression</a></li>
 </ul>
 <h3 id="2023-02-016" tabindex="-1">2023-02-016</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Feature Map</a>, <a class="internal-link is-unresolved" href="/404">Mercer Kernel</a>, and <a class="internal-link is-unresolved" href="/404">Mercer's Theorem</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Gaussian Process Regression</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Feature Map</a>, <a class="internal-link is-unresolved" href="/404" target="">Mercer Kernel</a>, and <a class="internal-link is-unresolved" href="/404" target="">Mercer's Theorem</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Gaussian Process Regression</a></li>
 </ul>
 <h3 id="2023-02-21-23" tabindex="-1">2023-02-21/23</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Support Vector Machine</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Support Vector Machine</a></li>
 </ul>
 <h3 id="2023-02-28" tabindex="-1">2023-02-28</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Decision Tree</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Ensemble Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Decision Tree</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Ensemble Learning</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Bootstrap</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Random Forest</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Bootstrap</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Random Forest</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="2023-03-2" tabindex="-1">2023-03-2</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Boosting</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Boosting</a></li>
 </ul>
 <h3 id="2023-03-21" tabindex="-1">2023-03-21</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Unsupervised Learning</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Unsupervised Learning</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Clustering</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Clustering</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">K-Means</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">K-Means</a></li>
 </ul>
 </li>
 </ul>
@@ -1425,49 +1425,49 @@ We want to estimate the distribution of some data.</p>
 </ul>
 <h3 id="2023-03-23" tabindex="-1">2023-03-23</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Expectation Maximization</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Expectation Maximization</a></li>
 </ul>
 <h3 id="2023-03-28" tabindex="-1">2023-03-28</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Clustering</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Clustering</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">K-Means#Soft (Weighted) K-Means</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Gaussian Mixture Model</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">K-Means#Soft (Weighted) K-Means</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Gaussian Mixture Model</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="2023-03-30" tabindex="-1">2023-03-30</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Matrix Factorization</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Matrix Factorization</a></li>
 </ul>
 <h3 id="2023-04-04" tabindex="-1">2023-04-04</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Topic Modeling</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Topic Modeling</a></li>
 </ul>
 <h3 id="2023-04-06" tabindex="-1">2023-04-06</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Principal Components Analysis</a>
+<li><a class="internal-link is-unresolved" href="/404" target="">Principal Components Analysis</a>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Probabilistic PCA</a></li>
-<li><a class="internal-link is-unresolved" href="/404">Kernel PCA</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Probabilistic PCA</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Kernel PCA</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="2023-04-11" tabindex="-1">2023-04-11</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Markov Chain</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Markov Chain</a></li>
 </ul>
 <h3 id="2023-04-13" tabindex="-1">2023-04-13</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Hidden Markov Model</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Hidden Markov Model</a></li>
 </ul>
 <h3 id="2023-04-18" tabindex="-1">2023-04-18</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Kalman Filter</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Kalman Filter</a></li>
 </ul>
 <h3 id="2023-04-20" tabindex="-1">2023-04-20</h3>
 <ul>
-<li><a class="internal-link is-unresolved" href="/404">Association Analysis</a></li>
+<li><a class="internal-link is-unresolved" href="/404" target="">Association Analysis</a></li>
 </ul>
 
       

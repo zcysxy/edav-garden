@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1145,16 +1145,16 @@
 <p>A time series is a sequence of data points, typically consisting of successive measurements made over a time interval. Visualizing time series data helps extract meaningful statistics and other characteristics of the data.</p>
 <ul>
 <li>When presenting time series data, use <strong>lines</strong> with time on the x-axis</li>
-<li>Use <code>Date</code> and <code>Date-Time</code> <a class="internal-link" data-note-icon="" href="/r-type/">R classes</a> for time series</li>
+<li>Use <code>Date</code> and <code>Date-Time</code> <a class="internal-link" target="" data-note-icon="" href="/r-type/">R classes</a> for time series</li>
 </ul>
 <h2 id="long-term-trend" tabindex="-1">Long-Term Trend</h2>
 <p>Time series graphs are good for exploring <strong>overall long-term trends (secular)</strong>.<br>
 Time series are essentially discrete data and have <strong>short-term noise</strong>. We can add a <strong>loess smoother</strong> to fit the data.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221101170338.png" alt=""></p>
 <p>In the above example, the blue curve is a global non-parametric smoother, while the red segments are linear smoothers constrained to specific time windows (groups). We can see that the smoothers eliminate the short-term noise (e.g. intra-weekly oscillations) and present the long-term trend.</p>
-<p>Add a smoother using <a class="internal-link is-unresolved" href="/404">ggplot2</a>: <code>geom_smooth(method = &quot;loess&quot;, span = .75, se = FALSE)</code></p>
+<p>Add a smoother using <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a>: <code>geom_smooth(method = &quot;loess&quot;, span = .75, se = FALSE)</code></p>
 <ul>
-<li><span class="alt-check alt-check-tip">Choose the right parameters for smoothers to avoid <a class="internal-link is-unresolved" href="/404">Overfitting and Underfitting</a>. Small <code>span</code> tends to overfit; while large <code>span</code> tends to underfit.<br>
+<li><span class="alt-check alt-check-tip">Choose the right parameters for smoothers to avoid <a class="internal-link is-unresolved" href="/404" target="">Overfitting and Underfitting</a>. Small <code>span</code> tends to overfit; while large <code>span</code> tends to underfit.<br>
 { <a class="tag" onclick="toggleTagSearch(this)" data-content="#4j85jk">#4j85jk</a>}<br>
 </span></li>
 </ul>

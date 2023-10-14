@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1145,18 +1145,18 @@
 <p>Categorical data is a type of data that can be divided into groups or <strong>categories</strong>.</p>
 <h2 id="graphs" tabindex="-1">Graphs</h2>
 <ul>
-<li><a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>
+<li><a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>
 <ul>
-<li>since the bars in a <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a> always have the same width, you compare lengths, not areas, which is much easier</li>
+<li>since the bars in a <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a> always have the same width, you compare lengths, not areas, which is much easier</li>
 </ul>
 </li>
 <li>Pie Chart</li>
-<li><a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
+<li><a class="internal-link" target="" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a></li>
 </ul>
 <div class="callout " data-callout="rmk"><div class="callout-title"><div class="callout-title-inner"> Points vs Areas<br></div></div>
 <div class="callout-content">
 <p>
-There are suggestions for using <strong>individual points</strong> (not the same as <a class="internal-link" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a>) for cases and jittering to keep them apart. This does not work well for high-frequency groups, as it is hard to assess their densities, and the displays for low-frequency groups may exhibit non-existent patterns due to the random jittering.<br>
+There are suggestions for using <strong>individual points</strong> (not the same as <a class="internal-link" target="" data-note-icon="" href="/cleveland-dot-plot/">Cleveland Dot Plot</a>) for cases and jittering to keep them apart. This does not work well for high-frequency groups, as it is hard to assess their densities, and the displays for low-frequency groups may exhibit non-existent patterns due to the random jittering.<br>
 Nevertheless, as always with exploratory graphics, if a graphic helps to uncover information, it is worth using.</p>
 </div></div>
 <h2 id="ordinal-vs-nominal" tabindex="-1">Ordinal vs Nominal</h2>
@@ -1175,7 +1175,7 @@ Nevertheless, as always with exploratory graphics, if a graphic helps to uncover
 </ul>
 <h2 id="discrete-data" tabindex="-1">Discrete Data</h2>
 <p>Though not strictly categorical, when a variable has discrete values and the range is small, we can regard it as a categorical variable.<br>
-In this case, a <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a> is the same as a <a class="internal-link" data-note-icon="" href="/histogram/">Histogram</a> if each bin in the histogram contains only one value.</p>
+In this case, a <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a> is the same as a <a class="internal-link" target="" data-note-icon="" href="/histogram/">Histogram</a> if each bin in the histogram contains only one value.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211171912.png" alt=""></p>
 <h2 id="features" tabindex="-1">Features</h2>
 <ul>
@@ -1216,7 +1216,7 @@ In this case, a <a class="internal-link" data-note-icon="" href="/bar-chart/">Ba
 </li>
 </ul>
 <h2 id="facets" tabindex="-1">Facets</h2>
-<p>Sometimes categories can be further divided into different groups, with different scales. We can use <a class="internal-link is-unresolved" href="/404">facets</a> w/ different scales if needed. See <a class="internal-link is-unresolved" href="/404">ggplot2#^32e6e9</a> for code. However usually, we should not use different scales in a plot.</p>
+<p>Sometimes categories can be further divided into different groups, with different scales. We can use <a class="internal-link is-unresolved" href="/404" target="">facets</a> w/ different scales if needed. See <a class="internal-link is-unresolved" href="/404" target="">ggplot2#^32e6e9</a> for code. However usually, we should not use different scales in a plot.</p>
 <h2 id="top-bottom-coded-data" tabindex="-1">Top/Bottom-Coded Data</h2>
 <p>When there are too many categories to present, we can combine top/bottom categories into a &quot;or more&quot; category. However, the &quot;or more&quot; category may contain too much data to be considered &quot;or more&quot;. So when a <strong>smart cut</strong> is needed. For example, when two bars are similar, it's not reasonable to cut them; you should look for a &quot;jump&quot; instead.</p>
 <h2 id="data-formats" tabindex="-1">Data Formats</h2>
@@ -1278,14 +1278,14 @@ In this case, a <a class="internal-link" data-note-icon="" href="/bar-chart/">Ba
 <li>disagree</li>
 <li>strongly disagree</li>
 </ul>
-<p>Relative frequency stacked <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>s are used to present this kind of data.</p>
+<p>Relative frequency stacked <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>s are used to present this kind of data.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225221.png" alt=""></p>
 <p>Colors play an important role in presenting this kind of data: we use a neutral color to present a neutral category, and use two different sets of colors for categories on two sides.</p>
-<p id="99cd33">Another type of <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>, <strong>diverging stacked bar chart</strong>s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out.</p>
+<p id="99cd33">Another type of <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>, <strong>diverging stacked bar chart</strong>s, sometimes are more suitable. They align bars with the neutral category always in the center. By doing this, the inclination stands out.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013225854.png" alt=""></p>
 <p>Furthermore, we can separate and even remove the neutral category.</p>
 <h2 id="combine-continuous-variables-and-categorical-variables" tabindex="-1">Combine Continuous Variables and Categorical Variables</h2>
-<p>When combining <a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>s and <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Variable</a>s, we should consider</p>
+<p>When combining <a class="internal-link" target="" data-note-icon="" href="/edav-continuous-variable/">Continuous Variable</a>s and <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">Categorical Variable</a>s, we should consider</p>
 <ul>
 <li>mapping options:
 <ul>

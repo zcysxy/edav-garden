@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,7 +1142,7 @@
       
       
       <h1 id="d3-axes" tabindex="-1">D3 Axes</h1>
-<p>To render axes in <a class="internal-link" data-note-icon="" href="/d3/">D3</a>, we need to first generate them, and then plot them.<br>
+<p>To render axes in <a class="internal-link" target="" data-note-icon="" href="/d3/">D3</a>, we need to first generate them, and then plot them.<br>
 There are four axis generators called axis components:</p>
 <ul>
 <li><code>.axisTop()</code></li>
@@ -1156,7 +1156,7 @@ There are four axis generators called axis components:</p>
 <li><code>d3.axisBottom().scale(xScale)</code></li>
 <li><code>d3.axisBottom(xScale)</code></li>
 </ul>
-<p>To plot the axis, <strong>call</strong> it on <strong>a selection</strong>, then some <a class="internal-link is-unresolved" href="/404">SVG</a> elements presenting the axis will be created as a child of that selection. Also, there are two ways:</p>
+<p>To plot the axis, <strong>call</strong> it on <strong>a selection</strong>, then some <a class="internal-link is-unresolved" href="/404" target="">SVG</a> elements presenting the axis will be created as a child of that selection. Also, there are two ways:</p>
 <ul>
 <li><code>d3.select(&quot;svg&quot;).append(&quot;g&quot;).call(xAxis)</code></li>
 <li><code>xAxis(d3.select(&quot;svg&quot;).append(&quot;g&quot;))</code></li>
@@ -1172,7 +1172,7 @@ svg.append(&quot;g&quot;)
    .call(yAxis);
 </code></pre>
 <h2 id="ticks" tabindex="-1">Ticks</h2>
-<p>To label the ticks, use labels when creating the <a class="internal-link" data-note-icon="" href="/d3-scale/">D3 Scale</a>. For example, for data</p>
+<p>To label the ticks, use labels when creating the <a class="internal-link" target="" data-note-icon="" href="/d3-scale/">D3 Scale</a>. For example, for data</p>
 <pre><code class="language-js">const bardata = [{month: &quot;Jan&quot;, value: 300},
                  {month: &quot;Feb&quot;, value: 100},
                  {month: &quot;Mar&quot;, value: 150},

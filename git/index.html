@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1261,7 +1261,7 @@
 <h2 id="usage" tabindex="-1">Usage</h2>
 <h3 id="update" tabindex="-1">Update</h3>
 <blockquote>
-<p>On <a class="internal-link is-unresolved" href="/404">Linux</a></p>
+<p>On <a class="internal-link is-unresolved" href="/404" target="">Linux</a></p>
 </blockquote>
 <pre><code class="language-bash">sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
@@ -1291,7 +1291,7 @@ git config --global user.email &quot;yourname@example.com&quot;
 <pre><code class="language-bash">cat ~/.ssh/id_rsa.pub | clip.exe
 </code></pre>
 <ul>
-<li><span class="alt-check alt-check-rmk"><code>clip.exe</code> is only available on WSL, use <code>xclip</code> on other Linux systems, use <code>pbcopy</code> on <a class="internal-link is-unresolved" href="/404">macOS</a></span></li>
+<li><span class="alt-check alt-check-rmk"><code>clip.exe</code> is only available on WSL, use <code>xclip</code> on other Linux systems, use <code>pbcopy</code> on <a class="internal-link is-unresolved" href="/404" target="">macOS</a></span></li>
 </ul>
 <ul>
 <li>Go to GitHub to add the SSH key</li>

@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1147,10 +1147,10 @@
 <p><code>robotstxt::paths_allowed(url)</code> checks if a page is reachable</p>
 </li>
 <li>
-<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved" href="/404">HTML</a> page, returns a <a class="internal-link is-unresolved" href="/404">XML</a> object</p>
+<p><code>read_html(url)</code> gets the content of the <a class="internal-link is-unresolved" href="/404" target="">HTML</a> page, returns a <a class="internal-link is-unresolved" href="/404" target="">XML</a> object</p>
 </li>
 <li>
-<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link" data-note-icon="" href="/r-data-structure/#list">R Data Structure#List</a> of tibbles (dataframes)</p>
+<p><code>html_table()</code> get the tables out of a fetched HTML page, returns a <a class="internal-link is-unresolved" href="/404" target="">R Data Structure#List</a> of tibbles (dataframes)</p>
 <ul>
 <li><span class="alt-check alt-check-ex">Process a table: <code>mytable %&gt;% filter(X1 == &quot;Version:&quot;) %&gt;% pull(X2)</code></span></li>
 </ul>

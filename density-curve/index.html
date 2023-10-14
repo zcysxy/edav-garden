@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,14 +1142,14 @@
       
       
       <h1 id="density-curve" tabindex="-1">Density Curve</h1>
-<p>In <a class="internal-link is-unresolved" href="/404">Probability Theory</a>, a density curve is a function that describes how a random variable is distributed. It is a smooth curve that shows how often each value of the random variable occurs.</p>
-<p>In <a class="internal-link" data-note-icon="" href="/edav/">EDAV</a>, a density curve for some data is the density curve of any distribution that approximates the data empirical distribution.<br>
-A common technique is to give each point a <a class="internal-link is-unresolved" href="/404">Normal Distribution</a> with mean equal to its value. Then the density curve is the <strong>composition</strong> of multiple normal distributions.</p>
+<p>In <a class="internal-link is-unresolved" href="/404" target="">Probability Theory</a>, a density curve is a function that describes how a random variable is distributed. It is a smooth curve that shows how often each value of the random variable occurs.</p>
+<p>In <a class="internal-link" target="" data-note-icon="" href="/edav/">EDAV</a>, a density curve for some data is the density curve of any distribution that approximates the data empirical distribution.<br>
+A common technique is to give each point a <a class="internal-link is-unresolved" href="/404" target="">Normal Distribution</a> with mean equal to its value. Then the density curve is the <strong>composition</strong> of multiple normal distributions.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210194447.png" alt="variance one"></p>
-<p>Then the variance of the normal distribution, which can be seen as <strong>binwidth</strong> in <a class="internal-link" data-note-icon="" href="/histogram/">Histogram</a>, controls the shape of the curve.</p>
+<p>Then the variance of the normal distribution, which can be seen as <strong>binwidth</strong> in <a class="internal-link" target="" data-note-icon="" href="/histogram/">Histogram</a>, controls the shape of the curve.</p>
 <ul>
-<li>If the variance is too small, then the <a class="internal-link is-unresolved" href="/404">Normal Distribution</a> becomes a <a class="internal-link is-unresolved" href="/404">Dirac Distribution</a>, and the composite density curve becomes too sharp</li>
-<li>If the variance is too large, then the <a class="internal-link is-unresolved" href="/404">Normal Distribution</a> becomes a constant, and the composite density curve becomes too flat</li>
+<li>If the variance is too small, then the <a class="internal-link is-unresolved" href="/404" target="">Normal Distribution</a> becomes a <a class="internal-link is-unresolved" href="/404" target="">Dirac Distribution</a>, and the composite density curve becomes too sharp</li>
+<li>If the variance is too large, then the <a class="internal-link is-unresolved" href="/404" target="">Normal Distribution</a> becomes a constant, and the composite density curve becomes too flat</li>
 </ul>
 <p>In real implementations, such variance is controlled by parameter <strong>bandwidth</strong> <code>h</code>.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221210194717.png" alt=""></p>

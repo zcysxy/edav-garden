@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1147,7 +1147,7 @@
       
       <h1 id="scatterplot" tabindex="-1">Scatterplot</h1>
 <p>A scatter plot uses Cartesian coordinates to display values for typically <strong>two variables</strong> for a set of data. The data are displayed as a collection of points, each having the value of two variables determining the position.</p>
-<p>The major role of scatterplots lies in <strong>revealing associations</strong> (<a class="internal-link" data-note-icon="" href="/edav-dependency-relationship/">EDAV - Dependency Relationship</a>) between variables, not just linear associations, but any kind of association.</p>
+<p>The major role of scatterplots lies in <strong>revealing associations</strong> (<a class="internal-link" target="" data-note-icon="" href="/edav-dependency-relationship/">EDAV - Dependency Relationship</a>) between variables, not just linear associations, but any kind of association.</p>
 <h2 id="features" tabindex="-1">Features</h2>
 <ul>
 <li>Causal relationships
@@ -1203,7 +1203,7 @@
 <ul>
 <li>Default value in <code>geom_point</code> is <code>size = 1.5</code>
 <ul>
-<li><span class="alt-check alt-check-tip">We can use <code>ggplot2:::check_subclass(&quot;point&quot;, &quot;Geom&quot;)$default_aes</code> to see the default values in <a class="internal-link is-unresolved" href="/404">ggplot2</a></span></li>
+<li><span class="alt-check alt-check-tip">We can use <code>ggplot2:::check_subclass(&quot;point&quot;, &quot;Geom&quot;)$default_aes</code> to see the default values in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></span></li>
 </ul>
 </li>
 <li>Make <code>shape = &quot;.&quot;</code></li>
@@ -1221,7 +1221,7 @@
 <li>subset data
 <ul>
 <li>static: by percentiles</li>
-<li>interactive: <a class="internal-link is-unresolved" href="/404">ggplotly(), plot_ly()</a></li>
+<li>interactive: <a class="internal-link is-unresolved" href="/404" target="">ggplotly(), plot_ly()</a></li>
 </ul>
 </li>
 <li>remove outliers</li>
@@ -1235,7 +1235,7 @@
 </li>
 </ul>
 <h2 id="smooth-scatterplot" tabindex="-1">Smooth Scatterplot</h2>
-<p>A smooth scatterplot is a combination of a scatterplot, a <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a>, and a <a class="internal-link" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>. It plots the points and uses colors and shapes to show the magnitude of clusters. Use the <a class="internal-link" data-note-icon="" href="/r/">R</a> built-in function <code>smoothScatter(x,y)</code> to create a smooth scatterplot.</p>
+<p>A smooth scatterplot is a combination of a scatterplot, a <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a>, and a <a class="internal-link" target="" data-note-icon="" href="/density-contour-plot/">Density Contour Plot</a>. It plots the points and uses colors and shapes to show the magnitude of clusters. Use the <a class="internal-link" target="" data-note-icon="" href="/r/">R</a> built-in function <code>smoothScatter(x,y)</code> to create a smooth scatterplot.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013010542.png" alt=""></p>
 
       

@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1149,7 +1149,7 @@
 <p>And some built-in browser functions are not part of the core JavaScript language — some are defined as part of <strong>browser APIs</strong>, which build on top of the default language to provide even more functionality.</p>
 </div></div>
 <h2 id="definition" tabindex="-1">Definition</h2>
-<p>Use <code>function</code> <a class="internal-link is-unresolved" href="/404">JS Keyword</a> to define a function</p>
+<p>Use <code>function</code> <a class="internal-link is-unresolved" href="/404" target="">JS Keyword</a> to define a function</p>
 <pre><code class="language-js">function myFunction(arg1, arg2) {
     doSomeOperations;
     let result = expression;
@@ -1158,8 +1158,8 @@
 </code></pre>
 <h3 id="return" tabindex="-1">Return</h3>
 <ul>
-<li>Functions without <code>return</code> <a class="internal-link is-unresolved" href="/404">JS Keyword</a>/statement <em>return</em> <a class="internal-link is-unresolved" href="/404">JS Types - undefined</a></li>
-<li>Just like <a class="internal-link is-unresolved" href="/404">JS Type#typeof</a>, <code>return</code> is both a <a class="internal-link" data-note-icon="" href="/js-function/">JS Function</a> and a <a class="internal-link is-unresolved" href="/404">JS Operator</a>
+<li>Functions without <code>return</code> <a class="internal-link is-unresolved" href="/404" target="">JS Keyword</a>/statement <em>return</em> <a class="internal-link is-unresolved" href="/404" target="">JS Types - undefined</a></li>
+<li>Just like <a class="internal-link is-unresolved" href="/404" target="">JS Type#typeof</a>, <code>return</code> is both a <a class="internal-link" target="" data-note-icon="" href="/js-function/">JS Function</a> and a <a class="internal-link is-unresolved" href="/404" target="">JS Operator</a>
 <ul>
 <li>This means there are two forms of syntax
 <ul>
@@ -1176,12 +1176,12 @@
 </li>
 <li>It is possible to use <code>return</code> without a value, which simply exits the function
 <ul>
-<li>In this case the function also <em>returns</em> <a class="internal-link is-unresolved" href="/404">JS Types - undefined</a></li>
+<li>In this case the function also <em>returns</em> <a class="internal-link is-unresolved" href="/404" target="">JS Types - undefined</a></li>
 </ul>
 </li>
 <li><a class="tag" onclick="toggleTagSearch(this)" data-content="#R">#R</a> Never add a newline between <code>return</code> and the value
 <ul>
-<li>See <a class="internal-link is-unresolved" href="/404">JS Basics#^js-semicolon-newline</a></li>
+<li>See <a class="internal-link is-unresolved" href="/404" target="">JS Basics#^js-semicolon-newline</a></li>
 <li>If we want the returned expression to wrap across multiple lines
 <ol>
 <li>We can start it at the same line as <code>return</code></li>
@@ -1192,9 +1192,9 @@
 </li>
 </ul>
 <h2 id="invoking" tabindex="-1">Invoking</h2>
-<p>Unlike <a class="internal-link" data-note-icon="" href="/python/">Python</a>, where functions must be defined before any invoking; and unlike <a class="internal-link is-unresolved" href="/404">MATLAB</a>, where functions must be listed at the end of the script; JS allows to define the functions anywhere and invoke them anywhere.</p>
+<p>Unlike <a class="internal-link" target="" data-note-icon="" href="/python/">Python</a>, where functions must be defined before any invoking; and unlike <a class="internal-link is-unresolved" href="/404" target="">MATLAB</a>, where functions must be listed at the end of the script; JS allows to define the functions anywhere and invoke them anywhere.</p>
 <h2 id="default-values" tabindex="-1">Default values</h2>
-<p>If a function is called, but an argument is not provided, then the corresponding value becomes <a class="internal-link is-unresolved" href="/404">JS Types - undefined</a>. However, we can provide its <strong>default value</strong> in the function definition</p>
+<p>If a function is called, but an argument is not provided, then the corresponding value becomes <a class="internal-link is-unresolved" href="/404" target="">JS Types - undefined</a>. However, we can provide its <strong>default value</strong> in the function definition</p>
 <pre><code class="language-js">function myFun(para1, para2 = &quot;no text given&quot;) {
   console.log(para1 + para2);
 }
@@ -1219,7 +1219,7 @@ myFun(&quot;Notice: &quot;); // 'Notice: no text given'
 
 showMessage(); // empty message
 </code></pre>
-<p>Or we could use the <code>Or we could use the</code>||<code>and</code>??<code><a class="internal-link is-unresolved" href="/404">logical operator</a>s Or we could use the</code></p>
+<p>Or we could use the <code>Or we could use the</code>||<code>and</code>??<code><a class="internal-link is-unresolved" href="/404" target="">logical operator</a>s Or we could use the</code></p>
 <pre><code class="language-js">function showMessage(text) {
   // if text is undefined or otherwise falsy, set it to 'empty'
   text = text || 'empty';
@@ -1236,9 +1236,9 @@ showCount(); // unknown
 </code></pre>
 </div></div>
 <h2 id="arguments" tabindex="-1">Arguments</h2>
-<p>Within every function, there is an <strong><a class="internal-link is-unresolved" href="/404">JS Type - Array</a>-like</strong> <a class="internal-link is-unresolved" href="/404">JS Types - Object</a> called <code>arguments</code> that contains the values of the arguments passed to that function.</p>
+<p>Within every function, there is an <strong><a class="internal-link is-unresolved" href="/404" target="">JS Type - Array</a>-like</strong> <a class="internal-link is-unresolved" href="/404" target="">JS Types - Object</a> called <code>arguments</code> that contains the values of the arguments passed to that function.</p>
 <ul>
-<li>The arguments object is not an <a class="internal-link is-unresolved" href="/404">JS Type - Array</a>: it lacks all Array properties and methods except length and property access <code>[]</code></li>
+<li>The arguments object is not an <a class="internal-link is-unresolved" href="/404" target="">JS Type - Array</a>: it lacks all Array properties and methods except length and property access <code>[]</code></li>
 </ul>
 <h2 id="anonymous-function" tabindex="-1">Anonymous Function</h2>
 <p>When we don't need to store a function in a name, we can define an anonymous function</p>
@@ -1255,7 +1255,7 @@ myButton.onclick = function() {
 </code></pre>
 <p>With event handler, anonymous function is like a <strong>when</strong> statement: it executes some code when an event is triggered.</p>
 <h3 id="function-expression" tabindex="-1">Function Expression</h3>
-<p>Just like any other type, an anonymous function can be assigned to a <a class="internal-link is-unresolved" href="/404">JS Variable</a>. Such form of creating a function is also known as <mark>function expression</mark>.</p>
+<p>Just like any other type, an anonymous function can be assigned to a <a class="internal-link is-unresolved" href="/404" target="">JS Variable</a>. Such form of creating a function is also known as <mark>function expression</mark>.</p>
 <pre><code class="language-js">/* Define */
 let varFun = function() {
     // Do somethinf
@@ -1276,10 +1276,10 @@ varFun();
 </li>
 <li>But unlike general function declaration, function expressions are not <mark>hoisted</mark>
 <ul>
-<li>i.e. the <a class="internal-link is-unresolved" href="/404">JS Variable</a> (function) need to be assigned first before being invoked.</li>
+<li>i.e. the <a class="internal-link is-unresolved" href="/404" target="">JS Variable</a> (function) need to be assigned first before being invoked.</li>
 </ul>
 </li>
-<li>And just like general <a class="internal-link is-unresolved" href="/404">JS Variable</a>s, you can also assign the function to be the value of <strong>multiple variables</strong></li>
+<li>And just like general <a class="internal-link is-unresolved" href="/404" target="">JS Variable</a>s, you can also assign the function to be the value of <strong>multiple variables</strong></li>
 </ul>
 <div class="callout " data-callout="ex"><div class="callout-title"><div class="callout-title-inner"> Callback Functions</div></div>
 <div class="callout-content">
@@ -1326,11 +1326,11 @@ ask(
 <h1 id="n-h1" tabindex="-1">n-h1</h1>
 </div>
 <h1 id="js-array-function" tabindex="-1">JS Array Function</h1>
-<p>Another way to create a function and assign it to a variable (this process is called <a class="internal-link" data-note-icon="" href="/js-function/#function-expression"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>) is called <strong>arrow function</strong>, which is similar to <a class="internal-link is-unresolved" href="/404">Python Lambda Function</a></p>
+<p>Another way to create a function and assign it to a variable (this process is called <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>) is called <strong>arrow function</strong>, which is similar to <a class="internal-link is-unresolved" href="/404" target="">Python Lambda Function</a></p>
 <pre><code class="language-js">let myFun = (para1, para2) =&gt; expression
 </code></pre>
 <p>This creates a function <code>myFun</code> that accepts arguments <code>para1</code> and <code>para2</code>, then evaluates the <code>expression</code> on the right side with their use and <strong>returns its result</strong>.</p>
-<p>In other words, it’s the shorter version of the <a class="internal-link" data-note-icon="" href="/js-function/#function-expression"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>:</p>
+<p>In other words, it’s the shorter version of the <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#Function">#Function</a> Expression</a>:</p>
 <pre><code class="language-js">let myFun = function(para1, para2) {
   return expression;
 };
@@ -1388,7 +1388,7 @@ shadow(); // 'hello'
 console.log(a); // 1
 </code></pre>
 <ul>
-<li>This also means that you can <em>re-declare</em> a <a class="internal-link is-unresolved" href="/404">JS Variable</a> in the local scope of a function</li>
+<li>This also means that you can <em>re-declare</em> a <a class="internal-link is-unresolved" href="/404" target="">JS Variable</a> in the local scope of a function</li>
 </ul>
 </li>
 <li>

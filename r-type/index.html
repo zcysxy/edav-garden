@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1147,7 +1147,7 @@
 <p><span class="alt-check alt-check-rmk">Here we just introduce some basic &quot;atomic&quot; data types. There are many more, like <s>dates and</s> time series.</span></p>
 </li>
 <li>
-<p><span class="alt-check alt-check-tip">Use function <code>is.x()</code>, such as <code>is.na()</code> and <code>is.complex()</code>, to test the type of an <a class="internal-link" data-note-icon="" href="/r/">R</a> object.</span></p>
+<p><span class="alt-check alt-check-tip">Use function <code>is.x()</code>, such as <code>is.na()</code> and <code>is.complex()</code>, to test the type of an <a class="internal-link" target="" data-note-icon="" href="/r/">R</a> object.</span></p>
 </li>
 </ul>
 <div class="table-wrapper"><table>
@@ -1159,27 +1159,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type/#integer">Integer</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Integer</a></td>
 <td><code>int</code></td>
 </tr>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type/#numeric">Numeric</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Numeric</a></td>
 <td><code>dbl</code></td>
 </tr>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type/#characters">Characters</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Characters</a></td>
 <td><code>chr</code></td>
 </tr>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type/#logical">Logical</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Logical</a></td>
 <td><code>lgl</code></td>
 </tr>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type/#factors">Factors</a></td>
+<td><a class="internal-link is-unresolved" href="/404" target="">Factors</a></td>
 <td><code>fctr</code></td>
 </tr>
 <tr>
-<td><a class="internal-link" data-note-icon="" href="/r-type-date/">Date</a></td>
+<td><a class="internal-link" target="" data-note-icon="" href="/r-type-date/">Date</a></td>
 <td><code>date</code></td>
 </tr>
 <tr>
@@ -1202,21 +1202,21 @@ class(-Inf)
 class(NaN)
 </code></pre>
 <h2 id="complex" tabindex="-1">Complex</h2>
-<p>The imaginary part of a complex is appended with an <code>i</code> in <a class="internal-link" data-note-icon="" href="/r/">R</a>.</p>
+<p>The imaginary part of a complex is appended with an <code>i</code> in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a>.</p>
 <pre><code class="language-r">x &lt;- 1 + 1i
 y &lt;- -1i + 1
 x * y
 class(x - 1i) # complex
 </code></pre>
 <h2 id="characters" tabindex="-1">Characters</h2>
-<p id="55dclb">There is no difference between strings and characters in <a class="internal-link" data-note-icon="" href="/r/">R</a>, unlike <a class="internal-link is-unresolved" href="/404">MATLAB</a>.<br>
+<p id="55dclb">There is no difference between strings and characters in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a>, unlike <a class="internal-link is-unresolved" href="/404" target="">MATLAB</a>.<br>
 And a string and a character are both char vectors of length 1.<br>
 Characters are surrounded by double quotes <code>&quot;</code> (or single quotes <code>'</code>).</p>
 <pre><code class="language-r">length(&quot;Hello&quot;)
 length(c(&quot;Hello&quot;,&quot;World&quot;))
 </code></pre>
 <h2 id="logical" tabindex="-1">Logical</h2>
-<p>Capital <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> are three logicals in <a class="internal-link" data-note-icon="" href="/r/">R</a></p>
+<p>Capital <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> are three logicals in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a></p>
 <pre><code class="language-r">TRUE # not true or True
 class(NA)
 FALSE == FALSE # TRUE
@@ -1225,7 +1225,7 @@ FALSE == FALSE # TRUE
 <li><span class="alt-check alt-check-tip"><code>T</code> and <code>F</code> are shorthands for <code>TRUE</code> and <code>FALSE</code>.</span></li>
 </ul>
 <h2 id="factors" tabindex="-1">Factors</h2>
-<p>Factors are used to represent <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
+<p>Factors are used to represent <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">EDAV - Categorical Data</a> and can be unordered or ordered. One can think of a factor as an integer vector where each integer has a <em>label</em>.</p>
 <pre><code class="language-r">x &lt;- factor(c(&quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;no&quot;)) 
 x
 # [1] yes yes no  yes no 
@@ -1246,14 +1246,14 @@ unclass(x)
 <ul>
 <li>Factor levels have an <strong>order</strong>
 <ul>
-<li>Not like <a class="internal-link" data-note-icon="" href="/r-type/#characters"><a class="tag" onclick="toggleTagSearch(this)" data-content="#Characters">#Characters</a></a>, which obey alphabetical order</li>
+<li>Not like <a class="internal-link is-unresolved" href="/404" target=""><a class="tag" onclick="toggleTagSearch(this)" data-content="#Characters">#Characters</a></a>, which obey alphabetical order</li>
 </ul>
 </li>
 <li>Factor levels serve as <strong>labels</strong> for data</li>
-<li><a class="internal-link" data-note-icon="" href="/forcats/">forcats</a> is a useful package for manipulating factors</li>
+<li><a class="internal-link" target="" data-note-icon="" href="/forcats/">forcats</a> is a useful package for manipulating factors</li>
 </ul>
 <h2 id="null" tabindex="-1">NULL</h2>
-<p>Capital <code>NULL</code> is a special empty object in <a class="internal-link" data-note-icon="" href="/r/">R</a>.</p>
+<p>Capital <code>NULL</code> is a special empty object in <a class="internal-link" target="" data-note-icon="" href="/r/">R</a>.</p>
 
       
         <center style="margin-top:5em;display:flex;justify-content:center;align-items:center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" ></a><span style="font-size:.8em;color:var(--text-muted);margin:5px;margin-bottom:9px"> by <a  rel="homepage" href="https://me.zcysxy.space">zcysxy</a></span></center>

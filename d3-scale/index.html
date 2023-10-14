@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1142,13 +1142,13 @@
       
       
       <h1 id="d3-scale" tabindex="-1">D3 Scale</h1>
-<p>Cartesian coordinates are different from the coordinates in an <a class="internal-link is-unresolved" href="/404">SVG</a>.<br>
+<p>Cartesian coordinates are different from the coordinates in an <a class="internal-link is-unresolved" href="/404" target="">SVG</a>.<br>
 <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221201003039.png" alt=""></p>
-<p>So we need transformers to map Cartesian coordinates to <a class="internal-link is-unresolved" href="/404">SVG</a> coordinates; <strong>scales</strong> in <a class="internal-link" data-note-icon="" href="/d3/">D3</a> are such transformers.</p>
-<p>There are two functions in <a class="internal-link" data-note-icon="" href="/d3/">D3</a> to create scales: one for <a class="internal-link" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>—<code>.scaleBand()</code>, and one for <a class="internal-link" data-note-icon="" href="/edav-continuous-variable/">Continuous Data</a>—<code>.scaleLinear()</code>.<br>
+<p>So we need transformers to map Cartesian coordinates to <a class="internal-link is-unresolved" href="/404" target="">SVG</a> coordinates; <strong>scales</strong> in <a class="internal-link" target="" data-note-icon="" href="/d3/">D3</a> are such transformers.</p>
+<p>There are two functions in <a class="internal-link" target="" data-note-icon="" href="/d3/">D3</a> to create scales: one for <a class="internal-link" target="" data-note-icon="" href="/edav-categorical-data/">Categorical Data</a>—<code>.scaleBand()</code>, and one for <a class="internal-link" target="" data-note-icon="" href="/edav-continuous-variable/">Continuous Data</a>—<code>.scaleLinear()</code>.<br>
 Note that these functions are for creating your own scales rather than alternating the current scales.</p>
 <h2 id="ordinal-scales" tabindex="-1">Ordinal Scales</h2>
-<p>To create an <a class="internal-link" data-note-icon="" href="/edav-categorical-data/#ordinal-vs-nominal">ordinal</a> scale:</p>
+<p>To create an <a class="internal-link is-unresolved" href="/404" target="">ordinal</a> scale:</p>
 <pre><code class="language-js">const ordScale = d3.scaleBand()
     .domain([&quot;cold&quot;, &quot;warm&quot;, &quot;hotel&quot;])
     .range([0,600])
@@ -1159,7 +1159,7 @@ And <code>ordScale(category)</code> returns the <strong>left boundary</strong> o
 <p><code>.domain()</code> also accepts indexes of categories.<br>
 In this case, to make the above snippet more flexible, we can use <code>.domain(d3.range(dataset.length))</code> instead of <code>.domain([0,1,2,3,4])</code>.</p>
 <ul>
-<li><span class="alt-check alt-check-tip">Don't mix up <code>d3.range()</code>, which returns an <a class="internal-link is-unresolved" href="/404">array</a> of integers, and <code>.domain().range()</code>.<br>
+<li><span class="alt-check alt-check-tip">Don't mix up <code>d3.range()</code>, which returns an <a class="internal-link is-unresolved" href="/404" target="">array</a> of integers, and <code>.domain().range()</code>.<br>
 { <a class="tag" onclick="toggleTagSearch(this)" data-content="#vga7uq">#vga7uq</a>}<br>
 </span></li>
 </ul>

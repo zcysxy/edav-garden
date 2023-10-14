@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1144,10 +1144,10 @@
       <h1 id="mosaic-plot" tabindex="-1">Mosaic Plot</h1>
 <p>A mosaic plot is a filled rectangular plot (no white space) with consistent numbers of rows and columns, in which the area of each small rectangle is proportional to the frequency count for a unique combination of levels of the categorical variables displayed.</p>
 <ul>
-<li>Mosaic plots are like stacked <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>s, except that the width and height of the bars are proportional to the amount of data.</li>
+<li>Mosaic plots are like stacked <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>s, except that the width and height of the bars are proportional to the amount of data.</li>
 <li>Mosaic plots are not <strong>treemaps</strong>, which are another type of filled rectangular plots representing <strong>hierarchical data</strong> (fill color does not necessarily represent frequency count)</li>
 <li>Mosaic plots with only one horizontal cut (variable) are called <mark>spine plots</mark>, where vertical cuts are called <mark>spines</mark></li>
-<li>Mosaic plots with the same bin width are relative frequency stacked <a class="internal-link" data-note-icon="" href="/bar-chart/">Bar Chart</a>s
+<li>Mosaic plots with the same bin width are relative frequency stacked <a class="internal-link" target="" data-note-icon="" href="/bar-chart/">Bar Chart</a>s
 <ul>
 <li>All bars sum up to 100%, thus have the same height</li>
 </ul>
@@ -1158,7 +1158,7 @@
 <p>You can not read the actual values in a mosaic plot, but you can inspect the <strong>association</strong>. As we can see from the above example, we can relatively confident in concluding that the older one is, the higher probability of them being a follower.<br>
 The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 <h2 id="more-variables" tabindex="-1">More Variables</h2>
-<p>Mosaic plots are powerful for presenting <a class="internal-link" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>. We can put multiple variables on the x-axis and y-axis. The most important problem is <strong>cutting</strong> the variables.</p>
+<p>Mosaic plots are powerful for presenting <a class="internal-link" target="" data-note-icon="" href="/edav-multivariate-categorical-data/">Multivariate Categorical Data</a>. We can put multiple variables on the x-axis and y-axis. The most important problem is <strong>cutting</strong> the variables.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013185846.png" alt=""></p>
 <p>As in the above example, we put variables</p>
 <ul>
@@ -1174,7 +1174,7 @@ The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 </li>
 </ul>
 <h2 id="mosaic-pairs-plot" tabindex="-1">Mosaic Pairs Plot</h2>
-<p>Just like <a class="internal-link" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a>, we can make mosaic plot matrix, with each element being a spine plot with two variables. Then for <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> variables, we need an <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="5.481ex" height="1.136ex" role="img" focusable="false" viewBox="0 -491 2422.4 502" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1822.4,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>n</mi></math></mjx-assistive-mml></mjx-container> matrix. A diagonal elements is a vertical proportion cut of one variable.</p>
+<p>Just like <a class="internal-link" target="" data-note-icon="" href="/scatterplot-matrix/">Scatterplot Matrix</a>, we can make mosaic plot matrix, with each element being a spine plot with two variables. Then for <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> variables, we need an <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="5.481ex" height="1.136ex" role="img" focusable="false" viewBox="0 -491 2422.4 502" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z" style="stroke-width: 3;"></path></g><g data-mml-node="mi" transform="translate(1822.4,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width: 3;"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>n</mi></math></mjx-assistive-mml></mjx-container> matrix. A diagonal elements is a vertical proportion cut of one variable.</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221211221648.png" alt=""></p>
 <h2 id="best-practices" tabindex="-1">Best Practices</h2>
 <ul>
@@ -1204,7 +1204,7 @@ The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 </ul>
 <h2 id="implementation" tabindex="-1">Implementation</h2>
 <ul>
-<li><code>geom_mosaic</code> in <a class="internal-link is-unresolved" href="/404">ggplot2</a></li>
+<li><code>geom_mosaic</code> in <a class="internal-link is-unresolved" href="/404" target="">ggplot2</a></li>
 <li><code>mosaic()</code> in package <code>vcd</code>
 <ul id="hv0kpp">
 <li>
@@ -1214,7 +1214,7 @@ The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 <p><span class="alt-check alt-check-ex"><code>mosaic(Music ~ Age + Favorite, data = counts3, direction = c(&quot;v&quot;, &quot;v&quot;, &quot;h&quot;))</code></span></p>
 </li>
 <li>
-<p>Here <a class="internal-link is-unresolved" href="/404">R Type - Formula</a> can be read as &quot;on&quot;, especially for dependent variables</p>
+<p>Here <a class="internal-link is-unresolved" href="/404" target="">R Type - Formula</a> can be read as &quot;on&quot;, especially for dependent variables</p>
 </li>
 <li>
 <p>There should be a <code>Freq</code> column in the date, which is a standard column in a dataframe</p>
@@ -1234,8 +1234,8 @@ The <em>steeper</em> the <em>stairs</em>, the stronger the relationship.</p>
 </li>
 </ul>
 <h2 id="simpson-s-paradox" tabindex="-1">Simpson's Paradox</h2>
-<p>Simpson's paradox is a phenomenon in <a class="internal-link is-unresolved" href="/404">Probability Theory</a> and <a class="internal-link is-unresolved" href="/404">Statistics</a> in which a trend appears in several groups of data but disappears or reverses when the groups are combined.<br>
-An example of Simpson's paradox is <a class="internal-link is-unresolved" href="/404">A Plausible Treatment Test</a>.<br>
+<p>Simpson's paradox is a phenomenon in <a class="internal-link is-unresolved" href="/404" target="">Probability Theory</a> and <a class="internal-link is-unresolved" href="/404" target="">Statistics</a> in which a trend appears in several groups of data but disappears or reverses when the groups are combined.<br>
+An example of Simpson's paradox is <a class="internal-link is-unresolved" href="/404" target="">A Plausible Treatment Test</a>.<br>
 A visual example of Simpson's paradox:</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222838.png" alt="200x200"> ==&gt; <img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221013222903.png" alt="200x200"></p>
 <p>Mosaic plots can help eliminate Simpson's paradox:</p>

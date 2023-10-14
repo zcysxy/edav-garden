@@ -62,7 +62,7 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <link href="/styles/digital-garden-base.css" rel="stylesheet">
     <link href="/styles/obsidian-base.css" rel="stylesheet">
-    <link href="/styles/_theme.9626f4de.css" rel="stylesheet">
+    <link href="/styles/_theme.9938f53f.css" rel="stylesheet">
 
 
 <link href="/styles/custom-style.css" rel="stylesheet"><link href="/styles/user/note-gallery.css" rel="stylesheet">
@@ -878,7 +878,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2023-10-06T01:03:52.929Z';
+        const searchIndexDate = '2023-10-14T20:20:09.513Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -890,9 +890,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2023-10-06T01:03:52.929Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2023-10-14T20:20:09.513Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-06T01:03:52.929Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2023-10-14T20:20:09.513Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1157,8 +1157,8 @@
 </li>
 </ul>
 <h2 id="visualization" tabindex="-1">Visualization</h2>
-<p><a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a>s are suitable for visualizing missing data.</p>
-<p>First, use <a class="internal-link" data-note-icon="" href="/tidyr/">tidyr</a> to convert column names into one variable. Then plot a <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a> with the x-axis being column names (variable name), the y-axis being row names (observation id), and the color indicating missing values.</p>
+<p><a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a>s are suitable for visualizing missing data.</p>
+<p>First, use <a class="internal-link" target="" data-note-icon="" href="/tidyr/">tidyr</a> to convert column names into one variable. Then plot a <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a> with the x-axis being column names (variable name), the y-axis being row names (observation id), and the color indicating missing values.</p>
 <p>An example:</p>
 <pre><code class="language-r">library(tidyverse)
 set.seed(5702)
@@ -1180,12 +1180,12 @@ ggplot(tidycars, aes(x = key, y = fct_rev(id), fill = missing)) +
   theme_bw()
 </code></pre>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103225656.png" alt="|500" width="500px"></p>
-<p>A better idea is to combine the normal <a class="internal-link" data-note-icon="" href="/heatmap/">Heatmap</a> with missing data: use one color to present missing data, and a <a class="internal-link" data-note-icon="" href="/graph-color/#1dc7c8">sequential color palette</a> to present the magnitude of other values.</p>
+<p>A better idea is to combine the normal <a class="internal-link" target="" data-note-icon="" href="/heatmap/">Heatmap</a> with missing data: use one color to present missing data, and a <a class="internal-link is-unresolved" href="/404" target="">sequential color palette</a> to present the magnitude of other values.</p>
 <ul>
 <li><span class="alt-check alt-check-rmk">To better explore the patterns (the combination of columns missing), we can sort column names by the number of missing.</span></li>
 </ul>
 <h3 id="plot-missing" tabindex="-1">plot_missing()</h3>
-<p>Function <code>plot_missing()</code> from <a class="internal-link" data-note-icon="" href="/r-package/">R Package</a> <code>redav</code> is a powerful tool to explore missing patterns. It renders graphs like this</p>
+<p>Function <code>plot_missing()</code> from <a class="internal-link" target="" data-note-icon="" href="/r-package/">R Package</a> <code>redav</code> is a powerful tool to explore missing patterns. It renders graphs like this</p>
 <p><img src="https://raw.githubusercontent.com/zcysxy/Figurebed/master/img/20221103230138.png" alt=""></p>
 <ul>
 <li>The top part shows the <strong>number</strong> of missing values in each column</li>
